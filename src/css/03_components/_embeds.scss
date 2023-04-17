@@ -6,7 +6,10 @@
             --scaleFactor: 1;
             transform: scale(calc(var(--scale) * var(--scaleFactor)));
             transform-origin: bottom;
-            margin-top: calc((calc(var(--scale) * var(--scaleFactor)) - 1) * 100vh);
+
+            &.loaded {
+                margin-top: calc((calc(var(--scale) * var(--scaleFactor)) - 1) * 100vh);
+            }
 
             @include media-breakpoint-up(lg) {
                 --scale: 1;

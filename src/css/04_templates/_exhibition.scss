@@ -132,7 +132,7 @@
     list-style: none;
     font-size: 0;
     letter-spacing: 0;
-    white-space: nowrap;
+    //white-space: nowrap;
 
     @include media-breakpoint-up(md) {
         --angled-points-distance: 3.2vw;

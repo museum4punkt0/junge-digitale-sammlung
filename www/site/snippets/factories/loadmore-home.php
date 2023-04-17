@@ -20,12 +20,27 @@
       <?php if ($url = $collectionItem->embed_url()->toEmbed()) : ?>
 
         <?php if ($url->providerName()->lower() == 'twitter') : ?>
-          <div class="twitter-container single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" tabindex="-1">
-            <?= $url->code() ?>
-            <a title="<?= $collectionItem->title() ?>" class="exhibit-link cover-link" href="<?= $collectionItem->id() ?>">
-              <?= $collectionItem->title()->value() ?>
-            </a>
-          </div>
+          <?php if (isFeatureAllowed('embeds')) : ?>
+            <div class="twitter-container single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" tabindex="-1">
+              <?= $url->code() ?>
+              <a title="<?= $collectionItem->title() ?>" class="exhibit-link cover-link" href="<?= $collectionItem->id() ?>">
+                <?= $collectionItem->title()->value() ?>
+              </a>
+            </div>
+          <?php else : ?>
+            <div class="no-cookies">
+              <a title="<?= $collectionItem->title() ?>" class="" href="<?= $collectionItem->id() ?>">
+                <div class="exhibit-embed d-block h-100">
+                  <p>
+                    <?= snippet('renderers/labeler', ['field' => 'cookies_infotext', 'fallback' => 'Cookies für externe Inhalte sind deaktiviert. Bitte passe die Einstellungen an, wenn du diese Inhalte sehen willst.']) ?>
+                  </p>
+                  <p>
+                    <i icon-name="cookie" class="icon-only"></i>
+                  </p>
+                </div>
+              </a>
+            </div>
+          <?php endif; ?>
         <?php else : ?>
           <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
             <?php if ($url->image()) : ?>

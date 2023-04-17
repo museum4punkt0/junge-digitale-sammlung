@@ -20,13 +20,38 @@
         <?php if ($exhibit_type_class == "embed") : ?>
             <?php if ($url = $exhibit->embed_url()->toEmbed()) : ?>
                 <?php if ($url->providerName()->lower() == 'twitter') : ?>
+                    <?php if (isFeatureAllowed('embeds')) : ?>
+                        <div class="pe-none twitter-container single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>">
+                            <?= $url->code() ?>
+                            <a title="<?= $exhibit->title() ?>" class="exhibit-link cover-link" href="<?= $exhibit->url() ?>">
+                                <?= $exhibit->title()->value() ?>
+                            </a>
+                        </div>
+                    <?php else : ?>
+                        <div class="no-cookies">
+                            <a title="<?= $exhibit->title() ?>" class="" href="<?= $exhibit->url() ?>">
+                                <div class="exhibit-embed d-block h-100">
+                                    <p>
+                                        <?= snippet('renderers/labeler', ['field' => 'cookies_infotext', 'fallback' => 'Cookies für externe Inhalte sind deaktiviert. Bitte passe die Einstellungen an, wenn du diese Inhalte sehen willst.']) ?>
+                                    <div id="edit-embed-cookie"><strong role="button">Anpassen</strong></div>
+                                    <script>
+                                        document.querySelector('#edit-embed-cookie').addEventListener('click', function(e) {
+                                            e.stopPropagation();
+                                            e.preventDefault();
+                                            const event = document.createEvent('HTMLEvents');
+                                            event.initEvent('cookies:update', true, false);
+                                            document.querySelector('body').dispatchEvent(event);
+                                        });
+                                    </script>
+                                    </p>
+                                    <p>
+                                        <i icon-name="cookie" class="icon-only"></i>
+                                    </p>
+                                </div>
+                            </a>
+                        </div>
+                    <?php endif; ?>
 
-                    <div class="pe-none twitter-container single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>">
-                        <?= $url->code() ?>
-                        <a title="<?= $exhibit->title() ?>" class="exhibit-link cover-link" href="<?= $exhibit->url() ?>">
-                            <?= $exhibit->title()->value() ?>
-                        </a>
-                    </div>
 
                 <?php else : ?>
                     <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">

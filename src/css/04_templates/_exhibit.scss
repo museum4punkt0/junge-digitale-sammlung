@@ -159,8 +159,7 @@
             &.instagram {
                 padding-top: 1rem;
                 max-width: 95%;
-                iframe
-                {
+                iframe {
                     pointer-events: all;
                     width: inherit !important;
                     min-width: 0 !important;
@@ -359,5 +358,34 @@
     iframe {
         border-radius: 10px;
         width: 325px !important;
+    }
+}
+
+
+.no-cookies {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: initial;
+    max-width: 90%;
+    z-index: inherit;
+    position: relative;
+    margin: 0 auto;
+    white-space: normal;
+    p{
+        margin: 0;
+        font-size: 1rem;
+        @include media-breakpoint-up(md) {
+            font-size: inherit;
+        }
+    }
+    &.embed__container{
+        min-height: 50vh;
+    }
+    .exhibit-embed {
+        background-color: var(--c-color-2);
+        padding: 2rem;
+        box-shadow: 2px 15px 25px rgba(#fff, .15);
+        max-width: 100%;
     }
 }

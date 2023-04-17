@@ -145,6 +145,8 @@ body.home {
                 }
             }
         }
+
+        
         .loadmore-trigger {
             display: inline-block;
             margin-left: -5rem;
@@ -158,6 +160,7 @@ body.home {
             //bottom: var(--scroll-bar-width);
             //margin-bottom: var(--scroll-bar-width);
             //max-height: 30vh;
+            margin-bottom: 1rem;
 
             white-space: initial;
             display: inline-block;
@@ -167,16 +170,11 @@ body.home {
                 pointer-events: none;
             }
 
-            /* p{
-                font-weight: 400;
-            } */
-
             @include media-breakpoint-up(lg) {
                 padding: 0 var(--margin-md);
                 //max-height: none;
                 //max-width: 500px;
                 height: auto;
-                margin-bottom: 1rem;
             }
         }
         .scroll__area {

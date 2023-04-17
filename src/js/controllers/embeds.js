@@ -38,6 +38,7 @@ function tweetLoaded(ev) {
                 if (w > 0 && h > 0) {
                     let container = findParentContainer(entry.target.parentNode, 'twitter-container');
                     container.style.cssText = '--scaleFactor: ' + w/h;
+                    container.classList.add('loaded');
                 }
             });
         }).observe(this);
