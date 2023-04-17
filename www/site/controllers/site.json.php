@@ -98,6 +98,20 @@ return function ($kirby, $page, $site) {
     }
 
 
+    // Get embed info for AJAX call
+    if ($kirby->request()->is('GET') && get('embedurl')) {
+        $embed = [];
+        $embedurl = get('embedurl');
+
+        if (!V::url($embedurl)) {
+            $embed['status'] = 'error';
+            $embed['error']  = 'The $url variable is not an url';
+        } else {
+            $embed = scrapEmbed($embedurl, $embed);
+        }
+    }
+
+
     if ($kirby->request()->is('GET') && get('exhibitionID')) { // Validation for impulse for curator list in leader
         $curatorID = get('curatorID');
         $exhibitionID = get('exhibitionID');
@@ -115,6 +129,7 @@ return function ($kirby, $page, $site) {
         'lockedBy' => $lockedBy ?? null,
         'impulseResult' => $impulseResult ?? null,
         'overlayCode' => $overlayCode ?? null,
+        'embed' => $embed ?? null,
         'dataPage' => $dataPage ?? null,
         'json' => [],
     ];

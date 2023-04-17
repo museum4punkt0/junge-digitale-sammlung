@@ -28,5 +28,6 @@ if (isset($searchQuery)) {
 }
 
 $json['comment'] = $comment;
+$json['embed'] = $embed;
 
 echo json_encode($json);

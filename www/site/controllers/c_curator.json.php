@@ -14,19 +14,6 @@ return function ($kirby, $page, $site) {
     }
   }
 
-  // Get embed info for AJAX call
-  if ($kirby->request()->is('GET') && get('url')) {
-    $embed = [];
-    $url = get('url');
-
-    if (!V::url($url)) {
-      $embed['status'] = 'error';
-      $embed['error']  = 'The $url variable is not an url';
-    } else {
-      $embed = scrapEmbed($url, $embed);
-    }
-  }
-
   if ($kirby->request()->is('GET') && get('exhibitionpage')) { // get data for updated exhibition
 
     $pageID = get('exhibitionpage');
@@ -121,20 +108,19 @@ return function ($kirby, $page, $site) {
       $alert[] = "ERROR: " . $e->getMessage();
     }
   }
-
+  
   return [
     'lockactionstatus' => $site_vars['lockactionstatus'],
     'lockedBy' => $site_vars['lockedBy'],
     'impulseResult' => $site_vars['impulseResult'],
     'overlayCode' => $site_vars['overlayCode'],
     'dataPage' => $site_vars['dataPage'],
+    'embed' => $site_vars['embed'],
 
     'exhibitionDataResult'  => $exhibitionDataResult ?? null,
     'curatorInExhibition'  => $curatorInExhibition ?? null,
 
     'alert' => $alert ?? null,
-
-    'embed' => $embed ?? null,
 
     'usernameExists'  => $usernameExists ?? null,
     'json' => [],

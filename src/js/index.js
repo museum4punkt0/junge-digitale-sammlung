@@ -2,7 +2,7 @@ import Loadeer from "loadeer";
 import Alert from "./components/Alert";
 import '@kuzorov/smoothscroll-polyfill';
 import { Tab, Modal, Tooltip } from 'bootstrap';
-import { initEmbedLogic } from "./controllers/embeds"; 
+import { initEmbedLogic } from "./controllers/embeds";
 import { setupVideos } from './controllers/video-handler';
 import { initAccessibility } from "./controllers/accessibility";
 import { InactivityCountdownTimer } from 'inactivity-countdown-timer/dist/main';

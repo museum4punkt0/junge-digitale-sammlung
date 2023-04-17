@@ -7,5 +7,6 @@ $json['overlayCode'] = $overlayCode;
 $json['exhibitionDataResult'] = $exhibitionDataResult;
 $json['isCuratorLeader'] = $isCuratorLeader; 
 $json['dataPage'] = $dataPage; 
+$json['embed'] = $embed;
 
 echo json_encode($json);

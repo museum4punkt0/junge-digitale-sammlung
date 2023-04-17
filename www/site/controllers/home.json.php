@@ -3,14 +3,14 @@
 return function ($kirby, $page, $site) {
 
   // Grab the data from the default controller for authentification
-  //$site_vars = $kirby->controller('site.json', compact('kirby', 'page', 'site'));
+  $site_vars = $kirby->controller('site.json', compact('kirby', 'page', 'site'));
 
   if ($kirby->request()->is('GET') && get('searchQuery')) { // Validation for impulse for curator list in leader
 
     $searchQuery   = get('searchQuery');
     //$searchResults = $site->search($searchQuery, 'title')->unlisted()->filterBy('intendedTemplate', get('currentCollection'));
     $searchResults = $site->search($searchQuery, 'title')->unlisted()->filterBy('intendedTemplate', get('currentCollection'));
-  } else {
+  } else if ($kirby->request()->is('GET') && (get('currentCollection') || get('currentImpulse'))) {
     $params   = get();
 
     $items    = $site->children()->filterBy('intendedTemplate', 'c_workshop')
@@ -41,23 +41,23 @@ return function ($kirby, $page, $site) {
     } elseif ($type == 'c_exhibition') {
       foreach ($params as $param => $value) {
         $items = $items->filter(function ($p) use ($param, $value) {
-          if($param == 'curator_state'){
+          if ($param == 'curator_state') {
             $states = $p->getLinkedUsersStates();
-            return in_array($value,$states);
+            return in_array($value, $states);
           }
 
-          if($param == 'schoolclass'){
+          if ($param == 'schoolclass') {
             $classes = $p->getLinkedUsersClasses();
-            return in_array($value,$classes);
-          }          
+            return in_array($value, $classes);
+          }
           //return $p->linked_user()->toPageOrDraft()->content()->get($param) == $value;
         });
       }
     }
   }
 
-
   return [
+    'embed' => $site_vars['embed'],
     'loadmoreContent' => $items ?? null,
     'more'     => $more ?? null,
     'type'     => $type ?? null,

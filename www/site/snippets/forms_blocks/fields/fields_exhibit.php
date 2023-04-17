@@ -6,7 +6,7 @@
         </label>
         <div class="col-md-7">
             <?php $urldata = $linkedpage->embed_url()->yaml(); ?>
-            <?= snippet('renderers/input_element', ['forcedValue' => $urldata['input'] ?? null, 'name' => 'embed_url', 'type' => 'url', 'ajaxHandler' => 'scrapeEmbed']); ?>
+            <?= snippet('renderers/input_element', ['forcedValue' => $urldata['input'] ?? null, 'name' => 'embed_url', 'type' => 'url', 'ajaxHandler' => 'scrapWorkshopEmbed']); ?>
         </div>
         <div class="col-md-2">
             <?= snippet('renderers/fields_metainfo', ['name' => 'embed_url']) ?>

@@ -18,15 +18,19 @@
 
     <?php if ($exhibit_type_class == "embed") : ?>
       <?php if ($url = $collectionItem->embed_url()->toEmbed()) : ?>
-
         <?php if ($url->providerName()->lower() == 'twitter') : ?>
           <?php if (isFeatureAllowed('embeds')) : ?>
+
             <div class="twitter-container single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" tabindex="-1">
               <?= $url->code() ?>
+              <div class="spinner-border text-primary fs-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
               <a title="<?= $collectionItem->title() ?>" class="exhibit-link cover-link" href="<?= $collectionItem->id() ?>">
                 <?= $collectionItem->title()->value() ?>
               </a>
             </div>
+
           <?php else : ?>
             <div class="no-cookies">
               <a title="<?= $collectionItem->title() ?>" class="" href="<?= $collectionItem->id() ?>">
@@ -41,10 +45,18 @@
               </a>
             </div>
           <?php endif; ?>
+        <?php elseif ($url->providerName()->lower() == 'tiktok') : ?>
+          <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
+            <div class="load-embed-img" href="<?= $url->url() ?>">
+              <div class="spinner-border text-primary fs-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+              </div>
+            </div>
+          </a>
         <?php else : ?>
           <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
             <?php if ($url->image()) : ?>
-              <img src="<?= $url->image() ?>" alt="">
+              <img src="<?= $url->image() ?>" alt="<?= $url->title() ?>">
             <?php else : ?>
               <p class="single-exhibit">
                 <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
@@ -106,7 +118,7 @@
               <?php endif ?>
             <?php else : ?>
               <?php if ($img = $exhibit->exhibit_preview()->toFile()) : ?>
-                <img src="<?= $img->resize(100)->url(); ?>" alt="" class="<?= $compact_exhibit_class ?>">
+                <img src="<?= $img->resize(100)->url(); ?>" alt="<?= $exhibit->title() ?>" class="<?= $compact_exhibit_class ?>">
               <?php else : ?>
                 <div class="empty"><i icon-name="help-circle" class="icon-only"></i></div>
               <?php endif ?>

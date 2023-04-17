@@ -64,7 +64,7 @@ async function checkImpulseRelationships(ajaxTarget) {
 
     let url = location.protocol + '//' + location.host + location.pathname;
     url = `${url}.json/?impulseCheck=${impulse}&pageID=${page}`;
-    
+
     try {
         const response = await fetch(url);
         const { impulseResult } = await response.json();
@@ -92,7 +92,7 @@ async function checkImpulseRelationships(ajaxTarget) {
         else if (impulseResult == 'result_error') {
             if (input && error && check && warning) {
                 isInvalid(input, check, error);
-                warning.classList.add('d-none');  
+                warning.classList.add('d-none');
             }
         }
         // default behaviour if no answer, sets valid or invalid if value empty or not
@@ -136,7 +136,7 @@ async function checkImpulseRelationshipsList(ajaxTarget) {
 
     let url = location.protocol + '//' + location.host + location.pathname;
     url = `${url}.json/?curatorID=${curator}&exhibitionID=${page}`;
-    
+
     try {
         const response = await fetch(url);
         const { impulseResult } = await response.json();
@@ -164,7 +164,7 @@ async function checkImpulseRelationshipsList(ajaxTarget) {
         else if (impulseResult == 'result_error') {
             if (input && error && check && warning) {
                 isInvalid(input, check, error);
-                warning.classList.add('d-none');                
+                warning.classList.add('d-none');
             }
         }
         else {
@@ -196,7 +196,7 @@ async function fetchDynamicExhibitionData(context) {
         console.log(url);
         try {
             const response = await fetch(url);
-            const { isCuratorLeader, exhibitionDataResult, curatorInExhibition } = await response.json(); 
+            const { isCuratorLeader, exhibitionDataResult, curatorInExhibition } = await response.json();
 
             if (isCuratorLeader || (exhibitionDataResult && curatorInExhibition)) {
                 let form = context.querySelector('form');
@@ -222,29 +222,69 @@ async function fetchDynamicExhibitionData(context) {
 Object.assign(window, { fetchDynamicExhibitionData });
 
 /**
- * Scrapes the embed URL to see if its valid and returns some data.
+ * Simple ajax to call scraper of embeds in controller and return the whole object
+ * @param {string} url 
+ * @returns object
+ */
+async function scrapEmbed(url) {
+    let result = false;
+
+    if (url) {
+        try {
+            console.log('fetch:: ' + url);
+            const response = await fetch(url);
+            const { embed } = await response.json();
+            result = embed;
+            console.log(result);
+        } catch (er) {
+            console.log('Fetch error: ', er);
+        }
+    }
+
+    return result;
+}
+Object.assign(window, { scrapEmbed });
+
+/**
+ * Scrapes for the image file of the embed url and returns a finished img tag (relevant for tiktok,
+ * since the preview images are short lived and we must always load the new ones)
+ * @param {string} url 
+ * @returns string
+ */
+async function scrapFreshEmbedImage(url) {
+    let imgTag = false;
+
+    await scrapEmbed(url).then(embed => {
+        imgTag = '<img src="' + embed.data.image + '" alt="' + embed.data.title + '">';
+    });
+
+    return imgTag;
+}
+Object.assign(window, { scrapFreshEmbedImage });
+
+/**
+ * Scrapes the embed URL to see if its valid and handles data.
  * Then injects the embed into the DOM and sets validation icons.
  * @param {HTMLElement} ajaxTarget 
  */
-async function scrapeEmbed(ajaxTarget) {
+function scrapWorkshopEmbed(ajaxTarget) {
     let urlvalue = ajaxTarget.value;
     urlvalue = urlvalue.split('?')[0].replace(/\/$/, "");
     ajaxTarget.value = urlvalue;
-    let url = location.protocol + '//' + location.host + location.pathname;
-    url = `${url}.json/?url=${urlvalue}`;
-    console.log(url);
+    let embedurl = location.protocol + '//' + location.host + location.pathname;
+    embedurl = `${embedurl}.json/?embedurl=${urlvalue}`;
 
     // if this container exists, cookies were allowed
     let embed_preview = document.getElementById('embed__preview');
-
     if (urlvalue && embed_preview) {
-        try {
-            const response = await fetch(url);
-            const { embed } = await response.json();
-            
+        //try {
+        /* const response = await fetch(url);
+        const { embed } = await response.json();
+ */
+        scrapEmbed(embedurl).then(embed => {
             let check = ajaxTarget.form.querySelector('.checks[data-for="' + ajaxTarget.id + '"]');
             let error = ajaxTarget.form.querySelector('.errors[data-for="' + ajaxTarget.id + '"]');
-            let input = ajaxTarget.form.querySelector('#' + ajaxTarget.id);            
+            let input = ajaxTarget.form.querySelector('#' + ajaxTarget.id);
 
             if (embed.data) {
                 if (input && error && check) {
@@ -253,6 +293,31 @@ async function scrapeEmbed(ajaxTarget) {
 
                 embed_preview.innerHTML = embed.data.code;
                 embed_preview.setAttribute('class', 'mx-auto ' + embed.data.providerName.toLowerCase());
+
+                if (window.twttr) {
+                    window.twttr.widgets.load();
+                }
+                else if (embed.data.providerName.toLowerCase() == 'twitter') {
+                    const embed = document.createElement('script');
+                    embed.src = 'https://platform.twitter.com/widgets.js';
+                    document.body.appendChild(embed);
+                }
+
+                if (window.instgrm) {
+                    window.instgrm.Embeds.process();
+                }
+                else if (embed.data.providerName.toLowerCase() == 'instagram') {
+                    const embed = document.createElement('script');
+                    embed.src = 'https://www.instagram.com/embed.js';
+                    document.body.appendChild(embed);
+                }
+
+                // sadly no obvious way to reinitialize tiktokEmbed, so we readded everytime
+                if (embed.data.providerName.toLowerCase() == 'tiktok') {
+                    const embed = document.createElement('script');
+                    embed.src = 'https://www.tiktok.com/embed.js';
+                    document.body.appendChild(embed);
+                }
             }
             else {
                 let embed_preview = document.querySelector('#embed__preview');
@@ -262,35 +327,12 @@ async function scrapeEmbed(ajaxTarget) {
                     isInvalid(input, check, error);
                 }
             }
+        });
 
-            if (window.twttr) {
-                window.twttr.widgets.load();
-            }
-            else if (embed.data.providerName.toLowerCase() == 'twitter') {
-                const embed = document.createElement('script');
-                embed.src = 'https://platform.twitter.com/widgets.js';
-                document.body.appendChild(embed);
-            }
 
-            if (window.instgrm) {
-                window.instgrm.Embeds.process();
-            }
-            else if (embed.data.providerName.toLowerCase() == 'instagram') {
-                const embed = document.createElement('script');
-                embed.src = 'https://www.instagram.com/embed.js';
-                document.body.appendChild(embed);
-            }
-
-            /* sadly no obvious way to reinitialize tiktokEmbed, so we readded everytime*/
-            if (embed.data.providerName.toLowerCase() == 'tiktok') {
-                const embed = document.createElement('script');
-                embed.src ='https://www.tiktok.com/embed.js';
-                document.body.appendChild(embed);
-            }
-
-        } catch (er) {
+        /* } catch (er) {
             console.log('Fetch error: ', er);
-        }
+        } */
     }
     else {
         let check = ajaxTarget.form.querySelector('.checks[data-for="' + ajaxTarget.id + '"]');
@@ -304,7 +346,7 @@ async function scrapeEmbed(ajaxTarget) {
     }
 
 }
-Object.assign(window, { scrapeEmbed });
+Object.assign(window, { scrapWorkshopEmbed });
 
 
 /**
@@ -399,6 +441,7 @@ let usernameDelay = 300;
  * @param {HTMLElement} element 
  */
 function checkUsername(element) {
+
     const form = element.form;
     let check = form.querySelector('.checks[data-for="' + element.name + '"]');
     let error = form.querySelector('.errors[data-for="' + element.name + '"]');
@@ -494,4 +537,3 @@ function isInvalid(element, check, error) {
     error.classList.remove('d-none');
     element.classList.remove('filled');
 }
-

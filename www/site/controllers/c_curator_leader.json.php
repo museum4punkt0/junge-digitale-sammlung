@@ -22,14 +22,13 @@ return function ($kirby, $page, $site) {
     }
 }
 
-
-
   return [
     'lockactionstatus' => $site_vars['lockactionstatus'],
     'lockedBy' => $site_vars['lockedBy'],
     'impulseResult' => $site_vars['impulseResult'],
     'overlayCode' => $site_vars['overlayCode'],
     'dataPage' => $site_vars['dataPage'],
+    'embed' => $site_vars['embed'],
     
     'exhibitionDataResult'  => $exhibitionDataResult ?? null,
     'isCuratorLeader'  => $isCuratorLeader ?? null,

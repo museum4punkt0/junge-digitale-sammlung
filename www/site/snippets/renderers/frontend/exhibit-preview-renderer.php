@@ -23,6 +23,9 @@
                     <?php if (isFeatureAllowed('embeds')) : ?>
                         <div class="pe-none twitter-container single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>">
                             <?= $url->code() ?>
+                            <div class="spinner-border text-primary fs-3" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
                             <a title="<?= $exhibit->title() ?>" class="exhibit-link cover-link" href="<?= $exhibit->url() ?>">
                                 <?= $exhibit->title()->value() ?>
                             </a>
@@ -52,7 +55,14 @@
                         </div>
                     <?php endif; ?>
 
-
+                <?php elseif ($url->providerName()->lower() == 'tiktok') : ?>
+                    <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">
+                        <div class="load-embed-img" href="<?= $url->url() ?>">
+                            <div class="spinner-border text-primary fs-3" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
+                        </div>
+                    </a>
                 <?php else : ?>
                     <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">
                         <?php if ($url->image()) : ?>
