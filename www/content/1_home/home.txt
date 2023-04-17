@@ -1,0 +1,215 @@
+Title: Home
+
+----
+
+Introtext: <p><strong>Herzlichen willkommen bei der Jungen Digitalen Sammlung!</strong></p><p>Zwischen. Alltäglich. Mein. Dein. Anders sein. Normal?</p><p>Die Junge Digitale Sammlung (JDS) ist eine Online-Sammlung zum Thema <em>Identität und Diversität</em> des Deutschen Auswandererhauses. Sie ist generiert und kuratiert von Schüler:innen und dokumentiert Aspekte von Identität und gesellschaftlicher Vielfalt als Teil der Zeitgeschichte und macht diese sichtbar.</p><p>Die Sammlungsobjekte werden von jungen Menschen aus ihrem persönlichen Umfeld ausgewählt. Soweit es sich nicht um born digital Objekte handelt, erstellen die Jugendlichen im Deutschen Auswandererhaus davon (3D-) Digitalisate. Anschließend erstellen sie gemeinsam in ihrer Schulklasse eine Ausstellung zu einem ausgewählten Thema. Ihre Objekte und Ausstellungen berichten über ihren Alltag, Handlungsfähigkeit und Wahrnehmung in einer von Digitalisierung und Diversität geprägten Migrationsgesellschaft.</p><p>Viel Freude beim Umsehen!</p>
+
+----
+
+Sitemap: true
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_admin
+  time: Wed, 28 Sep 2022 15:03:08 UTC
+- 
+  user: 0DAH_admin
+  time: Wed, 28 Sep 2022 17:07:43 CEST
+- 
+  user: 0DAH_admin
+  time: Mon, 17 Oct 2022 08:48:29 CEST
+- 
+  user: 0DAH_duque
+  time: 2022.12.07, Mi. 12:41:24
+- 
+  user: 0DAH_duque
+  time: 2022.12.07, Mi. 12:41:56
+- 
+  user: 0DAH_duque
+  time: 2023.01.31, Di. 17:06:29
+- 
+  user: 0DAH_duque
+  time: 2023.02.17, Fr. 09:39:09
+- 
+  user: 0DAH_duque
+  time: 2023.02.17, Fr. 09:39:11
+- 
+  user: 0DAH_duque
+  time: 2023.02.17, Fr. 09:39:18
+- 
+  user: 0DAH_duque
+  time: 2023.02.17, Fr. 09:39:21
+- 
+  user: 0DAH_duque
+  time: 2023.02.17, Fr. 09:39:22
+
+----
+
+Meta-title: This is my home
+
+----
+
+Meta-description: 
+
+----
+
+Meta-canonical-url: 
+
+----
+
+Meta-author: 
+
+----
+
+Meta-image: 
+
+----
+
+Meta-phone-number: 
+
+----
+
+Og-title: 
+
+----
+
+Og-description: 
+
+----
+
+Og-image: 
+
+----
+
+Og-site-name: 
+
+----
+
+Og-url: 
+
+----
+
+Og-audio: 
+
+----
+
+Og-video: 
+
+----
+
+Og-determiner: 
+
+----
+
+Og-type: 
+
+----
+
+Og-type-article-published-time: 
+
+----
+
+Og-type-article-modified-time: 
+
+----
+
+Og-type-article-expiration-time: 
+
+----
+
+Og-type-article-author: 
+
+----
+
+Og-type-article-section: 
+
+----
+
+Og-type-article-tag: 
+
+----
+
+Twitter-title: 
+
+----
+
+Twitter-description: 
+
+----
+
+Twitter-image: 
+
+----
+
+Twitter-card-type: 
+
+----
+
+Twitter-site: 
+
+----
+
+Twitter-creator: 
+
+----
+
+Robots-noindex: 
+
+----
+
+Robots-nofollow: 
+
+----
+
+Robots-noarchive: 
+
+----
+
+Robots-noimageindex: 
+
+----
+
+Robots-nosnippet: 
+
+----
+
+Threed-model: 
+
+----
+
+Threed-model-preview: 
+
+----
+
+Layout: 
+
+----
+
+Showinnav: false
+
+----
+
+Seodescription: Home Meta
+
+----
+
+Seoimage: 
+
+----
+
+Text: hi
+
+----
+
+Datemodifiedepoch: 1676623162
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Uuid: Z7IFm0zTsjgwDiGu

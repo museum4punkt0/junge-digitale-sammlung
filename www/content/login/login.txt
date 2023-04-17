@@ -1,0 +1,29 @@
+Title: Login
+
+----
+
+Login-error: Benutzername oder Passwort falsch.
+
+----
+
+User-inactive: Der Benutzer ist nicht mehr aktiv. Bitte kontaktieren sie das DAH.
+
+----
+
+Username: Benutzername
+
+----
+
+Password: Passwort
+
+----
+
+Button: Log-in
+
+----
+
+Alert: Benutzername und/oder Passwort nicht gültig.
+
+----
+
+Uuid: GYFWXC4LFK4AEi8b
