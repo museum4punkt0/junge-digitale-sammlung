@@ -1,0 +1,56 @@
+html {
+    font-size: 12px;
+
+    @include media-breakpoint-up(md) {
+        font-size: 14px;
+    }
+}
+
+h1,
+h2 {
+    color: var(--primary-color);
+    font-weight: 600;
+    line-height: 0.95;
+}
+
+h1 {
+    letter-spacing: calc(var(--letter-spacing) * 3.5);
+}
+h2 {
+    letter-spacing: calc(var(--letter-spacing) * 2);
+}
+
+p {
+    font-weight: 400;
+}
+
+.excerpt {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.lucide {
+    width: 18px;
+    height: 18px;
+
+    @include media-breakpoint-up(lg) {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.legals{
+    a{
+        text-align: right;
+        display: inline-block;
+    }
+}
+
+.meta-text{
+    font-size: 1rem;
+}
+
+b, strong{
+    font-weight: 500;
+}

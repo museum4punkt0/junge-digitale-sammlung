@@ -1,0 +1,70 @@
+@import "../vars";
+
+@font-face {
+    font-style: normal;
+    font-weight: 400;
+    font-family: 'WeissenhofGrotesk';
+    src: url('webfonts/332361_7_unhinted_0.woff2') format('woff2'), url('webfonts/332361_7_unhinted_0.woff') format('woff'), url('webfonts/332361_7_unhinted_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 600;
+    font-family: "WeissenhofGrotesk";
+    src: url("../webfonts/332361_0_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_0_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_0_unhinted_0.ttf") format("truetype");
+}
+
+body {
+    background-color: #888;
+    transition: background-color 0.25s;
+    font-weight: 400;
+    letter-spacing: var(--letter-spacing);
+    font-family: "WeissenhofGrotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
+        "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+}
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+h1 {
+    color: var(--body-font-color);
+}
+
+.page {
+    .qr {
+        img {
+            max-width: 5cm;
+        }
+    }
+}
+
+.info__area {
+    position: fixed;
+    z-index: 99999;
+    top: 0.5rem;
+    right: 0.5rem;
+    padding: 1rem;
+    background-color: rgba($color: #fff, $alpha: 0.93);
+    border: 1px solid $c-color-6;
+    text-align: center;
+    font-size: 0.8rem;
+    max-width: 250px;
+    @media print {
+        display: none;
+    }
+}
+button,
+.btn {
+    display: block;
+    padding: 0.8rem 1rem;
+    margin: 0.6rem 0;
+    background-color: $c-color-8;
+    border-radius: 0;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}

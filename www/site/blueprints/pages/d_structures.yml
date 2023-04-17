@@ -1,0 +1,265 @@
+title: Daten für Felder
+icon: table
+
+options:
+  sitemap: hide
+
+status:
+  extends: fields/statestwo
+
+tabs:
+  # pages tab
+  pages:
+    label: Daten
+    icon: layers
+    sections:
+      content_settings:
+        type: fields
+        fields:
+          # json dropdowns
+          h_dropdowns_json:
+            label: Dropdowns - Externe JSON Dateien
+            type: headline
+          json_countries_sourceIsOnline:
+            type: toggle
+            label: Quelle
+            width: 1/6
+            text:
+              - Lokal
+              - Online
+          json_countries_url:
+            label: JSON URL
+            type: url
+            width: 1/3
+            help: |
+              Aktuelle Daten aus
+              https://stefangabos.github.io/world_countries
+              (https://cdn.jsdelivr.net/npm/world_countries_lists@latest/data/countries/de/world.json)
+            when:
+              json_countries_sourceIsOnline: true
+          json_countries_file:
+            type: files
+            label: JSON Datei
+            width: 1/3
+            help: Bitte eine JSON Datei im Reiter "JSON Daten" hochladen
+            uploads: false
+            when:
+              json_countries_sourceIsOnline: false
+            max: 1
+            query: site.data_populators_pick.toPage.files.filterBy('template','jsondata')
+          json_countries_id:
+            type: text
+            width: 1/4
+            label: Wert Parameter aus JSON
+            help: (z.B. 'alpha2' für de, fr, nl, etc. für Daten aus https://stefangabos.github.io/world_countries)
+          json_countries_label:
+            type: text
+            width: 1/4
+            label: Beschriftung Parameter in JSON
+            help: (z.B. 'name' für Deutschland, Frankreich, Niederlande, etc. für Daten aus https://stefangabos.github.io/world_countries)
+          countries_extra:
+            label: Länder JSON Ergänzung
+            type: structure
+            width: 1/2
+            sortable: false
+            limit: 10
+            fields:
+              label:
+                label: Beschriftung
+                type: text
+              value:
+                label: Wert
+                type: slug
+                sync: label
+                help: (Beispiel 'de' für Deutschland. Wird automatisch aus Beschriftung generiert.)
+          # workshop dropdowns
+          h_dropdowns_workshop:
+            label: Dropdowns - Workshops
+            type: headline
+          curator_state:
+            label: Bundesländer / Gebiete (für Schule)
+            type: structure
+            width: 1/2
+            sortable: false
+            limit: 10
+            columns:
+              desc: true
+              id: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+          schoolclass:
+            label: Klasse/Stufe
+            type: structure
+            width: 1/2
+            sortable: false
+            limit: 10
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+
+          # curators
+          h_dropdowns_curator:
+            label: Dropdowns - Teilnehmer
+            type: headline
+          age_start:
+            label: Alter - Startzahl
+            type: number
+            width: 1/4
+            min: 1
+            max: 98
+            help: Der Dropdown "Alter" wird automatisch anhand Start und End generiert
+          age_end:
+            label: Alter - Endzahl
+            type: number
+            width: 1/4
+            min: 2
+            max: 99
+            help: Der Dropdown "Alter" wird automatisch anhand Start und End generiert
+          age_structure:
+            label: Alter - Zusätzliche Felder
+            type: structure
+            width: 1/2
+            sortable: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+          gender:
+            label: Geschlecht
+            type: structure
+            width: 1/2
+            sortable: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+          personaldrive:
+            label: Zugehörigkeit zu … wichtig
+            type: structure
+            width: 1/2
+            sortable: false
+            max: 8
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+
+          # exhibits
+          h_dropdowns_exhibits:
+            label: Dropdowns - Objekte & Ausstellungen
+            type: headline
+
+          impulse:
+            label: Themen
+            type: structure
+            width: 1/2
+            sortable: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+          type:
+            label: Objekttypen
+            type: structure
+            width: 1/2
+            sortable: false
+            help: Für diese Daten, wenn erweitert, sollten extra Funktionalitäten programmiert werden.
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+               ### has to have numeric id so i can check for it 
+          classification:
+            label: Klassifikationen
+            type: structure
+            width: 1/2
+            sortable: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+              sub_options:
+                label: options
+                type: structure
+                fields:
+                  desc:
+                    label: Beschriftung
+                    type: text
+                  id:
+                    label: ID
+                    type: slug
+                    #sync: desc
+          # exh digital
+          # h_dropdowns_digital:
+          #   label: Dropdowns - Digitale Objekte
+          #   type: headline
+          # widgettype:
+          #   label: Widget Typen
+          #   type: structure
+          #   width: 1/2
+          #   sortable: false
+          #   help: Für diese Daten, wenn erweitert, sollten extra Funktionalitäten programmiert werden.
+          #   fields:
+          #     desc:
+          #       label: Beschriftung
+          #       type: text
+          # exh phys
+          h_dropdowns_physical:
+            label: Dropdowns - Physische Objekte
+            type: headline
+          scan_method:
+            label: Digitalisierungsmethoden
+            type: structure
+            width: 1/2
+            sortable: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+          scan_device:
+            label: Digitalisierungsgeräten
+            type: structure
+            width: 1/2
+            sortable: false
+            fields:
+              desc:
+                label: Beschriftung
+                type: text
+              id:
+                label: ID
+                type: slug
+                #sync: desc
+  # data tab
+  jsondata:
+    extends: tabs/jsondataTab

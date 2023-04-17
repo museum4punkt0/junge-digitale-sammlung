@@ -1,0 +1,73 @@
+label: SEO
+icon: search
+
+fields:
+  meta_headline:
+    label: Basic Meta Information
+    type: headline
+    numbered: false
+  meta_title:
+    label: Title (Override)
+    type: text
+    help: The page title as it should be displayed on search engines. Will default to Kirby page title when this field is empty.
+  meta_description:
+    label: Description
+    type: text
+    help: A short description of the site/page that will be displayed underneath the page title by search engines.
+  meta_author:
+    label: Author/s
+    type: text
+    help: The name of the author of the page. Can be an entity or a person.
+  meta_image:
+    label: Image
+    type: files
+    multiple: false
+    translate: false
+
+
+  ## robots
+  robots_headline:
+    label: Robots
+    type: headline
+    numbered: false
+  robots_noindex:
+    label: No Index
+    type: select
+    options:
+      all: All
+      enabled: Enabled
+      disabled: Disabled
+      default: Site Default
+    default: default
+    width: 1/2
+    help: Search engines will not index and display page/s.
+  robots_nofollow:
+    label: No Follow
+    type: select
+    options:
+      enabled: Enabled
+      disabled: Disabled
+      default: Site Default
+    default: default
+    width: 1/2
+    help: Search engines will not follow links.
+  robots_noimageindex:
+    label: No Image Index
+    type: select
+    options:
+      enabled: Enabled
+      disabled: Disabled
+      default: Site Default
+    default: default
+    width: 1/2
+    help: Search engines will not associate page/s with image search results.
+
+
+  sitemap:
+    extends: fields/sitemap
+    width: 1/2
+    translate: false
+    help: Adding content to your site's sitemap helps your search engine rankings.
+    text:
+      - "Omitted"
+      - "Added"

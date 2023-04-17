@@ -1,0 +1,42 @@
+{
+  "name": "johannschopplich/kirbylog",
+  "description": "Zero-dependency global `kirbylog()` helper for any content",
+  "type": "kirby-plugin",
+  "version": "1.4.2",
+  "keywords": [
+    "getkirby",
+    "kirby",
+    "logger",
+    "log"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/johannschopplich/kirbylog#readme",
+  "authors": [
+    {
+      "name": "Johann Schopplich",
+      "email": "pkg@johannschopplich.com",
+      "homepage": "https://johannschopplich.com"
+    }
+  ],
+  "require": {
+    "php": ">=7.4.0",
+    "getkirby/composer-installer": "^1.2"
+  },
+  "require-dev": {
+    "getkirby/cms": "^3.7",
+    "phpunit/phpunit": "^9"
+  },
+  "scripts": {
+    "dist": "composer install --no-dev --optimize-autoloader",
+    "test": "phpunit"
+  },
+  "config": {
+    "optimize-autoloader": true,
+    "allow-plugins": {
+      "getkirby/composer-installer": true
+    }
+  },
+  "extra": {
+    "kirby-cms-path": "tests/fixtures/kirby"
+  }
+}

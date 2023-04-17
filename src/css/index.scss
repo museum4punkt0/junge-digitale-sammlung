@@ -1,0 +1,43 @@
+@import "vars"; 
+
+// 00 MIXINGS
+@import "00_mixings/colorconverter";
+
+
+// 01 VENDOR
+@import "01_vendor/bootstrap";   
+@import "01_vendor/vlite"; 
+@import "01_vendor/photoswipe";  
+//@import "../../node_modules/@trevoreyre/autocomplete-js/dist/style"; 
+//@import "01_vendor/animatecss"; 
+
+@import "01_vendor/virtual-select.min"; 
+
+// 02 BASE
+@import "02_base/base";
+@import "02_base/fonts";
+@import "02_base/typo";
+@import "02_base/media";
+@import "02_base/sections";  
+
+// 03 COMPONENTS
+@import "03_components/custom-containers";
+@import "03_components/nav";
+@import "03_components/ui";
+@import "03_components/grids";
+@import "03_components/hovers";
+@import "03_components/forms";
+@import "03_components/vlite";
+@import "03_components/alerts";
+@import "03_components/dragndrop"; 
+@import "03_components/search";
+@import "03_components/image-checkbox";
+@import "03_components/embeds";
+@import "03_components/cookiemodal";
+
+// 04_templates
+@import "04_templates/home";
+@import "04_templates/exhibit";
+@import "04_templates/exhibition";
+
+

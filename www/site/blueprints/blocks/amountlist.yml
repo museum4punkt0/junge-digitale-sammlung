@@ -1,0 +1,19 @@
+name: Amount List
+icon: list-numbers
+preview: table
+fields:
+  rows:
+    type: structure
+    label: Items
+    columns:
+      amount:
+        width: 1/4
+      text:
+        width: 3/4
+    fields:
+      amount:
+        type: text
+        label: Left Column
+      text:
+        type: text
+        label: Right Column

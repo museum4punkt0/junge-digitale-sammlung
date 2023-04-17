@@ -1,0 +1,26 @@
+{
+  "name": "jds-dah-website",
+  "devDependencies": {
+    "@tarekraafat/autocomplete.js": "^10.2.7"
+  },
+  "dependencies": {
+    "masonry-layout": "^4.2.2",
+    "@kuzorov/smoothscroll-polyfill": "^0.4.6",
+    "vlitejs": "^4.2.0",
+    "bootstrap": "^5.2.3",
+    "photoswipe": "^5.3.7",
+    "loadeer": "^2.1.3",
+    "inactivity-countdown-timer": "^2.0.0-beta-2",
+    "@google/model-viewer": "^3.0.2",
+    "lucide": "^0.144.0",
+    "@popperjs/core": "^2.11.7",
+    "horizontal-scroll": "^1.1.0"
+  },
+  "description": "junge digitale sammlung",
+  "private": true,
+  "author": "2av",
+  "license": "GNU",
+  "optionalDependencies": {},
+  "version": "0.0.1",
+  "scripts": {}
+}

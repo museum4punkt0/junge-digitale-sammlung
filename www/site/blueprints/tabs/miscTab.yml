@@ -1,0 +1,9 @@
+label: Andere Einst.
+icon: settings
+sections:
+  psettings:
+    type: fields
+    extends: sections/pagesettings
+  misc:
+    type: fields
+    extends: sections/miscInfo

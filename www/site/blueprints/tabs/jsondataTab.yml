@@ -1,0 +1,8 @@
+label: JSON Daten
+icon: bolt
+
+sections:
+  models:  
+    extends: sections/files
+    template: jsondata
+    label: JSON Daten

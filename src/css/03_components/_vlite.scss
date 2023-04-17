@@ -1,0 +1,13 @@
+.v-vlite {
+
+    //--vlite-controlsColor: var(--btn-color);
+    --vlite-controlBarHeight: 40px;
+    --vlite-controlsIconWidth: 25px;
+    --vlite-controlsIconHeight: 25px;
+    --vlite-progressBarHeight: 4px;
+    --vlite-colorPrimary: var(--c-color-6);
+
+    .v-progressBar{
+        height: var(--vlite-progressBarHeight);
+    }
+}

@@ -1,0 +1,16 @@
+label: Default
+type: group
+fieldsets:
+  - heading
+  - text
+  - list
+  - amountlist
+  - image
+  - table
+  - line
+  - gallery
+  - video
+  - markdown
+  - quote
+  - code
+  - html

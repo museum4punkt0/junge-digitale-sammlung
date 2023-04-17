@@ -1,0 +1,17 @@
+name: field.blocks.toast.name
+icon: alert
+wysiwyg: true
+fields:
+  toastType:
+    label: Toast Type
+    type: radio
+    default: text
+    options:
+      - text
+      - bolt
+      - alert
+      - neutral
+  text:
+    label: Text
+    type: writer
+    placeholder: Enter some text…

@@ -1,0 +1,15 @@
+{
+    "name": "2av/blocks-factory",
+    "description": "Special blocks",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Santiago Duque",
+            "email": "sd@2av.de"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    }
+}

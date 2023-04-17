@@ -1,0 +1,5 @@
+title: JSON Daten
+
+accept:
+  mime: application/json
+  maxsize: 15000000

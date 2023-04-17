@@ -1,0 +1,92 @@
+.drag-area {
+  /* border: 2px dashed #fff;
+    height: 300px;
+    width: 100%; */
+  /* border-radius: 5px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.drop-area {
+  border: 2px dashed #fff;
+  height: 200px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+
+  @include media-breakpoint-up(lg) {
+    height: 300px;
+  }
+}
+.drop-area.active {
+  border: 2px dashed var(--secondary-color);
+}
+
+.drag-area {
+  header,
+  span {
+    z-index: 1;
+  }
+  header {
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    line-height: normal;
+    font-weight: 500;
+    color: var(--secondary-color);
+
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+    }
+  }
+}
+
+.drag-area > button {
+  padding: 10px 25px;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  background: #fff;
+  color: #5256ad;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.drag-area .media-container {
+  z-index: 0;
+  pointer-events: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+.drag-area img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 5px;
+  pointer-events: none;
+  opacity: 1;
+  bottom: 0;
+  z-index: 0;
+}
+.drag-area {
+  img,
+  .v-vlite,
+  .exhibit-3d {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    pointer-events: none;
+    opacity: 1;
+    bottom: 0;
+    z-index: 0;
+  }
+}
+.drop-area.active img,
+.drop-area.active .exhibit-3d {
+  opacity: 0.6;
+}

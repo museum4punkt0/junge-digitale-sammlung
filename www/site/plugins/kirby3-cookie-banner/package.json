@@ -1,0 +1,19 @@
+{
+  "name": "kirby3-cookie-banner",
+  "version": "1.0.5",
+  "description": "",
+  "author": "Michael Scheurich <contact@michaelscheurich.dev>",
+  "scripts": {
+    "dev": "parcel watch ./src/cookie-modal.js -d ./assets --public-url ./ --no-hmr",
+    "build": "parcel build ./src/cookie-modal.js -d ./assets --public-url ./ --no-source-maps --no-content-hash"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "cssnano": "^4.1.10",
+    "sass": "^1.22.9"
+  },
+  "dependencies": {
+    "js-cookie": "^2.2.1"
+  }
+}

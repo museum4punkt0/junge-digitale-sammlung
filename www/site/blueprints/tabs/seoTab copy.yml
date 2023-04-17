@@ -1,0 +1,29 @@
+label: SEO
+icon: search
+
+fields:
+  seoDescription:
+    label: Meta description (optimally around 180 characters)
+    type: textarea
+    buttons: false
+    counter: true
+    help: This text appears in the Google Search or as preview in Facebook posts, etc.
+    maxlenght: 180
+
+  seoImage:
+    label: Preview image for sharing
+    type: files
+    translate: false
+    multiselect: false
+    max: 1
+    help: This image will appear when sharing on social media.
+
+  sitemap:
+    extends: fields/sitemap
+    width: 1/2
+    translate: false
+    help: Adding content to your site's sitemap helps your search engine rankings.
+    text:
+     - 'Omitted'
+     - 'Added'
+

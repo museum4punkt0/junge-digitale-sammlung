@@ -1,0 +1,40 @@
+.alert {
+    background-color: var(--primary-color);
+    z-index: 9999;
+    transition-property: opacity;
+    opacity: 0;
+    color: #fff;
+    width: calc(100% - 2rem);
+
+    @include media-breakpoint-up(md) {
+        width: auto;
+    }
+
+    a {
+        color: #fff;
+        font-weight: 500;
+    }
+
+    &.position-fixed {
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+    &.showing {
+        opacity: 1;
+    }
+    & > p {
+        margin-bottom: 0;
+    }
+    li:last-of-type {
+        margin-bottom: 0;
+        p {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.modal {
+    --bs-modal-bg: var(--body-bg);
+    --bs-modal-border-radius: 0;
+}

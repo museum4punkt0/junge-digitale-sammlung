@@ -1,0 +1,4 @@
+label: Blocks Factory
+type: group
+fieldsets:
+  - accordion

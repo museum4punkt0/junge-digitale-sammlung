@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "dev": "npx -y kirbyup src/index.js --watch",
+    "build": "npx -y kirbyup src/index.js",
+    "run:e2e": "cypress run --config-file cypress.config.local.js",
+    "open:e2e": "cypress open --config-file cypress.config.local.js"
+  },
+  "posthtml": {
+    "recognizeSelfClosing": true
+  },
+  "devDependencies": {
+    "@vue/component-compiler-utils": "^3.3.0",
+    "cssnano": "^5.1.12",
+    "cypress": "^10.4.0",
+    "eslint": "^8.21.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier-vue": "^4.2.0",
+    "eslint-plugin-vue": "^9.3.0",
+    "eslint-plugin-cypress": "^2.12.1",
+    "prettier": "^2.7.1",
+    "sass": "^1.54.2",
+    "vue-template-compiler": "^2.7.8"
+  },
+  "dependencies": {
+    "@ambimax/semantic-release-composer": "github:ambimax/semantic-release-composer",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "vue": "^3.2.37",
+    "vue-hot-reload-api": "^2.3.4"
+  }
+}

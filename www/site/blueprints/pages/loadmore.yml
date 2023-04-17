@@ -1,0 +1,46 @@
+title: Load-More Seite
+icon: page
+
+tabs:
+  # content tab
+  content:
+    label: Content
+    icon: layers
+    sections:
+      special:
+        type: fields
+        fields:
+          speciallbl:
+            type: headline
+            label: Special settings
+          loadmore_btn_lbl:
+            type: text
+            label: '"Load more" Button Label'
+      content:
+        type: fields
+        fields:
+          contentlabel:
+            type: headline
+            label: Content
+          layout:
+            extends: fields/layout
+  #subpages
+  subpages:
+    label: Subpages
+    icon: layers
+    sections:
+      pages:
+        extends: sections/pages
+
+  # gallery tab
+  gallery:
+    extends: tabs/galleryTab
+
+  # misc
+  misc:
+    extends: tabs/miscTab   
+
+  # metaknight
+  seotab:
+    extends: seo
+    label: SEO

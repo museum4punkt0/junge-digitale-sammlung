@@ -1,0 +1,9 @@
+label: Bilder
+icon: image
+
+sections:
+  images:
+    label: Bilder
+    extends: sections/files
+    template: image
+    help: max. 6MB

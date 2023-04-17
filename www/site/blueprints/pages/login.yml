@@ -1,0 +1,26 @@
+title: Login Seite
+icon: key
+
+options:
+  sitemap: hide
+  delete: false
+  create: false
+  changeStatus: false
+  changeSlug: false
+  
+fields:
+  login_error:
+    label: Text für falsche Eingabe
+    type: text
+  user_inactive:
+    label: Text für Benutzer nicht mehr aktiv
+    type: text
+  username:
+    label: Text für "Benutzername"
+    type: text
+  password:
+    label: Text für "Passwort"
+    type: text
+  button:
+    label: Text für Button "Log-in"
+    type: text

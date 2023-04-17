@@ -1,0 +1,11 @@
+# Template for images that are uploaded by an admin via the admin-backend
+
+label: Preview-Bilder
+icon: image
+
+sections:
+  images:
+    label: Preview-Bilder
+    extends: sections/files
+    template: previewimage
+    help: max. 6MB

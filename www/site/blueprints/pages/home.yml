@@ -1,0 +1,38 @@
+title: Home Seite
+icon: page
+
+options:
+  sort: false
+  delete: false
+  create: false
+  changeStatus: false
+  changeSlug: false
+  
+tabs:
+  # content tab
+  content:
+    label: Content
+    icon: layers
+    sections:
+      content:
+        type: fields
+        fields:
+          contentlabel:
+            type: headline
+            label: Content
+          introtext:
+            label: Intro Text
+            type: writer
+
+  # gallery tab
+  gallery:
+    extends: tabs/galleryTab
+
+  # misc
+  misc:
+    extends: tabs/miscTab   
+
+  # metaknight
+  seotab:
+    extends: seo
+    label: SEO

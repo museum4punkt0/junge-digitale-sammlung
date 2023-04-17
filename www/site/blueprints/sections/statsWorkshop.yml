@@ -1,0 +1,22 @@
+type: stats
+# Available size options: small, medium, large, huge. Default is large
+size: huge
+reports:
+  - label: Ausstellungen
+    value: "{{page.children.filterBy('intendedTemplate','c_exhibition').count}}"
+    info: Aktiv
+    theme: positive
+  - label: Objekte
+    value: "{{page.children.filterBy('intendedTemplate','c_exhibit').count}}"
+    info: Aktiv
+    theme: positive
+  - label: Teilnehmer
+    value: "{{page.children.filterBy('intendedTemplate','c_curator').count}}"
+    info: Aktiv
+    theme: positive
+    link: '/pages/{{page.id}}?tab=users'
+  - label: Konto 
+    value: "{{page.mainuser.toUser.name}}"
+    info: "{{page.mainuser.userStatus}}"
+    link: "/users/{{page.mainuser.toUser.id}}"
+    theme: "{{page.mainuser.userStatusTheme}}"

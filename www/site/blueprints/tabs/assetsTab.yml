@@ -1,0 +1,9 @@
+label: Mediendateien
+icon: image
+
+sections:
+  digital_assets:
+    extends: sections/files
+    template: asset
+    label: Mediendateien
+    help: max. 80MB

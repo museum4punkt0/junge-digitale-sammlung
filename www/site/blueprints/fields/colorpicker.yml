@@ -1,0 +1,20 @@
+label: Color
+type: color-palette
+unselect: true
+options:
+  dark-blue:
+    background: "#263380"
+    text: "#ffffff"
+    tooltip: "Dark Blue"
+  soft-blue:
+    background: "#5469ec"
+    text: "#ffffff"
+    tooltip: "Soft Blue"
+  grey:
+    background: "#f0f1f3"
+    text: "#5469ec"
+    tooltip: "Grey" 
+  white:
+    background: "#fff"
+    text: "#3f3d3d"
+    tooltip: White

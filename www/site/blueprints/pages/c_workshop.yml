@@ -1,0 +1,274 @@
+# Template for workshops that contain workshop relevant data as well as exhibits, exhibitions and curators pages
+
+title: Workshop
+icon: sitemap
+
+status:
+  extends: fields/statestwo
+
+addFields:
+  title:
+    label: Title
+    type: text
+    required: true
+    icon: title
+  tempslug:
+    label: URL
+    type: slug
+    required: true
+    sync: title
+
+tabs:
+  # tab exhibitions and exhibits
+  exhibits:
+    label: Sammlung
+    icon: dashboard
+    columns:
+      - width: 3/4
+        sections:
+          stats: sections/statsWorkshop
+          exhibitions:
+            extends: sections/pages
+            headline: Ausstellungen
+            layout: table
+            info: false
+            columns:
+              impulse:
+                label: Thema
+                type: text
+                value: "{{page.impulse.mapValueToLabel}}"
+              slug:
+                label: URL
+                type: text
+                value: "{{page.slug}}"
+              linked_exhibits:
+                label: Objekte
+                type: text
+                width: 1/9
+                value: "{{page.getLinkedTotalExhibitsCount}}"
+              linked_users:
+                label: Teiln.
+                type: text
+                width: 1/9
+                value: "{{page.getLinkedUsersCount}}"
+              complete:
+                label: Status
+                type: html
+                width: 1/9
+                value: <div class="isDone isDone-{{page.complete}}">Vollständig</div>
+            template:
+              - c_exhibition
+          exhibits:
+            extends: sections/pages
+            headline: Exponate
+            layout: table
+            image:
+              query: page.exhibit_preview.toFile
+              cover: true
+              ratio: 1/1
+              back: white
+
+            info: false
+            columns:
+              impulse:
+                label: Thema
+                type: text
+                value: "{{page.impulse.mapValueToLabel}}"
+              slug:
+                label: URL
+                type: text
+                value: "{{page.slug}}"
+              linked_user:
+                label: Teilnehmer / ID
+                type: html
+                value: "{{page.linked_user.toPageOrDraft.title}} / <span class='meta'>{{page.linked_user.toPageOrDraft.slug}}</span>"
+              complete:
+                label: Status
+                type: html
+                width: 1/9
+                value: <div class="isDone isDone-{{page.complete}}">Vollständig</div>
+            template:
+              - c_exhibit
+      - width: 1/4
+        sections:
+          exhibitfields:
+            type: fields
+            fields:
+              institution:
+                label: Institution / Kurs
+                type: text
+                required: true
+              line1:
+                type: line
+
+              complete:
+                label: Abgegeben
+                type: toggle
+                width: 1/3
+                text:
+                  - Nicht fertig
+                  - Fertig
+                help: Workshop wurde als fertig markiert
+              mainuser:
+                label: Gruppenkonto
+                type: users
+                multiple: false
+              comment:
+                type: textarea
+                label: Kommentar
+                width: 1/3
+                buttons: false
+                help: Kommentar des Leiters
+              clean:
+                type: toggle
+                label: Bereinigt
+                width: 1/3
+                text:
+                  - Nicht aufgeräumt
+                  - Aufgeräumt
+                help: Workshop wurde vom System als bereinigt markiert
+              infojanitor:
+                type: info
+                label: 3D Modelle
+                text: Verlinkt nachträglich Objekte und 3D Dateien. Bereits verlinkte Objekte/Modelle werden erneut verlinkt.
+                theme: none
+              janitorworkshopassetlinking:
+                type: janitor
+                label: 3D Modelle verlinken
+                generator: false
+                width: 1/3
+                progress: Bitte warten ...
+                job: workshopassetlinking
+
+              line2:
+                type: line
+              materials:
+                label: Materialien
+                type: pages
+                query: site.children.filterBy('intendedTemplate', 'materials').children.filterBy('intendedTemplate', 'material')
+
+  # tab users
+  users:
+    label: Teilnehmer
+    icon: users
+    columns:
+      - width: 2/3
+        sections:
+          c_leaders:
+            extends: sections/pages
+            headline: Leiter
+            info: false
+            layout: table
+            sortBy: dateCreatedEpoch desc
+            columns:
+              slug:
+                label: Konto ID
+                type: text
+                value: "{{page.slug}}"
+              datecreatedepoch:
+                label: Angelegt
+                type: text
+                width: 1/8
+                value: "{{ page.dateCreatedEpoch.epoch2date('yy.MM.dd') }}"
+            template:
+              - c_curator_leader
+          c_users:
+            extends: sections/pages
+            headline: Teilnehmer
+            info: false
+            layout: table
+            sortBy: dateCreatedEpoch desc
+            columns:
+              slug:
+                label: Konto ID
+                type: text
+                width: 1/12
+                value: "{{page.slug}}"
+              linked_exhibit:
+                label: Objekt
+                type: text
+                value: "{{page.linked_exhibit.toPageOrDraft.title}}"
+              linked_exhibition:
+                label: Ausstellung
+                type: text
+                value: "{{page.linked_exhibition.toPageOrDraft.title}}"
+              datecreatedepoch:
+                label: Angelegt
+                type: text
+                width: 1/8
+                value: "{{ page.dateCreatedEpoch.epoch2date('yy.MM.dd') }}"
+              complete:
+                label: Status
+                type: html
+                width: 1/9
+                value: <div class="isDone isDone-{{page.complete}}">Vollständig</div>
+            template:
+              - c_curator
+
+          # data_usernames:
+          #   extends: sections/pages
+          #   headline: Benutzernamen
+          #   type: pages
+          #   templates:
+          #     - d_usernames
+          db:
+            type: fields
+            fields:
+              data_usernames_page:
+                type: pages
+                label: Aktive "Benutzernamen"
+                disabled: true
+                max: 1
+                query: page.children.filterBy('intendedTemplate', 'd_usernames')
+
+      - width: 1/3
+        sections:
+          logics:
+            type: fields
+            fields:
+              janitor:
+                type: janitor
+                label: Generieren
+                generator: true
+                reload: true
+                width: 1/2
+                progress: Bitte warten ...
+                job: creategroupusers
+              pdfbtn:
+                type: button
+                label: PDF Liste
+                text: Ansehen # Button text
+                url: "{{ page.url }}/teilnehmerliste"
+                icon: share
+                open: true # open URL in new tab
+
+  # previewimgs tab
+  previewimgs:
+    extends: tabs/previewimgTab
+
+  # files tab
+  filestab:
+    extends: tabs/modelsTab
+
+  # misc
+  misc:
+    label: Andere Einst.
+    icon: settings
+    sections:
+      psettings:
+        type: fields
+        fields:
+          settingslabel:
+            type: headline
+            label: Sitemap
+          sitemap:
+            extends: fields/sitemap
+            width: 1/4
+            default: no
+            help: Workshops sollten in der Regel nicht in der Sitemap erscheinen.
+            text:
+              - "Übersprungen"
+              - "Hinzugefügt"
+      misc:
+        type: fields
+        extends: sections/miscInfo

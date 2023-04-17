@@ -1,0 +1,22 @@
+name: field.blocks.card.name
+icon: image
+fields: 
+  link:
+    type: url
+    label: URL
+  image:
+    label: Image
+    type: files
+    uploads: image
+  heading:
+    label: Heading
+    inline: true
+    marks: false
+    type: writer
+    placeholder: Card headline...
+  text:
+    label: Text
+    type: writer
+    marks: false
+    inline: true
+    placeholder: Text...

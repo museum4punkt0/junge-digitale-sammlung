@@ -1,0 +1,44 @@
+title: Benutzernamen
+icon: users
+
+options:
+  sitemap: hide
+  
+status:
+  extends: fields/statestwo
+
+sections:
+  content:
+    type: fields
+    fields:
+      # database users
+      h_usersdb:
+        label: Usernames
+        type: headline
+      username_db:
+        label: Username Datenbank
+        type: structure
+        width: 1/2
+        sortable: false
+        disabled: false
+        sortBy: index
+        fields:
+          index:
+            type: text
+            label: Index
+            disabled: true
+          index_structure:
+            type: structure
+            label: Einträge
+            disabled: false
+            sortable: false
+            sortBy: username
+            fields:
+              username:
+                label: Username
+                type: text
+                disabled: false
+              user:
+                label: User
+                type: pages
+                disabled: false

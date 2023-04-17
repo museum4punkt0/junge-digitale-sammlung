@@ -1,0 +1,147 @@
+title: Ausstellung
+icon: dashboard
+
+status:
+  extends: fields/statestwo
+
+addFields:
+  title:
+    label: Title
+    type: text
+    required: true
+    icon: title
+  tempslug:
+    label: URL
+    type: slug
+    required: true
+    sync: title
+
+tabs:
+  #exhibits
+  exhibits:
+    label: Information
+    icon: layers
+    columns:
+      - width: 2/3
+        sections:
+          frontendcontent:
+            type: fields
+            fields:
+              impulse:
+                label: Thema
+                type: select
+                width: 1/3
+                options: query
+                query:
+                  fetch: site.data_populators_pick.toPage.impulse.toStructure
+                  text: "{{ structureItem.desc }}"
+                  value: "{{ structureItem.id }}"
+              exhibitionintro:
+                label: Einführungstext
+                type: textarea
+                buttons: false
+              user1:
+                label: Benutzer 1
+                type: pages
+                width: 1/2
+                max: 1
+                query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_curator')
+                help: "Objekt: {{page.user1.toPageOrDraft.linked_exhibit.toPageOrDraft.title}} / {{page.user1.toPageOrDraft.linked_exhibit.toPageOrDraft.impulse}}"
+              exhibit1text:
+                label: Objekt 1 Text
+                type: textarea
+                width: 1/2
+                buttons: false
+              user2:
+                label: Benutzer 2
+                type: pages
+                width: 1/2
+                max: 1
+                query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_curator')
+                help: "Objekt: {{page.user2.toPageOrDraft.linked_exhibit.toPageOrDraft.title}} / {{page.user2.toPageOrDraft.linked_exhibit.toPageOrDraft.impulse}}"
+              exhibit2text:
+                label: Objekt 2 Text
+                type: textarea
+                width: 1/2
+                buttons: false
+              user3:
+                label: Benutzer 3
+                type: pages
+                width: 1/2
+                max: 1
+                query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_curator')
+                help: "Objekt: {{page.user3.toPageOrDraft.linked_exhibit.toPageOrDraft.title}} / {{page.user3.toPageOrDraft.linked_exhibit.toPageOrDraft.impulse}}"
+              exhibit3text:
+                label: Objekt 3 Text
+                type: textarea
+                width: 1/2
+                buttons: false
+              user4:
+                label: Benutzer 4
+                type: pages
+                width: 1/2
+                max: 1
+                query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_curator')
+                help: "Objekt: {{page.user4.toPageOrDraft.linked_exhibit.toPageOrDraft.title}} / {{page.user4.toPageOrDraft.linked_exhibit.toPageOrDraft.impulse}}"
+              exhibit4text:
+                label: Objekt 4 Text
+                type: textarea
+                width: 1/2
+                buttons: false
+              user5:
+                label: Benutzer 5
+                type: pages
+                width: 1/2
+                max: 1
+                query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_curator')
+                help: "Objekt: {{page.user5.toPageOrDraft.linked_exhibit.toPageOrDraft.title}} / {{page.user5.toPageOrDraft.linked_exhibit.toPageOrDraft.impulse}}"
+              exhibit5text:
+                label: Objekt 5 Text
+                type: textarea
+                width: 1/2
+                buttons: false
+
+      - width: 1/3
+        sections:
+          relations:
+            type: fields
+            fields:
+              complete:
+                label: Vollständig
+                type: toggle
+                text:
+                  - Nicht fertig
+                  - Fertig
+                help: Pflichtfelder wurden eingegeben
+              comments:
+                label: Fehlende Daten
+                type: info
+                text: "{{page.missinginfo.brToN}}"
+                theme: negative
+                whenQuery: missinginfo
+              comments1:
+                label: Teilnehmer/Objekte
+                type: info
+                text: "{{page.userMsg.brToN}}"
+                theme: negative
+                whenQuery: userMsg
+              comments2:
+                label: Themen
+                type: info
+                text: "{{page.exhibitsMsg.brToN}}"
+                theme: negative
+                whenQuery: exhibitsMsg
+
+
+  # gallery tab
+  gallery:
+    extends: tabs/galleryTab
+
+  # misc
+  misc:
+    extends: tabs/miscTab
+
+  # metaknight
+  seotab:
+    extends: seo
+    label: SEO

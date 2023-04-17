@@ -1,0 +1,121 @@
+<?php
+
+return function ($kirby, $page, $site) {
+
+    $lockactionstatus = "";
+
+    /***
+     * 
+     * LOCK : For Exhibition pages
+     * 
+     */
+
+    if ($kirby->request()->is('GET') && get('lockMe')) {
+
+        $lockMe = get('lockMe');
+
+        if ($lockMe) {
+            $lockMePage = $page->parent()->findPageOrDraft($lockMe);
+
+            if ($lockMePage) {
+                if ($lockMePage->checkBlock($page->slug())) {
+                    $lockactionstatus = "already_locked";
+                    //lockedBy = $lockMePage->lock()->getCurator();
+                    $lock = $lockMePage->lock();
+                    //$overlayCode = snippet('forms_blocks/overlay-blocked', ['lockedBy' => $lockedBy], true);
+                    $lockedBy = $lock->getInfos()['curator'];
+                    $overlayCode = snippet('forms_blocks/overlay-blocked', ['lock' => $lock, 'lockMe' => $lockMe, 'page' => $page], true);
+                } else {
+                    $lockMePage->lockMe($page);
+                    $lockactionstatus = "PAGE LOCKED " . $lockMePage->title();
+                }
+            } else {
+                $lockactionstatus = "page not found";
+            }
+        }
+    }
+
+    /***
+     * 
+     * UNLOCK : For Exhibition pages
+     * 
+     */
+    if ($kirby->request()->is('GET') && get('unlockMe')) {
+
+        $unlockMe = get('unlockMe');
+        $blockedBy = get('blockedBy');
+
+        if ($unlockMe) {
+            $unlockMePage = $page->parent()->findPageOrDraft($unlockMe);
+
+            if ($unlockMePage) {
+                if ($unlockMePage->lock()->getCurator() == $page->slug()) {
+                    //if ($blockedBy && $blockedBy == $page->slug()) {
+                    $unlockMePage->unlockMe();
+                    $lockactionstatus = "PAGE UNLOCKED " . $unlockMePage->title();
+                } else if ($blockedBy && $blockedBy != $page->slug()) {
+                    $lockactionstatus = "was_already_locked";
+                    $lockedBy = $blockedBy;
+                }
+            } else {
+                $lockactionstatus = "page not found";
+            }
+        }
+    }
+
+    if ($kirby->request()->is('GET') && get('pageID')) { // Validation for impulse
+        $impulse = get('impulseCheck');
+        $pageID = get('pageID'); // exhibition
+
+        $exhibit = $page->parent()->findPageOrDraft($pageID);
+
+        if ($exhibit) {
+            if ($user = $exhibit->linked_user()->toPageOrDraft()) {
+                if ($exhibition = $user->linked_exhibition()->toPageOrDraft()) {
+                    // exhibition found, check if impulses match
+
+                    if ($impulse == $exhibition->impulse()->value()) {
+                        $impulseResult = 'result_success';
+                    } else {
+                        $impulseResult = 'result_error';
+                    }
+                }
+                // UUID not found, object not part of any exhibition
+                else {
+                    $impulseResult = 'UUID keine Ausstellung vorhanden';
+                    $impulseResult = 'no_exhibition';
+                }
+            }
+            // UUID not found, object not part of any exhibition
+            else {
+                $impulseResult = 'UUID Benutzer nicht gefunden';
+            }
+        }
+        // UUID not found, no exhibit found
+        else {
+            $impulseResult = 'UUID Objekt nicht gefunden';
+        }
+    }
+
+
+    if ($kirby->request()->is('GET') && get('exhibitionID')) { // Validation for impulse for curator list in leader
+        $curatorID = get('curatorID');
+        $exhibitionID = get('exhibitionID');
+
+        $exhibition = $page->parent()->findPageOrDraft($exhibitionID);
+
+        $impulseResult =  matchImpulses($exhibition, $curatorID);
+    }
+
+    $dataPage = $site->data_fieldinfos_pick()->toPage();
+
+    return [
+        //'relatedExhibits' => $options,
+        'lockactionstatus' => $lockactionstatus ?? null,
+        'lockedBy' => $lockedBy ?? null,
+        'impulseResult' => $impulseResult ?? null,
+        'overlayCode' => $overlayCode ?? null,
+        'dataPage' => $dataPage ?? null,
+        'json' => [],
+    ];
+};

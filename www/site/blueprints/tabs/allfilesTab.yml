@@ -1,0 +1,12 @@
+label: All Files
+icon: images
+sections:
+  allfiles:
+    headline: All files - Check if all your images have captions
+    type: filesdisplay
+    help: Check if all your images have captions.
+    layout: cards
+    size: tiny
+    limit: 35
+    info: "{{ file.caption }}"
+    query: site.index.files

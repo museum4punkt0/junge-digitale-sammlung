@@ -1,0 +1,1 @@
+<button id="btt" class="hovers" title="Go to top"><img src="<?= $kirby->url('assets') ?>/images/backtotop.svg" alt="back to top"> </button> 

@@ -1,0 +1,16 @@
+type: stats
+# Available size options: small, medium, large, huge. Default is large
+size: huge
+reports:
+  - label: Workshop-Räume
+    value: "{{site.children.filterBy('intendedTemplate','c_workshop').count}}"
+    info: Aktiv
+    theme: positive
+  - label: Ausstellungen
+    value: "{{site.children.filterBy('intendedTemplate','c_workshop').children.filterBy('intendedTemplate','c_exhibition').count}}"
+    info: Aktiv
+    theme: positive
+  - label: Objekte
+    value:  "{{site.children.filterBy('intendedTemplate','c_workshop').children.filterBy('intendedTemplate','c_exhibit').count}}"
+    info: Aktiv
+    theme: positive

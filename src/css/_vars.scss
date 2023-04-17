@@ -1,0 +1,114 @@
+// BOOTSTRAP OVERRIDE
+
+//f0f1f3
+
+$c-color-1: #f0f1f2;
+$c-color-2: #e6ecf2;
+$c-color-3: #dee9f4;
+$c-color-4: #d4e5f2;
+$c-color-dropdown-selected: #C9D1FF;
+$c-color-5: #aab5f8;
+$c-color-6: #798af2;
+$c-gradient-start: #6a7ef9;
+$c-color-7: #5a71ff; // light main
+$c-color-8: #4b5ed1; // main
+$c-color-9: #7b84b7;
+$c-color-10: #283583; // dark main
+$c-color-11: #434343;
+
+$blue: $c-color-8;
+$darkblue: $c-color-10;
+$lightdetail: $c-color-1;
+$red: #d45b67;
+$warning: #fd7e14;
+$info: $c-color-5;
+
+//$secondary: #4b5ed1;
+
+$ui_shadow: 1px 2px 5px rgba(#333, $alpha: 0.25);
+
+$transition-collapse: height .05s;
+
+$border-radius: 0rem;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 1025px,
+  xl: 1200px,
+  laptop: 1440px,
+  exhibition_width: 1540px,
+  xxl: 1680px,
+  fullhd: 1920px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px,
+  xxl: 1600px,  
+);
+
+$custom-container-max-size : 1024px;
+
+$modal-md: 600px;
+$modal-lg: 1000px;
+$modal-xl: 1300px;
+
+$font-family-sans-serif: "WeissenhofGrotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+  "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+  "Noto Color Emoji" !default;
+$font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-size-base: 1.25rem;
+//$line-height-base: 1.3;
+$h1-font-size: $font-size-base * 3 !default;
+$h2-font-size: $font-size-base * 1.5 !default;
+$h3-font-size: $font-size-base * 1.15 !default;
+
+$tooltip-font-size: 0.9rem;
+
+// CSS VARS
+:root {
+  /* colors*/
+  --c-blue: #{$blue};
+  --c-darkblue: #{$darkblue};
+  --c-lightdetail: #{$lightdetail};
+  --c-color-1: #{$c-color-1};
+  --c-color-2: #{$c-color-2};
+  --c-color-3: #{$c-color-3};
+  --c-color-4: #{$c-color-4};
+  --c-color-dropdown-selected: #{$c-color-dropdown-selected};
+  --c-color-5: #{$c-color-5};
+  --c-color-6: #{$c-color-6};
+  --c-color-gradient-start: #{$c-gradient-start};
+  --c-color-7: #{$c-color-7};
+  --c-color-8: #{$c-color-8};
+  --c-color-9: #{$c-color-9};
+  --c-color-10: #{$c-color-10};
+  --c-color-11: #{$c-color-11};
+
+  --filter-bg: #{$c-color-2};
+  --filter-options-bg: #{$c-color-4};
+  --filter-font-color: #{$c-color-7};
+
+  --margin-sm: 30px;
+  --margin-md: calc(2 * var(--margin-sm));
+  --margin-lg: calc(2 * var(--margin-md));
+
+  --custom-container-max-size: $custom-container-max-size;
+
+  --body-bg: var(--c-lightdetail);
+  --body-font-color: var(--c-darkblue);
+  --primary-color: var(--c-darkblue);
+  --secondary-color: var(--c-blue);
+  --letter-spacing: 0.5px;
+  --ui-shadow: #{$ui_shadow};
+
+  --bs-body-line-height: 1.5 !important;
+}
+
+body{
+  --displ-bot-hover-els: -3rem;
+}

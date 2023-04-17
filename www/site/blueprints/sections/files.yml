@@ -1,0 +1,11 @@
+  type: files
+  sticky: true
+  
+  layout: cards
+
+  info: "{{ file.caption }}"
+  text: "{{ file.filename }}"
+  empty: Bitte Dateien hochladen
+  
+
+ 

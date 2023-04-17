@@ -1,0 +1,253 @@
+title: Exponat
+icon: box
+
+status:
+  extends: fields/statestwo
+
+addFields:
+  title:
+    label: Title
+    type: text
+    required: true
+    icon: title
+  tempslug:
+    label: URL
+    type: slug
+    required: true
+    sync: title
+
+tabs:
+  # content tab
+  content:
+    label: Content
+    icon: layers
+    sections:
+      information:
+        type: fields
+        fields:
+          contentlabel:
+            type: headline
+            label: Allgemein
+          linked_user:
+            type: pages
+            label: Inhaber
+            multiple: false
+            width: 1/3
+            query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_curator')
+          complete:
+            label: Vollständig
+            type: toggle
+            width: 1/3
+            text:
+              - Nicht fertig
+              - Fertig
+            help: Pflichtfelder wurden eingegeben
+          comments:
+            label: Kommentare
+            type: info
+            text: "{{page.missinginfo.brToN}}"
+            theme: negative
+            whenQuery: missinginfo
+            width: 1/3
+          gap1:
+            type: gap
+            width: 1/3
+            whenQuery: "missinginfo ? false : true"
+
+          museum_preview:
+            label: Vorschaubild Museum
+            type: files
+            uploads: false
+            width: 1/4
+            max: 1
+
+          exhibit_preview:
+            label: Vorschaubild
+            type: files
+            uploads: false
+            width: 1/4
+            max: 1
+            query: page.getPreviewImages
+          digital_asset:
+            label: Mediendatei
+            type: files
+            uploads: false
+            width: 1/4
+            max: 1
+            whenQuery: type = 2
+          threed_model:
+            label: 3D-Objekt
+            type: files
+            uploads: false
+            width: 1/4 
+            max: 1
+            whenQuery: type = 0  
+            query: page.getModels
+          threed_model_light:
+            label: Belichtung Objekt
+            type: range
+            width: 1/4
+            default: 1
+            step: 0.1
+            min: 1
+            max: 10
+            whenQuery: threed_model ::count() >= 1 && type = 0  
+          threed_model_size:
+            label: Darstellung "Kompakt"
+            type: toggle
+            width: 1/4
+            text:
+             - 'Nein'
+             - 'Ja'
+            help: Reduziert die Größe im 3D Viewer von Objekte, die sehr groß wirken.
+            whenQuery: threed_model ::count() >= 1 && type = 0  
+
+      frontendcontent:
+        type: fields
+        fields:
+          impulse:
+            label: Thema
+            type: select
+            width: 1/3
+            options: query
+            query:
+              fetch: site.data_populators_pick.toPage.impulse.toStructure
+              text: "{{ structureItem.desc }}"
+              value: "{{ structureItem.id }}"
+          type:
+            label: Objekttyp
+            type: select
+            width: 1/3
+            options: query
+            query:
+              fetch: site.data_populators_pick.toPage.type.toStructure
+              text: "{{ structureItem.desc }}"
+              value: "{{ structureItem.id }}"
+          classification:
+            label: Klassifikation
+            type: multiselect
+            width: 1/3
+            options: query
+            query:
+              fetch: site.data_populators_pick.toPage.classification.multiselectGroupPanel
+              text: "{{ item.desc }}"
+              value: "{{ item.id }}"
+          description:
+            label: Objektbeschreibung
+            type: textarea
+            buttons: false
+
+          made_when:
+            label: Entstehungszeit
+            type: text
+            width: 1/2
+          historical_background:
+            label: Historischer, kultureller Hintergrund
+            type: textarea
+            buttons: false
+            width: 1/2
+          personal_relation:
+            label: Objektstory
+            type: textarea
+            buttons: false
+            help: (thematischer und persönlicher Bezug)
+
+          ## embeded objects ##
+          h_embeds:
+            type: headline
+            label: Embedded Objekte
+            whenQuery: type = 1
+          # widgettype:
+          #   label: Widget Typ
+          #   type: select
+          #   width: 1/3
+          #   whenQuery: type = 1
+          #   options: query
+          #   query:
+          #     fetch: site.data_populators_pick.toPage.widgettype.toStructure
+          #     text: "{{ structureItem.desc }}"
+          #     value: "{{ structureItem.id }}"
+          embed_url:
+            label: Embed URL
+            type: embed
+            width: 1/3
+            whenQuery: type = 1
+
+          ## scanned objects ##
+          h_scans:
+            type: headline
+            label: Gescannte Objekte
+            whenQuery: type = 0
+          material:
+            label: Material
+            type: text
+            width: 1/3
+            whenQuery: type = 0
+          dimensions:
+            label: Maße
+            type: text
+            after: cm
+            width: 1/3
+            whenQuery: type = 0
+          weight:
+            label: Gewicht
+            type: text
+            after: g
+            width: 1/3
+            whenQuery: type = 0
+          scan_date:
+            label: Aufnahmedatum Digitalisat
+            type: date
+            width: 1/3
+            whenQuery: type = 0
+          scan_method:
+            label: Digitalisierungsmethode
+            type: select
+            width: 1/3
+            whenQuery: type = 0
+            options: query
+            query:
+              fetch: site.data_populators_pick.toPage.scan_method.toStructure
+              text: "{{ structureItem.desc }}"
+              value: "{{ structureItem.id }}"
+          scan_device:
+            label: Digitalisierungsgerät
+            type: select
+            width: 1/3
+            whenQuery: type = 0
+            options: query
+            query:
+              fetch: site.data_populators_pick.toPage.scan_device.toStructure
+              text: "{{ structureItem.desc }}"
+              value: "{{ structureItem.id }}"
+          scan_software:
+            label: Software, Version
+            type: text
+            width: 1/2
+            whenQuery: type = 0
+          scan_updated:
+            label: Bearbeitung des Digitalisates
+            type: text
+            width: 1/2
+            whenQuery: type = 0
+
+  # gallery tab
+  gallery:
+    extends: tabs/galleryTab
+
+  # files tab
+  filestab:
+    extends: tabs/modelsTab
+
+  # asset tab
+  assetstab:
+    extends: tabs/assetsTab
+
+  # misc
+  misc:
+    extends: tabs/miscTab
+
+  # metaknight
+  seotab:
+    extends: seo
+    label: SEO

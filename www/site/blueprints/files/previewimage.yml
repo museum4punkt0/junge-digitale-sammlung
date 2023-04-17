@@ -1,0 +1,23 @@
+title: Preview-Bild
+
+accept:
+  mime: image/*
+  type: image
+  #extension: jpg, png
+  maxsize: 6000000
+
+fields:
+  linkedmodel:
+    label: 3D Model
+    type: files
+    uploads: false
+    query: file.page.getModels
+  alt:
+    label: Alternative Text
+    type: text
+    width: 1/2
+    help: Appears when image can not get loaded
+  caption:
+    label: Caption
+    type: textarea
+    width: 1/2

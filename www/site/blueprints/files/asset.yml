@@ -1,0 +1,5 @@
+title: Mediendatei
+
+accept:
+  type: image, video
+  maxsize: 80000000 #80MB

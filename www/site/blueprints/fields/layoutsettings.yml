@@ -1,0 +1,27 @@
+tabs:
+  design:
+    label: Design & Layout
+    fields:
+      sectiontype:
+        label: Section type
+        type: select
+        default: sectionclosed
+        translate: true
+        help: Depending on the type, the section will have spacing top and bottom (Closed Section), only top (Section Start), only bottom (Section End) or no psacing at all (In-Between). With this you can dock sections into one another that are supposed to look like if they are one because of the background colour.
+        options:
+          sectionclosed: Closed Section
+          sectionstart: Section Start
+          sectionend: Section End
+          sectionmid: Section In-Between
+      valign:
+        type: select
+        label: Vertical Align
+        default: va_top
+        translate: true
+        options: 
+          va_top: Top
+          va_center: Center
+          va_bot: Bottom
+
+
+

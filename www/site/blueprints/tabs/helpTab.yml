@@ -1,0 +1,12 @@
+label: Help
+icon: smile
+
+fields: 
+  infoContact:
+    label: 
+      de: Support
+      en: Support
+    type: info
+    text: >
+        For technical support please contact Santiago Duque:<br>
+        <a href="mailto:sd@squareclouds.de">sd@squareclouds.de</a>

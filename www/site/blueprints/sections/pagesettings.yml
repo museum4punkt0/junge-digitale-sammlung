@@ -1,0 +1,13 @@
+type: fields
+fields:
+  settingslabel:
+    type: headline
+    label: Sitemap
+  sitemap:
+    extends: fields/sitemap
+    width: 1/4
+    help: Das Hinzufügen von Inhalten zur Sitemap verbessert das Suchmaschinenranking.
+    text:
+     - 'Übersprungen'
+     - 'Hinzugefügt'
+

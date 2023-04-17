@@ -1,0 +1,46 @@
+type: fields
+fields:
+  h_page_info:
+    label: Protokoll
+    type: headline
+  date_created_info:
+    type: info
+    label: Erstellungsdatum
+    width: 1/3
+    theme: none
+    text: "{{ page.dateCreatedEpoch.epoch2date }}"
+  creationuser:
+    type: info
+    label: Von Benutzer angelegt
+    width: 1/3
+    theme: none
+    text: "{{ page.createdByUser }}"
+  date_modified_info:
+    type: info
+    label: Letzte Aktualisierung
+    width: 1/3
+    theme: none
+    text: "{{ page.dateModifiedEpoch.epoch2date }}"
+  lastuser:
+    type: info
+    label: Letzter Benutzer
+    width: 1/3
+    theme: none
+    text: "{{ page.modifiedByUser }}"
+  updateLogs:
+    type: structure
+    label: Änderungshistorie
+    sortable: false
+    sortBy: time desc
+    translate: false
+    disabled: true
+    limit: 30
+    fields:
+      user:
+        type: text
+        label: User
+        disabled: true
+      time:
+        type: text
+        label: Zeit
+        disabled: true

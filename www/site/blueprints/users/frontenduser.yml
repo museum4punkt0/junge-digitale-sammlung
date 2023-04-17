@@ -1,0 +1,60 @@
+title: Gruppenkonto
+image:
+  back: blue-200
+  icon: clock
+permissions:
+  access:
+    panel: false
+columns:
+  left:
+    width: 1/2
+    fields:
+      logindata:
+        label: Login Information
+        type: headline
+      userid:
+        label: Username
+        type: info
+        text: "{{user.name}}"
+        theme: none
+      userpassword:
+        label: Passwort
+        type: info
+        theme: none
+        text: "Kann nicht angezeigt werden. Falls es nicht dokumentiert wurde, bitte Passwort neu anlegen. (Einstellungen > Passwort ändern)"
+      useridmail:
+        label: Generierte Email ID (wird nur vom System verwendet)
+        type: info
+        text: "{{user.email}}"
+        theme: none
+      
+  right:
+    width: 1/2
+    fields:
+      infos:
+        label: Eigenschaften
+        type: headline
+      active:
+        label : Aktiv
+        type: toggle
+        width: 1/3
+        default: yes
+        text:
+          - Nein
+          - Ja
+      expiration:
+        label: Verfallsdatum
+        type: date
+        width: 2/3
+        display: DD.MM.YYYY
+        default: today + 30 day
+      description:
+        label: Kommentar
+        type: text
+        help: z.B. Institution, etc
+      linked_workshop:
+        label: Workshop
+        type: pages
+        subpages: false
+        multiple: false
+        query: site.childrenAndDrafts.filterBy('intendedTemplate','c_workshop')

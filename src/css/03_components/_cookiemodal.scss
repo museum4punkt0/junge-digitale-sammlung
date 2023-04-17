@@ -1,0 +1,50 @@
+.cookie-modal__content {
+    background-color: var(--body-bg) !important;
+}
+.cookie-modal__check svg {
+  stroke: var(--body-bg) !important;
+}
+#edit-cookies {
+    &.btn {
+        position: fixed;
+        bottom: calc(var(--displ-bot-hover-els) + 4.5rem);
+        right: 1.4rem;
+        z-index: 99;
+        font-size: 0.8rem;
+        color: #fff;
+        border: 1px solid var(--primary-color);
+        border-radius: 50rem;
+        background-color: var(--primary-color);
+        padding: 0.1rem;
+        min-height: 28px;
+        min-width: 28px;
+        cursor: pointer;
+        border-bottom: none;
+        @include media-breakpoint-up(lg) {
+            bottom: 0;
+            min-height: 0;
+            min-width: 0;
+            right: 1.2rem;
+            border-radius: 0;
+        }
+    }
+}
+.cookie-modal__button {
+    transition: all 0.15s;
+    border: 2px solid var(--primary-color) !important;
+    color: var(--primary-color) !important;
+
+    &:hover {
+        border: 2px solid var(--secondary-color) !important;
+        background-color: var(--secondary-color) !important;
+        color: #fff !important;
+    }
+
+    &.primary {
+        background-color: var(--primary-color) !important;
+        color: #fff !important;
+        &:hover {
+            background-color: var(--secondary-color) !important;
+        }
+    }
+}

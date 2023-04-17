@@ -1,0 +1,30 @@
+/* .container.custom{
+    width: 100%;
+    max-width: 1920px;
+    padding-left: 0;
+    padding-right: 0;
+} */
+
+.container {
+    .text-white {
+        color: #fff;
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        a,
+        a:visited,
+        a:link {
+            color: #fff;
+        }
+
+        a{
+            text-decoration: underline;
+        }
+        a:hover{
+            text-decoration: none;
+        }
+    }
+}

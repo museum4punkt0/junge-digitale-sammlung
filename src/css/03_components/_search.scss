@@ -1,0 +1,77 @@
+.autoComplete_wrapper {
+  display: inline-block;
+  position: relative;
+}
+
+.autoComplete_wrapper > input {
+  padding-left: 10px;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  outline: 0;
+  min-height: 10px;
+  max-height: 130px;
+}
+
+.autoComplete_wrapper > input::placeholder {
+  color: rgba(123, 123, 123, 0.5);
+  transition: all 0.3s ease;
+}
+
+.autoComplete_wrapper > ul {
+  position: absolute;
+  max-height: 226px;
+  overflow-y: auto;
+  top: 100%;
+  left: 0;
+  right: 0;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+  background-color: var(--filter-bg); 
+  z-index: 1000;
+  outline: none;
+  box-shadow: var(--ui-shadow);
+}
+
+.autoComplete_wrapper > ul > .list-group-item {
+  padding: 0.5rem;
+  list-style: none;
+  text-align: left;
+  font-size: 16px;
+  color: var(--filter-font-color);
+  font-weight: bold;
+  transition: all 0.1s ease-in-out;
+  background-color: transparent;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: all 0.2s ease;
+}
+
+.autoComplete_wrapper > ul > .list-group-item::selection {
+  color: rgba(#ffffff, 0);
+  background-color: rgba(#ffffff, 0);
+}
+
+.autoComplete_wrapper > ul > .list-group-item:hover {
+  cursor: pointer;
+  background-color: var(--c-color-4);
+  //color: #fff;
+}
+
+.autoComplete_wrapper > ul > .list-group-item mark {
+  background-color: transparent;
+  color: rgba(255, 122, 122, 1);
+  font-weight: bold;
+}
+
+.autoComplete_wrapper > ul > .list-group-item mark::selection {
+  color: rgba(#ffffff, 0);
+  background-color: rgba(#ffffff, 0);
+}
+
+.autoComplete_wrapper > ul > .list-group-item[aria-selected="true"] {
+  background-color: var(--c-color-4);
+  //color: #fff;
+}
+

@@ -1,0 +1,15 @@
+label: Dateien
+icon: image
+
+sections:
+  infos:
+    type: fields
+    fields:
+      sizeinfo:
+        type: info
+        label: Information zur Dateigröße
+        text: Die gesamte Größe der generierten ZIP Datei darf 90MB nicht überschreiten. Die einzelnen Dateien sollten dementsprechend groß/klein sein.
+  files:
+    label: Dateien
+    extends: sections/files
+    template: files

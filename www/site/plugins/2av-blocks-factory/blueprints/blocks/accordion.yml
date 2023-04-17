@@ -1,0 +1,8 @@
+name: field.blocks.accordion.name
+icon: template
+fields:
+  elements:
+    label: Elements
+    type: blocks
+    fieldsets:
+      - accordion_element

@@ -1,0 +1,10 @@
+name: Custom HTML
+icon: code
+wysiwyg: true
+preview: code
+fields:
+  code:
+    label: Custom HTML
+    type: textarea
+    buttons: false
+    font: monospace

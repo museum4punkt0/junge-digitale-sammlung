@@ -1,0 +1,5 @@
+title: 3D Objekt
+
+accept:
+  mime: '*/*'
+  maxsize: 15000000

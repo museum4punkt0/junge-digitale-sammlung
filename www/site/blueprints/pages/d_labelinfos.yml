@@ -1,0 +1,435 @@
+title: Beschriftungen
+icon: list-bullet
+
+options:
+  sitemap: hide
+  
+status:
+  extends: fields/statestwo
+
+sections:
+  content:
+    type: fields
+    fields:
+      # user infos
+      h_user:
+        type: headline
+        label: Benutzer Felder
+
+      fullname_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Name"
+      fullname:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Name"
+
+      username_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Benutzername"
+      username:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Benutzername"
+
+      gender_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Geschlecht"
+      gender:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Geschlecht"
+
+      age_in_years_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Alter"
+      age_in_years:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Alter"
+
+      birthcountry_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Geburtsland"
+      birthcountry:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Geburtsland"
+
+      birthcountry_comment_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Geburtsland, Historische Länder"
+      birthcountry_comment:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Geburtsland, Historische Länder"
+
+      stations_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Lebensstationen"
+      stations:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Lebensstationen"
+
+      stations_comment_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Lebensstationen, Historische Länder"
+      stations_comment:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Lebensstationen, Historische Länder"
+
+      personaldrive_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Zugehörigkeiten"
+      personaldrive:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Zugehörigkeiten"
+
+      curator_state_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Bundesland"
+      curator_state:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Bundesland"
+
+      schoolclass_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Klassenstufe"
+      schoolclass:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Klassenstufe"
+
+      privacytext:
+        type: writer
+        width: 1/2
+        label: Text für "Datenschutz" Checkbox
+
+      # exhibit infos
+      h_exhibit:
+        type: headline
+        label: Objekt Felder
+
+      exhibitname_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Objektname"
+      exhibitname:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Objektname"
+
+      impulse_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Thema"
+      impulse:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Thema"
+
+      type_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Objekttyp"
+      type:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Objekttyp"
+
+      classification_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Klassifikation"
+      classification:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Klassifikation"
+
+      description_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Objektbeschreibung"
+      description:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Objektbeschreibung"
+
+      made_when_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Entstehungszeit"
+      made_when:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Entstehungszeit"
+
+      historical_background_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Historischer, kultureller Hintergrund"
+      historical_background:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Historischer, kultureller Hintergrund"
+
+      personal_relation_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Objektstory"
+      personal_relation:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Objektstory"
+
+      # digital embeds
+      # embed_files_label:
+      #   type: text
+      #   buttons: false
+      #   width: 1/4
+      #   label: Beschriftung für Upload der Dateitypen für "Digital Embed"
+      embed_files:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für Upload der Dateitypen für "Digital Embed"
+
+      embed_url_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Embed URL"
+      embed_url:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Embed URL"
+      
+      # phsyical exhibit
+      museum_preview_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für Upload der Dateitypen für "Vorschau für das Museum"
+      museum_preview:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für Upload der Dateitypen für "Vorschau für das Museum"
+
+      exhibit_preview_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für Auswahl des Vorschaubildes des Objekts
+      exhibit_preview:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für Auswahl des Vorschaubildes des Objekts
+
+      material_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Material"
+      material:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Material"
+
+      dimensions_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Maße"
+      dimensions:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Maße"
+
+      weight_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Gewicht"
+      weight:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Gewicht"
+
+      scan_date_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Aufnahmedatum Digitalisat"
+      scan_date:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Aufnahmedatum Digitalisat"
+
+      scan_method_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Digitalisierungsmethode"
+      scan_method:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Digitalisierungsmethode"
+
+      scan_device_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Digitalisierungsgerät"
+      scan_device:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Digitalisierungsgerät"
+
+      scan_software_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Software, Version"
+      scan_software:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Software, Version"
+
+      scan_updated_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Bearbeitung des Digitalisates"
+      scan_updated:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Bearbeitung des Digitalisates"
+
+      # born digital exhibit
+      borndigital_files_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für Upload der Dateitypen für "Digital Born"
+      borndigital_files:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für Upload der Dateitypen für "Digital Born"
+      # exhibit_preview_label:
+      #   type: text
+      #   buttons: false
+      #   width: 1/4
+      #   label: Beschriftung für Upload "Vorschaubild / Bild"
+      
+
+      # exhibition fields
+      h_exhibition:
+        type: headline
+        label: Ausstellung Felder
+
+      exhibitiontitle_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Ausstellungstitel"
+      exhibitiontitle:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Ausstellungstitel"
+      
+      exhibitionintro_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Einführungstext"
+      exhibitionintro:
+        type: textarea
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Einführungstext"
+
+      # overall info messages fields
+      h_infomsgs:
+        type: headline
+        label: Informationen
+      
+      cookies_infotext:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Hinweis für "Cookies sind inaktiv, bitte aktivieren"
+        help: Wenn der Besucher sich embed Inhalte anschauen will, Cookies aber inaktiv sind.
+
+      ws_send_main_txt:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Hinweis wenn Leiter das Workshop verschickt
+        help: z.B. "Sind Sie sicher, dass Sie die Daten dieses Workshops abschicken wollen?"
+

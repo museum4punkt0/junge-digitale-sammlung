@@ -1,0 +1,364 @@
+.btn {
+    line-height: 1.5;
+
+    @include media-breakpoint-down(sm) {
+        --bs-btn-padding-x: 0.5rem;
+        --bs-btn-padding-y: 0.25rem;
+    }
+}
+
+.empty {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 1em;
+    vertical-align: middle;
+    background-color: transparent;
+    width: 100%;
+    padding: 1rem;
+    aspect-ratio: 1/1;
+
+    svg {
+        width: 100%;
+        height: 100%;
+    }
+
+    //background-color: currentcolor;
+    //opacity: 0.5;
+}
+.dropdown-toggle {
+    --bs-btn-bg: var(--filter-bg);
+    --bs-btn-border-color: var(--filter-bg);
+    --bs-btn-hover-bg: var(--filter-bg);
+    --bs-btn-hover-border-color: var(--filter-bg);
+    --bs-btn-focus-shadow-rgb: 102, 118, 216;
+    --bs-btn-active-bg: var(--filter-bg);
+    --bs-btn-active-border-color: var(--filter-bg);
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-bg: var(--filter-bg);
+    --bs-btn-disabled-border-color: var(--filter-bg);
+
+    --bs-btn-color: var(--filter-font-color);
+    --bs-btn-hover-color: var(--filter-font-color);
+    --bs-btn-active-color: var(--filter-font-color);
+    --bs-btn-disabled-color: var(--filter-font-color);
+
+    --bs-btn-padding-x: 0.9rem;
+    --bs-btn-padding-y: 0.9rem;
+
+    font-weight: 600;
+    background-color: var(--filter-bg);
+}
+.input-wrapper {
+    padding: 0.5rem;
+    background-color: var(--filter-bg);
+    margin-top: 0;
+    position: relative;
+    --p-vert: 0.15rem;
+
+    * {
+        margin-top: 0;
+    }
+
+    label {
+        font-weight: 600;
+        color: var(--filter-font-color);
+        padding-top: calc(var(--p-vert) + 1px);
+        padding-bottom: calc(var(--p-vert) + 1px);
+        //margin: 1rem;
+    }
+
+    input,
+    button {
+        margin: 0;
+        padding-top: var(--p-vert);
+        padding-bottom: var(--p-vert);
+    }
+
+    &.inputSearch {
+        //width: 450px;
+    }
+}
+
+.dropdown-toggle,
+.input-wrapper {
+    @include media-breakpoint-down(md) {
+        font-size: 1rem;
+    }
+}
+
+.vscomp-ele {
+    .vscomp-arrow::after {
+        width: 0;
+        height: 0;
+        transform: none;
+        margin-top: 1px;
+        border-color: transparent;
+        border-bottom: 0;
+        border-left-width: 6px;
+        border-right-width: 6px;
+        border-top-width: 12px;
+        border-top: 11px solid var(--primary-color);
+
+        @include media-breakpoint-down(md) {
+            border-left-width: 4px;
+            border-right-width: 4px;
+            border-top-width: 8px;
+        }
+    }
+
+    .vscomp-clear-icon {
+        opacity: 0.5;
+        &::before,
+        &::after {
+            background-color: var(--primary-color);
+        }
+    }
+
+    &.pop-comp-active {
+        .vscomp-arrow::after {
+            transform: rotate(180deg);
+        }
+    }
+
+    .pop-comp-wrapper {
+        transform: translate3d(0px, 100%, 0px) !important;
+        bottom: -0.25rem;
+    }
+}
+
+/** frontend filters **/
+.filter__container {
+    .select-container {
+        position: relative;
+    }
+    .vscomp-ele {
+        color: var(--filter-font-color);
+        font-weight: 600;
+        letter-spacing: 0.05rem;
+        border: none;
+        display: block;
+
+        @include media-breakpoint-up(md) {
+            letter-spacing: 1px;
+        }
+
+        &.pop-comp-active {
+            .vscomp-toggle-button {
+                color: var(--c-color-4);
+                background-color: var(--c-color-2);
+            }
+        }
+
+        .vscomp-option,
+        .vscomp-toggle-button {
+            transition: color 100ms, background-color 100ms;
+            color: var(--filter-font-color);
+
+            &.focused,
+            &.selected {
+                background-color: var(--c-color-dropdown-selected);
+            }
+        }
+
+        .vscomp-option {
+            background-color: var(--filter-options-bg);
+        }
+
+        .vscomp-toggle-button {
+            background-color: var(--filter-bg);
+        }
+
+        .vscomp-value {
+            height: auto;
+            line-height: inherit;
+        }
+    }
+
+    .dd-filter {
+        border: none;
+        background-color: transparent;
+        width: auto;
+        padding: 0.5rem 0.5rem 0;
+        margin-top: 0.5rem;
+        position: absolute;
+        background-color: var(--c-color-2);
+
+        @include media-breakpoint-up(lg) {
+            //width: 848px;
+        }
+
+        .vscomp-ele {
+            .vscomp-toggle-button {
+                background-color: var(--c-color-3);
+            }
+            &.pop-comp-active {
+                .vscomp-toggle-button {
+                    color: var(--c-color-5);
+                }
+            }
+        }
+
+        .vscomp-ele-wrapper {
+            margin-bottom: 0.5rem;
+        }
+
+        .flex-wrapper {
+            flex-wrap: wrap;
+            gap: 0 10px;
+        }
+    }
+    .vscomp-ele.filter__select {
+        width: calc(100vw - 2rem);
+        max-width: none;
+        min-width: 25%;
+
+        @media (orientation: landscape) {
+            max-width: calc(50% - 5px);
+        }
+
+        @include media-breakpoint-up(lg) {
+            max-width: 406px;
+        }
+    }
+    .vscomp-ele#collection_selector {
+        font-size: 4.85vw;
+        //font-size: clamp(11px, 4.85vw, 21px);
+        width: 53%;
+        max-width: 230px;
+
+        @media (orientation: landscape) {
+            font-size: 4vh;
+        }
+
+        @include media-breakpoint-down(md) {
+            max-width: 100% !important;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 4vw;
+            width: 35%;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 1.875rem;
+        }
+
+        .vscomp-option {
+            //line-height: 2.5rem;
+
+            .vscomp-option-text {
+                padding-top: 0.6rem;
+                padding-bottom: 0.6rem;
+            }
+        }
+    }
+
+    .vscomp-ele#impulse_selector {
+        font-size: 6.55vw;
+        max-width: 100%;
+        min-width: 25%;
+        width: 100%;
+        letter-spacing: 1px;
+
+        .vscomp-option {
+            line-height: 6.5vw;
+
+            .vscomp-option-text {
+                padding-top: 0.6rem;
+                padding-bottom: 0.6rem;
+            }
+        }
+
+        // landscape
+        @media (orientation: landscape) {
+            font-size: 6vh;
+
+            .vscomp-option {
+                font-size: 5vh;
+                line-height: 5vh;
+
+                @include media-breakpoint-up(md) {
+                    font-size: inherit;
+                    line-height: normal;
+                }
+
+                .vscomp-option-text {
+                    padding-top: 0.4rem;
+                    padding-bottom: 0.4rem;
+                }
+            }
+        }
+
+        .vscomp-toggle-button {
+            @include media-breakpoint-up(md) {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+
+        // down too override ellipse
+        .vscomp-option-description,
+        .vscomp-option-text {
+            text-overflow: unset;
+            white-space: initial;
+        }
+
+        @include media-breakpoint-up(md) {
+            font-size: 3.5rem;
+            letter-spacing: 2px;
+
+            .vscomp-option {
+                line-height: 5rem;
+
+                .vscomp-option-text {
+                    padding-top: 0.6rem;
+                    padding-bottom: 0.6rem;
+                }
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            font-size: 4rem;
+            letter-spacing: 2px;
+            max-width: none;
+
+            .vscomp-option {
+                line-height: 5rem;
+            }
+        }
+    }
+}
+
+.filter-toggle {
+    &[aria-expanded="true"] {
+        color: var(--c-color-4);
+        background-color: var(--c-color-2);
+
+        &::before {
+            content: "";
+            width: 100%;
+            height: 0.5rem;
+            background-color: var(--c-color-2);
+            display: block;
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+        }
+
+        &::after {
+            border-top: 0;
+            border-bottom: 10px solid;
+            color: var(--filter-font-color);
+        }
+    }
+
+    &::after {
+        border-top: 10px solid;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        border-bottom: 0;
+        vertical-align: 0;
+        margin-left: 0.5rem;
+    }
+}

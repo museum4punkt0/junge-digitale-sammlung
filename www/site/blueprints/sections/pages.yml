@@ -1,0 +1,9 @@
+headline: Subpages
+type: pages
+status: all
+info: '{{ page.blueprint.title }}'
+
+image:
+  cover: true
+  back: white
+sortable: true

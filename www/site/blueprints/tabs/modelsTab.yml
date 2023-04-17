@@ -1,0 +1,9 @@
+label: 3D Assets
+icon: image
+
+sections:
+  models:
+    extends: sections/files
+    template: gltf
+    label: Modelle
+    help: max. 15MB

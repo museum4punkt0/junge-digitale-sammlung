@@ -1,0 +1,30 @@
+title: Materialien Seite
+icon: page
+
+options:
+  sitemap: hide
+  delete: false
+  create: false
+  changeStatus: false
+
+status:
+  extends: fields/statestwo
+
+columns:
+  - width: 1/2
+    sections:
+      textinfos:
+        type: fields
+        fields:
+          introduction:
+            label: Intro-Text für Leiteransicht
+            type: writer
+  - width: 1/2
+    sections:
+      pages:
+        extends: sections/pages
+        label: Material-Pakete
+        layout: cardlets
+        help: Unterschiedliche Pakete können hier angelegt und in den jeweiligen Workshops ausgewählt werden.
+        template:
+          - material

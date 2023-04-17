@@ -1,0 +1,48 @@
+.hovers {
+  pointer-events: none;
+  position: fixed;
+  right: 1.4rem;
+  border: none;
+  outline: none;
+  background-color: var(--primary-color);
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  box-shadow: 1px 1px 4px #33333377;
+  border-radius: 50%;
+  transition: all 200ms;
+  opacity: 0;
+  line-height: 0;
+  z-index: 100;
+
+  width: 28px;
+  height: 28px;
+  padding: 7px;
+
+  @include media-breakpoint-up(lg) {
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    right: 1.3rem;
+  }
+  &.showing {
+    pointer-events: all;
+    opacity: 1;
+  }
+
+  &:hover {
+    background-color: var(--secondary-color);
+  }
+}
+
+#btt {
+  bottom: calc(var(--displ-bot-hover-els) + 7.8rem);
+  @include media-breakpoint-up(lg) {
+    bottom: 4.5rem;
+  }
+}
+
+.custom-tooltip {
+  --bs-tooltip-bg: var(--c-darkblue);
+  pointer-events: none;
+}

@@ -1,0 +1,222 @@
+title: Site 
+
+tabs:
+  # pages tab
+  pages:
+    label: Seiten
+    icon: layers
+    columns:
+      - width: 2/3
+        sections:
+          stats: sections/statsSite
+          groups:
+            extends: sections/pages
+            headline: Workshop-Räume
+            search: true
+            type: pages
+            layout: table
+            image: false
+            sortBy: dateCreatedEpoch desc
+            info: false
+            columns:
+              exhibitions:
+                label: Ausstellungen
+                type: text
+                width: 1/9
+                value: "{{page.children.filterBy('intendedTemplate','c_exhibition').count}}"
+              exhibits:
+                label: Objekte
+                type: text
+                width: 1/11
+                value: "{{page.children.filterBy('intendedTemplate','c_exhibit').count}}"
+              datecreatedepoch:
+                label: Angelegt
+                type: text
+                width: 1/8
+                value: "{{ page.dateCreatedEpoch.epoch2date('yyyy.MM.dd') }}"
+              clean:
+                label: Cleaned
+                type: html
+                width: 1/10
+                value: <div class="isDone isDone-{{page.clean}}">Cleaned</div>
+              complete:
+                label: Abgegeben
+                type: html
+                width: 1/9
+                value: <div class="isDone isDone-{{page.complete}}">Abgegeben</div>
+            templates:
+              - c_workshop
+      - width: 1/3
+        sections:
+          pages:
+            extends: sections/pages
+            headline: Reguläre Seiten
+            type: pages
+            templates:
+              - home
+              - default
+              - loadmore
+              - materials
+              - legal
+              - login
+              - error
+            create:
+              - default
+              - legal
+              - loadmore
+            image:
+              query: false
+              back: white
+  # content settings
+  content_settings:
+    label: Content Einstell.
+    icon: settings
+    columns:
+      - width: 1/2
+        sections:
+          data_populators:
+            extends: sections/pages
+            headline: Daten für Felder
+            type: pages
+            templates:
+              - d_structures
+          data_fieldinfos:
+            extends: sections/pages
+            headline: Feld-Informationen
+            type: pages
+            templates:
+              - d_labelinfos
+          # data_usernames:
+          #   extends: sections/pages
+          #   headline: Benutzernamen
+          #   type: pages
+          #   templates:
+          #     - d_usernames
+      - width: 1/2
+        sections:
+          data_fields:
+            headline: Daten Felder
+            type: fields
+            fields:
+              data_populators_pick:
+                type: pages
+                label: Aktive "Daten für Felder"
+                max: 1
+                query: site.children.filterBy('intendedTemplate', 'd_structures')
+              data_fieldinfos_pick:
+                type: pages
+                label: Aktive "Feld-Informationen"
+                max: 1
+                query: site.children.filterBy('intendedTemplate', 'd_labelinfos')
+              # data_usernames_pick:
+              #   type: pages
+              #   label: Aktive "Benutzernamen"
+              #   max: 1
+              #   query: site.children.filterBy('intendedTemplate', 'd_usernames')
+
+  # settings tab
+  settings:
+    label: Website Einstell.
+    icon: settings
+    sections:
+      headersettings:
+        type: fields
+        fields:
+          fglobal:
+            label: System-Funktionen
+            type: headline
+          janitorclean:
+            type: janitor
+            label: Workshops bereinigen
+            generator: false
+            width: 1/3
+            progress: Bitte warten ...
+            job: cleanroutine
+          janitorusersdeac:
+            type: janitor
+            label: Benutzer deaktivieren
+            generator: false
+            width: 1/3
+            progress: Bitte warten ...
+            job: deactivateusers
+          janitorusersdelete:
+            type: janitor
+            label: Inaktive Benutzer löschen
+            generator: false
+            width: 1/3
+            progress: Bitte warten ...
+            job: deleteusers
+          hglobal:
+            label: Header Information
+            type: headline
+          institutionlogo:
+            label: Logo Museum
+            type: files
+            multiple: false
+            translate: false
+            width: 1/4
+            max: 1
+            layout: list
+            image:
+              back: white
+          projectlogo:
+            label: Logo Projekt
+            type: files
+            multiple: false
+            translate: false
+            width: 1/4
+            max: 1
+            layout: list
+            image:
+              back: white
+
+          foglobal:
+            label: Footer Information
+            type: headline
+
+          hemailsettings:
+            label: Email Information
+            type: headline
+          usertimeouttime:
+            label: Dauer bis Auto-Logout
+            type: number
+            width: 1/2
+            min: 0.5
+            max: 40
+            help: 'min: 0.5, max: 40 (Minuten)' 
+          lockedpagestime:
+            label: Dauer der Seitensperre (Ausstellungen)
+            type: number
+            width: 1/2
+            min: 0.5
+            max: 20
+            help: 'min: 0.5, max: 20 (Minuten)'
+          from_address:
+            label: Absender (generierte Emails)
+            type: email
+            help: 'Absender aller generierten Emails, z.B. jds@dah.com. ACHTUNG: bitte je nach Server sicher stellen, dass diese Adresse Emails versenden darf.'
+          to_address:
+            label: Empfänger (generierte Emails)
+            type: email
+            width: 1/2
+            help: Empfänger aller generierten Emails, z.B. workshops@dah.com
+          cc_address:
+            label: CC Empfänger (generierte Emails)
+            type: email
+            width: 1/2
+            help: CC Empfänger aller generierten Emails, z.B. admin@2av.de
+          mail_subject:
+            label: Betreff
+            type: text
+            help: Betreff für generierte Emails, z.B. "Ein neues Workshop wurde fertig gestellt"
+
+  # gallery tab
+  gallery:
+    extends: tabs/galleryTab
+
+    # metaknight
+  seotab: seo
+
+  # help tab
+  #help:
+  # extends: tabs/helpTab

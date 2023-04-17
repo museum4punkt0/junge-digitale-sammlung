@@ -1,0 +1,15 @@
+{
+    "name": "2av/system-functions",
+    "description": "System functions for data handling",
+    "type": "kirby-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Santiago Duque",
+            "email": "sd@2av.de"
+        }
+    ],
+    "require": {
+        "getkirby/composer-installer": "^1.1"
+    }
+}
