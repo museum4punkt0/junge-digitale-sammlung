@@ -108,29 +108,32 @@ tabs:
                 text:
                   - Nicht fertig
                   - Fertig
-                help: Workshop wurde als fertig markiert
+                help: Das Workshop wurde als fertig markiert und kann kuratiert werden.
               mainuser:
                 label: Gruppenkonto
                 type: users
                 multiple: false
+                help: Verlinktes Gruppenkonto für eine Gruppe von Teilnehmern.
               comment:
                 type: textarea
                 label: Kommentar
                 width: 1/3
                 buttons: false
-                help: Kommentar des Leiters
+                disabled: true
+                help: Kommentar vom Gruppenleiter beim Verschicken vom Workshop an das Museum.
               clean:
                 type: toggle
                 label: Bereinigt
                 width: 1/3
                 text:
-                  - Nicht aufgeräumt
-                  - Aufgeräumt
+                  - Nein
+                  - Ja
                 help: Workshop wurde vom System als bereinigt markiert
               infojanitor:
                 type: info
                 label: 3D Modelle
-                text: Verlinkt nachträglich Objekte und 3D Dateien. Bereits verlinkte Objekte/Modelle werden erneut verlinkt.
+                text: Verlinkt nachträglich Objekte und 3D Dateien. 
+                help: Bereits verlinkte Objekte/Modelle werden erneut verlinkt, falls Dateien aktualisiert wurden.
                 theme: none
               janitorworkshopassetlinking:
                 type: janitor
