@@ -124,6 +124,15 @@
 
             &.youtube,
             &.vimeo {
+                
+                @include media-breakpoint-down(md) {
+                    max-width: 90%;
+                }
+
+                @include media-breakpoint-up(md) {
+                    padding-top: 1rem;
+                }
+
                 @include media-breakpoint-up(xxl) {
                     padding-top: 1rem;
                 }
@@ -204,7 +213,9 @@
                 }
                 iframe.instagram-media-rendered,
                 blockquote {
-                    display: inline !important;
+                    //display: inline !important;
+                    display: block !important;
+                    margin: 0 auto !important;
                 }
             }
         }

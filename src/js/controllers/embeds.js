@@ -6,11 +6,13 @@
  * For tiktok it scrapes the new images and sets them dynamically
  * via javascript
  */
-/* let newTiktokCounter = 0;
-let dynamicEmbedImgs = []; */
-const baseembedurl = `${window.location.href.split('?')[0]}.json`;
-console.log(baseembedurl);
-//const baseembedurl = location.protocol + '//' + location.host + location.pathname + '.json';
+
+let baseembedurl = `${window.location.href.split('?')[0]}`;
+var lastChar = baseembedurl.substr(-1); // Selects the last character
+if (lastChar == '/')         // If the last character is a slash
+    baseembedurl = baseembedurl + 'home.json'; // we are in home and need to call the home json so its not /.json but home.json
+else
+    baseembedurl = baseembedurl + '.json'; // otherwise call normally the controller for every other template
 export function initEmbedLogic() {
     // TWITTER
     let tweetsLoading = document.querySelectorAll('.twitter-container'); // until now only twitter
@@ -18,13 +20,8 @@ export function initEmbedLogic() {
         element.addEventListener('DOMNodeInserted', tweetLoaded);
     });
 
-    // TIKTOK    
+    // SERVICES THAT HAVE SHORT LIVED IMG URLs 
     let dynamicEmbedImgs = document.querySelectorAll('.load-embed-img');
-
-
-    /* if (dynamicEmbedImgs.length > 0)
-        loadTiktokAtATime(dynamicEmbedImgs); */
-
     dynamicEmbedImgs.forEach(element => {
         let imgUrl = element.getAttribute('href');
         let sendembedurl = `${baseembedurl}?embedurl=${imgUrl}`;
@@ -35,26 +32,6 @@ export function initEmbedLogic() {
         });
     });
 }
-
-/*  function loadTiktokAtATime(dynamicEmbedImgs) {
-    let imgUrl = dynamicEmbedImgs[newTiktokCounter].getAttribute('href');
-    let sendembedurl = `${baseembedurl}?embedurl=${imgUrl}`;
-    console.log(dynamicEmbedImgs[newTiktokCounter]);
-    console.log(imgUrl);
-     scrapFreshEmbedImage(sendembedurl).then(imgTag => {
-        dynamicEmbedImgs[newTiktokCounter].classList.remove('load-embed-img');
-        dynamicEmbedImgs[newTiktokCounter].classList.add('loaded-embed-img');
-        dynamicEmbedImgs[newTiktokCounter].innerHTML = imgTag;
-        newTiktokCounter++;
-        if(newTiktokCounter < dynamicEmbedImgs.length){
-            loadTiktokAtATime(dynamicEmbedImgs);
-        }
-        else{
-            newTiktokCounter = 0;
-            dynamicEmbedImgs = [];
-        }        
-    });
-} */
 
 
 /**

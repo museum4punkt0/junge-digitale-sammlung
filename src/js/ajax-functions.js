@@ -247,7 +247,8 @@ Object.assign(window, { scrapEmbed });
 
 /**
  * Scrapes for the image file of the embed url and returns a finished img tag (relevant for tiktok,
- * since the preview images are short lived and we must always load the new ones)
+ * since the preview images are short lived and we must always load the new ones). If the URL cant
+ * be scrapped, it returns a X-icon as visual error.
  * @param {string} url 
  * @returns string
  */
@@ -255,7 +256,10 @@ async function scrapFreshEmbedImage(url) {
     let imgTag = false;
 
     await scrapEmbed(url).then(embed => {
-        imgTag = '<img src="' + embed.data.image + '" alt="' + embed.data.title + '">';
+        if (embed.data)
+            imgTag = '<img src="' + embed.data.image + '" alt="' + embed.data.title + '">';
+        else
+            imgTag = '<p class="single-exhibit text-danger">Unable to load<span class="empty"><i icon-name="x-circle" class="icon-only"></i></span></p>'
     });
 
     return imgTag;

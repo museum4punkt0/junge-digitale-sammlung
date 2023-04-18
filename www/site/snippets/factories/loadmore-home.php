@@ -45,7 +45,7 @@
               </a>
             </div>
           <?php endif; ?>
-        <?php elseif ($url->providerName()->lower() == 'tiktok') : ?>
+        <?php elseif ($url->providerName()->lower() == 'tiktok' || $url->providerName()->lower() == 'instagram') : ?>
           <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
             <div class="load-embed-img" href="<?= $url->url() ?>">
               <div class="spinner-border text-primary fs-3" role="status">
