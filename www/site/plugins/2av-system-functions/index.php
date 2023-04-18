@@ -101,13 +101,19 @@ function removeUnusedPages($ws)
     $succ = 0;
 
     if (!$ws->clean()->toBool()) {
-        $filter = [/* 'c_curator', 'c_curator_leader', */'c_exhibit', 'c_exhibition'];
+        $filter = [/* 'c_curator', 'c_curator_leader', */'c_exhibit', 'c_exhibition']; // only remove exhibits and exhibitions
         $children = $ws->childrenAndDrafts()->filterBy('intendedTemplate', 'in', $filter);
 
         foreach ($children as $child) {
-            if ($child->isDraft() && !$child->complete()->toBool()) { // change ifelse logic if we need to remove also curators
-                if ($child->delete())
+            if ($child->isDraft() && !$child->complete()->toBool()) { // is not complete and is still only draft
+
+                if ($child->delete()) {
                     $succ++;
+                    kirbylog($child->title()->value() . ' : was deleted');
+                } else {
+                    kirbylog($child->title()->value() . ' : ERROR deleting', 'error');
+                }
+                kirbylog('--');
             }
         }
 
@@ -451,7 +457,8 @@ function create_zip($page, $file)
  * @param  array $embed
  * @return array
  */
-function scrapEmbed($url, $embed){
+function scrapEmbed($url, $embed)
+{
     try {
         $dispatcher = new Embed\Http\CurlDispatcher();
         $options = \Embed\Embed::$default_config;
@@ -462,39 +469,39 @@ function scrapEmbed($url, $embed){
 
         $media = Embed\Embed::create($url, $options, $dispatcher);
 
-        if(strtolower($media->providerName) == 'instagram'){
-          $media->code = snippet('renderers/embeds/instagram', ['embedurl' => $url], true);
+        if (strtolower($media->providerName) == 'instagram') {
+            $media->code = snippet('renderers/embeds/instagram', ['embedurl' => $url], true);
         }
 
         $embed['status'] = 'success';
         $embed['data']   = array(
-          'title'         => $media->title,
-          'description'   => $media->description,
-          'url'           => $media->url,
-          'type'          => $media->type,
-          'tags'          => $media->tags,
-          'image'         => $media->image,
-          'imageWidth'    => $media->imageWidth,
-          'imageHeight'   => $media->imageHeight,
-          'images'        => $media->images,
-          'code'          => $media->code,
-          'feeds'         => $media->feeds,
-          'width'         => $media->width,
-          'height'        => $media->height,
-          'aspectRatio'   => $media->aspectRatio,
-          'authorName'    => $media->authorName,
-          'authorUrl'     => $media->authorUrl,
-          'providerIcon'  => $media->providerIcon,
-          'providerIcons' => $media->providerIcons,
-          'providerName'  => $media->providerName,
-          'providerUrl'   => $media->providerUrl,
-          'publishedTime' => $media->publishedTime,
-          'license'       => $media->license,
+            'title'         => $media->title,
+            'description'   => $media->description,
+            'url'           => $media->url,
+            'type'          => $media->type,
+            'tags'          => $media->tags,
+            'image'         => $media->image,
+            'imageWidth'    => $media->imageWidth,
+            'imageHeight'   => $media->imageHeight,
+            'images'        => $media->images,
+            'code'          => $media->code,
+            'feeds'         => $media->feeds,
+            'width'         => $media->width,
+            'height'        => $media->height,
+            'aspectRatio'   => $media->aspectRatio,
+            'authorName'    => $media->authorName,
+            'authorUrl'     => $media->authorUrl,
+            'providerIcon'  => $media->providerIcon,
+            'providerIcons' => $media->providerIcons,
+            'providerName'  => $media->providerName,
+            'providerUrl'   => $media->providerUrl,
+            'publishedTime' => $media->publishedTime,
+            'license'       => $media->license,
         );
-      } catch (Exception $e) {
+    } catch (Exception $e) {
         $embed['status'] = 'error';
         $embed['error']  = $e->getMessage();
-      }
+    }
 
-      return $embed;
+    return $embed;
 }

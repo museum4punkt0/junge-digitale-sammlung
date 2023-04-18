@@ -30,18 +30,33 @@ return [
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
 
+        kirbylog('---- CRON DEACTIVATE USERS: ' . date('Y-m-d H:i:s') . ' ----');
+
         kirby()->impersonate('kirby');
 
         foreach ($users as $u) {
-            if ($u->active()->toBool() && date('Y-m-d', time()) > $u->expiration()->toDate('Y-m-d')) {
+            $deadline =  new Kirby\Toolkit\Date($u->expiration());
+            $now = new Datetime(date('Y-m-d'));
+            $endDate = new Datetime($deadline);
+            $diff = $endDate->diff($now);
+
+            if (
+                $u->active()->toBool() &&
+                $now > $endDate
+            ) {
                 $u->update([
                     'active' => false
                 ]);
+                kirbylog($u->name()->value() . ' was overdue for ' . $diff->days . ' days');
+                kirbylog('--');
                 $amount++;
             }
         }
 
-        kirbylog('CRON: ' . $amount . " Benutzer deaktiviert");
+        kirbylog('RESULT: ' . $amount . " users deactivated");
+        kirbylog('---------------------------------------------');
+        kirbylog(' ');
+
         kirby()->impersonate('nobody');
 
         return [
@@ -56,22 +71,37 @@ return [
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
 
+        kirbylog('---- CRON DELETE USERS: ' . date('Y-m-d H:i:s') . ' ----');
+
         kirby()->impersonate('kirby');
         $msg = '';
         foreach ($users as $u) {
             $deadline =  new Kirby\Toolkit\Date($u->expiration());
-            $deadline = $deadline->add(new DateInterval('P7D'));
+            $deadline = $deadline->add(new DateInterval('P40D')); // 40 days
 
-            if (!$u->active()->toBool() && date('Y-m-d', time()) > $deadline->format('Y-m-d')) {
+            $now = new Datetime(date('Y-m-d'));
+            $endDate = new Datetime($deadline);
+            $diff = $endDate->diff($now);
+
+            if (
+                !$u->active()->toBool() &&
+                $now  > $endDate
+            ) {
                 try {
                     $u->delete();
+                    kirbylog($u->name()->value() . ' was inactive for ' . $diff->days . ' days');
+                    kirbylog('--');
+                    $now = new Datetime(date('Y-m-d'));
+                    $endDate = new Datetime($u->expiration()->toDate('Y-m-d'));
                 } catch (Exception $e) {
                 }
                 $amount++;
             }
         }
 
-        kirbylog('CRON: ' . $amount . " Benutzer gelöscht");
+        kirbylog('RESULT: ' . $amount . " users deleted");
+        kirbylog('---------------------------------------------');
+        kirbylog(' ');
         kirby()->impersonate('nobody');
 
         return [
@@ -86,13 +116,17 @@ return [
         $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
         $amount = 0;
 
+        kirbylog('---- CRON DELETE EXHIBITS AND EXHIBITIONS: ' . date('Y-m-d H:i:s') . ' ----');
+
         kirby()->impersonate('kirby');
 
         foreach ($workshops as $ws) {
             $amount += removeUnusedPages($ws);
         }
 
-        kirbylog('CRON: ' . $amount . " Objekte und/oder Ausstellungen gelöscht");
+        kirbylog('RESULT: ' . $amount . " exhibits/exhibitions were deleted");
+        kirbylog('---------------------------------------------');
+        kirbylog(' ');
         kirby()->impersonate('nobody');
 
         return [

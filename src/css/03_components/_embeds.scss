@@ -3,12 +3,12 @@
         .single-exhibit.twitter-container {
             width: 100% !important;
             --scale: 0.66;
-            --scaleFactor: 1;
-            transform: scale(calc(var(--scale) * var(--scaleFactor)));
+            --scaleFactor: 1;            
             transform-origin: bottom;
 
             &.loaded {
                 margin-top: calc((calc(var(--scale) * var(--scaleFactor)) - 1) * 100vh);
+                transform: scale(calc(var(--scale) * var(--scaleFactor)));
             }
 
             @include media-breakpoint-up(lg) {

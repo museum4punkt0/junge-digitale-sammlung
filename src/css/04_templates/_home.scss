@@ -195,6 +195,7 @@ body.home {
             overflow-y: hidden;
             white-space: nowrap;
             vertical-align: bottom;
+            transform: translateZ(0);
 
             display: flex;
             flex-direction: column;
@@ -379,16 +380,16 @@ body.home {
                             &:focus {
                                 border: 3px solid $input-focus-border-color;
                                 outline: 0;
-                                filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.4));
+                                //filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.4));
                             }
                             &:hover {
                                 //transform: scale(102%);
-                                filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.4));
+                                //filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.4));
                             }
                             a {
                                 &:focus {
                                     opacity: 1;
-                                    filter: drop-shadow(0px 0px 10px rgba(255, 255, 249, 1)) !important;
+                                    //filter: drop-shadow(0px 0px 10px rgba(255, 255, 249, 1)) !important;
                                 }
                                 background-color: transparent;
                             }
@@ -458,7 +459,7 @@ body.home {
                             width: 80%;
                             display: block;
                             margin: 0 auto;
-                            filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.15));
+                            //filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.15));
 
                             &.size-compact {
                                 width: 64%;
@@ -493,7 +494,8 @@ body.home {
                                 0 var(--angled-points-distance)
                             );
                             background-color: var(--c-color-8);
-                            background: linear-gradient(178deg, var(--c-color-gradient-start) 0%, var(--c-color-8) 68%);
+                            //background: linear-gradient(178deg, var(--c-color-gradient-start) 0%, var(--c-color-8) 68%);
+                            background: linear-gradient(178deg, var(--c-color-6) 0%, var(--c-color-8) 68%);
                             width: 100%;
                             min-height: calc(
                                 var(--exhibit-factor-h-factor) * 9.1vh
