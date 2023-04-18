@@ -22,6 +22,11 @@ return [
     'port' => getenv('CLOUDRON_MAIL_SMTP_PORT'),
   ],
 
+  'loadmoresettings' => [
+    'default' => 12,
+    'home' => 12,
+  ],
+
   // API
   'api' => require_once 'api.php',
 
