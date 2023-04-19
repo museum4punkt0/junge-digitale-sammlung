@@ -4,9 +4,9 @@
 1. Kurzbeschreibung
 2. Finanzierung
 3. Empfohlenes Server Setup 
-4. Voraussetzungen und Skills 
-5. Installation der Platform
-6. Entwicklung der Platform
+4. Voraussetzungen und Skills
+5. Installation der Platform (deploy) 
+6. Entwicklung
 7. Benutzung/Usage
 8. Beteiligung/Contributing
 9. Credits
@@ -28,17 +28,22 @@ Das Deutsche Auswandererhaus ist ein kulturhistorisches Museum zum Thema Migrati
 
 ## 3. Empfohlenes Server Setup 
 
-- Ubuntu 20.04
+Das projekt wurde ursprünglich auf folgendem Server installiert.
+- Ubuntu 20.04 (Cloudron installiert)
 - Apache 2.4.x
 - PHP 8.1 mit Standard-Modulen (OPCache deaktivieren)
-- Genug Speicherplatz auf langer Sicht
+- vCPU 3 AMD (virtueller Server)
+- 4GB RAM
+- 80GB Festplatte
+
+*Die Größe der Festplatte hängt hauptsächlich davon ab, wieviele Video-Dateien erwartet werden. 3D Modelle und Bilder verbrauchen vergleichsweise wenig Platz.*
 
 
 ---
 
 ## 4. Voraussetzungen und Skills
 
-Die Installation der Platform ist relativ leicht durchzuführen und kann grundsätzlich ohne große technische Kentnisse erfolgen.
+Die Installation (deployment) der Platform ist relativ leicht durchzuführen und kann grundsätzlich ohne große technische Kenntnisse erfolgen.
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie folgende Anforderungen erfüllt haben:
 
@@ -48,27 +53,27 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie folgende Anforderungen erfüllt
 * Sie haben eine Kopie dieses Repositorys.
 
 ### Für die Entwicklung
-Für eine bessere Verwaltung der npm Packages wurde das Projekt ursprünglich mit den Software [Prepros](https://prepros.io) (Mac, Windows, Linux) und [CodeKit](https://codekitapp.com/) (Mac only) entwickelt. Beide bieten eine grafische und bequeme Benutzeroberfläche, um Source-Code zu kompilieren, Packages zu verwalten und Browser zu auto-refreshen. Beide config-Dateien sind in diesem Repository inkludiert (Sie benötigen nur eine von beiden Software). Alternativ können Sie bspw. ein Webpack Workflow verfolgen, s. bitte [kirby-webpack](https://github.com/brocessing/kirby-webpack).
+*Hinweise: Für eine bessere Verwaltung der npm Packages wurde das Projekt ursprünglich mit den Software [Prepros](https://prepros.io) (Mac, Windows, Linux) und [CodeKit](https://codekitapp.com/) (Mac only) entwickelt. Beide bieten eine grafische und bequeme Benutzeroberfläche, um Source-Code zu kompilieren, Packages zu verwalten und Browser zu auto-refreshen. Beide config-Dateien sind in diesem Repository inkludiert (Sie benötigen nur eine von beiden Software). Für die Server-Funktion wurde es mit MAMP gearbeitet. Alternativ können Sie bspw. ein Webpack Workflow verfolgen, s. bitte [kirby-webpack](https://github.com/brocessing/kirby-webpack).*
 
-Es gelten die gleichen Voraussetzungen wie für die Installation. Dazu noch:
-- npm ist auf Ihrem Rechner installiert -----welche npm version------
-- Prepros oder CodeKit ist auf Ihrem Rechner installiert (optional können Sie das Webpack Workflow selber konfigurieren)
-- Apache steht auf Ihrem Rechner zur Verfügung, um localhost starten zu können (z.B XAMPP, MAMP, Apache Installation, etc.)
+Es gelten die gleichen Voraussetzungen wie für die Installation (deployment). Dazu noch:
+- npm ist auf Ihrem Rechner installiert
+- Prepros oder CodeKit ist auf Ihrem Rechner installiert (optional können Sie das Webpack Workflow konfigurieren)
+- Apache steht auf Ihrem Rechner zur Verfügung, um localhost starten zu können (z.B MAMP, XAMPP, Apache Installation, etc.)
 
-*Prepros oder CodeKit?: CodeKit ist eine Mac-only Software, die vergleichsweise leicht mächtiger ist aber lizenziert/gekauft werden muss. Prepros bietet eine kostenlose Version an und ist universell.*
+*Prepros oder CodeKit?: CodeKit ist eine Mac-only Software, die vergleichsweise performanter ist aber lizenziert/gekauft werden muss. Prepros bietet eine kostenlose Version an und ist universell.*
 
 
 ---
 
-## 5. Installation der Platform
+## 5. Installation der Platform (deploy)
 
-- Kirby-Core Ordner entzippten (s. bitte 4. Voraussetzungen und Skills) und in `kirby` umbenennen (ohne Suffixe).
+- Kirby-Core Ordner entzippen (s. bitte 4. Voraussetzungen und Skills) und in `kirby` umbenennen (ohne Suffixe).
 
 - Kirby-Core in den Ordner `www` verschieben.
 
-- Den kompletten Ordner `www` auf den Server hochladen und mit der gewünschten Domain verknüpfen. Wichtig dabei ist, dass der komplette Ordner inkl. versteckten Dateien, bspw. .htaccess, hochgeladen wird.
+- Den kompletten Ordner `www` auf den Zielserver kopieren/hochladen. Wichtig dabei ist, dass der komplette Ordner inkl. versteckten Dateien, bspw. .htaccess, kopiert/hochgeladen wird.
 
-- Anschliessend im Browser die ausgewählte Domain besuchen. Die Sammlung sollte erscheinen.
+- Anschliessend im Browser die Domain oder IP Adresse besuchen. Die Sammlung sollte erscheinen.
 
 Das Admin-Backend von Kirby erreichen Sie unter `/panel`, z.B.:
 
@@ -93,21 +98,29 @@ Passwort:
 
 ## 6. Entwicklung der Platform
 
-Für die Weiterentwicklung und/oder Anpassung der verschiedenen Teile des Systems wird Personal mit guten Kenntnissen in PHP, JS und CSS, und mittleren Kenntnissen in der Serveradministration empfohlen.
+Für die Weiterentwicklung und/oder Anpassung der verschiedenen Teile des Systems wird Personal mit guten Kenntnissen in PHP, JS und CSS und optimalerweise Kirby CMS empfohlen. Auch mittlere Kenntnissen in der Serveradministration sind empfehlenswert, da eine möglichst reibungslose Kommunikation mit den externen Social-Media Anbieter (embeds) je nach Server bestimmte Anpassungen benötigt.
+
+Zum starten:
 
 - Laden Sie eine Kopie dieses Repositorys herunter.
 
+- Die Platform wie unter "Installation" installieren.
+
 - Starten Sie den lokalen Server.
 
-- Platform wie unter "Installation" installieren, allerdings im localhost Kontext.
+- In Prepros oder CodeKit das Projekt importieren. Da beide config-Dateien vorhanden sind können Sie die Packages in dem ausgewählten Programm direkt installieren. 
 
-- In Prepros oder CodeKit das Projekt importieren. Da beide config-Dateien vorhanden sind können Sie die Packages in dem ausgewählten Programm direkt installieren. Das Kompilieren von Javascript und SCSS ist bereits in den config-Dateien eingerichtet (Output für kompilierte Dateien ist `www/assets`).
+- Alternativ können Sie die Packages mit dem Befehl `npm install` wie üblich installieren.
 
 - Pfade zum localhost Ordner des Projekts in den Projekt-Einstellungen in Prepros oder CodeKit für die Auto-Refresh Funktion aktualisieren. Diese sollte zu Ihrem `www` Ordner zeigen.
 
+- Das Kompilieren von Javascript und SCSS ist bereits in den config-Dateien eingerichtet (Output für kompilierte Dateien ist `www/assets`).
+
 - Der Code im Ordner `src` kann jetzt bearbeitet werden. 
 
-WICHTIG: die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über die Preview-URLs von Prepros oder CodeKit abgerufen werden, da Weiterleitungsfehler autretten werden. Die live Auto-Refresh Funktion bleibt von daher nur für den Sammlung-Bereich relevant.
+*Weitere technische Details finden Sie [hier](docs/intro.md).*
+
+WICHTIG: die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über die Preview-URLs von Prepros oder CodeKit abgerufen werden, da Weiterleitungsfehler auftretten werden. Die live Auto-Refresh Funktion bleibt von daher nur für den Sammlung-Bereich relevant.
 
 *Für weitere Prepros Einstellungen bitte die [Prepros Dokumentation](https://prepros.io/help/) lesen.*
 

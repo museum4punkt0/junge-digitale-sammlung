@@ -392,18 +392,6 @@ sections:
         label: EMBED FELDER
         theme: none
 
-      embed_files:
-        type: writer
-        nodes: false
-        marks:
-          - bold
-          - italic
-          - link
-          - email
-        buttons: false
-        width: 1/4
-        label: Hinweis für Upload der Dateitypen für "Digital Embed"
-
       embed_url_label:
         type: text
         buttons: false
@@ -420,6 +408,17 @@ sections:
         buttons: false
         width: 1/4
         label: Hinweis für "Embed URL"
+      embed_files:
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
+        buttons: false
+        width: 1/4
+        label: Hinweis für Upload der Dateitypen für "Digital Embed"
 
       h_physicalfields_info:
         type: line

@@ -1,5 +1,7 @@
 # Benutzung
 
+ *(Screenshots können abweichen)*
+
 ## Inhaltsverzeichnis
 
 1. [Einleitung](#1-einleitung)
@@ -9,6 +11,8 @@
 ## 1. Einleitung
 
 In seinem Teilprojekt entwickelt das Projektteam des DAHs unter dem Titel „Junge Digitale Sammlung“ (kurz JDS) ein museumspädagogisches Workshop-Angebot für Schulklassen ab der 8. Klassenstufe sowie der Oberstufe. Eine Teilnahme ist nicht nur im Klassenverband denkbar, sondern auch für Gruppen von Schüler:innen aus verschiedenen Schulen, etwa im Rahmen eines Ferienangebotes. Der Workshop setzt sich inhaltlich mit den Themenkomplexen Identität und Diversität auseinander sowie mit der Bedeutung und Handhabung von Objekten im Museum. Im Zentrum des Workshops stehen persönliche Alltagsobjekte der Teilnehmenden. Unter dem Begriff Objekt werden bei der JDS sowohl physische Objekte als auch Born Digital Objects und sowohl eigen produzierte als auch von anderen erstellte Werke verschiedenster Dateiformate verstanden. Materielle 2D- und 3D-Objekte werden nach Möglichkeit 3D-gescannt oder zumindest hochauflösend fotografiert. Alle Objekte werden mit Metadaten versehen. Die JDS-Plattform ist dabei sowohl Arbeitsunterstützung als auch Datenbank und Tool für die Veröffentlichung von Objekten und virtuellen Ausstellungen. 
+
+![](_media/sammlung/intro.png)
 
 Die Lehreinheiten finden sowohl in der Schule als auch im Museum statt und können auch in Form von Hausaufgaben weitergeführt werden. Nach einer Einführung finden sich Schüler:innen zunächst in Gruppen (3 bis max. 5 Personen) zusammen und wählen eines von vier Themen aus. Auf Grund einer geplanten langen Laufzeit sowie einer eventuellen Ausweitung des Angebots für die Erwachsenenbildung können die Themen erweitert werden. Unter dem jeweiligen thematischen Blickwinkel werden von den Teilnehmenden Alltagsobjekt ausgewählt und dazu Metadaten wie beispielsweise Material, Maße, Gewicht sowie individuelle Informationen zusammengetragen. Es kann sich dabei um physische oder digitale Objekte bzw. deren Repräsentation handeln, wenn dies aus rechtlichen Gründen möglich ist. Im Museum werden die physischen Objekte hochauflösend fotografiert und nach Möglichkeit in 3D-gescannt. Alle Daten werden mittels Eingabemaske in die JDS-Plattform eingetragen. Die Gruppen können ihre Objekte jeweils in einer Ausstellung zusammenfassen, dafür erstellen sie u. a. einen gemeinsamen Titel und einen Einführungstext. Mit „Abgabe“ wird das Workshop an die Redaktion des DAHs übergeben. In Abhängigkeit davon, ob alle rechtlich relevanten Unterlagen im DAH eingegangen sind, wird ein definierter Teil der Daten auf der Plattform veröffentlicht. 
 
@@ -21,11 +25,20 @@ Die Plattform gliedert sich in folgende drei funktionelle Module:
 * Workshop-Bereich für Teilnehmer des Workshops (nicht öffentlich zugänglich)
 * Admin-Bereich für Personal (nicht öffentlich zugänglich)
 
+
+Sammlung-Bereich |  Workshop-Bereich  |  Admin-Bereich 
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/sammlung/sammlung-intro.png)  |  ![](_media/workshop/user-intro.png)  |  ![](_media/admin/panel-intro.png)
+
 --
 
 ### Sammlung-Bereich
 
-Im öffentlich zugängliche Bereich können die Besucher:innen der Webseite die freigegebenen Objekte und Ausstellungen der JDS durchstöbern, betrachten und deren Informationen lesen. Nach einem zufällig vorausgewählten Thema wird eine Übersicht mit allen Objekten oder Ausstellungen nach Veröffentlichungsdatum angezeigt. Diese kann nach Kriterien wie Klasse/Stufe oder Bundesland gefiltert werden. Eine Freitextsuche steht auch zur Verfügung. Zwischen den verschiedenen Themen kann gewechselt werden. Auch zwischen Objekte und Ausstellungen kann per Dropdown gewechselt werden.
+Im öffentlichen Bereich können die Besucher:innen der Webseite die freigegebenen Objekte und Ausstellungen der JDS durchstöbern, betrachten und deren Informationen lesen. Nach einem zufällig vorausgewählten Thema wird eine Übersicht mit allen Objekten oder Ausstellungen nach Veröffentlichungsdatum angezeigt. Diese kann nach Kriterien wie Klasse/Stufe oder Bundesland gefiltert werden. Eine Freitextsuche steht auch zur Verfügung. Zwischen den verschiedenen Themen kann gewechselt werden. Auch zwischen Objekte und Ausstellungen kann per Dropdown gewechselt werden.
+
+Übersicht  |  Objekte oder Ausstellungen  |  Filter Thema
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/sammlung/sammlung-normal.png)  |  ![](_media/sammlung/sammlung-filterCollection.png)  |  ![](_media/sammlung/sammlung-filterThema.png)
 
 Wird ein Objekt ausgewählt, wird eine Objektseite mit den dazugehörigen Texten dargestellt. 3D-Objekte lassen sich dort dreidimensional betrachten, Bilder vergrößern, Filme abspielen etc. 
 
