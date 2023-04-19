@@ -502,7 +502,7 @@ function handleExhibitTypeChange(element) {
     let form = element.form;
     createPhantomToggle({
         headline: 'Achtung',
-        message: 'Wenn Sie den Objekttyp verändern werden wird das Objekt gespeichert und manche Daten zurückgesetzt. Sind Sie sicher?',
+        message: 'Wenn Sie den Objekttyp verändern wird das Objekt gespeichert und manche Daten werden zurückgesetzt. Sind Sie sicher?',
         func: 'sendAjaxForm',
         data: form.id,
         contextCancel: '#' + form.id,
