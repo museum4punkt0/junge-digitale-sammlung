@@ -12,6 +12,8 @@
 
 In seinem Teilprojekt entwickelt das Projektteam des DAHs unter dem Titel „Junge Digitale Sammlung“ (kurz JDS) ein museumspädagogisches Workshop-Angebot für Schulklassen ab der 8. Klassenstufe sowie der Oberstufe. Eine Teilnahme ist nicht nur im Klassenverband denkbar, sondern auch für Gruppen von Schüler:innen aus verschiedenen Schulen, etwa im Rahmen eines Ferienangebotes. Der Workshop setzt sich inhaltlich mit den Themenkomplexen Identität und Diversität auseinander sowie mit der Bedeutung und Handhabung von Objekten im Museum. Im Zentrum des Workshops stehen persönliche Alltagsobjekte der Teilnehmenden. Unter dem Begriff Objekt werden bei der JDS sowohl physische Objekte als auch Born Digital Objects und sowohl eigen produzierte als auch von anderen erstellte Werke verschiedenster Dateiformate verstanden. Materielle 2D- und 3D-Objekte werden nach Möglichkeit 3D-gescannt oder zumindest hochauflösend fotografiert. Alle Objekte werden mit Metadaten versehen. Die JDS-Plattform ist dabei sowohl Arbeitsunterstützung als auch Datenbank und Tool für die Veröffentlichung von Objekten und virtuellen Ausstellungen. 
 
+
+
 ![](_media/sammlung/sammlung-intro.png)
 
 Die Lehreinheiten finden sowohl in der Schule als auch im Museum statt und können auch in Form von Hausaufgaben weitergeführt werden. Nach einer Einführung finden sich Schüler:innen zunächst in Gruppen (3 bis max. 5 Personen) zusammen und wählen eines von vier Themen aus. Auf Grund einer geplanten langen Laufzeit sowie einer eventuellen Ausweitung des Angebots für die Erwachsenenbildung können die Themen erweitert werden. Unter dem jeweiligen thematischen Blickwinkel werden von den Teilnehmenden Alltagsobjekt ausgewählt und dazu Metadaten wie beispielsweise Material, Maße, Gewicht sowie individuelle Informationen zusammengetragen. Es kann sich dabei um physische oder digitale Objekte bzw. deren Repräsentation handeln, wenn dies aus rechtlichen Gründen möglich ist. Im Museum werden die physischen Objekte hochauflösend fotografiert und nach Möglichkeit in 3D-gescannt. Alle Daten werden mittels Eingabemaske in die JDS-Plattform eingetragen. Die Gruppen können ihre Objekte jeweils in einer Ausstellung zusammenfassen, dafür erstellen sie u. a. einen gemeinsamen Titel und einen Einführungstext. Mit „Abgabe“ wird das Workshop an die Redaktion des DAHs übergeben. In Abhängigkeit davon, ob alle rechtlich relevanten Unterlagen im DAH eingegangen sind, wird ein definierter Teil der Daten auf der Plattform veröffentlicht. 
@@ -59,6 +61,8 @@ Auch weitere, reguläre Seiten können besucht werden, z.B. eine Impressums- ode
 --
 
 ### Workshop-Bereich
+
+[Hier finden Sie Details zum Workshop-Bereich](details/workshop.md) »
 
 Workshop-Räume sind virtuelle Räume, geschützte Arbeitsbereiche für Klassen oder Gruppen, mit einer zeitlichen Begrenzung. Für diese werden Gruppen-Konten benötigt, die es Leiter:innen und Teilnehmer:innen ermöglicht, Objekte und deren Metadaten zur Sammlung hinzuzufügen, anzusehen und zu bearbeiten. Hierfür werden Zugänge ohne eine verpflichtende Registrierung mit E-Mail-Adressen von den Administratoren angelegt. Die Gültigkeitsdauer der Logins und damit der Zugriff auf die Workshop-Räume kann ggf. noch verändert oder verlängert werden, um flexibel auf die Entwicklungen und Bedürfnisse des Workshops eingehen zu können.
 
@@ -111,11 +115,21 @@ Video und Vorschaubild des Videos |
 :-------------------------:|
 ![](_media/workshop/objekt-tab-eigenes%20video.png)  |  
 
+
 --
 
 ### Admin-Bereich
 
-Dieser Bereich dient sowohl der Verwaltung der Plattform durch die Mitarbeiter:innen des Museums als auch der Redaktion und Freigabe der Beiträge im öffentlichen Bereich der JDS. Projekt vorbereitend werden hier Gruppen-Benutzer und Workshopräume angelegt. Nach Abgabe durch die Teilnehmer:innen bzw. Leiter:innen erfolgt die Redaktion durch die Mitarbeiter. Nach Prüfung und Korrektur werden die einzelnen Beiträge für die Veröffentlichung freigegeben. Hierfür ist das Vorliegen der rechtlich relevanten Unterlagen Voraussetzung und wird daher noch einmal von den Mitarbeiter:innen überprüft. Sichtbar im öffentlichen Bereich der Plattform wird nur ein definierter Teil der eingegebenen Daten. Alle nicht freigegebenen Objekte und Ausstellungen werden entweder von den Mitarbeitern oder vom System als Teil einer automatischen Routine gelöscht. Die meisten Texte inklusive Überschriften, die seitens des DAHs auf der Plattform erscheinen, wie Begrüßungstexte und erläuternde Texte, können von Museumsmitarbeiter:innen im administrativen Bereich gepflegt werden. Dies gilt sowohl für Inhalte des öffentlichen Teils als auch der Workshopräume. Änderungen durch die Mitarbeiter:innen oder Teilnehmer:innen werden in einer Änderungshistorie festgehalten.
+[Hier finden Sie Details zum Admin-Bereich](details/admin.md) »
+
+Dieser Bereich dient sowohl der Verwaltung der Plattform durch die Mitarbeiter:innen des Museums als auch der Redaktion und Freigabe der Beiträge im öffentlichen Bereich der JDS. Projekt vorbereitend werden hier Gruppen-Benutzer und Workshopräume angelegt. Nach Abgabe eines Workshops durch die Gruppenleiter:innen erfolgt die Redaktion durch die Mitarbeiter:innen. Die Abgabe erfolgt digital im Workshop-Bereich und die Mitarbeiter:innen bekommen eine E-Mail als Benachrichtigung. Nach Prüfung und Korrektur werden die einzelnen Beiträge für die Veröffentlichung freigegeben. Hierfür ist das Vorliegen der rechtlich relevanten Unterlagen Voraussetzung und wird daher noch einmal von den Mitarbeiter:innen überprüft.
+
+Sichtbar im öffentlichen Bereich der Plattform wird nur ein definierter Teil der abgegebenen Daten. Alle nicht freigegebenen Objekte und Ausstellungen werden entweder von den Mitarbeitern:innen oder vom System als Teil einer automatischen Routine gelöscht. Die meisten Texte inklusive Überschriften, die seitens des DAHs auf der Plattform erscheinen, wie Begrüßungstexte und erläuternde Texte, können von Museumsmitarbeiter:innen im administrativen Bereich gepflegt werden. Dies gilt sowohl für Inhalte des öffentlichen Teils als auch der Workshopräume. Änderungen durch die Mitarbeiter:innen oder Teilnehmer:innen werden in einer Änderungshistorie festgehalten.
+
+Admin Bereich |  Workshop, Reiter Sammlung  |  Workshop, Reiter Benutzer
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/admin/panel-intro.png)  |  ![](_media/admin/ws/ws-tab-sammlung.png)  |  ![](_media/admin/ws/ws-tab-users.png)
+
 
 ---
 
@@ -123,11 +137,24 @@ Dieser Bereich dient sowohl der Verwaltung der Plattform durch die Mitarbeiter:i
 
 Folgende Schritte sollten optimalerweise in dieser Reihenfolge ablaufen:
 
-- Das Museum wird von einer Gruppe kontaktiert. Diese würde gerne teilnehmen und benötigt eine Einführung und Zugangsdaten.
-- Ein Mitarbeiter:in legt ein Gruppen-Konto und ein Workshop-Raum für diese Gruppe an. Der Mitarbeiter verknüpft das Konto mit dem Workshop-Raum.
-- Mitarbeiter:in legt XY Teilnehmer und XZ Leiter Subkonten im Workshop-Raum an. Subkonten werden durch Seiten im System repräsentiert.
-- Mitarbeiter:in ruft PDF-Übersicht der Teilnehmer auf. Hier werden alle Subkonten aufgelistet und zwar ein Teilnehmer pro PDF Seite. Jede Seite beinhaltet eine ID und den Login-Pfad für die Gruppe.
-- Mitarbeiter:in übergibt die a) Zugangsdaten des Gruppenkontos, b) Leiter IDs und c) PDF mit Teilnehmer IDs an die Leiter der Gruppe. Zugangsdaten und Leiter IDs werden getrennt und nicht in der PDF geliefert um zu vermeiden, dass diese Informationen nicht für alle Teilnehmer:innen zugänglich sind.
-- Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppen-Konto.
-- Ab jetzt kann jede:r Teilnehmer:in (und Leiter:in) sich einloggen und das Workshop benutzen.
-- Bei der ersten Anmeldung müssen sowohl Leiter:innen als auch Teilnehmer:innen eine PIN anlegen. Somit sind die jeweiligen Arbeitsbereiche im Workshop-Raum geschützt.
+### 1) Das Museum wird von einer Gruppe kontaktiert. Diese würde gerne teilnehmen und benötigt eine Einführung und Zugangsdaten.
+
+Dies erfolgt auf klassicher Art, bspw. per E-Mail.
+
+### 2) Ein Mitarbeiter:in legt ein Gruppenkonto und einen Workshop-Raum für diese Gruppe an. Der/die Mitarbeiter:in verknüpft das Konto mit dem Workshop-Raum.
+
+Ein Gruppenkonto, z.B. für eine komplette Klasse, können im Bereich 'Temp Users' angelegt werden. Sie sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist es sicher gestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben.
+
+Der/die Mitarbeiter:in muss sich dafür im Admin-Bereich einloggen, oben links in der Navigation "Temp Users" auswählen und ein Konto anlegen. Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Dies kann in dem Blueprint für die Frontend-Benutzer angepasst werden. Dieser Wert wird beim Anlegen eines Kontos übernommen. Er kann im Admin-Backend aber jederzeit wieder angepasst werden.
+
+Menü oben links |  Übersicht Temp Users  |  Konto anlegen
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/admin/panel-menu.png)  |  ![](_media/admin/users/tempusers-paneloverview.png)  |  ![](_media/admin/users/tempusers-anlegen.png) 
+
+
+### 3) Mitarbeiter:in legt XY Teilnehmer und XZ Leiter Subkonten im Workshop-Raum an. Subkonten werden durch Seiten im System repräsentiert.
+### 4) Mitarbeiter:in ruft PDF-Übersicht der Teilnehmer auf. Hier werden alle Subkonten aufgelistet und zwar ein Teilnehmer pro PDF Seite. Jede Seite beinhaltet eine ID und den Login-Pfad für die Gruppe.
+### 5) Mitarbeiter:in übergibt die a) Zugangsdaten des Gruppenkontos, b) Leiter IDs und c) PDF mit Teilnehmer IDs an die Leiter der Gruppe. Zugangsdaten und Leiter IDs werden getrennt und nicht in der PDF geliefert um zu vermeiden, dass diese Informationen nicht für alle Teilnehmer:innen zugänglich sind.
+### 6) Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppen-Konto.
+### 7) Ab jetzt kann jede:r Teilnehmer:in (und Leiter:in) sich einloggen und das Workshop benutzen.
+### 8) Bei der ersten Anmeldung müssen sowohl Leiter:innen als auch Teilnehmer:innen eine PIN anlegen. Somit sind die jeweiligen Arbeitsbereiche im Workshop-Raum geschützt.
