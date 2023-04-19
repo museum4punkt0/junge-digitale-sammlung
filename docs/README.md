@@ -89,7 +89,7 @@ Der 3D Scanner vom DAH exportiert OBJ Dateintypen. Mit Hilfe vom JDS O2G Tool k�
 
 !!!!!!!! -- LINK ZUM O2G REPO -- !!!!!!
 
-O2G Tool |  3D Modelle und Vorschaubilder als Admin hochladen  |  Lobby, um Teilnehmer zu Wechseln
+O2G Tool |  3D Modelle und Vorschaubilder als Admin hochladen  |  Als Teilnehmer Objekt selektieren
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/workshop/workshop-o2gtool.png)  |  ![](_media/admin/ws/ws-tab-previewbilder.png)  |  ![](_media/workshop/objekt-tab-model%20select.png)
 
@@ -99,9 +99,17 @@ Teilnehmer können auch Links aus unterschiedlichen Platformen als Exponate prä
 
 *Bitte dabei an Copyrights und andere rechtlichen Eventualitäten denken und passende Datenschutzmasnahmen ergreifen. Da alle Inhalte vor der Live-Freischaltung von Personal überprüft, kuratiert und freigegeben werden müssen liegt grundsätzlich die Verantwortung potenzieller Copyright-Verletzungen beim Personal.*
 
+Digital Embed |  
+:-------------------------:|
+![](_media/workshop/objekt-tab-youtube.png)  |  
+
 ##### *Born-digital*
 
-Für Teilnehmer die eigene Bilder oder Videos hochladen und präsentieren wollen. Das System erlaubt übliche Bildformate (png, jpg, heic) und ausschließlich MP4 als Videoformat.
+Teilnehmer die ihre eigenen Bilder oder Videos hochladen und präsentieren wollen können diesen Objekttyp selektieren. Das System erlaubt übliche Bildformate (png, jpg, heic) und ausschließlich MP4 als Videoformat.
+
+Video und Vorschaubild des Videos |  
+:-------------------------:|
+![](_media/workshop/objekt-tab-eigenes%20video.png)  |  
 
 --
 
