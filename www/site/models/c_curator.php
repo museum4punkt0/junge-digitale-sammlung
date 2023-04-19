@@ -120,6 +120,16 @@ class CCuratorPage extends JDSPage
     }
   }
 
+  public static function hookPageUpdateBefore($page, $values, $strings)
+  {
+    if (isset($values['username'])) {
+      $isChanging = $values['username'] != $page->username();
+      if ($isChanging && usernameExists($values['username'])) {
+        throw new Exception('Benutzername existiert bereits.');
+      }
+    }
+  }
+
   public static function hookDeleteBefore($page, $force)
   {
     if ($exhibit = $page->linked_exhibit()->toPageOrDraft()) {
