@@ -1,6 +1,6 @@
 # Benutzung
 
- *(Screenshots können abweichen. Screenshots enthalten Testdaten)*
+ *(Screenshots können abweichen. Screenshots enthalten Testdaten. Manche Bereiche wurden aus Copyright Gründen )*
 
 ## Inhaltsverzeichnis
 
