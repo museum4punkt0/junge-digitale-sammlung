@@ -28,7 +28,7 @@ Die Plattform gliedert sich in folgende drei funktionelle Module:
 
 Sammlung-Bereich |  Workshop-Bereich  |  Admin-Bereich 
 :-------------------------:|:-------------------------:|:-------------------------:
-![](_media/sammlung/sammlung-intro.png)  |  ![](_media/workshop/user-intro.png)  |  ![](_media/admin/panel-intro.png)
+![](_media/sammlung/sammlung-intro.png)  |  ![](_media/workshop/user-tab.png)  |  ![](_media/admin/panel-intro.png)
 
 --
 
