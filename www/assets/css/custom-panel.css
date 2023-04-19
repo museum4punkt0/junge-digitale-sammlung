@@ -22,16 +22,6 @@ label {
     color: #5c627f;
 }
 
-/* .k-topbar-wrapper::before{
-    content: "";
-    background-image: url("../images/scd-logo_128x128.png");
-    background-size: contain;
-    width: 30px;
-    height: 30px;
-    position: absolute;
-    left: -70px;  
-} */
-
 .k-topbar {
     --bg: #5469ec;
 }
@@ -43,10 +33,6 @@ textarea {
 .k-layout:not(:last-of-type) {
     margin-bottom: 12px;
     border-bottom: 2px solid #e5eff5;
-}
-
-.k-panel {
-    /*  background: #fafafa; */
 }
 
 [dir="ltr"] .k-topbar-signals::before {
@@ -85,10 +71,6 @@ textarea {
 .k-headline-field {
     padding-top: 1rem;
 }
-
-/* .k-line-field {
-    height: auto;
-} */
 
 .color-palette_input-color {
     border: 1px solid #aaa;
@@ -131,6 +113,10 @@ PAGE TABLES
     color: #888888;
 }
 
+
+.k-field-name-tempslug{
+    display: none;
+}
 
 /*
 *   LOGS

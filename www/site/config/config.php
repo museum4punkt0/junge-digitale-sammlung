@@ -16,17 +16,27 @@ return [
     'gcInterval'     => 10              // default: cleanup every ~100 requests
   ],
 
-  'mailsettings' => [
-    'un' => getenv('CLOUDRON_MAIL_SMTP_USERNAME'),
-    'pw' => getenv('CLOUDRON_MAIL_SMTP_PASSWORD'),
-    'host' => getenv('CLOUDRON_MAIL_SMTP_SERVER'),
-    'port' => getenv('CLOUDRON_MAIL_SMTP_PORT'),
+  'jds' => [
+    'tempusers' => [
+      'defaultdomain' => '2av.de'
+    ],
+
+    'mailsettings' => [
+      'un' => getenv('CLOUDRON_MAIL_SMTP_USERNAME'),
+      'pw' => getenv('CLOUDRON_MAIL_SMTP_PASSWORD'),
+      'host' => getenv('CLOUDRON_MAIL_SMTP_SERVER'),
+      'port' => getenv('CLOUDRON_MAIL_SMTP_PORT'),
+    ],
+
+    'loadmoresettings' => [
+      'blog' => 12,
+      'home' => 12,
+    ],
   ],
 
-  'loadmoresettings' => [
-    'default' => 12,
-    'home' => 12,
-  ],
+
+
+  
 
   // API
   'api' => require_once 'api.php',

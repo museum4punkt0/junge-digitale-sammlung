@@ -5,7 +5,7 @@ return function ($page, $site, $kirby) {
   # Grab the data from the default controller for authentification
   $site_vars = $kirby->controller('site', compact('page', 'kirby'));
 
-  $limit    = option('loadmoresettings.home', 'loadmoresettings.default');
+  $limit    = option('jds.loadmoresettings.home', 12);
   $currentCollection = "c_exhibit";
 
   return [

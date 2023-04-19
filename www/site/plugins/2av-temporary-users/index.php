@@ -116,7 +116,7 @@ Kirby::plugin('2av/temporaryusers', [
                                             'disabled' => true,
                                         ]), */
 
-                                        
+
                                         /* 'translation'  => Field::translation([
                                             'required' => true
                                         ]), */
@@ -127,7 +127,7 @@ Kirby::plugin('2av/temporaryusers', [
                                     'submitButton' => I18n::translate('create'),
                                     'value' => [
                                         'name'        => '',
-                                        'email'       => $uniqueId . '@2av.de',
+                                        'email'       => $uniqueId . '@' . option('jds.tempusers.defaultdomain', '2av.de'),
                                         'password'    => password_generate(8),
                                         'translation' => $kirby->panelLanguage(),
                                         'role'        => 'frontenduser'

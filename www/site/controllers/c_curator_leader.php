@@ -119,10 +119,10 @@ return function ($kirby, $page, $site) {
             try {
                 $kirby->email([
                     'beforeSend' => function ($mailer) {
-                        $usernameSmtp = option('mailsettings.un') ?? null;
-                        $passwordSmtp = option('mailsettings.pw') ?? null;
-                        $host = option('mailsettings.host') ?? null;
-                        $port = (int) option('mailsettings.port') ?? null;
+                        $usernameSmtp = option('jds.mailsettings.un') ?? null;
+                        $passwordSmtp = option('jds.mailsettings.pw') ?? null;
+                        $host = option('jds.mailsettings.host') ?? null;
+                        $port = (int) option('jds.mailsettings.port') ?? null;
 
                         $mailer->isSMTP();
 

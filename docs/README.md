@@ -42,7 +42,7 @@ Im öffentlichen Bereich können die Besucher:innen der Webseite die freigegeben
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/sammlung/sammlung-normal.png)  |  ![](_media/sammlung/sammlung-filterCollection.png)  |  ![](_media/sammlung/sammlung-filterThema.png)
 
-Unterfilter  |  Filter Bundesland  |  Suche
+Unterfilter (Bundesland, Klasse)  |  Filter Bundesland  |  Suche
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/sammlung/sammlung-filter.png)  |  ![](_media/sammlung/sammlung-filterBundesland.png)  |  ![](_media/sammlung/sammlung-suche.png)
 
@@ -139,13 +139,26 @@ Folgende Schritte sollten optimalerweise in dieser Reihenfolge ablaufen:
 
 ### 1) Das Museum wird von einer Gruppe kontaktiert. Diese würde gerne teilnehmen und benötigt eine Einführung und Zugangsdaten.
 
-Dies erfolgt auf klassicher Art, bspw. per E-Mail.
+Dies erfolgt auf klassischer Art, bspw. per E-Mail, etc.
 
-### 2) Ein Mitarbeiter:in legt ein Gruppenkonto und einen Workshop-Raum für diese Gruppe an. Der/die Mitarbeiter:in verknüpft das Konto mit dem Workshop-Raum.
+### 2) Ein/e Mitarbeiter:in legt ein Gruppenkonto und einen Workshop-Raum für diese Gruppe an. Der/die Mitarbeiter:in verknüpft das Konto mit dem Workshop-Raum.
 
-Ein Gruppenkonto, z.B. für eine komplette Klasse, können im Bereich 'Temp Users' angelegt werden. Sie sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist es sicher gestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben.
+Ein Gruppenkonto, z.B. für eine komplette Klasse, können im Bereich 'Temp Users' angelegt werden. Sie sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist es sicher gestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Ein automatisiertes Löschen muss auf Ihrem Server per CRON-Job ausgeführt werden (mehr dazu im Kapitel [Technisches](technisches/README.md)).
 
-Der/die Mitarbeiter:in muss sich dafür im Admin-Bereich einloggen, oben links in der Navigation "Temp Users" auswählen und ein Konto anlegen. Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Dies kann in dem Blueprint für die Frontend-Benutzer angepasst werden. Dieser Wert wird beim Anlegen eines Kontos übernommen. Er kann im Admin-Backend aber jederzeit wieder angepasst werden.
+Der/die Mitarbeiter:in muss sich dafür im Admin-Bereich einloggen, oben links in der Navigation "Temp Users" auswählen. Auf "Neuen Account anlegen" klicken und einen Name für das Konto eingeben, z.B. KlasseBeethoven8. Das System wird automatisch ein Passwort vergeben. **Dieses Passwort unbedingt aufschreiben, um es später übergeben zu können.** 
+
+Menü oben links |  Übersicht Temp Users  |  Konto anlegen
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/admin/panel-menu.png)  |  ![](_media/admin/users/tempusers-paneloverview.png)  |  ![](_media/admin/users/tempusers-anlegen.png) 
+
+Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Er kann im Admin-Bereich aber jederzeit angepasst werden. Das System wird auch 
+
+Details Gruppen-Konto |  
+:-------------------------:|
+![](_media/admin/users/tempusers-eigenschaften.png) |  
+
+
+Im Anschluss muss der/die Mitarbeiter:in ein Workshop anlegen. Dafür oben links im Menü zurück zu "Site" navigieren. Hier auf der Hauptansicht des Admin-Bereiches werden die Workshops aufgelistet. Einfach auf "Hinzufügen" klicken und einen passenden Name ()
 
 Menü oben links |  Übersicht Temp Users  |  Konto anlegen
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -153,6 +166,9 @@ Menü oben links |  Übersicht Temp Users  |  Konto anlegen
 
 
 ### 3) Mitarbeiter:in legt XY Teilnehmer und XZ Leiter Subkonten im Workshop-Raum an. Subkonten werden durch Seiten im System repräsentiert.
+
+
+
 ### 4) Mitarbeiter:in ruft PDF-Übersicht der Teilnehmer auf. Hier werden alle Subkonten aufgelistet und zwar ein Teilnehmer pro PDF Seite. Jede Seite beinhaltet eine ID und den Login-Pfad für die Gruppe.
 ### 5) Mitarbeiter:in übergibt die a) Zugangsdaten des Gruppenkontos, b) Leiter IDs und c) PDF mit Teilnehmer IDs an die Leiter der Gruppe. Zugangsdaten und Leiter IDs werden getrennt und nicht in der PDF geliefert um zu vermeiden, dass diese Informationen nicht für alle Teilnehmer:innen zugänglich sind.
 ### 6) Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppen-Konto.
