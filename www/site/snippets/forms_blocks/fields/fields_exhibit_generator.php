@@ -41,7 +41,7 @@
                                 <?php if ($exhibit_type_class == "embed") : ?>
                                     <?php if ($url = $linked_exhibit->embed_url()->toEmbed()) : ?>
                                         <?php if ($url->providerName()->lower() == 'twitter') : ?>
-                                            <span class="text-secondary">
+                                            <span class="text-secondary text-break">
                                                 TWEET:
                                                 <?= $url->url() ?>
                                             </span>

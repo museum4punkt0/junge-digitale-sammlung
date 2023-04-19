@@ -3,7 +3,7 @@ icon: list-bullet
 
 options:
   sitemap: hide
-  
+
 status:
   extends: fields/statestwo
 
@@ -11,10 +11,33 @@ sections:
   content:
     type: fields
     fields:
+      # allgemeine infos
+      h_infos:
+        type: headline
+        label: Hinweise
+
+      plain__and_writer_info:
+        type: info
+        width: 1/2
+        label: Einfacher oder formatierter Text
+        text: |
+          Die meisten Textfelder sind einfache gehalten und man kann nur Text eingeben. Für Bereiche, die längere Texte benötigen sind Formatierungen (z.B. kursiv oder fett) erlaubt. Selektieren Sie einfach Textbereiche in dem Feld damit die Optionen erscheinen.
+
+      before_after_text_info:
+        type: info
+        width: 1/2
+        label: Vor und nach Texte
+        text: |
+          Manche Texte haben eine Variable mitten im Text. Man benötigt in diesem Fall Texte vor der Variable und nach der Variable. Solche Texte besitzen 2 Felder. Diese Texte können nicht formatiert werden.
+
+          Beispiel: Hallo ((varible benutzername)), schön dich wieder zu sehen!
+          Teil davor: Hallo
+          Teil danach: , schön dich wieder zu sehen!
+
       # user infos
       h_user:
         type: headline
-        label: Benutzer Felder
+        label: Benutzer
 
       fullname_label:
         type: text
@@ -22,7 +45,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Name"
       fullname:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Name"
@@ -33,7 +62,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Benutzername"
       username:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Benutzername"
@@ -44,7 +79,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Geschlecht"
       gender:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Geschlecht"
@@ -55,7 +96,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Alter"
       age_in_years:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Alter"
@@ -66,7 +113,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Geburtsland"
       birthcountry:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Geburtsland"
@@ -77,7 +130,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Geburtsland, Historische Länder"
       birthcountry_comment:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Geburtsland, Historische Länder"
@@ -88,7 +147,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Lebensstationen"
       stations:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Lebensstationen"
@@ -99,7 +164,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Lebensstationen, Historische Länder"
       stations_comment:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Lebensstationen, Historische Länder"
@@ -110,7 +181,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Zugehörigkeiten"
       personaldrive:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Zugehörigkeiten"
@@ -121,7 +198,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Bundesland"
       curator_state:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Bundesland"
@@ -132,7 +215,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Klassenstufe"
       schoolclass:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Klassenstufe"
@@ -145,7 +234,12 @@ sections:
       # exhibit infos
       h_exhibit:
         type: headline
-        label: Objekt Felder
+        label: Objekt
+
+      regularfields_info:
+        type: info
+        label: GEMEINSAME FELDER
+        theme: none
 
       exhibitname_label:
         type: text
@@ -153,7 +247,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Objektname"
       exhibitname:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Objektname"
@@ -164,7 +264,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Thema"
       impulse:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Thema"
@@ -175,7 +281,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Objekttyp"
       type:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Objekttyp"
@@ -186,7 +298,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Klassifikation"
       classification:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Klassifikation"
@@ -197,7 +315,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Objektbeschreibung"
       description:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Objektbeschreibung"
@@ -208,7 +332,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Entstehungszeit"
       made_when:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Entstehungszeit"
@@ -219,7 +349,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Historischer, kultureller Hintergrund"
       historical_background:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Historischer, kultureller Hintergrund"
@@ -230,7 +366,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Objektstory"
       personal_relation:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Objektstory"
@@ -241,8 +383,23 @@ sections:
       #   buttons: false
       #   width: 1/4
       #   label: Beschriftung für Upload der Dateitypen für "Digital Embed"
+
+
+      h_embedfields_info:
+        type: line
+      embedfields_info:
+        type: info
+        label: EMBED FELDER
+        theme: none
+
       embed_files:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für Upload der Dateitypen für "Digital Embed"
@@ -253,11 +410,24 @@ sections:
         width: 1/4
         label: Beschriftung für "Embed URL"
       embed_url:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Embed URL"
-      
+
+      h_physicalfields_info:
+        type: line
+      physicalfields_info:
+        type: info
+        label: PHYSISCHE FELDER
+        theme: none
+
       # phsyical exhibit
       museum_preview_label:
         type: text
@@ -265,21 +435,33 @@ sections:
         width: 1/4
         label: Beschriftung für Upload der Dateitypen für "Vorschau für das Museum"
       museum_preview:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für Upload der Dateitypen für "Vorschau für das Museum"
 
-      exhibit_preview_label:
+      exhibit_3dpreview_label:
         type: text
         buttons: false
         width: 1/4
-        label: Beschriftung für Auswahl des Vorschaubildes des Objekts
+        label: Beschriftung für "Auswahl des Objekts (Anhand der Vorschaubilder)"
       exhibit_preview:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
-        label: Hinweis für Auswahl des Vorschaubildes des Objekts
+        label: Hinweis für "Auswahl des des Objekts (Anhand der Vorschaubilder)"
 
       material_label:
         type: text
@@ -287,7 +469,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Material"
       material:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Material"
@@ -298,7 +486,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Maße"
       dimensions:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Maße"
@@ -309,7 +503,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Gewicht"
       weight:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Gewicht"
@@ -320,7 +520,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Aufnahmedatum Digitalisat"
       scan_date:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Aufnahmedatum Digitalisat"
@@ -331,7 +537,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Digitalisierungsmethode"
       scan_method:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Digitalisierungsmethode"
@@ -342,7 +554,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Digitalisierungsgerät"
       scan_device:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Digitalisierungsgerät"
@@ -353,7 +571,13 @@ sections:
         width: 1/4
         label: Beschriftung für "Software, Version"
       scan_software:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Software, Version"
@@ -364,19 +588,43 @@ sections:
         width: 1/4
         label: Beschriftung für "Bearbeitung des Digitalisates"
       scan_updated:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Bearbeitung des Digitalisates"
 
+      h_digitalfields_info:
+        type: line
+      digitalfields_info:
+        type: info
+        label: BORN-DIGITAL FELDER
+        theme: none
+
       # born digital exhibit
-      borndigital_files_label:
+      exhibit_preview_label:
         type: text
         buttons: false
         width: 1/4
-        label: Beschriftung für Upload der Dateitypen für "Digital Born"
+        label: Beschriftung für "Bild / Vorschau" Upload
+      digital_asset_label:
+        type: text
+        buttons: false
+        width: 1/4
+        label: Beschriftung für "Video" Upload 
       borndigital_files:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für Upload der Dateitypen für "Digital Born"
@@ -385,12 +633,11 @@ sections:
       #   buttons: false
       #   width: 1/4
       #   label: Beschriftung für Upload "Vorschaubild / Bild"
-      
 
       # exhibition fields
       h_exhibition:
         type: headline
-        label: Ausstellung Felder
+        label: Ausstellung
 
       exhibitiontitle_label:
         type: text
@@ -398,18 +645,30 @@ sections:
         width: 1/4
         label: Beschriftung für "Ausstellungstitel"
       exhibitiontitle:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Ausstellungstitel"
-      
+
       exhibitionintro_label:
         type: text
         buttons: false
         width: 1/4
         label: Beschriftung für "Einführungstext"
       exhibitionintro:
-        type: textarea
+        type: writer
+        nodes: false
+        marks:
+          - bold
+          - italic
+          - link
+          - email
         buttons: false
         width: 1/4
         label: Hinweis für "Einführungstext"
@@ -418,18 +677,43 @@ sections:
       h_infomsgs:
         type: headline
         label: Informationen
-      
+
       cookies_infotext:
         type: text
         buttons: false
-        width: 1/4
+        width: 1/2
         label: Hinweis für "Cookies sind inaktiv, bitte aktivieren"
-        help: Wenn der Besucher sich embed Inhalte anschauen will, Cookies aber inaktiv sind.
+        help: Wenn der Besucher sich eingebettete Inhalte anschauen will, Cookies aber inaktiv sind.
 
       ws_send_main_txt:
         type: text
         buttons: false
-        width: 1/4
+        width: 1/2
         label: Hinweis wenn Leiter das Workshop verschickt
         help: z.B. "Sind Sie sicher, dass Sie die Daten dieses Workshops abschicken wollen?"
 
+      ws_exhibition_locked_msg_before:
+        type: text
+        width: 1/2
+        label: Hinweis wenn Ausstellung blockiert (Text vor Zeit)
+        after: (minuten)
+        help: z.B. "Wird zurzeit von einem anderen Teilnehmer bearbeitet. Sie können nach ca."
+
+      ws_exhibition_locked_msg_after:
+        type: text
+        width: 1/2
+        before: (minuten)
+        label: Hinweis wenn Ausstellung blockiert (Text nach Zeit)
+        help: z.B. "Minuten diese Seite trotzdem entsperren."
+
+      ws_exhibition_locked_msg_unlockwarning:
+        type: text
+        width: 1/2
+        label: Warnung vor dem Entsperren einer Ausstellung
+        help: z.B. "Achtung! Wenn du die Ausstellung entsperrst könnte es zu Überschreibungen führen!"
+
+      ws_exhibition_locked_msg_tryagain:
+        type: text
+        width: 1/2
+        label: Hinweis wann man evtl. die Ausstellung wieder bearbeiten kann.
+        help: z.B. "Bitte versuchen Sie es um diese Uhrzeit noch mal:"

@@ -236,8 +236,8 @@ tabs:
     extends: tabs/galleryTab
 
   # files tab
-  filestab:
-    extends: tabs/modelsTab
+  # filestab:
+  #   extends: tabs/modelsTab
 
   # asset tab
   assetstab:

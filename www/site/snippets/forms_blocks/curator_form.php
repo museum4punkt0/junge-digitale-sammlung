@@ -80,7 +80,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
         <div class="form-group row mb-4">
           <!-- <label class="col-md-3 col-form-label" for="">Objekt</label> -->
           <div class="col-md-7 offset-md-3">
-            <div class="hstack gap-4 align-items-start ">
+            <div class="hstack gap-4 align-items-end ">
               <?php if ($linked_exhibit->type()->value() == 0) : ?>
                 <!-- PHYSICAL EXHIBIT -->
                 <?= snippet('forms_blocks/fields/fields_exhibit-physical', ['page' => $page, 'linked_exhibit' => $linked_exhibit]) ?>
@@ -113,7 +113,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
           <?php if ($linked_exhibit->type()->value() == 0) : ?>
             <div class="form-group row">
               <label for="exhibit_preview" class="col-md-3 col-form-label is-required">
-                Vorschaubild
+                <?= snippet('renderers/labeler', ['field' => 'exhibit_3dpreview_label', 'fallback' => 'Vorschaubild des Objekts']) ?>
               </label>
               <div class="col-md-7">
                 <?= snippet('renderers/input_element', ['_page' => $linked_exhibit, 'name' => 'exhibit_preview', 'type' => 'radioimages', 'ajaxHandler' => 'checkRadioGroupGallery']); ?>

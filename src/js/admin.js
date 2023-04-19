@@ -239,7 +239,7 @@ function initBSElements() {
     //tooltips curators status      
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
     //const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, { container: 'body' }));
-    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new Tooltip(tooltipTriggerEl, { container: 'body' }));
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new Tooltip(tooltipTriggerEl, { container: 'body', html: true }));
 }
 
 async function handleCurrentActiveForm(targetElement) {

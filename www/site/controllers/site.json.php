@@ -13,12 +13,12 @@ return function ($kirby, $page, $site) {
     if ($kirby->request()->is('GET') && get('lockMe')) {
 
         $lockMe = get('lockMe');
-
+        
         if ($lockMe) {
             $lockMePage = $page->parent()->findPageOrDraft($lockMe);
-
+            
             if ($lockMePage) {
-                if ($lockMePage->checkLock($page->slug())) {
+                if ($lockMePage->checkLock($page->slug())) {                
                     $lockactionstatus = "already_locked";
                     $lock = $lockMePage->lock();
                     $lockedBy = $lock->getInfos()['curator'];

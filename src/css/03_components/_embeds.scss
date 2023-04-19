@@ -34,3 +34,15 @@
         }
     }
 }
+
+#embed__preview{
+    min-height: 150px;
+    min-width: 150px;
+    background-color: #eee;
+    border-radius: 3px;
+    margin: 0 auto;
+    blockquote, iframe{
+        margin: 0;
+        padding: 0;
+    }
+}

@@ -292,7 +292,7 @@ class JDSPage extends Page
      * @param  \Kirby\Cms\Page $curatorPage
      * @return void
      */
-    public function lockMe(\Kirby\Cms\Pages $curatorPage)
+    public function lockMe($curatorPage)
     {
         $username = $curatorPage->intendedTemplate() == 'c_curator' ? $curatorPage->username()->toString() : 'Leiterkonto';
         $this->lock()->createWithCurator($curatorPage->slug(), $username);
@@ -319,7 +319,7 @@ class JDSPage extends Page
      * @param  string $curator_slug
      * @return bool
      */
-    public function checkLock(string $curator_slug): bool
+    public function checkLock($curator_slug): bool
     {
         $lock = $this->lock();
         return $lock && $lock->isBlocked($curator_slug) === true;

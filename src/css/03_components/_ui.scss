@@ -362,3 +362,10 @@
         margin-left: 0.5rem;
     }
 }
+
+
+.tooltip{
+    *:last-child{
+        margin-bottom: 0;
+    }
+}
