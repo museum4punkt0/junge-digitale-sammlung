@@ -1,6 +1,6 @@
 # Benutzung
 
- *(Screenshots können abweichen)*
+ *(Screenshots können abweichen. Screenshots enthalten Testdaten)*
 
 ## Inhaltsverzeichnis
 
@@ -40,11 +40,21 @@ Im öffentlichen Bereich können die Besucher:innen der Webseite die freigegeben
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/sammlung/sammlung-normal.png)  |  ![](_media/sammlung/sammlung-filterCollection.png)  |  ![](_media/sammlung/sammlung-filterThema.png)
 
-Wird ein Objekt ausgewählt, wird eine Objektseite mit den dazugehörigen Texten dargestellt. 3D-Objekte lassen sich dort dreidimensional betrachten, Bilder vergrößern, Filme abspielen etc. 
+Unterfilter  |  Filter Bundesland  |  Suche
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/sammlung/sammlung-filter.png)  |  ![](_media/sammlung/sammlung-filterBundesland.png)  |  ![](_media/sammlung/sammlung-suche.png)
+
+Wird ein Objekt ausgewählt, so wird eine Objektseite mit den dazugehörigen Texten dargestellt. 3D-Objekte lassen sich dort dreidimensional betrachten, Bilder vergrößern, Filme abspielen etc. 
 
 Ist die Übersicht in Ausstellung-Modus, so gelangt man nach Auswahl einer Ausstellung zur Ausstellungs-Ansicht mit deren Titel, Texten und Objekten, die zu dieser Ausstellung gehören. Auch von dort lassen sich die Objekte auswählen und in der Objektansicht im Detail betrachten. In einer Ausstellungsansicht werden 3 bis 5 Objekte präsentiert, die thematisch in dieser Ausstellung gruppiert wurden. 
 
+Sammlung, Ausstellungs-Ansicht  |  Ausstellungsseite  |  Objektseite
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/sammlung/sammlung-intro-ausstellungen.png)  |  ![](_media/sammlung/sammlung-ausstellung.png)  |  ![](_media/sammlung/sammlung-objekt.png)
+
 Bevor Inhalte, die während eines Workshops von Teilnehmern vorbereitet wurden, in diesem Bereich erscheinen, müssen sie von einem Administrator (z. B. Museumsmitarbeiter, Personal) überprüft, kuratiert und freigegeben werden.
+
+Auch weitere, reguläre Seiten können besucht werden, z.B. eine Impressums- oder "Über das Projekt"-Seiten, etc.
 
 --
 
@@ -52,17 +62,34 @@ Bevor Inhalte, die während eines Workshops von Teilnehmern vorbereitet wurden, 
 
 Workshop-Räume sind virtuelle Räume, geschützte Arbeitsbereiche für Klassen oder Gruppen, mit einer zeitlichen Begrenzung. Für diese werden Gruppen-Konten benötigt, die es Leiter:innen und Teilnehmer:innen ermöglicht, Objekte und deren Metadaten zur Sammlung hinzuzufügen, anzusehen und zu bearbeiten. Hierfür werden Zugänge ohne eine verpflichtende Registrierung mit E-Mail-Adressen von den Administratoren angelegt. Die Gültigkeitsdauer der Logins und damit der Zugriff auf die Workshop-Räume kann ggf. noch verändert oder verlängert werden, um flexibel auf die Entwicklungen und Bedürfnisse des Workshops eingehen zu können.
 
+Workshop Login |  Profil-Tab  |  Objekt-Tab (gescrollt)
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/workshop/workshop-intro.png)  |  ![](_media/workshop/user-tab.png)  |  ![](_media/workshop/objekt-tab-gescrollt.png)
+
 Eine Teilnehmer-Gruppe (z. B. eine ganze Schulklasse) besitzt eine Benutzername und Passwort Kombination. Diese werden von einem Administrator vor Workshop-Start definiert und weiter gegeben. Jeder Teilnehmer besitzt dazu noch eine eigene ID und kann bei der ersten Anmeldung eine eigene PIN anlegen. So können kommunale und private Bereiche innerhalb eines Workshopraumes getrennt werden.
 
 Wenn eingeloggt können Teilnehmer hier Daten zu ihrer Person und ihrem Objekt einpflegen. Bestimmte persönliche Daten werden auf der jeweiligen Objektansicht in der Sammlung angezeigt, z. B. Benutzername oder Bundesland, viele davon dienen aber eher für interne Zwecke des Personals.
 
-Teilnehmer:innen stehen 3 Objekttypen zur Verfügung: physisch, digital-embed und born-digital. Diese besitzen gemeinsame Felder wie Name, Objektstory oder Klassifikation, haben aber je nach Typ auch spezielle Felder, z. B. Maße und Gewicht.
+Gruppen-Konto Login |  PIN Eingabe nach Login  |  Lobby, um Teilnehmer zu Wechseln
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/workshop/workshop-intro.png)  |  ![](_media/workshop/workshop-pin.png)  |  ![](_media/workshop/workshop-lobby.png)
+
+
+Teilnehmer:innen stehen 3 Objekttypen zur Verfügung: physisch, digital-embed und born-digital. Diese besitzen gemeinsame Felder wie Titel, Objektstory oder Klassifikation, haben aber je nach Typ auch spezielle Felder, z. B. Maße oder Gewicht.
 
 #### *Physische Objekte*
 
-Diese Objekte wurden während des Workshops mittels eines 3D Scanners eingescannt. Sollten Teilnehmer (z. B. Schüler zusammen mit einem Lehrer während des Unterrichts) vor dem vor Ort Workshop-Termin im Museum schon mal einige Inhalte bearbeiten wollen, steht ihnen ein Uploadfeld für eine Vorschau des Objekts zur Verfügung. Somit können Mitarbeiter besser einschätzen, welche Objekte die Teilnehmer mitbringen werden.
+Diese Objekte wurden während des Workshops mittels eines 3D Scanners eingescannt. Sollten Teilnehmer (z. B. Schüler zusammen mit einem Lehrer während des Unterrichts) vor dem vor Ort Workshop-Termin im Museum schon mal einige Inhalte bearbeiten wollen, steht ihnen ein Uploadfeld für eine Vorschau des Objekts zur Verfügung. Somit können Mitarbeiter besser einschätzen, welche Objekte die Teilnehmer mitbringen werden (dieser Schritt ist aber optional).
 
 Es ist vorausgesehen, dass der Scan des Objekts vor Ort gemeinsam mit Hilfe von Personal erfolgt. Dementsprechend ist das System so konzipiert, dass die Mitarbeiter die 3D-Modelle und dessen Vorschaubilder im Admin-Bereich hochladen. Die Teilnehmer können im Anschluss ihr Objekt auswählen. Das System erlaubt ausschliesslich GLTF oder GLB Dateien, da diese für Web optimiert sind.
+
+Der 3D Scanner vom DAH exportiert OBJ Dateintypen. Mit Hilfe vom JDS O2G Tool können die OBJ Dateien leicht bearbeitet und in GLTF/GLB umgewandelt werden. Mehr zu diesem Tool erfahren Sie im O2G Repository.
+
+!!!!!!!! -- LINK ZUM O2G REPO -- !!!!!!
+
+Gruppen-Konto Login |  PIN Eingabe nach Login  |  Lobby, um Teilnehmer zu Wechseln
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/workshop/workshop-intro.png)  |  ![](_media/workshop/workshop-pin.png)  |  ![](_media/workshop/workshop-lobby.png)
 
 #### *Digital-embed*
 
