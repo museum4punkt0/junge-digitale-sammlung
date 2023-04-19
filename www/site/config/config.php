@@ -6,6 +6,7 @@ return [
   'debug' => true,
   'languages' => false,
   'panel' => [
+    'language' => 'de',
     'css' => 'assets/css/custom-panel.css'
   ],
 

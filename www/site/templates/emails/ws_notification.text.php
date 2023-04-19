@@ -5,7 +5,7 @@ $exhibits = $data['ws-exhibits'];
 $exhibitions = $data['ws-exhibitions'];
 ?>
 
-Neues Workshop wurde als fertig markiert.
+Neuer Workshop wurde als fertig markiert.
 
 <?= $data['ws-name'] ?>
 

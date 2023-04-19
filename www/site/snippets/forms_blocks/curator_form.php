@@ -93,7 +93,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
               <?php endif ?>
             </div>
           </div>
-          
+
           <div class="col-md-2">
             <?php if ($linked_exhibit->type()->value() == 0) : ?>
               <?= snippet('renderers/fields_metainfo', ['name' => 'museum_preview', 'composed' => ['museum_preview'], 'context' => $linked_exhibit]) ?>
@@ -105,8 +105,8 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
           </div>
         </div>
 
-    
-<hr>
+
+        <hr>
 
         <!-- EXHIBIT FORM -->
         <form id="exhibit-form" class="exhibit-form watchdog__form" action="<?= $page->url() ?>" method="POST">
@@ -129,7 +129,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
             <div class="col-md-4 offset-md-6 col-lg-3 offset-lg-7">
               <div class="vstack gap-2">
                 <a href="<?= $linked_exhibit->parent()->url() ?>/<?= $linked_exhibit->slug() ?>" target="_blank" class="btn btn-primary preview__exhibit-button">
-                  Preview <i icon-name="eye" class="float-end"></i>
+                  Vorschau <i icon-name="eye" class="float-end"></i>
                 </a>
                 <button class="btn btn-primary mobile-fixed mobile-right save__exhibit-button" type="submit" name="save-exhibit" value="Objekt speichern">
                   Speichern <i icon-name="save" class="float-end"></i>
@@ -216,7 +216,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
             <div class="col-md-4 offset-md-6 col-lg-3 offset-lg-7">
               <div class="vstack gap-2">
                 <a href="<?= $linked_exhibition->parent()->url() ?>/<?= $linked_exhibition->slug() ?>" target="_blank" class="btn btn-primary preview__exhibit-button">
-                  Preview <i icon-name="eye" class="float-end"></i>
+                  Vorschau <i icon-name="eye" class="float-end"></i>
                 </a>
                 <button class="btn btn-primary mobile-fixed mobile-right save__exhibition-button" type="submit" name="save-exhibition" value="Ausstellung speichern">
                   Speichern <i icon-name="save" class="float-end"></i>

@@ -208,7 +208,7 @@ tabs:
           mail_subject:
             label: Betreff
             type: text
-            help: Betreff für generierte Emails, z.B. "Ein neues Workshop wurde fertig gestellt"
+            help: Betreff für generierte Emails, z.B. "Ein neuer Workshop wurde fertig gestellt"
 
   # gallery tab
   gallery:

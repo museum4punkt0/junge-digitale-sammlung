@@ -60,7 +60,7 @@ class CCuratorPage extends JDSPage
     $messages = [
       'fullname'  => 'Name fehlt.',
       'username'  => 'Benutzername fehlt.',
-      'dse'       => 'Datenschuzterklärung nicht angekreuzt.',
+      'dse'       => 'Datenschutzerklärung nicht angekreuzt.',
     ];
 
     if ($isComplete = invalid($input, $dataRules, $messages)) {

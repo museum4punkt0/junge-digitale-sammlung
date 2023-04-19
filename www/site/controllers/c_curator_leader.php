@@ -144,7 +144,7 @@ return function ($kirby, $page, $site) {
                     'replyTo' => $site->from_address()->value(),
                     'to' => $site->to_address()->value(),
                     'cc' => $site->cc_address()->isNotEmpty() ? $site->cc_address()->value() :  null,
-                    'subject' => ($site->mail_subject()->isNotEmpty() ? $site->mail_subject()->value() :  'Neues Workshop')  . ' :: [' . $mailData['ws-name'] . ']',
+                    'subject' => ($site->mail_subject()->isNotEmpty() ? $site->mail_subject()->value() :  'Neuer Workshop')  . ' :: [' . $mailData['ws-name'] . ']',
                     'template' => 'ws_notification',
                     'data'  => $mailData
                 ]);

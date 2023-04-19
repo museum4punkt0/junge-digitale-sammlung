@@ -17,7 +17,7 @@ date_default_timezone_set('Europe/Berlin');
 
             <?php if (($time + 60 * $locktime) <= time()) : ?>
                 <p>
-                    Entsperren: Achtung! es könnte zu überschreibungen führen!
+                    Entsperren: Achtung! Es könnte zu Überschreibungen führen!
                 </p>
                 <form action="" method="POST" action="<?= $page->url() ?>">
                     <?php if (isset($lockMe)) : ?>
