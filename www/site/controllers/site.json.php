@@ -18,11 +18,9 @@ return function ($kirby, $page, $site) {
             $lockMePage = $page->parent()->findPageOrDraft($lockMe);
 
             if ($lockMePage) {
-                if ($lockMePage->checkBlock($page->slug())) {
+                if ($lockMePage->checkLock($page->slug())) {
                     $lockactionstatus = "already_locked";
-                    //lockedBy = $lockMePage->lock()->getCurator();
                     $lock = $lockMePage->lock();
-                    //$overlayCode = snippet('forms_blocks/overlay-blocked', ['lockedBy' => $lockedBy], true);
                     $lockedBy = $lock->getInfos()['curator'];
                     $overlayCode = snippet('forms_blocks/overlay-blocked', ['lock' => $lock, 'lockMe' => $lockMe, 'page' => $page], true);
                 } else {
@@ -50,7 +48,6 @@ return function ($kirby, $page, $site) {
 
             if ($unlockMePage) {
                 if ($unlockMePage->lock()->getCurator() == $page->slug()) {
-                    //if ($blockedBy && $blockedBy == $page->slug()) {
                     $unlockMePage->unlockMe();
                     $lockactionstatus = "PAGE UNLOCKED " . $unlockMePage->title();
                 } else if ($blockedBy && $blockedBy != $page->slug()) {

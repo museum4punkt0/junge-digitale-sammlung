@@ -211,9 +211,9 @@ return function ($kirby, $page) {
                         'uname' => $kirby->user()->name()
                     ]);
 
-                    if ($changeSlug) {
-                        $tempslug = $page->checkSlugIndex($data['title']);
-                        $updateexhibit->changeSlugOnly($tempslug);
+                    if ($changeSlug) {                        
+                        $indexedSlug = $updateexhibit->checkSlugIndex(Str::slug($data['title']));
+                        $updateexhibit->changeSlugOnly($indexedSlug);
                     }
 
                     $data['exhibitname'] = $data['title'];
@@ -310,8 +310,8 @@ return function ($kirby, $page) {
                     ]);
 
                     if ($changeSlug) {
-                        $tempslug = $page->checkSlugIndex($data['title']);
-                        $updateexhibition->changeSlugOnly($tempslug);
+                        $indexedSlug = $updateexhibition->checkSlugIndex(Str::slug($data['title']));
+                        $updateexhibition->changeSlugOnly($indexedSlug);
                     }
 
                     $alert[] = 'Ausstellung erfolgreich gespeichert!';

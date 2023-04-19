@@ -123,8 +123,8 @@ class CExhibitPage extends JDSPage
 
   public static function hookPageCreate($page) // plugin
   {
-    $tempslug = $page->checkSlugIndex($page->tempslug());
-    $page->changeSlugOnly($tempslug);
+    $indexedSlug = $page->checkSlugIndex($page->tempslug());
+    $page->changeSlugOnly($indexedSlug);
   }
 
   public static function hookChangeSlugAfter($newPage, $oldPage)
@@ -141,6 +141,12 @@ class CExhibitPage extends JDSPage
         $exhibition->update($exhibition_msgs);
       }
     }
+  }
+
+  public static function hookChangeTitleAfter($newPage, $oldPage)
+  {
+    $newPage->changeSlugAfterTitleChange($newPage->title(), $oldPage->title());
+    Panel::go($newPage->parent()->panel()->path());
   }
 
   public static function hookPageUpdateAfter($newPage, $oldPage)
@@ -207,7 +213,7 @@ class CExhibitPage extends JDSPage
   {
     // refresh message infos in exhibition, if it is linked
     $linked_user = $page->linked_user()->toPageOrDraft();
-    if ($exhibition = $linked_user->linked_exhibition()->toPageOrDraft()) {
+    if ($linked_user && $exhibition = $linked_user->linked_exhibition()->toPageOrDraft()) {
       $exhibition_msgs = handleExhibitionMessages($exhibition->content()->data(), $exhibition);
       $exhibition->update($exhibition_msgs);
     }

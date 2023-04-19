@@ -1,13 +1,23 @@
 <?php
 
+/**
+ * 
+ * JDSPage
+ * Basic class for all other models (template classes). It contains many features
+ * that are used by all relevant models, like save-history logging, sepcial
+ * URL slug handling
+ * 
+ **/
+
 use Kirby\Cms\CustomContentLock;
+use Kirby\Cms\Page;
 
 class JDSPage extends Page
 {
     /**
      * Gets called once after page was created
      *
-     * @param  Array $data
+     * @param  array $data
      * @return void
      */
     public function updateAtCreation($data = null)
@@ -20,6 +30,16 @@ class JDSPage extends Page
         $this->update($creationData);
     }
 
+    /**
+     * update
+     * Overrides the update function
+     * https://github.com/getkirby/kirby/blob/3.9.3/src/Cms/PageActions.php#L942
+     * Save-history logic and some slug change manipulation if title was changed
+     * @param  array $input
+     * @param  string $languageCode
+     * @param  bool $validate
+     * @return Kirby\Cms\Page
+     */
     public function update(array $input = NULL, string $languageCode = NULL, bool $validate = false)
     {
         date_default_timezone_set('Europe/Berlin');
@@ -36,7 +56,6 @@ class JDSPage extends Page
             option('2av.jds-pagemodel.dateFormatIntl')
         );
         $ldString = datefmt_format($fmt, $timestamp);
-
 
         $pagelogs = $this->updateLogs()->yaml() ?? [];
         $pagelogs[] = [
@@ -55,10 +74,13 @@ class JDSPage extends Page
         $input[option('2av.jds-pagemodel.modifiedByUser')] = $username;
         $input[option('2av.jds-pagemodel.updateLogs')] = $pagelogs;
 
-        if (isset($input['title']) && $input['title'] != $this->title()) {
+        /* if (isset($input['title']) && $input['title'] != $this->title()) {
             $input['delayedSlugChange'] = true;
-        }
+        } */
 
+        /* if the page is inside a workshop (it is an exhibit, exhibition or participant)
+        *  and the workshop was alrady cleaned, set it again as uncleaned
+        */
         if ($this->parent() && $this->parent()->intendedTemplate() == 'c_workshop') {
             if ($this->parent()->clean()->toBool()) {
                 $wsupdate = $this->parent()->update([
@@ -70,57 +92,103 @@ class JDSPage extends Page
         return parent::update($input);
     }
 
+    /**
+     * changeSlugOnly
+     * changes only the slug without updating anything else
+     * @param  string $slug
+     * @return Kirby\Cms\Page
+     */
     public function changeSlugOnly(string $slug)
     {
         return parent::changeSlug($slug);
     }
 
+    /**
+     * changeSlug
+     * Overrides the changeSlug function to also call an empty update so the history log gets triggered
+     * https://github.com/getkirby/kirby/blob/3.9.3/src/Cms/PageActions.php#L154
+     * @param  string $slug
+     * @param  string $languageCode
+     * @return Kirby\Cms\Page
+     */
     public function changeSlug(string $slug, string $languageCode = null)
     {
         $this->update();
         return parent::changeSlug($slug, $languageCode);
     }
 
+    /**
+     * checkSlugIndex
+     * Used for pages that might has colliding slugs, like exhibits and exhibitions. If a slug already exists
+     * inside the workshop, it adds an index number as a suffix
+     * @param  string $_slug
+     * @return string
+     */
     public function checkSlugIndex($_slug)
     {
-        $existingUrls = $this->parent()->childrenAndDrafts();
+        $existingPages = $this->parent()->childrenAndDrafts();
         $existingIds = [];
 
-        if ($existingUrls->isNotEmpty()) {
-            foreach ($existingUrls as $eu) {
-                array_push($existingIds, $eu->slug());
+        if ($existingPages->isNotEmpty()) {
+            foreach ($existingPages as $ep) {
+                array_push($existingIds, $ep->slug());
             }
         }
 
         $tempslugOri = $_slug;
-        $tempslug = $_slug;
+        $indexedSlug = $_slug;
         $index = 1;
-        while (in_array($tempslug, $existingIds)) {
-            $tempslug = $tempslugOri . '-' . $index;
+
+        while (in_array($indexedSlug, $existingIds)) {
+
+            $indexedSlug = $tempslugOri . '-' . $index;
             $index++;
         }
 
-        return $tempslug;
+        return $indexedSlug;
     }
 
-    /* public function changeTitleAtCreation(string $suffixSlug)
-    {
-        return parent::changeTitle($this->title() . '-' . $suffixSlug);
-    } */
-
+    /**
+     * changeTitle
+     * https://github.com/getkirby/kirby/blob/3.9.3/src/Cms/PageActions.php#L399
+     * Overrides the chanteTitle function to trigger an empty update
+     * so the history log writes once. Relevant for logging in the
+     * admin area
+     * @param  mixed $title
+     * @param  mixed $languageCode
+     * @return Kirby\Cms\Page
+     */
     public function changeTitle(string $title, string $languageCode = null)
     {
         $this->update();
         return parent::changeTitle($title, $languageCode);
     }
 
+    /**
+     * changeSlugAfterTitleChange
+     * Automatically changes the slug after a title change. Relevant for the admin area
+     * @param  mixed $newTitle
+     * @param  mixed $oldTitle
+     * @return void
+     */
+    public function changeSlugAfterTitleChange($newTitle, $oldTitle)
+    {
+        $changeSlug = $newTitle != $oldTitle;
 
+        if ($changeSlug) {
+            $indexedSlug = $this->checkSlugIndex(Str::slug($newTitle));
+            $this->changeSlugOnly($indexedSlug);
+        }
+    }
 
+    // INFO: the following function have 'pin' in the name since participants login using their ID and PIN
 
     /**
-     * 
-     * PIN and sub-auth functions
-     * 
+     * pinMe
+     * Handles PIN sub-authentification for participants inside workshop area
+     * @param  Kirby\Cms\Page $workshopPage
+     * @param  mixed $data
+     * @return array
      */
     public function pinMe($workshopPage, $data)
     {
@@ -151,6 +219,13 @@ class JDSPage extends Page
         return $alert;
     }
 
+    /**
+     * unpinMe
+     * Handles participant soft-logout, meaning the group account is still logged in
+     * but a new participant can now enter his/her PIN in the workshop lobby area
+     * @param  Kirby\Cms\Page $workshopPage
+     * @return array
+     */
     public function unpinMe($workshopPage)
     {
         if ($workshopPage) {
@@ -168,20 +243,35 @@ class JDSPage extends Page
         return $alert;
     }
 
+    /**
+     * checkPin
+     * Checks if the session variable for the participant ID is the same as
+     * the current page's that calls the function
+     * @return bool
+     */
     public function checkPin()
     {
         return kirby()->session()->get('participantID') == $this->slug();
     }
 
+    /**
+     * getPinStatus
+     * Returns true or false if a participant is logged in with an ID
+     * (function not used until now but might be relevant)
+     * @return bool
+     */
     public function getPinStatus()
     {
         return kirby()->session()->get('participantLogged');
     }
 
     /**
-     * 
-     * Lock and blocking functions
-     * 
+     * lock
+     * overrides lock function to return our CustomLock
+     * https://github.com/getkirby/kirby/blob/3.9.3/src/Cms/ModelWithContent.php#L311
+     * Creates a lock for the page so others cannot edit it (at this point
+     * only relevant for exhibitions)
+     * @return void
      */
     public function lock()
     {
@@ -196,73 +286,66 @@ class JDSPage extends Page
         }
     }
 
-    public function lockMe($curatorPage)
+    /**
+     * lockMe
+     * Locks the page taking into account special logic
+     * @param  \Kirby\Cms\Page $curatorPage
+     * @return void
+     */
+    public function lockMe(\Kirby\Cms\Pages $curatorPage)
     {
         $username = $curatorPage->intendedTemplate() == 'c_curator' ? $curatorPage->username()->toString() : 'Leiterkonto';
         $this->lock()->createWithCurator($curatorPage->slug(), $username);
     }
 
+    /**
+     * unlockMe
+     * Unlocks the page in a more forcefull way
+     * than only $contentlock->unlock() so we are
+     * sure it is unlocked. This is due to many curators
+     * sharing the group account
+     * @return void
+     */
     public function unlockMe()
     {
         $this->lock()->remove();
         $this->lock()->resolve();
     }
 
-    public function checkBlock($curator): bool
+    /**
+     * checkLock
+     * Similar to isLocked, but our CustomLock checks for other parameters
+     * https://github.com/getkirby/kirby/blob/3.9.3/src/Cms/ModelWithContent.php#L287
+     * @param  string $curator_slug
+     * @return bool
+     */
+    public function checkLock(string $curator_slug): bool
     {
         $lock = $this->lock();
-        return $lock && $lock->isBlocked($curator) === true;
+        return $lock && $lock->isBlocked($curator_slug) === true;
     }
 
 
-
     /**
+     * callPopulateAge
+     * Calls the global function populateAge. Needed in order to use this function
+     * inside YAML blueprints
      * 
-     * Populators and helper functions
-     * 
+     * @param  int $start
+     * @param  int $end
+     * @param  bool $invert
+     * @return void
      */
-    public function populateAge(int $start = 1, int $end = 99, $invert = false)
+    public function callPopulateAge(int $start = 1, int $end = 99, $invert = false)
     {
-        $_structure = new Kirby\Cms\Structure();
-
-        $dataPage = site()->data_populators_pick()->toPage();
-        $extraItems = [];
-
-        if ($dataPage) {
-            if ($dataPage->age_start()->isNotEmpty())
-                $start = $dataPage->age_start()->value();
-
-            if ($dataPage->age_end()->isNotEmpty())
-                $end = $dataPage->age_end()->value();
-
-            $extraItems = $dataPage->age_structure()->toStructure();
-        }
-
-        for ($i = 0; $i <= ($end - $start); $i++) {
-            $_structure->add(new Kirby\Cms\StructureObject([
-                'id'        => strval($start + $i),
-                'content'   => ['desc' => strval($start + $i)]
-            ]));
-        }
-
-        foreach ($extraItems as $structureItem) {
-            $_structure->add(new Kirby\Cms\StructureObject([
-                'id'        => $structureItem->desc()->slug(),
-                'content'   => ['desc' => $structureItem->desc()]
-            ]));
-        }
-
-        if ($invert)
-            $_structure = $_structure->flip();
-
-        return $_structure;
+        return populateAge($start, $end, $invert);
     }
 }
 
 
 /************
  * 
- * PLUGIN
+ * Define the plugin
  * 
  * **********/
 

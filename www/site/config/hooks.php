@@ -83,6 +83,14 @@ return [
         }
     },
 
+    'page.changeTitle:after' => function ($newPage, $oldPage) {
+        $modelName = a::get(Page::$models, $newPage->intendedTemplate()->name());
+
+        if ($modelName && method_exists($modelName, 'hookChangeTitleAfter')) {
+            $modelName::hookChangeTitleAfter($newPage, $oldPage);
+        }
+    },
+
     'page.delete:before' => function ($page, $force) {
         $modelName = a::get(Page::$models, $page->intendedTemplate()->name());
 

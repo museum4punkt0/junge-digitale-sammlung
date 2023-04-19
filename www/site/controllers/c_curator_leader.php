@@ -213,32 +213,6 @@ return function ($kirby, $page, $site) {
 
         $currentExhibition = $page->parent()->childrenAndDrafts()->find($data['exhibition-id']);
 
-        // check users for impulse mismatch
-        /* $forcedExhibitionValue = $data['impulse'] ?? null;
-        $data['userMsg'] = '';
-        $data['exhibitsMsg'] = '';
-        $userWarnings = 0;
-        $userErrors = 0;
-        for ($x = 1; $x <= 5; $x++) {
-            if (isset($data['user' . $x]) && $data['user' . $x] != '') {
-                if (matchImpulses($currentExhibition, $data['user' . $x], $forcedExhibitionValue) == 'result_error') {
-                    $userErrors++;
-                } else if (matchImpulses($currentExhibition, $data['user' . $x], $forcedExhibitionValue) == 'result_warning') {
-                    $userWarnings++;
-                }
-            }
-        }
-        if ($userWarnings != 0) {
-            $data['userMsg'] .= $userWarnings . " verlinkte Teilnehmer haben noch keine Objekte";
-        }
-        if ($userErrors != 0) {
-            $data['exhibitsMsg'] .= $userErrors . " verlinkte Objekte haben unpassende Themen";
-        } */
-
-        /* $exhibition_msgs = handleExhibitionMessages($data, $currentExhibition);   
-        $data = array_merge($data, $exhibition_msgs); */
-        //var_dump($data);
-
         $formRules = [
             'exhibitiontitle'    => ['required'],
             'impulse'            => ['required'],
@@ -274,8 +248,8 @@ return function ($kirby, $page, $site) {
                     $updateexhibition->unlockMe();
 
                     if ($changeSlug) {
-                        $tempslug = $page->checkSlugIndex($data['title']);
-                        $updateexhibition->changeSlugOnly($tempslug);
+                        $indexedSlug = $updateexhibition->checkSlugIndex(Str::slug($data['title']));
+                        $updateexhibition->changeSlugOnly($indexedSlug);
                     }
 
                     $alert[] = 'Ausstellung erfolgreich gespeichert!';

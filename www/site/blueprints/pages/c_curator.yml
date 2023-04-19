@@ -102,7 +102,7 @@ tabs:
             label: Alter
             options: query
             query:
-              fetch: page.populateAge
+              fetch: page.callPopulateAge
               text: "{{ structureItem.desc }}"
               value: "{{ structureItem.id }}"
 

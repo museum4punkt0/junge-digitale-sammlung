@@ -2,13 +2,17 @@
 return function ($page, $kirby, $site) {
 
     if ($kirby->request()->is('GET') && get('logout')) {
+
+        // unlocks to current page, if locked
         $page->unlockMe();
 
         if ($linked_exhibit = $page->linked_exhibit()->toPageOrDraft()) {
+            // unlocks my exhibit page, if the current page had an exhibit related to it
             $linked_exhibit->unlockMe();
         }
 
         if ($linked_exhibition = $page->linked_exhibition()->toPageOrDraft()) {
+            // unlocks my exhibition page, if the current page had an exhibit related to it
             $linked_exhibition->unlockMe();
         }
 

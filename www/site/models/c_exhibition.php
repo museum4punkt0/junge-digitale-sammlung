@@ -66,8 +66,8 @@ class CExhibitionPage extends JDSPage
       ]);
     }
 
-    $tempslug = $page->checkSlugIndex($page->tempslug());
-    $page->changeSlugOnly($tempslug);
+    $indexedSlug = $page->checkSlugIndex($page->tempslug());
+    $page->changeSlugOnly($indexedSlug);
   }
 
   public static function hookPageUpdateAfter($newPage, $oldPage)
