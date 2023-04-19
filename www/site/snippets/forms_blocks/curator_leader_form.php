@@ -71,7 +71,7 @@ $materials = $page->parent()->materials()->toPages();
                     <div class="p-id stack__header">ID</div>
                     <div class="p-status stack__header excerpt">Daten</div>
                     <div class="o-status stack__header excerpt">Objekt</div>
-                    <div class="o-link stack__header excerpt">Obj.<br>Name</div>
+                    <div class="o-link stack__header excerpt">Obj.<br>Vorschau</div>
                     <div class="p-pin__reset stack__header excerpt">PIN Reset</div>
                 </div>
             </div>

@@ -153,7 +153,7 @@ function handleExhibitionMessages($data, $page)
         $response['userMsg'] .= $userWarnings . " verlinkte Teilnehmer haben noch keine Objekte";
     }
     if ($userErrors != 0) {
-        $response['exhibitsMsg'] .= $userErrors . " verlinkte Objekte haben unpassende Themen";
+        $response['exhibitsMsg'] .= $userErrors . " verlinkte Objekte haben nicht passende Themen";
     }
 
     return $response;

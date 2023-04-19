@@ -3,7 +3,7 @@
         <?php $legalpages = $site->children()->filterBy('intendedTemplate', 'legal');
         foreach ($legalpages as $lp) : ?>
             <div class="text-end">
-                <a href="<?= $lp->id() ?>" title="<?= $lp->title() ?>" class="link-info" target="_blank">
+                <a href="<?= $lp->url() ?>" title="<?= $lp->title() ?>" class="link-info" target="_blank">
                     <?= $lp->title() ?> ›
                 </a>
             </div>
