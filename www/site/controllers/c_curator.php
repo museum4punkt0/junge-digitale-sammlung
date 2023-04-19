@@ -34,7 +34,6 @@ return function ($kirby, $page) {
         if ($invalid = invalid($data, $formRules, $messages)) {
             $alert = $invalid;
         } else {
-
             if ($isChanging && usernameExists($data['username'])) {
                 $alert[] = 'Benutzername existiert bereits.';
                 $metainfo = "user-error";
