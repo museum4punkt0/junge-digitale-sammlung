@@ -457,7 +457,7 @@ function create_zip($page, $file)
  * @param  array $embed
  * @return array
  */
-function scrapEmbed($url, $embed)
+/* function scrapEmbed($url, $embed)
 {
     try {
         $dispatcher = new Embed\Http\CurlDispatcher();
@@ -504,4 +504,4 @@ function scrapEmbed($url, $embed)
     }
 
     return $embed;
-}
+} */

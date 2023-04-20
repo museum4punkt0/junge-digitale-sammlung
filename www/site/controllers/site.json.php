@@ -104,7 +104,7 @@ return function ($kirby, $page, $site) {
             $embed['status'] = 'error';
             $embed['error']  = 'The $url variable is not an url';
         } else {
-            $embed = scrapEmbed($embedurl, $embed);
+            $embed = $site->getEmbedData($embedurl);
         }
     }
 

@@ -4,7 +4,7 @@
  * TODO
  * populate after form submit still unclean because of $data['title']
  */
-return function ($kirby, $page) {
+return function ($kirby, $page, $site) {
 
     # Grab the data from the default controller for authentification
     $site_vars = $kirby->controller('site', compact('page', 'kirby'));
@@ -169,7 +169,7 @@ return function ($kirby, $page) {
                     $embed['status'] = 'error';
                     $embed['error']  = 'The $url variable is not an url';
                 } else {
-                    $embed = scrapEmbed($url, $embed);
+                    $embed = $site->getEmbedData($url);
 
                     if (isset($embed['data']) && $embed['data']) {
                         $data['embed_url'] = [

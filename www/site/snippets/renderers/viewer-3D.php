@@ -1,6 +1,6 @@
 <script>
     self.ModelViewerElement = self.ModelViewerElement || {};
-    self.ModelViewerElement.dracoDecoderLocation = '/assets/js/vendor/decoder/';
+    self.ModelViewerElement.dracoDecoderLocation = '<?= kirby()->url() ?>/assets/js/vendor/decoder/';
 </script>
 <?= js('/assets/js/vendor/model-viewer.min.js', ['type' => 'module']) ?>
 <?php

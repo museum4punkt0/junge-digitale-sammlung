@@ -125,11 +125,15 @@
             &.youtube,
             &.vimeo {
                 @include media-breakpoint-down(md) {
-                    max-width: 90%;
+                    max-width: 100%;
                 }
 
                 @include media-breakpoint-up(md) {
-                    padding-top: 1rem;
+                    padding-top: 5.75rem;
+                }
+
+                @include media-breakpoint-up(xl) {
+                    padding-top: 14.5rem;
                 }
 
                 @include media-breakpoint-up(xxl) {
