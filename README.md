@@ -17,18 +17,18 @@
 
 Das Deutsche Auswandererhaus ist ein kulturhistorisches Museum zum Thema Migration in Bremerhaven. Im Rahmen des deutschlandweiten Förderprojekts »museum4punkt0« sollen neue Formen der digitalen Kommunikation, Partizipation, Bildung und Vermittlung in Museen entwickelt, umgesetzt und evaluiert werden. Das Projektteam des DAHs erarbeitete unter dem Titel »Junge Digitale Sammlung« JDS ein museumspädagogisches Workshop-Angebot für Schulklassen. Der Workshop setzt sich inhaltlich mit den Themenkomplexen Identität und Diversität auseinander sowie mit der Bedeutung und Handhabung von Objekten im Museum. Teilnehmende Schüler:innen können dabei ihre Alltagsobjekte, die sowohl physisch als auch digital sein können, in 3D scannen oder fotografieren. Diese und weitere Daten zum Objekt werden in eine Datenbank eingegeben und später auf einer Plattform veröffentlicht. Durch die Workshops wird die JDS zu einer umfangreichen Sammlung anwachsen.
 
+Dieses Repository entspricht ein komplexes Theme für Kirby CMS und beinhaltet alle relevante Dateien (abgesehen vom Kirby CMS Kern).
 
 ---
 
 ## 2. Finanzierung
 [Bitte Input von BB]
 
-
 ---
 
 ## 3. Empfohlenes Server Setup 
 
-Das projekt wurde ursprünglich auf folgendem Server installiert.
+Das Projekt wurde ursprünglich auf folgendem Server installiert.
 - Ubuntu 20.04 (Cloudron installiert)
 - Apache 2.4.x
 - PHP 8.1 mit Standard-Modulen (OPCache deaktivieren)
@@ -36,7 +36,7 @@ Das projekt wurde ursprünglich auf folgendem Server installiert.
 - 4GB RAM
 - 80GB Festplatte
 
-*Die Größe der Festplatte hängt hauptsächlich davon ab, wieviele Video-Dateien erwartet werden. 3D Modelle und Bilder verbrauchen vergleichsweise wenig Platz.*
+*Die Größe der Festplatte hängt hauptsächlich von der Menge an Video-Dateien die erwartet wird. 3D Modelle und Bilder verbrauchen vergleichsweise wenig Platz.*
 
 
 ---
@@ -49,7 +49,7 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie folgende Anforderungen erfüllt
 
 ### Für die Installation
 * Ein Server steht Ihnen zur Verfügung.
-* Sie haben eine [Kirby](https://getkirby.com) Version heruntergeladen. Das ursprüngliche Projekt wurde mit [Kirby 3.8.3](https://github.com/getkirby/kirby/releases/tag/3.8.3) erstellt. Aus Kompatibilitätsgründen wird empfohlen diese Version zu verwenden. Alle relevante Plugins sind in diesem Repository inkludiert. Kirby ist ein Open-Source, lizenzbasiertes CMS System.
+* Sie haben eine Version vom Kirby-Core [Kirby](https://getkirby.com) heruntergeladen. Das ursprüngliche Projekt wurde mit [Kirby 3.8.3](https://github.com/getkirby/kirby/releases/tag/3.8.3) erstellt. Aus Kompatibilitätsgründen wird empfohlen diese Version zu verwenden. Alle relevante Plugins sind in diesem Repository inkludiert. Kirby ist ein Open-Source, lizenzbasiertes CMS System.
 * Sie haben eine Kopie dieses Repositorys.
 
 ### Für die Entwicklung

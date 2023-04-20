@@ -1,3 +1,7 @@
+[« zurück zu README](../README.md)
+
+---
+
 # Benutzung
 
  *(Screenshots können abweichen. Screenshots enthalten Testdaten. Manche Bereiche wurden aus Copyright Gründen )*
@@ -174,3 +178,7 @@ Menü oben links |  Übersicht Temp Users  |  Konto anlegen
 ### 6) Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppen-Konto.
 ### 7) Ab jetzt kann jede:r Teilnehmer:in (und Leiter:in) sich einloggen und das Workshop benutzen.
 ### 8) Bei der ersten Anmeldung müssen sowohl Leiter:innen als auch Teilnehmer:innen eine PIN anlegen. Somit sind die jeweiligen Arbeitsbereiche im Workshop-Raum geschützt.
+
+---
+
+[« zurück zu README](../README.md)

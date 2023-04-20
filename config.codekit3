@@ -448,25 +448,6 @@
       "oAP" : "\/docs\/.nojekyll",
       "oF" : 0
     },
-    "\/docs\/benutzer.md" : {
-      "cB" : 0,
-      "cS" : 0,
-      "eF" : 1,
-      "eL" : 1,
-      "ema" : 1,
-      "eSQ" : 1,
-      "ft" : 4096,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/docs\/benutzer.html",
-      "oF" : 0,
-      "oFM" : 0,
-      "oS" : 0,
-      "pHT" : 0,
-      "pME" : 1,
-      "rFN" : 0,
-      "uCM" : 0
-    },
     "\/docs\/details\/admin.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -532,25 +513,6 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/docs\/routinen-crons.md" : {
-      "cB" : 0,
-      "cS" : 0,
-      "eF" : 1,
-      "eL" : 1,
-      "ema" : 1,
-      "eSQ" : 1,
-      "ft" : 4096,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/docs\/routinen-crons.html",
-      "oF" : 0,
-      "oFM" : 0,
-      "oS" : 0,
-      "pHT" : 0,
-      "pME" : 1,
-      "rFN" : 0,
-      "uCM" : 0
-    },
     "\/docs\/technisches\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -570,7 +532,7 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/docs\/technisches\/templates.md" : {
+    "\/docs\/vorlage.md" : {
       "cB" : 0,
       "cS" : 0,
       "eF" : 1,
@@ -580,26 +542,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/docs\/technisches\/templates.html",
-      "oF" : 0,
-      "oFM" : 0,
-      "oS" : 0,
-      "pHT" : 0,
-      "pME" : 1,
-      "rFN" : 0,
-      "uCM" : 0
-    },
-    "\/docs\/template.md" : {
-      "cB" : 0,
-      "cS" : 0,
-      "eF" : 1,
-      "eL" : 1,
-      "ema" : 1,
-      "eSQ" : 1,
-      "ft" : 4096,
-      "hM" : 0,
-      "oA" : 1,
-      "oAP" : "\/docs\/template.html",
+      "oAP" : "\/docs\/vorlage.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
