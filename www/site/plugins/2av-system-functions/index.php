@@ -449,7 +449,7 @@ function create_zip($page, $file)
 
 
 /**
- * Gets data for embed url, based on Embed Class.
+ * Gets data for embed url, based on Embed Class (from kirby plugin).
  * Also creates 'code' parameter for instagram, since
  * it doesnt have it out of the box.
  *
