@@ -171,6 +171,7 @@ tabs:
             label: Embed URL
             type: embed
             width: 1/3
+            help: 'Instagram: Bitte URL ohne Parameter eingeben, also alles nach dem Fragezeichen löschen'
             whenQuery: type = 1
 
           ## scanned objects ##

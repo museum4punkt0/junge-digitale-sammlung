@@ -124,7 +124,6 @@
 
             &.youtube,
             &.vimeo {
-                
                 @include media-breakpoint-down(md) {
                     max-width: 90%;
                 }
@@ -208,14 +207,12 @@
             }
 
             &.instagram {
-                iframe {
-                    display: none !important;
-                }
-                iframe.instagram-media-rendered,
+                iframe,
                 blockquote {
-                    //display: inline !important;
-                    display: block !important;
                     margin: 0 auto !important;
+                }
+                iframe:not(.instagram-media-rendered) {
+                    position: relative !important;
                 }
             }
         }
@@ -372,7 +369,6 @@
     }
 }
 
-
 .no-cookies {
     display: flex;
     justify-content: center;
@@ -383,20 +379,20 @@
     position: relative;
     margin: 0 auto;
     white-space: normal;
-    p{
+    p {
         margin: 0;
         font-size: 1rem;
         @include media-breakpoint-up(md) {
             font-size: inherit;
         }
     }
-    &.embed__container{
+    &.embed__container {
         min-height: 50vh;
     }
     .exhibit-embed {
         background-color: var(--c-color-2);
         padding: 2rem;
-        box-shadow: 2px 15px 25px rgba(#fff, .15);
+        box-shadow: 2px 15px 25px rgba(#fff, 0.15);
         max-width: 100%;
     }
 }

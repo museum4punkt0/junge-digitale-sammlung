@@ -157,7 +157,7 @@ CURATOR
   }
 }
 
-#embed__preview { 
+#embed__preview {
   &.youtube,
   &.vimeo {
     width: 100%;
@@ -172,6 +172,15 @@ CURATOR
   &.instagram,
   &.twitter {
     width: 100%;
+  }
+  &.instagram {
+    iframe,
+    blockquote {
+      margin: 0 auto !important;
+    }
+    iframe:not(.instagram-media-rendered) {
+      position: relative !important;
+    }
   }
 }
 
@@ -190,10 +199,10 @@ CURATOR
     overflow-y: hidden;
   }
 }
-.overlay_container{
+.overlay_container {
   width: 100%;
 }
-.overlay__blocked.container { 
+.overlay__blocked.container {
   position: absolute;
   height: 100%;
   width: 100%;

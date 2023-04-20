@@ -83,10 +83,14 @@ class CExhibitPage extends JDSPage
       /* we check if provider code is empty. if the URL was input by the participant
       in a workshop it should have a code already, but if an admin did it in the admin
       area it will not have the code */
-      $provider = strtolower($input['embed_url']['media']['providerName']);
-      if ($provider == 'instagram' && $input['embed_url']['media']['code'] == '') {
-        $input['embed_url']['media']['code'] = snippet('renderers/embeds/instagram', ['embedurl' => $input['embed_url']['input']], true);
+      if (is_array($input['embed_url']) && $input['embed_url']['media']) {
+        $provider = strtolower($input['embed_url']['media']['providerName']);
+        if ($provider == 'instagram') {
+          $input['embed_url']['media']['code'] = snippet('renderers/embeds/instagram', ['embedurl' => $input['embed_url']['input']], true);
+          //$input['embed_url']['media']['code'] = $input['embed_url']['media']['code'] . '<script async src="//www.instagram.com/embed.js"></script>';
+        }
       }
+
 
       $dataRules = array_merge($dataRules, $digitalEmbedRules);
     } else if ((int)$exhibitType == '2') { // born digital exhibit
