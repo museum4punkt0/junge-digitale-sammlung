@@ -118,7 +118,7 @@ Zum starten:
 
 - Der Code im Ordner `src` kann jetzt bearbeitet werden. 
 
-*Weitere technische Details finden Sie [hier](docs/technisches/README.md).*
+***Weitere technische Details finden Sie [hier](docs/technisches/README.md).***
 
 WICHTIG: die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über die Preview-URLs von Prepros oder CodeKit abgerufen werden, da Weiterleitungsfehler auftretten werden. Die live Auto-Refresh Funktion bleibt von daher nur für den Sammlung-Bereich relevant.
 
@@ -131,7 +131,7 @@ WICHTIG: die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht
 
 ## 7. Benutzung/Usage
 
-*Die detaillierte Dokumentation finden Sie [hier](docs/README.md).*
+***Die detaillierte Dokumentation finden Sie [hier](docs/README.md).***
 
 
 ---
