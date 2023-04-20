@@ -73,8 +73,8 @@ input.field__pin {
   }
 
   .vscomp-wrapper {
-    &.focused,
-    &:focus {
+    //&.focused,
+    &:focus-visible {
       .vscomp-toggle-button {
         box-shadow: $input-focus-box-shadow;
       }
@@ -88,6 +88,10 @@ input.field__pin {
       }
     }
   }
+}
+.vscomp-wrapper.focused .vscomp-toggle-button,
+.vscomp-wrapper:focus .vscomp-toggle-button {
+  box-shadow: none;
 }
 
 .btn.send-ws {
