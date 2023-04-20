@@ -153,7 +153,6 @@ Kirby::plugin('2av/custom-methods', [
             $filename = $input ? $input : $this->name();
             $filenameQuery = explode('-', $filename)[0]; // get first occurrence, filenames must not have - for this to work
             //$filenameQuery = substr($filename, 0, strrpos($filename, '-'));
-            kirbylog('## $filenameQuery ##');
             kirbylog($filenameQuery);
             $models = $this->page()->getModels(); // we assume its a c_exhibit page and call the function directly
 

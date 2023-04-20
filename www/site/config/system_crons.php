@@ -48,7 +48,7 @@ return [
                     'active' => false
                 ]);
                 kirbylog($u->name()->value() . ' was overdue for ' . $diff->days . ' days');
-                kirbylog('--');
+                kirbylog('.');
                 $amount++;
             }
         }
@@ -83,21 +83,28 @@ return [
             $endDate = new Datetime($deadline);
             $diff = $endDate->diff($now);
 
-            
-
             if (
                 !$u->active()->toBool() &&
                 $now  > $endDate
             ) {
                 try {
-                    $u->delete();
-                    kirbylog($u->name()->value() . ' was inactive for ' . $diff->days . ' days');
-                    kirbylog('--');
-                    $now = new Datetime(date('Y-m-d'));
-                    $endDate = new Datetime($u->expiration()->toDate('Y-m-d'));
+
+                    if ($ws = $u->linked_workshop()->toPageOrDraft())
+                        removeUnusedPages($ws);
+
+                    if ($u->delete()){
+                        kirbylog($u->name()->value() . ' User DELETED. Was inactive for ' . $diff->days . ' days');
+                        $amount++;
+                    }
+                        
+                    else
+                        kirbylog($u->name()->value() . ' User ERROR DELETING. Has been inactive for ' . $diff->days . ' days');
+
+                    kirbylog('.');
                 } catch (Exception $e) {
+                    kirbylog($u->name()->value() . ' Workshop ERROR DELETING. Has been inactive for ' . $diff->days . ' days');
                 }
-                $amount++;
+                
             }
         }
 

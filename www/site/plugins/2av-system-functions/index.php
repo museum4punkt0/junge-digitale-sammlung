@@ -106,14 +106,14 @@ function removeUnusedPages($ws)
 
         foreach ($children as $child) {
             if ($child->isDraft() && !$child->complete()->toBool()) { // is not complete and is still only draft
-
+                $prefix = " : " . $child->intendedTemplate()->name();
                 if ($child->delete()) {
                     $succ++;
-                    kirbylog($child->title()->value() . ' : was deleted');
+                    kirbylog($child->title()->value() . $prefix . ' : was deleted in ' . $ws->title());
                 } else {
-                    kirbylog($child->title()->value() . ' : ERROR deleting', 'error');
+                    kirbylog($child->title()->value() . $prefix .  ' : ERROR deleting in ' . $ws->title(), 'error');
                 }
-                kirbylog('--');
+                kirbylog('.');
             }
         }
 
