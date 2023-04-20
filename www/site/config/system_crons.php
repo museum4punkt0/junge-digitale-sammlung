@@ -2,7 +2,7 @@
 
 return [
     'leaderpinreset' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object where the button as pressed
+        // $page => page object  
         // $data => 'my custom data'
         $leaderUpdated = $page->update([
             'pin' => ''
@@ -14,7 +14,7 @@ return [
     },
 
     'creategroupusers' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object where the button as pressed
+        // $page => page object  
         // $data => 'my custom data'
         buildUsersTree($page, $data);
         $amount = explode('&', $data);
@@ -25,7 +25,7 @@ return [
     },
 
     'deactivateusers' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object where the button as pressed
+        // $page => page object  
         // $data => 'my custom data'
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
@@ -66,7 +66,7 @@ return [
     },
 
     'deleteusers' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object where the button as pressed
+        // $page => page object  
         // $data => 'my custom data'
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
@@ -82,6 +82,8 @@ return [
             $now = new Datetime(date('Y-m-d'));
             $endDate = new Datetime($deadline);
             $diff = $endDate->diff($now);
+
+            
 
             if (
                 !$u->active()->toBool() &&
@@ -111,7 +113,7 @@ return [
     },
 
     'cleanroutine' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object where the button as pressed
+        // $page => page object  
         // $data => 'my custom data'
         $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
         $amount = 0;
@@ -136,7 +138,7 @@ return [
     },
 
     'workshopassetlinking' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object where the button as pressed
+        // $page => page object  
         // $data => 'my custom data'
         $amount = bindAllImagesTo3DModels($page);
 

@@ -194,18 +194,18 @@ class JDSPage extends Page
     {
         if ($workshopPage && $data) {
             try {
-                $target_page = $workshopPage->find($data['participant_url']);
+                $target_participant = $workshopPage->find($data['participant_url']);
                 $entered_pin = $data['first_pin'] . $data['second_pin'] . $data['third_pin'] . $data['fourth_pin'];
 
                 //if ($target_page->pin() == $entered_pin) {
-                if (password_verify($entered_pin, $target_page->pin())) {
+                if (password_verify($entered_pin, $target_participant->pin())) {
 
                     kirby()->session()->set([
                         'participantID' => $data['participant_url'],
                         'participantLogged'  => true
                     ]);
                     $alert[] = "PIN Richtig!";
-                    $target_page->go();
+                    $target_participant->go();
                 } else {
                     $alert[] = "Falsche PIN eingegeben.";
                 }
@@ -230,6 +230,12 @@ class JDSPage extends Page
     {
         if ($workshopPage) {
             try {
+
+                $participant = $workshopPage->find(kirby()->session()->get('participantID'));
+                if($participant && $exhibition = $participant->linked_exhibition()->toPageOrDraft()){
+                    $exhibition->unlockMe();
+                }
+
                 kirby()->session()->remove('participantID');
                 kirby()->session()->remove('participantLogged');
                 $alert[] = 'Teilnehmer wurde ausgeloggt';
