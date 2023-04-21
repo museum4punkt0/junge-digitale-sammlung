@@ -1,3 +1,4 @@
+<!-- if not collage, it is an exhibit podest -->
 <?php if (!$isPosterCollage) : ?>
     <?php if ($exhibit_type_class == "embed") : ?>
         <?php if ($url = $collectionItem->embed_url()->toEmbed()) : ?>
@@ -65,10 +66,12 @@
         </a>
     <?php endif ?>
 <?php else : ?>
-    <!-- WHAT HAPPENS WITH TWITTER??? MAYBE ONLY ICON? -->
+    <!-- poster collage -->
     <?php if ($exhibit_type_class == "embed") : ?>
         <?php if ($url = $collectionItem->embed_url()->toEmbed()) : ?>
-            <?php if ($url->providerName()->lower() == 'tiktok' || $url->providerName()->lower() == 'instagram') : ?>
+            <?php if ($url->providerName()->lower() == 'twitter') : ?>
+                <div class="embed__logo"><i icon-name="twitter" class="icon-only"></i></div>
+            <?php elseif ($url->providerName()->lower() == 'tiktok' || $url->providerName()->lower() == 'instagram') : ?>
                 <div class="load-embed-img" href="<?= $url->url() ?>">
                     <div class="spinner-border text-primary fs-3" role="status">
                         <span class="visually-hidden">Loading...</span>

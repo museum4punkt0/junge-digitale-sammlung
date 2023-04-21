@@ -337,7 +337,8 @@ body.home {
                                     }
                                     img,
                                     .empty,
-                                    .loaded-embed-img {
+                                    .loaded-embed-img,
+                                    .embed__logo {
                                         --poster-img-size: clamp(28px, 6.5vh, 100px);
                                         --poster-img-size-compact: clamp(21px, 5.8vh, 80px);
                                         margin: 0.2rem;
