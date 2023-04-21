@@ -147,6 +147,10 @@ Dies erfolgt auf klassischer Art, bspw. per E-Mail, etc.
 
 ### 2) Ein/e Mitarbeiter:in legt ein Gruppenkonto und einen Workshop-Raum für diese Gruppe an. Der/die Mitarbeiter:in verknüpft das Konto mit dem Workshop-Raum.
 
+Den Admin-Bereich finden Sie unter `/panel`, z.B.:
+
+`https://meinedomain.de/panel`
+
 Ein Gruppenkonto, z.B. für eine komplette Klasse, können im Bereich 'Temp Users' angelegt werden. Sie sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist es sicher gestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Ein automatisiertes Löschen muss auf Ihrem Server per CRON-Job ausgeführt werden (mehr dazu im Kapitel [Technisches](technisches/README.md)).
 
 Der/die Mitarbeiter:in muss sich dafür im Admin-Bereich einloggen, oben links in der Navigation "Temp Users" auswählen. Auf "Neuen Account anlegen" klicken und einen Name für das Konto eingeben, z.B. KlasseBeethoven8. Das System wird automatisch ein Passwort vergeben. **Dieses Passwort unbedingt aufschreiben, um es später übergeben zu können.** 
@@ -185,11 +189,44 @@ Reiter "Teilnehmer" |  Subkonten generieren  |  Subkonten Überblick
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/admin/ws/ws-tab-users-empty.png)  |  ![](_media/admin/ws/ws-tab-users-generating.png)  |  ![](_media/admin/ws/ws-tab-users.png) 
 
+
+Zum Schluss muss der/die Mitarbeiter:in die Workshop-Seite aktivieren bzw.veröffentlichen.
+
+Workshop veröffentlichen |  In Übersicht auch möglich
+:-------------------------:|:-------------------------:
+![](_media/admin/ws/ws-publish.png)  |  ![](_media/admin/ws/ws-publish%20from%20site.png)  |
+
 ### 4) Mitarbeiter:in ruft PDF-Übersicht der Teilnehmer auf. Hier werden alle Subkonten aufgelistet und zwar ein Teilnehmer pro PDF Seite. Jede Seite beinhaltet eine ID und den Login-Pfad für die Gruppe.
-### 5) Mitarbeiter:in übergibt die a) Zugangsdaten des Gruppenkontos, b) Leiter IDs und c) PDF mit Teilnehmer IDs an die Leiter der Gruppe. Zugangsdaten und Leiter IDs werden getrennt und nicht in der PDF geliefert um zu vermeiden, dass diese Informationen nicht für alle Teilnehmer:innen zugänglich sind.
+
+Per Klick auf "PDF Liste" wird im Browser einen neuen Tab mit der PDF-Liste geöffnet. Je nachdem wie die Übergabe erfolgen soll diese bitte drucken oder als PDF speichern.
+
+PDF Übersicht |  
+:-------------------------:|
+![](_media/admin/ws/ws-pdf%20overview.png) | 
+
+### 5) Der/die Mitarbeiter:in übergibt die a) Zugangsdaten des Gruppenkontos, b) Leiter IDs und c) PDF mit Teilnehmer IDs an die Leiter der Gruppe. 
+
+Dabei ist zu beachten, dass die Zugangsdaten des Gruppenkontos und die Leiter IDs getrennt und nicht in der PDF geliefert werden müssen, um zu vermeiden, dass Unbefugten diese Informationen zugänglich sind.
+
 ### 6) Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppen-Konto.
+
+Dies erfolgt auf klassischer Art, bspw. persönlich oder per E-Mail, etc.
+
 ### 7) Ab jetzt kann jede:r Teilnehmer:in (und Leiter:in) sich einloggen und das Workshop benutzen.
+
+Die Login-Seite für den Workshop-Bereich finden die Teilnehmer unter `/login`, z.B.:
+
+`https://meinedomain.de/login`
+
+Workshop Login-Seite |  
+:-------------------------:|
+![](_media/workshop/workshop-intro.png) | 
+
 ### 8) Bei der ersten Anmeldung müssen sowohl Leiter:innen als auch Teilnehmer:innen eine PIN anlegen. Somit sind die jeweiligen Arbeitsbereiche im Workshop-Raum geschützt.
+
+Workshop Login-Seite |  
+:-------------------------:|
+![](_media/workshop/workshop-intro.png) | 
 
 ---
 

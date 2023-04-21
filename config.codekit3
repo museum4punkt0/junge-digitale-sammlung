@@ -167,6 +167,45 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/docs\/_media\/admin\/ws\/ws-pdf overview.png" : {
+      "ft" : 32768,
+      "iS" : 215515,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/ws\/ws-pdf overview.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/docs\/_media\/admin\/ws\/ws-publish from site.png" : {
+      "ft" : 32768,
+      "iS" : 223257,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/ws\/ws-publish from site.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/docs\/_media\/admin\/ws\/ws-publish.png" : {
+      "ft" : 32768,
+      "iS" : 349951,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/ws\/ws-publish.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/docs\/_media\/admin\/ws\/ws-tab-3d assets.png" : {
       "ft" : 32768,
       "iS" : 242085,

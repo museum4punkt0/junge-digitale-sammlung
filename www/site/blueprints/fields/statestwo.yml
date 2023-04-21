@@ -1,6 +1,6 @@
 draft:
-  label: Draft
-  text: The page is still in draft mode. It can only be seen by editors with Panel access.
+  label: Entwruf
+  text: Die Seite befindet sich noch im Entwurfsmodus. Es kann nur von Redakteuren mit Admin-Zugriff gesehen werden.
 unlisted:
   label: Aktiv
-  text: The page is online and can be visited with the direct URL.
+  text: Die Seite ist online und kann besucht werden.
