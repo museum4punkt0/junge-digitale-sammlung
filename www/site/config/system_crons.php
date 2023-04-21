@@ -70,14 +70,15 @@ return [
         // $data => 'my custom data'
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
-
+        $inactivityDays = site()->userdaysactive()->isNotEmpty() ? site()->userdaysactive()->value() : 40;
+        
         kirbylog('---- CRON DELETE USERS: ' . date('Y-m-d H:i:s') . ' ----');
 
         kirby()->impersonate('kirby');
         $msg = '';
         foreach ($users as $u) {
             $deadline =  new Kirby\Toolkit\Date($u->expiration());
-            $deadline = $deadline->add(new DateInterval('P40D')); // 40 days
+            $deadline = $deadline->add(new DateInterval('P' . strval($inactivityDays) . 'D')); 
 
             $now = new Datetime(date('Y-m-d'));
             $endDate = new Datetime($deadline);
@@ -92,19 +93,16 @@ return [
                     if ($ws = $u->linked_workshop()->toPageOrDraft())
                         removeUnusedPages($ws);
 
-                    if ($u->delete()){
+                    if ($u->delete()) {
                         kirbylog($u->name()->value() . ' User DELETED. Was inactive for ' . $diff->days . ' days');
                         $amount++;
-                    }
-                        
-                    else
+                    } else
                         kirbylog($u->name()->value() . ' User ERROR DELETING. Has been inactive for ' . $diff->days . ' days');
 
                     kirbylog('.');
                 } catch (Exception $e) {
                     kirbylog($u->name()->value() . ' Workshop ERROR DELETING. Has been inactive for ' . $diff->days . ' days');
                 }
-                
             }
         }
 

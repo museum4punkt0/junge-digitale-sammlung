@@ -18,5 +18,4 @@
 </head>
 
 <body class="<?= $page->intendedTemplate() ?> <?= $page->title()->slug() ?>">
-<span id="cross-data" timeout-time="<?= $site->usertimeouttime() ?>" page-slug="<?= $page->slug() ?>"></span>
-
+  <span id="cross-data" timeout-time="<?= $site->usertimeouttime()->value() ?? 20 ?>" page-slug="<?= $page->slug() ?>"></span><!-- we pass some PHP values to JS via a span with attributes -->

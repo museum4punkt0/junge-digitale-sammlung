@@ -1,4 +1,4 @@
-title: Site 
+title: Site
 
 tabs:
   # pages tab
@@ -122,30 +122,8 @@ tabs:
       headersettings:
         type: fields
         fields:
-          fglobal:
-            label: System-Funktionen
-            type: headline
-          janitorclean:
-            type: janitor
-            label: Workshops bereinigen
-            generator: false
-            width: 1/3
-            progress: Bitte warten ...
-            job: cleanroutine
-          janitorusersdeac:
-            type: janitor
-            label: Benutzer deaktivieren
-            generator: false
-            width: 1/3
-            progress: Bitte warten ...
-            job: deactivateusers
-          janitorusersdelete:
-            type: janitor
-            label: Inaktive Benutzer löschen
-            generator: false
-            width: 1/3
-            progress: Bitte warten ...
-            job: deleteusers
+          
+          # header
           hglobal:
             label: Header Information
             type: headline
@@ -170,31 +148,39 @@ tabs:
             image:
               back: white
 
-          foglobal:
-            label: Footer Information
-            type: headline
-
-          hemailsettings:
-            label: Email Information
+          # workshops
+          wsglobal:
+            label: Workshop-Bereich
             type: headline
           usertimeouttime:
             label: Dauer bis Auto-Logout
             type: number
-            width: 1/2
+            width: 1/3
+            after: Minuten
             min: 0.5
             max: 40
-            help: 'min: 0.5, max: 40 (Minuten)' 
+            default: 20
+            required: true
+            help: 'min: 0.5, max: 40'
           lockedpagestime:
             label: Dauer der Seitensperre (Ausstellungen)
             type: number
-            width: 1/2
+            after: Minuten
+            width: 1/3
             min: 0.5
             max: 20
-            help: 'min: 0.5, max: 20 (Minuten)'
+            default: 10
+            required: true
+            help: 'min: 0.5, max: 20'
+
+          # mailing
+          hemailsettings:
+            label: Email Information
+            type: headline
           from_address:
             label: Absender (generierte Emails)
             type: email
-            help: 'Absender aller generierten Emails, z.B. jds@dah.com. ACHTUNG: bitte je nach Server sicher stellen, dass diese Adresse Emails versenden darf.'
+            help: "Absender aller generierten Emails, z.B. jds@dah.com. ACHTUNG: bitte je nach Server sicher stellen, dass diese Adresse Emails versenden darf."
           to_address:
             label: Empfänger (generierte Emails)
             type: email
@@ -209,6 +195,44 @@ tabs:
             label: Betreff
             type: text
             help: Betreff für generierte Emails, z.B. "Ein neuer Workshop wurde fertig gestellt"
+
+          # system
+          fglobal:
+            label: System
+            type: headline
+          janitorclean:
+            type: janitor
+            label: Workshops bereinigen
+            generator: false
+            width: 1/3
+            progress: Bitte warten ...
+            job: cleanroutine
+          janitorusersdeac:
+            type: janitor
+            label: Benutzer deaktivieren
+            generator: false
+            width: 1/3
+            progress: Bitte warten ...
+            job: deactivateusers
+          janitorusersdelete:
+            type: janitor
+            label: Inaktive Benutzer löschen
+            generator: false
+            width: 1/3
+            progress: Bitte warten ...
+            job: deleteusers
+          systemline1:
+            type: line
+          userdaysactive:
+            type: number
+            width: 1/3
+            required: true
+            min: 7
+            max: 60
+            default: 40
+            after: Tage
+            label: Default Gültigkeit der temporären Kontos
+            help: 'min: 7, max: 60'
 
   # gallery tab
   gallery:
