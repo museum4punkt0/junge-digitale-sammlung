@@ -1,16 +1,16 @@
 # Junge Digitale Sammlung 
 
 ## Inhaltsverzeichnis
-1. Kurzbeschreibung
-2. Finanzierung
-3. Empfohlenes Server Setup 
-4. Voraussetzungen und Skills
-5. Installation der Platform (deploy) 
-6. Entwicklung
-7. Benutzung/Usage
-8. Beteiligung/Contributing
-9. Credits
-10. Lizenz
+1. [Kurzbeschreibung](#1-kurzbeschreibung)
+2. [Finanzierung](#2-finanzierung)
+3. [Empfohlenes Server Setup](#3-empfohlenes-server-setup)
+4. [Voraussetzungen und Skills](#4-voraussetzungen-und-skills)
+5. [Installation der Platform (deploy)](#5-installation-der-platform-deploy)
+6. [Entwicklung](#6-entwicklung-der-platform)
+7. [Benutzung/Usage](#7-benutzungusage)
+8. [Beteiligung/Contributing](#8-beteiligungcontributing)
+9. [Credits](#9-credits)
+10. [Lizenz](#10-lizenz)
 
 
 ## 1. Kurzbeschreibung

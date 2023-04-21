@@ -155,23 +155,35 @@ Menü oben links |  Übersicht Temp Users  |  Konto anlegen
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/admin/panel-menu.png)  |  ![](_media/admin/users/tempusers-paneloverview.png)  |  ![](_media/admin/users/tempusers-anlegen.png) 
 
-Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Er kann im Admin-Bereich aber jederzeit angepasst werden. Das System wird auch 
+Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Er kann zurzeit leider nur im Code verändert werden (www/site/blueprints/users/frontenduser.yml). Die Gültigkeit an sich kann aber nach dem Anlegen beliebig angepasst werden. Nachdem ein Konto nicht mehr aktiv ist wird es nach einer gewissen Zeit gelöscht. Der Standardwert dafür sind 40 Tage; dieser Wert kann im Admin-Bereich eingestellt werden.
 
 Details Gruppen-Konto |  
 :-------------------------:|
 ![](_media/admin/users/tempusers-eigenschaften.png) |  
 
 
-Im Anschluss muss der/die Mitarbeiter:in ein Workshop anlegen. Dafür oben links im Menü zurück zu "Site" navigieren. Hier auf der Hauptansicht des Admin-Bereiches werden die Workshops aufgelistet. Einfach auf "Hinzufügen" klicken und einen passenden Name ()
+Im Anschluss muss der/die Mitarbeiter:in ein Workshop anlegen. Dafür oben links im Menü zurück zu "Site" navigieren. Hier auf der Hauptansicht des Admin-Bereiches werden die Workshops aufgelistet. Einfach auf "Hinzufügen" klicken und einen sinnvollen passenden Name (z.B. KlasseBeethoven8-2023) eingeben und den Workshop anlegen. Bitte bei der Benennung dabei denken, dass Workshops voraussichtlich nicht gelöscht werden. Dementsprechend wurde in diesem Beispiel ein Suffix 2023 hinzugefügt. So kann man die Workshops auf der Liste nach einigen Jahren trotzdem noch gut identifizieren. Die genaue Systematik wird aber Ihnen überlassen.
 
-Menü oben links |  Übersicht Temp Users  |  Konto anlegen
+Auf der Workshop-Seite bitte die Institution eingeben, und einen Benutzer (hier: das neu erstellte Gruppen-Konto von vorhin) auswählen. Diese sind Pflichtfelder. 
+
+*Hinweis: auch in der Ansicht eines Temp-Users kann die Beziehung Workshop-Gruppenkonto verändert werden.*
+
+Menü oben links |  Übersicht Workshops  |  Workshop anlegen
 :-------------------------:|:-------------------------:|:-------------------------:
-![](_media/admin/panel-menu.png)  |  ![](_media/admin/users/tempusers-paneloverview.png)  |  ![](_media/admin/users/tempusers-anlegen.png) 
+![](_media/admin/users/tempusers-eigenschaften-menu%20open.png)  |  ![](_media/admin/panel-intro.png)  |  ![](_media/admin/panel-ws-anlegen.png) 
+
+Workshop-Seite |  
+:-------------------------:|
+![](_media/admin/ws/ws-empty.png) |  
 
 
 ### 3) Mitarbeiter:in legt XY Teilnehmer und XZ Leiter Subkonten im Workshop-Raum an. Subkonten werden durch Seiten im System repräsentiert.
 
+Im Reiter "Teilnehmer" können nun Leiter- und Teilnehmerkonten (bzw. Subkonten in Form von Unterseiten) generiert werden. Dazu 
 
+Reiter "Teilnehmer" |  Subkonten generieren  |  Subkonten Überblick
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/admin/ws/ws-tab-users-empty.png)  |  ![](_media/admin/ws/ws-tab-users-generating.png)  |  ![](_media/admin/ws/ws-tab-users.png) 
 
 ### 4) Mitarbeiter:in ruft PDF-Übersicht der Teilnehmer auf. Hier werden alle Subkonten aufgelistet und zwar ein Teilnehmer pro PDF Seite. Jede Seite beinhaltet eine ID und den Login-Pfad für die Gruppe.
 ### 5) Mitarbeiter:in übergibt die a) Zugangsdaten des Gruppenkontos, b) Leiter IDs und c) PDF mit Teilnehmer IDs an die Leiter der Gruppe. Zugangsdaten und Leiter IDs werden getrennt und nicht in der PDF geliefert um zu vermeiden, dass diese Informationen nicht für alle Teilnehmer:innen zugänglich sind.
