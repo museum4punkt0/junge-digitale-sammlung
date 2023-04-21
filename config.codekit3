@@ -414,6 +414,32 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/docs\/_media\/workshop\/leiter\/ws-L-overview ausstellungen.png" : {
+      "ft" : 32768,
+      "iS" : 287157,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/workshop\/leiter\/ws-L-overview ausstellungen.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/docs\/_media\/workshop\/leiter\/ws-L-overview teilnehmer.png" : {
+      "ft" : 32768,
+      "iS" : 323005,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/workshop\/leiter\/ws-L-overview teilnehmer.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/docs\/_media\/workshop\/objekt-tab-eigenes video.png" : {
       "ft" : 32768,
       "iS" : 825936,
@@ -468,7 +494,7 @@
     },
     "\/docs\/_media\/workshop\/user-tab.png" : {
       "ft" : 32768,
-      "iS" : 305228,
+      "iS" : 283850,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/workshop\/user-tab.png",
       "oF" : 0,
@@ -523,6 +549,19 @@
       "iS" : 379087,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/workshop\/workshop-objekttyp wechsel.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/docs\/_media\/workshop\/workshop-pin confirm.png" : {
+      "ft" : 32768,
+      "iS" : 242339,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/workshop\/workshop-pin confirm.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,

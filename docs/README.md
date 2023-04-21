@@ -190,15 +190,15 @@ Reiter "Teilnehmer" |  Subkonten generieren  |  Subkonten Überblick
 ![](_media/admin/ws/ws-tab-users-empty.png)  |  ![](_media/admin/ws/ws-tab-users-generating.png)  |  ![](_media/admin/ws/ws-tab-users.png) 
 
 
-Zum Schluss muss der/die Mitarbeiter:in die Workshop-Seite aktivieren bzw.veröffentlichen.
+Zum Schluss muss der/die Mitarbeiter:in die Workshop-Seite aktivieren bzw.veröffentlichen. Dies können Sie überall wo es Status-Kreise gibt erledigen, z.B. oben links unterhalb vom Workshopname oder in der Übersicht der Workshops (Admin-Startseite).
 
-Workshop veröffentlichen |  In Übersicht auch möglich
+Workshop veröffentlichen |  In der Übersicht auch möglich
 :-------------------------:|:-------------------------:
 ![](_media/admin/ws/ws-publish.png)  |  ![](_media/admin/ws/ws-publish%20from%20site.png)  |
 
 ### 4) Mitarbeiter:in ruft PDF-Übersicht der Teilnehmer auf. Hier werden alle Subkonten aufgelistet und zwar ein Teilnehmer pro PDF Seite. Jede Seite beinhaltet eine ID und den Login-Pfad für die Gruppe.
 
-Per Klick auf "PDF Liste" wird im Browser einen neuen Tab mit der PDF-Liste geöffnet. Je nachdem wie die Übergabe erfolgen soll diese bitte drucken oder als PDF speichern.
+Im Reiter "Teilnehmer" und per Klick auf "PDF Liste" wird ein neuer  Browser-Tab mit der PDF-Liste geöffnet. Je nachdem wie die Übergabe erfolgen soll diese bitte drucken oder als PDF speichern.
 
 PDF Übersicht |  
 :-------------------------:|
@@ -218,15 +218,25 @@ Die Login-Seite für den Workshop-Bereich finden die Teilnehmer unter `/login`, 
 
 `https://meinedomain.de/login`
 
-Workshop Login-Seite |  
-:-------------------------:|
-![](_media/workshop/workshop-intro.png) | 
+Bei der ersten Anmeldung müssen sowohl Leiter:innen als auch Teilnehmer:innen eine PIN anlegen. Somit sind die jeweiligen Arbeitsbereiche im Workshop-Raum geschützt.
 
-### 8) Bei der ersten Anmeldung müssen sowohl Leiter:innen als auch Teilnehmer:innen eine PIN anlegen. Somit sind die jeweiligen Arbeitsbereiche im Workshop-Raum geschützt.
+Workshop Login-Seite | Benutzer PIN Identifizierung
+:-------------------------:|:-------------------------:
+![](_media/workshop/workshop-intro.png) | ![](_media/workshop/workshop-pin%20confirm.png)
 
-Workshop Login-Seite |  
-:-------------------------:|
-![](_media/workshop/workshop-intro.png) | 
+### 8) Die Gruppe trägt Daten ein.
+
+Ab hier sollte der Ablauf selbsterklärend sein. Teilnehmer können persönliche oder objektbezogene Daten eingeben, Ausstellungen gemeinsam bearbeiten, Leiter können Status der Benutzer und ihrer Objekten ansehen, PIN der Teilnehmer zurücksetzen, etc. 
+
+[Hier finden Sie Details zum Workshop-Bereich](details/workshop.md) »
+
+Beispiel Teilnehmer | Leiter Auslistung Teilnehmer | Leiter Auslistung Ausstellungen
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/workshop/user-tab.png) | ![](_media/workshop/leiter/ws-L-overview%20teilnehmer.png) | ![](_media/workshop/leiter/ws-L-overview%20ausstellungen.png)
+
+
+
+
 
 ---
 
