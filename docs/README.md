@@ -95,6 +95,8 @@ Es ist vorausgesehen, dass der Scan des Objekts vor Ort gemeinsam mit Hilfe von 
 
 Der 3D Scanner vom DAH exportiert OBJ Dateintypen. Mit Hilfe vom JDS O2G Tool können die OBJ Dateien leicht bearbeitet und in GLTF/GLB umgewandelt werden. Mehr zu diesem Tool erfahren Sie im O2G Repository.
 
+[----TODO----]
+
 !!!!!!!! -- LINK ZUM O2G REPO -- !!!!!!
 
 O2G Tool |  3D Modelle und Vorschaubilder als Admin hochladen  |  Als Teilnehmer Objekt selektieren
