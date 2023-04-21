@@ -112,7 +112,10 @@ tabs:
               mainuser:
                 label: Gruppenkonto
                 type: users
+                default: -
                 multiple: false
+                required: true
+                query: kirby.users.filterBy("role", "frontenduser")
                 help: Verlinktes Gruppenkonto für eine Gruppe von Teilnehmern.
               comment:
                 type: textarea
