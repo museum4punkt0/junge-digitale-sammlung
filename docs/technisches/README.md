@@ -5,12 +5,12 @@
 # Technische Grundlage
 
 ## Inhaltsverzeichnis
-1. Kurzbeschreibung
-2. Source Code (src)
-3. Kirby Templates (Seiten-Typen)
-4. Kirby Plugins
-5. Spezielle Ressourcen
-6. Routinen und CRON-Jobs
+1. [Kurzbeschreibung](#1-kurzbeschreibung)
+2. [Source Code (src)](#2-source-code-src)
+3. [Kirby Struktur und Seiten-Templates (Typen)](#3-kirby-struktur-und-seiten-templates-typen)
+4. [Kirby Plugins](#4-kirby-plugins)
+5. [Spezielle Ressourcen](#5-spezielle-ressourcen)
+6. [Routinen und CRON-Jobs](#6-routinen-und-cron-jobs)
 
 
 ## 1. Kurzbeschreibung
@@ -86,7 +86,13 @@ Jeder Seitentyp kann eine einige spezielle Klasse besitzen, die die Grundfunktio
 
 Im Ordner `www/site/plugins` befinden sich alle Plugins von diesem Kirby "Theme".
 
+<<<<< TODO >>>>>>>>
+
+
 ## 5. Spezielle Ressourcen
+
+<<<<< TODO >>>>>>>>
+
 
 
 ## 6. Routinen und CRON-Jobs
@@ -108,7 +114,7 @@ Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Dies kann in dem
 
 ![](_media/admin/users/tempusers-eigenschaften.png)  
 
-
+<<<<< TODO >>>>>>>>
 
 ---
 

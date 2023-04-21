@@ -4,7 +4,7 @@
 
 # Benutzung
 
- *(Screenshots können abweichen. Screenshots enthalten Testdaten. Manche Bereiche wurden aus Copyright Gründen )*
+ *(Screenshots können abweichen. Screenshots enthalten Testdaten. Manche Bereiche wurden aus Copyright Gründen unkenntlich gemacht)*
 
 ## Inhaltsverzeichnis
 
@@ -226,7 +226,9 @@ Workshop Login-Seite | Benutzer PIN Identifizierung
 
 ### 8) Die Gruppe trägt Daten ein.
 
-Ab hier sollte der Ablauf selbsterklärend sein. Teilnehmer können persönliche oder objektbezogene Daten eingeben, Ausstellungen gemeinsam bearbeiten, Leiter können Status der Benutzer und ihrer Objekten ansehen, PIN der Teilnehmer zurücksetzen, etc. 
+Ab hier sollte der Ablauf selbsterklärend sein. Teilnehmer:innen können persönliche oder objektbezogene Daten eingeben, Ausstellungen gemeinsam bearbeiten, Leiter können Status der Benutzer und ihrer Objekten ansehen, PIN der Teilnehmer zurücksetzen, etc. Die Teilnehmer:innen müssen zunächst auch einer Nutzungsvereinbarung mit DSE zustimmen.
+
+Diese Phase dauert einige Tage oder evtl. Wochen lang. Die Teilnehmer:innen können vor, während oder nach dem vor Ort Termin im Museum ihre Daten bearbeiten.
 
 [Hier finden Sie Details zum Workshop-Bereich](details/workshop.md) »
 
@@ -235,6 +237,9 @@ Beispiel Teilnehmer | Leiter Auslistung Teilnehmer | Leiter Auslistung Ausstellu
 ![](_media/workshop/user-tab.png) | ![](_media/workshop/leiter/ws-L-overview%20teilnehmer.png) | ![](_media/workshop/leiter/ws-L-overview%20ausstellungen.png)
 
 
+Das Eingeben der Daten erfolgt über Eingabemasken mit Freitextfeldern und Dropdowns. Es gibt Pflichtfelder und optionale Eingabemöglichkeiten – Pflichtfelder sind als solche gekennzeichnet.
+
+### 9) Vor Ort Termin im Museum
 
 
 
