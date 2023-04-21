@@ -113,7 +113,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
           <?php if ($linked_exhibit->type()->value() == 0) : ?>
             <div class="form-group row">
               <label for="exhibit_preview" class="col-md-3 col-form-label is-required">
-                <?= snippet('renderers/labeler', ['field' => 'exhibit_3dpreview_label', 'fallback' => 'Vorschaubild des Objekts']) ?>
+                <?= snippet('renderers/labeler', ['field' => 'exhibit_3dpreview_label', 'fallback' => 'Vorschaubild/3D Model des Objekts']) ?>
               </label>
               <div class="col-md-7">
                 <?= snippet('renderers/input_element', ['_page' => $linked_exhibit, 'name' => 'exhibit_preview', 'type' => 'radioimages', 'ajaxHandler' => 'checkRadioGroupGallery']); ?>
