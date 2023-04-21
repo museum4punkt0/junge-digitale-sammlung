@@ -113,7 +113,7 @@ Digital Embed |
 
 ##### *Born-digital*
 
-Teilnehmer die ihre eigenen Bilder oder Videos hochladen und präsentieren wollen können diesen Objekttyp selektieren. Das System erlaubt übliche Bildformate (png, jpg, heic) und ausschließlich MP4 als Videoformat.
+Teilnehmer die ihre eigenen Bilder oder Videos hochladen und präsentieren wollen können diesen Objekttyp auswählen. Das System erlaubt übliche Bildformate (png, jpg, heic) und ausschließlich MP4 als Videoformat.
 
 Video und Vorschaubild des Videos |  
 :-------------------------:|
