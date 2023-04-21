@@ -33,7 +33,7 @@ if ($data = $site->data_populators_pick()->toPage()) {
                             <option value="c_exhibit" selected>Objekte</option>
                             <option value="c_exhibition">Ausstellungen</option>
                         </select>
-                        <button type="button" class="x-btn btn d-inline-block d-md-none" aria-label="Filter schließen">
+                        <button type="button" class="x-btn btn d-inline-block d-lg-none" aria-label="Filter schließen">
                             <i icon-name="x" class=""></i>
                         </button>
 

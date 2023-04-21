@@ -19,7 +19,7 @@ body {
 
 header {
   .navbar {
-    background-color: var(--body-bg);
+    //background-color: var(--body-bg);
   }
 
   nav.navbar {
@@ -194,9 +194,10 @@ header {
   margin-top: 1rem;
   padding: .8rem;
   opacity: 1;
-  transition: opacity 100ms;
+  transition: opacity 100ms 150ms;
 
   &.active{
+    transition: opacity 250ms;
     opacity: 0;
   }
 
