@@ -47,6 +47,7 @@ columns:
         type: date
         width: 2/3
         display: DD.MM.YYYY
+        #default: today + "{{site.userdaysactive.getUserdaysactiveValue}}" day
         default: today + 30 day
       description:
         label: Kommentar

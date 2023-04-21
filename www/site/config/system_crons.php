@@ -70,7 +70,7 @@ return [
         // $data => 'my custom data'
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
-        $inactivityDays = site()->userdaysactive()->isNotEmpty() ? site()->userdaysactive()->value() : 40;
+        $inactivityDays = site()->userdaysbeforedelete()->isNotEmpty() ? site()->userdaysbeforedelete()->value() : 40;
         
         kirbylog('---- CRON DELETE USERS: ' . date('Y-m-d H:i:s') . ' ----');
 

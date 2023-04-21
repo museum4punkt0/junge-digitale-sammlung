@@ -139,6 +139,11 @@ Kirby::plugin('2av/custom-methods', [
 
             return $arr;
         },
+
+        /* 'getUserdaysactiveValue' => function ($field) {
+            kirbylog('TEST');
+            return "today + " . $field->value() . " day";
+        }, */
     ],
     'fileMethods' => [
         'responsiveImg' => function ($srcset = false) {
