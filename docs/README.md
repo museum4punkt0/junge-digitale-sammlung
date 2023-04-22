@@ -192,7 +192,7 @@ Reiter "Teilnehmer" |  Subkonten generieren  |  Subkonten Überblick
 ![](_media/admin/ws/ws-tab-users-empty.png)  |  ![](_media/admin/ws/ws-tab-users-generating.png)  |  ![](_media/admin/ws/ws-tab-users.png) 
 
 
-Zum Schluss muss der/die Mitarbeiter:in die Workshop-Seite aktivieren bzw.veröffentlichen. Dies können Sie überall wo es Status-Kreise gibt erledigen, z.B. oben links unterhalb vom Workshopname oder in der Übersicht der Workshops (Admin-Startseite).
+Zum Schluss muss der/die Mitarbeiter:in die Workshop-Seite aktivieren bzw.veröffentlichen. Dies können Sie überall wo es Status-Kreise gibt erledigen, z.B. oben links unterhalb vom Workshopname oder in der Übersicht der Workshops (Admin-Startseite). Die Funktion der Veröffentlichung funktioniert identisch für alle Seiten-Typen, nicht nur die Workshops.
 
 Workshop veröffentlichen |  In der Übersicht auch möglich
 :-------------------------:|:-------------------------:
@@ -226,9 +226,11 @@ Workshop Login-Seite | Benutzer PIN Identifizierung
 :-------------------------:|:-------------------------:
 ![](_media/workshop/workshop-intro.png) | ![](_media/workshop/workshop-pin%20confirm.png)
 
-### 8) Die Gruppe trägt Daten ein.
+### 8) Die Gruppe trägt Daten ein. In der Schule, zuhause oder unterwegs.
 
 Ab hier sollte der Ablauf selbsterklärend sein. Teilnehmer:innen können persönliche oder objektbezogene Daten eingeben, Ausstellungen gemeinsam bearbeiten, Leiter können Status der Benutzer und ihrer Objekten ansehen, PIN der Teilnehmer zurücksetzen, etc. Die Teilnehmer:innen müssen zunächst auch einer Nutzungsvereinbarung mit DSE zustimmen.
+
+Das Eingeben der Daten erfolgt über Eingabemasken mit Freitextfeldern und Dropdowns. Es gibt Pflichtfelder und optionale Eingabemöglichkeiten – Pflichtfelder sind als solche gekennzeichnet.
 
 Diese Phase dauert einige Tage oder evtl. Wochen lang. Die Teilnehmer:innen können vor, während oder nach dem vor Ort Termin im Museum ihre Daten bearbeiten.
 
@@ -239,10 +241,64 @@ Beispiel Teilnehmer | Leiter Auslistung Teilnehmer | Leiter Auslistung Ausstellu
 ![](_media/workshop/user-tab.png) | ![](_media/workshop/leiter/ws-L-overview%20teilnehmer.png) | ![](_media/workshop/leiter/ws-L-overview%20ausstellungen.png)
 
 
-Das Eingeben der Daten erfolgt über Eingabemasken mit Freitextfeldern und Dropdowns. Es gibt Pflichtfelder und optionale Eingabemöglichkeiten – Pflichtfelder sind als solche gekennzeichnet.
+### 9) Vor Ort Termin im Museum. Die Gruppe arbeitet gemeinsam mit den Mitarbeitern:innen.
 
-### 9) Vor Ort Termin im Museum
+Vor Ort im Museum werden unter anderem die physischen Objekte gemeinsam mit Mitarbeiter:innen gescannt. Nachdem ein Objekt als OBJ Datei gespeichert wurde (3D Scanner haben üblicherweise eine eigene Software, die das beherrschen sollte) kann es in eine GLTF/GLB mit Hilfe von "O2G" umgewandelt werden. Diese Anwendung wurde extra für die Platform entwickelt und kann das 3D Model leicht manipulieren, um bestmögliche Ergebnisse für die Darstellung auf der Website liefern zu können. In O2G werden pro Objekt 3 Dateien exportiert: ein Vorschaubild des Objekts, eine GLB 3D-Datei, die weboptimiert ist, und eine GLTF 3D-Datei, die weboptimiert und noch mal kompimiert wird. So können die Mitarbeiter:innen in jedem einzelnen Fall entscheiden welche Datei sie verwenden wollen. Man sucht hier ein gutes Qualität-Dateigröße Verhältnis.
 
+Die Mitarbeiter:innen können dann die aus O2G generierten statischen Bildern und die ausgewählten 3D-Dateien im Admin-Bereich hochladen (multiples Hochladen erlaubt). Nachdem die Bilder hochgeladen wurden erscheinen sie im Workshop-Bereich und zwar nur für die Benutzer, die ein physisches Objekt angelegt haben. Die Teilnehmer:innen können nun ein Vorschaubild auswählen, und falls die passende 3D-Datei gefunden wird, sind Bilddatei und 3D-Datei mit dem Objekt verlinkt.
+
+O2G Tool | Upload im Admin-Bereich
+:-------------------------:|:-------------------------:
+![](_media/workshop/workshop-o2gtool.png) | ![](_media/admin/ws/ws-tab-uploadbilder.png)
+
+Upload im Admin-Bereich | Auswahl für die Teilnehmer
+:-------------------------:|:-------------------------:
+![](_media/admin/ws/ws-tab-previewbilder.png) | ![](_media/workshop/objekt-tab-model%20select.png)
+
+### 10) Abschicken des Workshops durch Leiter:innen.
+
+Wenn der/die Leiter:in der Gruppe das Workshop als fertig markieren will, damit die Mitarbeiter:innen mit der Überprüfung der Daten und Freigabe der Seiten anfangen können, kann er/sie das per Knopdruck auf "Workshop abschicken" tun. Hier werden ein Paar hinweise angezeigt, und der/die Leiter:in kann eine kurze Nachricht für die Mitarbeiter:innen eingeben.
+
+Workshop | Abschicken des Workshops
+:-------------------------:|:-------------------------:
+![](_media/workshop/leiter/ws-L-overview%20teilnehmer-bottom.png) | ![](_media/workshop/leiter/ws-L-abschicken.png)
+
+Eine Mail wird für das Museum generiert. Die E-Mail Adressen, die im System eingestellt sind, empfangen die Mail. Diese enthält eine Übersicht der verschickten Daten.
+
+### 11) Die Mitarbeiter überprüfen und falls nötig korrigieren (z.B. Schreibfehler) die Daten, veröffentlichen die freigegebenen und, wenn gewünscht, löschen die nicht freigegebenen Objekte und Ausstellungen in dem jeweiligen Workshop.
+
+Im Admin-Bereich können die Mitarbeiter:innen die freigegebenen Objekte und Ausstellungen ähnlich wie für die Workshops veröffentlichen: oben links unterhalb vom Name oder auf der jeweiligen Liste. Als kleine Hilfe hat das Personal eine grüne Markierung für Objekte und Ausstellungen, die vollständige Daten enthalten. Der Hinweis des/der Leiters:in ist hier auch zu sehen.
+
+Veröffentlichte Seiten werden sofort in der Sammlung angezeigt. Sie können jederzeit deaktiviert werden.
+
+Übersicht Ausstellungen und Objekte | Objekt ist veröffentlicht
+:-------------------------:|:-------------------------:
+![](_media/admin/ws/ws-tab-overview%20objekt%20freigeben.png) | ![](_media/sammlung/sammlung-teilnehmer-objekt.png)
+
+### 12) Der Workshop ist somit vollständig abgeschlossen. Es folgen bestimmte Aufgaben, um die Platform zu bereinigen.
+
+Das System hat 3 Funktionen, die entweder per Klick oder CRON (automatisch von Ihrem Server) ausgelöst werden können. Um die Funktionen händisch auszulösen gehen Sie bitte auf der Hauptseite des Admin-Bereichs, Tab "Website Einstellungen". Die Buttons befinden sich am Ende der Ansicht.
+
+#### Workshops Bereinigen
+
+Das System geht alle Workshops durch, die noch nicht als bereinigt markiert sind. Bereinigen bedeutet in diesem Fall das Löschen von Ausstellungen und Objekten, die a) keine vollständigen Daten haben ***und*** b) nicht veröffentlich wurden. Erst wenn beide Bedingungen zutreffen wird die Seiten gelöscht.
+
+Ein Workshop weden auch bereinigt, wenn das verlinkte Gruppen-Konto gelöscht wird.
+
+#### Benutzer deaktivieren
+
+Diese Funktion deaktiviert die temporären Gruppen-Konten, dessen Gültigkeit abgelaufen ist. Das heisst, wenn sie sofort ein Benutzer deaktivieren wollen bewirkt diese Funktion nichts, da sie nur Kontos deaktiviert, mit einem Gültigkeitsdatum älter als "heute" deaktiviert.
+
+#### Inaktive Benutzer löschen
+
+Mit dieser Funktion werden inaktive Gruppen-Konten endgültig gelöscht. Sie überprüft, ob die Lösch-Gültigkeit abgelaufen ist, um erst dann das Konto zu löschen. Die Lösch-Gültigkeit setzt sich zusammen aus "Ablaufdatum des Kontos" + "eingestellter Warteperiode (in Tagen) bis zum Löschen". 
+
+Wie weiter oben beschrieben, vor dem Löschen des Kontos wird auch das damit verknüpfte Workshop erst mal bereinigt.
+
+
+System-Funktionen | 
+:-------------------------:|
+![](_media/admin/panel-system%20functions.png) | 
 
 
 ---

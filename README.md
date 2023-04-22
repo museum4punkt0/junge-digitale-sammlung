@@ -64,8 +64,8 @@ Bevor Sie beginnen, stellen Sie sicher, dass Sie folgende Anforderungen erfüllt
 *Hinweise: Für eine bessere Verwaltung der npm Packages wurde das Projekt ursprünglich mit den Software [Prepros](https://prepros.io) (Mac, Windows, Linux) und [CodeKit](https://codekitapp.com/) (Mac only) entwickelt. Beide bieten eine grafische und bequeme Benutzeroberfläche, um Source-Code zu kompilieren, Packages zu verwalten und Browser zu auto-refreshen. Beide config-Dateien sind in diesem Repository inkludiert (Sie benötigen nur eine von beiden Software). Für die Server-Funktion wurde es mit MAMP gearbeitet. Alternativ können Sie bspw. ein Webpack Workflow verfolgen, s. bitte [kirby-webpack](https://github.com/brocessing/kirby-webpack).*
 
 Es gelten die gleichen Voraussetzungen wie für die Installation (deployment). Dazu noch:
-- npm ist auf Ihrem Rechner installiert
 - Prepros oder CodeKit ist auf Ihrem Rechner installiert (optional können Sie das Webpack Workflow konfigurieren)
+- npm ist auf Ihrem Rechner installiert (optional, falls sie Prepros/CodeKit nicht verwenden werden)
 - Apache steht auf Ihrem Rechner zur Verfügung, um localhost starten zu können (z.B MAMP, XAMPP, Apache Installation, etc.)
 
 *Prepros oder CodeKit?: CodeKit ist eine Mac-only Software, die vergleichsweise performanter ist aber lizenziert/gekauft werden muss. Prepros bietet eine kostenlose Version an und ist universell.*
@@ -126,9 +126,7 @@ Zum starten:
 
 - Der Code im Ordner `src` kann jetzt bearbeitet werden. 
 
-***Weitere technische Details finden Sie [hier](docs/technisches/README.md).***
-
-WICHTIG: die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über die Preview-URLs von Prepros oder CodeKit abgerufen werden, da Weiterleitungsfehler auftretten werden. Die live Auto-Refresh Funktion bleibt von daher nur für den Sammlung-Bereich relevant.
+***Weitere technische Details und Hinweise finden Sie [hier](docs/technisches/README.md).***
 
 *Für weitere Prepros Einstellungen bitte die [Prepros Dokumentation](https://prepros.io/help/) lesen.*
 

@@ -5,26 +5,31 @@
 
 www/media/*
 !www/media/index.html
+
 www/site/cache/*
 !www/site/cache/index.html
+
 www/site/accounts/*
 !www/site/accounts/6fsI6XNb
 !www/site/accounts/index.html
+
 www/site/sessions/*
-!www/site/sessions/index.html
 www/site/config/credentials.php
-www/sessions/
+!www/site/sessions/index.html
 
 www/content/*
 !www/content/1_home
 !www/content/login
 !www/content/error
 
+www/kirby
+www/kirby/*
+www/phpinfo.php
+
 build
 build/*
 
-#www/kirby
-www/phpinfo.php
+
 
 
 

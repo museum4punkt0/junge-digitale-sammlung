@@ -34,10 +34,6 @@ return [
     ],
   ],
 
-
-
-  
-
   // API
   'api' => require_once 'api.php',
 
@@ -49,7 +45,7 @@ return [
 
   // JANITORS
   'bnomei.janitor.secret' => 'ef1aebc3c119b6ddba70dd8b368f1d99',
-  'bnomei.janitor.jobs' => require_once 'system_crons.php',
+  'bnomei.janitor.jobs' => require_once 'system_functions.php',
 
   // srcset thumbs
   'thumbs' => [

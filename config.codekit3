@@ -89,6 +89,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/docs\/_media\/admin\/panel-system functions.png" : {
+      "ft" : 32768,
+      "iS" : 228009,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/panel-system functions.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/docs\/_media\/admin\/panel-ws-anlegen.png" : {
       "ft" : 32768,
       "iS" : 284476,
@@ -219,9 +232,35 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/docs\/_media\/admin\/ws\/ws-tab-overview objekt freigeben.png" : {
+      "ft" : 32768,
+      "iS" : 314404,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/ws\/ws-tab-overview objekt freigeben.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/docs\/_media\/admin\/ws\/ws-tab-overview ws sent.png" : {
+      "ft" : 32768,
+      "iS" : 464736,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/ws\/ws-tab-overview ws sent.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/docs\/_media\/admin\/ws\/ws-tab-previewbilder.png" : {
       "ft" : 32768,
-      "iS" : 731799,
+      "iS" : 451758,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/ws\/ws-tab-previewbilder.png",
       "oF" : 0,
@@ -237,6 +276,19 @@
       "iS" : 515400,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/ws\/ws-tab-sammlung.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/docs\/_media\/admin\/ws\/ws-tab-uploadbilder.png" : {
+      "ft" : 32768,
+      "iS" : 213786,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/admin\/ws\/ws-tab-uploadbilder.png",
       "oF" : 0,
       "oIPL" : 0,
       "opt" : 0,
@@ -414,6 +466,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/docs\/_media\/sammlung\/sammlung-teilnehmer-objekt.png" : {
+      "ft" : 32768,
+      "iS" : 654907,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/sammlung\/sammlung-teilnehmer-objekt.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/docs\/_media\/workshop\/ausstellung-tab.png" : {
       "ft" : 32768,
       "iS" : 361316,
@@ -559,7 +624,7 @@
     },
     "\/docs\/_media\/workshop\/objekt-tab-model select.png" : {
       "ft" : 32768,
-      "iS" : 515396,
+      "iS" : 393589,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/workshop\/objekt-tab-model select.png",
       "oF" : 0,

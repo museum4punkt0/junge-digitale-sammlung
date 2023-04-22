@@ -241,7 +241,7 @@ tabs:
             max: 60
             default: 40
             after: Tage
-            label: Default Gültigkeit bis zum Löschen des temporären Kontos
+            label: Default Gültigkeit bis zum Löschen des inaktiven temporären Kontos
             help: 'min: 7, max: 60'
 
   # gallery tab
