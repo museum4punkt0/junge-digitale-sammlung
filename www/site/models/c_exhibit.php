@@ -36,7 +36,7 @@ class CExhibitPage extends JDSPage
 
       //physisch
       'scan_device'       => 'Digitalisierungsgerät fehlt.',
-      'museum_preview'    => 'Vorschaubild für Museum fehlt.',
+      //'museum_preview'    => 'Vorschaubild für Museum fehlt.',
       'exhibit_preview'   => 'Vorschaubild fehlt.',
       'threed_model'      => '3D Model fehlt.',
 
@@ -55,7 +55,7 @@ class CExhibitPage extends JDSPage
       $physicalRules = [
         //'scan_date' => ['required'],
         'scan_device' => ['required'],
-        'museum_preview' => ['required'],
+        //'museum_preview' => ['required'],
         'exhibit_preview' => ['required'],
         'threed_model' => ['required'],
       ];
