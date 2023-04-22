@@ -23,6 +23,9 @@ www/content/*
 build
 build/*
 
+#www/kirby
+www/phpinfo.php
+
 
 
 ### PHP ###

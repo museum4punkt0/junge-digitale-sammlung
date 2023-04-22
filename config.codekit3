@@ -2818,7 +2818,7 @@
       }
     },
     "esLintSourceType" : 0,
-    "externalServerAddress" : "http:\/\/localhost:8888\/scd-junge_digitale_sammlung\/www",
+    "externalServerAddress" : "http:\/\/localhost:8888\/junge-digitale-sammlung-website\/www",
     "gitIgnoreBuildFolder" : 1,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
