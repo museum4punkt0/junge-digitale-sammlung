@@ -4,10 +4,12 @@
         <?php if ($url = $collectionItem->embed_url()->toEmbed()) : ?>
             <?php if ($url->providerName()->lower() == 'twitter') : ?>
                 <?php if (isFeatureAllowed('embeds')) : ?>
-                    <div class="twitter-container single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" tabindex="-1">
-                        <?= $url->code() ?>
-                        <div class="spinner-border text-primary fs-3" role="status">
-                            <span class="visually-hidden">Loading...</span>
+                    <div class="twitter-framer">
+                        <div class="pe-none twitter-container single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" tabindex="-1">
+                            <?= $url->code() ?>
+                            <div class="spinner-border text-primary fs-3" role="status">
+                                <span class="visually-hidden">Loading...</span>
+                            </div>
                         </div>
                         <a title="<?= $collectionItem->title() ?>" class="exhibit-link cover-link" href="<?= $collectionItem->id() ?>">
                             <?= $collectionItem->title()->value() ?>

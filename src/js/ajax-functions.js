@@ -253,16 +253,23 @@ Object.assign(window, { scrapEmbed });
  * @returns string
  */
 async function scrapFreshEmbedImage(url) {
-    let imgTag = false;
+    let result;
 
     await scrapEmbed(url).then(embed => {
-        if (embed.data)
-            imgTag = '<img src="' + embed.data.image + '" alt="' + embed.data.title + '">';
+        if (embed.data) {
+            result = {
+                imgTag: '<img src="' + embed.data.image + '" alt="' + embed.data.title + '">',
+                imgWidth: embed.data.imageWidth,
+                imgHeight: embed.data.imageHeight,
+            };
+        }
         else
-            imgTag = '<p class="single-exhibit text-danger">Unable to load<span class="empty"><i icon-name="x-circle" class="icon-only"></i></span></p>'
+            result = {
+                imgTag: '<p class="single-exhibit text-danger">Unable to load<span class="empty"><i icon-name="x-circle" class="icon-only"></i></span></p>',
+            }
     });
 
-    return imgTag;
+    return result;
 }
 Object.assign(window, { scrapFreshEmbedImage });
 

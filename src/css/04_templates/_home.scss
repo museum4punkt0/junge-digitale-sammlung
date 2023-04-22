@@ -311,8 +311,10 @@ body.home {
                             height: var(--poster-height);
                             width: var(--poster-width);
 
-                            &:focus {
+                            &:focus-visible {
                                 border: 3px solid $input-focus-border-color;
+                                //box-shadow: var(--focus-visible);
+                                box-shadow: $input-focus-box-shadow, 0px 0px 3px #fff !important;
                             }
 
                             .flex-container {
@@ -413,7 +415,8 @@ body.home {
 
                         .single-exhibit {
                             &:focus {
-                                border: 3px solid $input-focus-border-color;
+                                //border: 3px solid $input-focus-border-color;
+                                box-shadow: $input-focus-box-shadow, 0px 0px 3px #fff !important;
                                 outline: 0;
                                 //filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.4));
                             }
@@ -491,20 +494,21 @@ body.home {
                         .single-exhibit {
                             z-index: 2;
                             position: relative;
-                            width: 80%;
+                            width: var(--single-exhibit-w);
                             display: block;
                             margin: 0 auto;
+                            --single-exhibit-w: 80%;
                             //filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.15));
 
                             &.size-compact {
-                                width: 64%;
+                                --single-exhibit-w: 64%;
                             }
 
                             @include media-breakpoint-up(md) {
-                                width: 72%;
+                                --single-exhibit-w: 72%;
 
                                 &.size-compact {
-                                    width: 56%;
+                                    --single-exhibit-w: 56%;
                                 }
                             }
 
@@ -516,6 +520,9 @@ body.home {
                                 margin-bottom: 3rem;
                             }
                             &.embed {
+                                --embed-w: 1;
+                                --embed-h: 1;
+                                width: calc(var(--single-exhibit-w) * calc(var(--embed-w) / var(--embed-h)));
                                 margin-bottom: 1rem;
                             }
                         }
@@ -536,7 +543,7 @@ body.home {
                                 var(--exhibit-factor-h-factor) * 9.1vh
                             ); // 0.1 for mobile rendering to be better
                             margin-top: -16vw;
-                            z-index: 1;
+                            z-index: -1;
 
                             // landscape
                             @media (orientation: landscape) {

@@ -3,7 +3,7 @@
  * Inits embed logic for handling embeds after loading.
  * It checks if the original DOMelement has something
  * else inserted, like a blockquote is replaced by an iframe.
- * For tiktok it scrapes the new images and sets them dynamically
+ * For some services it scrapes the new images and sets them dynamically
  * via javascript
  */
 
@@ -20,15 +20,19 @@ export function initEmbedLogic() {
         element.addEventListener('DOMNodeInserted', tweetLoaded);
     });
 
-    // SERVICES THAT HAVE SHORT LIVED IMG URLs 
+
+    // SERVICES THAT HAVE SHORT LIVED IMG URLs (tiktok, instagram)
     let dynamicEmbedImgs = document.querySelectorAll('.load-embed-img');
     dynamicEmbedImgs.forEach(element => {
         let imgUrl = element.getAttribute('href');
         let sendembedurl = `${baseembedurl}?embedurl=${imgUrl}`;
-        scrapFreshEmbedImage(sendembedurl).then(imgTag => {
+        scrapFreshEmbedImage(sendembedurl).then(result => {
             element.classList.remove('load-embed-img');
             element.classList.add('loaded-embed-img');
-            element.innerHTML = imgTag;
+            element.innerHTML = result.imgTag;
+
+            if (result.imgHeight > result.imgWidth) // we only want to scale the portrait imgs
+                element.parentNode.style.cssText = "--embed-w:" + result.imgWidth + "; --embed-h:" + result.imgHeight + "";
         });
     });
 }
@@ -56,12 +60,22 @@ function tweetLoaded(ev) {
     target.addEventListener('load', function () {
         new ResizeObserver(function (entries) {
             entries.forEach(entry => {
-                var w = entry.target.getBoundingClientRect().width;
-                var h = entry.target.getBoundingClientRect().height;
-                if (w > 0 && h > 0) {
+
+                var _w = entry.target.getBoundingClientRect().width;
+                var _h = entry.target.getBoundingClientRect().height;
+                if (_w > 0 && _h > 0) {
+                    this.disconnect();
+                    w = _w;
+                    h = _h;
                     let container = findParentContainer(entry.target.parentNode, 'twitter-container');
                     container.style.cssText = '--scaleFactor: ' + w / h;
                     container.classList.add('loaded');
+
+                    let parentContainer = container.parentNode;
+                    let factor = getComputedStyle(container).getPropertyValue('--scale');
+                    console.log(factor);
+                    parentContainer.style.width = factor * w * (w / h) + 'px';
+                    parentContainer.style.height = factor * h * (w / h) + 'px';
 
                     let spinner = container.querySelector('.spinner-border');
                     if (spinner)
@@ -71,5 +85,50 @@ function tweetLoaded(ev) {
             });
         }).observe(this);
     });
-
 }
+var w, h;
+function resizeTwitter(target, factor) {
+    /* var w = target.getBoundingClientRect().width;
+    var h = target.getBoundingClientRect().height; */
+    if (w > 0 && h > 0) {
+        let container = findParentContainer(target.parentNode, 'twitter-container');
+        //container.style.cssText = '--scaleFactor: ' + w / h;
+        container.classList.add('loaded');
+
+        let parentContainer = container.parentNode;
+        //factor = getComputedStyle(container).getPropertyValue('--scale');
+        console.log(factor);
+        parentContainer.style.width = factor * w * (w / h) + 'px';
+        parentContainer.style.height = factor * h * (w / h) + 'px';
+        parentContainer.classList.add('loaded');
+
+        let spinner = container.querySelector('.spinner-border');
+        if (spinner)
+            container.removeChild(spinner);
+
+    }
+}
+
+const mediaQueryMin = window.matchMedia('(min-width: 1024px)');
+const mediaQueryMax = window.matchMedia('(max-width: 1024px)');
+
+function handleTabletChangeMin(e) {
+    if (e.matches) {
+        let targets = document.querySelectorAll('.twitter-container iframe');
+        targets.forEach(target => {
+            resizeTwitter(target, 1);
+        });
+    }
+}
+
+function handleTabletChangeMax(e) {
+    if (e.matches) {
+        let targets = document.querySelectorAll('.twitter-container iframe');
+        targets.forEach(target => {
+            resizeTwitter(target, 0.66);
+        });
+    }
+}
+
+mediaQueryMin.addListener(handleTabletChangeMin);
+mediaQueryMax.addListener(handleTabletChangeMax);

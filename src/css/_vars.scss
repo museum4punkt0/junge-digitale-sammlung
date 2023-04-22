@@ -6,7 +6,7 @@ $c-color-1: #f0f1f2;
 $c-color-2: #e6ecf2;
 $c-color-3: #dee9f4;
 $c-color-4: #d4e5f2;
-$c-color-dropdown-selected: #C9D1FF;
+$c-color-dropdown-selected: #c9d1ff;
 $c-color-5: #aab5f8;
 $c-color-6: #798af2;
 $c-gradient-start: #6a7ef9;
@@ -26,8 +26,10 @@ $info: $c-color-5;
 //$secondary: #4b5ed1;
 
 $ui_shadow: 1px 2px 5px rgba(#333, $alpha: 0.25);
-
-$transition-collapse: height .05s;
+$input-focus-box-shadow: 0 0 0 0.25rem rgba(75, 94, 209, 0.45);
+$img-hover-dropshadow-filter: drop-shadow(2px 25px 25px rgba(255, 255, 249, 0.2));
+$img-hover-boxshadow: 2px 7px 20px rgba(#fffffa, 0.35);
+$transition-collapse: height 0.05s;
 
 $border-radius: 0rem;
 
@@ -48,10 +50,10 @@ $container-max-widths: (
   md: 720px,
   lg: 960px,
   xl: 1140px,
-  xxl: 1600px,  
+  xxl: 1600px,
 );
 
-$custom-container-max-size : 1024px;
+$custom-container-max-size: 1024px;
 
 $modal-md: 600px;
 $modal-lg: 1000px;
@@ -109,6 +111,6 @@ $tooltip-font-size: 0.9rem;
   --bs-body-line-height: 1.5 !important;
 }
 
-body{
+body {
   --displ-bot-hover-els: -3rem;
 }

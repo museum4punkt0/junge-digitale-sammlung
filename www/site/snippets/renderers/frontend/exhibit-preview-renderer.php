@@ -21,10 +21,12 @@
             <?php if ($url = $exhibit->embed_url()->toEmbed()) : ?>
                 <?php if ($url->providerName()->lower() == 'twitter') : ?>
                     <?php if (isFeatureAllowed('embeds')) : ?>
-                        <div class="pe-none twitter-container single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>">
-                            <?= $url->code() ?>
-                            <div class="spinner-border text-primary fs-3" role="status">
-                                <span class="visually-hidden">Loading...</span>
+                        <div class="twitter-framer">
+                            <div class="pe-none twitter-container single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>">
+                                <?= $url->code() ?>
+                                <div class="spinner-border text-primary fs-3" role="status">
+                                    <span class="visually-hidden">Loading...</span>
+                                </div>
                             </div>
                             <a title="<?= $exhibit->title() ?>" class="exhibit-link cover-link" href="<?= $exhibit->url() ?>">
                                 <?= $exhibit->title()->value() ?>
@@ -36,9 +38,9 @@
                                 <div class="exhibit-embed d-block h-100">
                                     <p>
                                         <?= snippet('renderers/labeler', ['field' => 'cookies_infotext', 'fallback' => 'Cookies für externe Inhalte sind deaktiviert. Bitte passe die Einstellungen an, wenn du diese Inhalte sehen willst.']) ?>
-                                    <div id="edit-embed-cookie"><strong role="button">Anpassen</strong></div>
+                                    <div id="edit-embed-cookie-<?= Str::slug($exhibit->title()) ?>"><strong role="button">Anpassen</strong></div>
                                     <script>
-                                        document.querySelector('#edit-embed-cookie').addEventListener('click', function(e) {
+                                        document.querySelector('#edit-embed-cookie-<?= Str::slug($exhibit->title()) ?>').addEventListener('click', function(e) {
                                             e.stopPropagation();
                                             e.preventDefault();
                                             const event = document.createEvent('HTMLEvents');

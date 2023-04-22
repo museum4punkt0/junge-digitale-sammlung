@@ -1,14 +1,24 @@
 .podest-container {
     .col-exhibit {
+        .twitter-framer {
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            &.loaded {
+                //overflow: hidden;
+            }
+        }
         .single-exhibit.twitter-container {
             width: 100% !important;
             --scale: 0.66;
-            --scaleFactor: 1;            
+            --scaleFactor: 1;
             transform-origin: bottom;
 
             &.loaded {
-                margin-top: calc((calc(var(--scale) * var(--scaleFactor)) - 1) * 100vh);
+                //margin-bottom: calc((calc(var(--scale) * var(--scaleFactor)) - 1) * 100vh);
+                //margin-top: -50%;
                 transform: scale(calc(var(--scale) * var(--scaleFactor)));
+                transform-origin: top;
             }
 
             @include media-breakpoint-up(lg) {
@@ -19,41 +29,50 @@
                 justify-content: center;
                 align-items: flex-end;
                 bottom: 0;
+                margin: 0 !important;
                 position: relative;
             }
         }
 
         .cover-link {
+            --test: #{$input-focus-box-shadow};
             position: absolute;
             width: 100%;
             height: 100%;
             bottom: 0;
             display: block;
-            z-index: inherit;
+            //z-index: inherit;
             pointer-events: all !important;
+            &:focus-visible{
+                box-shadow:  $input-focus-box-shadow, $img-hover-boxshadow !important;
+            }
+            &:hover{
+                box-shadow:  $img-hover-boxshadow!important;
+            }
         }
     }
 }
 
-#embed__preview{
+#embed__preview {
     min-height: 150px;
     min-width: 150px;
     background-color: #eee;
     border-radius: 3px;
     margin: 0 auto;
-    blockquote, iframe{
+    blockquote,
+    iframe {
         margin: 0;
         padding: 0;
     }
 }
 
-.embed__logo{
+.embed__logo {
     background-color: #f3f3f3;
     color: var(--primary-color);
-    box-shadow: 2px 2px 5px rgba(#333, .35);
+    box-shadow: 2px 2px 5px rgba(#333, 0.35);
     border-radius: 50%;
     padding: 0.85rem;
-    .lucide{
+    .lucide {
         width: 100%;
         height: 100%;
     }
