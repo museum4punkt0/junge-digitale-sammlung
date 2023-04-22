@@ -43,7 +43,7 @@ export function initEmbedLogic() {
  * It checks for new iframes and then disables accessibility
  * properties. Then it waits for load and checks the dimensions
  * to set a CSS scaling variable to scale down the tweet depending
- * on the height.
+ * on the height. After that the ResizeObserver disconnects
  * @param {Event} ev 
  */
 function tweetLoaded(ev) {
@@ -87,17 +87,18 @@ function tweetLoaded(ev) {
     });
 }
 var w, h;
+
+/**
+ * Resizes the tweet so it fits on a podest
+ * @param {HTMLElement} target 
+ * @param {number} factor 
+ */
 function resizeTwitter(target, factor) {
-    /* var w = target.getBoundingClientRect().width;
-    var h = target.getBoundingClientRect().height; */
     if (w > 0 && h > 0) {
         let container = findParentContainer(target.parentNode, 'twitter-container');
-        //container.style.cssText = '--scaleFactor: ' + w / h;
         container.classList.add('loaded');
 
         let parentContainer = container.parentNode;
-        //factor = getComputedStyle(container).getPropertyValue('--scale');
-        console.log(factor);
         parentContainer.style.width = factor * w * (w / h) + 'px';
         parentContainer.style.height = factor * h * (w / h) + 'px';
         parentContainer.classList.add('loaded');
@@ -105,13 +106,17 @@ function resizeTwitter(target, factor) {
         let spinner = container.querySelector('.spinner-border');
         if (spinner)
             container.removeChild(spinner);
-
     }
 }
 
+// JS media queries
 const mediaQueryMin = window.matchMedia('(min-width: 1024px)');
 const mediaQueryMax = window.matchMedia('(max-width: 1024px)');
 
+/**
+ * JS Mediaquery to resize and crop the scaled twitter embed
+ * @param {Event} e 
+ */
 function handleTabletChangeMin(e) {
     if (e.matches) {
         let targets = document.querySelectorAll('.twitter-container iframe');
@@ -121,6 +126,10 @@ function handleTabletChangeMin(e) {
     }
 }
 
+/**
+ * JS Mediaquery to resize and crop the scaled twitter embed
+ * @param {Event} e 
+ */
 function handleTabletChangeMax(e) {
     if (e.matches) {
         let targets = document.querySelectorAll('.twitter-container iframe');

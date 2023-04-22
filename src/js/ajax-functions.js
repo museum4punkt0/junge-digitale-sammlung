@@ -13,20 +13,6 @@
 import JDSForm from "./components/JDSForm";
 
 
-/* function ajaxCall(type, url, callback) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function () {
-        if (xmlhttp.readyState == XMLHttpRequest.DONE && xmlhttp.status == 200) {
-            var data = xmlhttp.responseText;
-            if (callback) callback(data);
-        }
-    };
-    xmlhttp.open(type, url, true);
-    xmlhttp.send();
-}
-Object.assign(window, { ajaxCall }); */
-
-
 /**
  * Sends a form via ajax by finding the forms submit button
  * or sending the form directly.
