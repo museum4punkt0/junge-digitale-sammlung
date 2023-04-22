@@ -162,6 +162,7 @@ z.B.
 Die Namen der Befehle können sie aus der Kirby-config Datei `system_functions.php` entnehmen. Sie werden hier auch andere Befehle finden, die bis jetzt ausschliesslich per Knopfdruck ausgelöst werden.
 
 ***site/config/system_functions.php***
+
     ...
     'deactivateusers' => function (){...},
     'deleteusers'  => function (){...},
@@ -169,6 +170,7 @@ Die Namen der Befehle können sie aus der Kirby-config Datei `system_functions.p
     ...
 
 Den Schlüssel können sie in der Kirby-config Datei einstellen.
+
 ***site/config/config.php***
 
     'bnomei.janitor.secret' => 'ef1aebc3c119b6ddba70dd8b368f1d99',
