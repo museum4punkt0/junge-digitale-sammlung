@@ -1,12 +1,8 @@
 <?php
 
-/*** 
- * TODO
- * populate after form submit still unclean because of $data['title']
- */
 return function ($kirby, $page, $site) {
 
-    # Grab the data from the default controller for authentification
+    # Grab the data from the default global site controller
     $site_vars = $kirby->controller('site', compact('page', 'kirby'));
 
     if (!$site_vars['authenticated']) {
@@ -63,7 +59,6 @@ return function ($kirby, $page, $site) {
         }
     }
 
-
     # ----------- HANDLE CREATE EXHIBIT
     if ($kirby->request()->is('POST') && get('create-exhibit')) {
         $data = get();
@@ -101,13 +96,8 @@ return function ($kirby, $page, $site) {
                     $alert[] = 'Objekt erfolgreich angelegt!';
                     $data['exhibitname'] = $data['title'];
                     unset($data['title']);
-                    // update linkage of curator happens in hook changeSlug:after of exhibit
 
-                    /* // refresh message infos in exhibition, if it is linked
-                    if ($exhibition = $page->linked_exhibition()->toPageOrDraft()) {
-                        $exhibition_msgs = handleExhibitionMessages($exhibition->content()->data(), $exhibition);
-                        $exhibition->update($exhibition_msgs);
-                    } */
+                    // update linkage of curator happens in hook changeSlug:after of exhibit
                 }
             } catch (Exception $e) {
                 $alert[] = 'Objekt-Registrierung fehlgeschlagen: ' . $e->getMessage();
@@ -176,7 +166,6 @@ return function ($kirby, $page, $site) {
                             'input' => $url,
                             'media' => $embed['data'],
                         ];
-
                     } else {
                         $data['embed_url'] = [
                             'input' => $url,
@@ -211,7 +200,7 @@ return function ($kirby, $page, $site) {
                         'uname' => $kirby->user()->name()
                     ]);
 
-                    if ($changeSlug) {                        
+                    if ($changeSlug) {
                         $indexedSlug = $updateexhibit->checkSlugIndex(Str::slug($data['title']));
                         $updateexhibit->changeSlugOnly($indexedSlug);
                     }
@@ -228,7 +217,8 @@ return function ($kirby, $page, $site) {
     }
 
     # ------------ HANDLE DELETE FOR PREVIEW & MODEL & ASSET
-    if ($kirby->request()->is('POST') && (get('delete-museum-preview') || get('delete-preview') || get('delete-model') || get('delete-asset'))) {
+    // model removal from the frontend has been deactivated on 22.03.2023, but the logic for delete-model still remains here, just in case.
+    if ($kirby->request()->is('POST') && (get('delete-museum-preview') || get('delete-preview') || get('delete-asset') /*|| get('delete-model')*/)) {
 
         if (get('delete-museum-preview')) {
             $_file_template = "image";
@@ -236,10 +226,10 @@ return function ($kirby, $page, $site) {
         } elseif (get('delete-preview')) {
             $_file_template = "image";
             $_field = 'exhibit_preview';
-        } elseif (get('delete-model')) {
+        } /* elseif (get('delete-model')) {
             $_file_template = "gltf";
             $_field = 'threed_model';
-        } elseif (get('delete-asset')) {
+        } */ elseif (get('delete-asset')) {
             $_file_template = "asset";
             $_field = 'digital_asset';
         }
@@ -324,7 +314,7 @@ return function ($kirby, $page, $site) {
         }
     }
 
-    // logout in case it was auto-logout
+    // logout in case it was auto-logout (javascript called)
     if ($kirby->request()->is('POST') && get('logout-after-save')) {
         go($kirby->url() . '/logout');
     }

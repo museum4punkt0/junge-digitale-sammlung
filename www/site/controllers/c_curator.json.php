@@ -2,11 +2,10 @@
 
 return function ($kirby, $page, $site) {
 
-  // Grab the data from the default controller for authentification
+  // Grab the data from the default global site controller
   $site_vars = $kirby->controller('site.json', compact('kirby', 'page', 'site'));
 
-  if ($kirby->request()->is('GET') && get('username')) {
-
+  if ($kirby->request()->is('GET') && get('username')) { // for checking if username exists
     $username = get('username');
 
     if ($username) {
@@ -14,7 +13,7 @@ return function ($kirby, $page, $site) {
     }
   }
 
-  if ($kirby->request()->is('GET') && get('exhibitionpage')) { // get data for updated exhibition
+  if ($kirby->request()->is('GET') && get('exhibitionpage')) { // get data for updated exhibition when we change tabs in the user area
 
     $pageID = get('exhibitionpage');
 
@@ -28,11 +27,10 @@ return function ($kirby, $page, $site) {
     }
   }
 
-
-
   # ------------ HANDLE DATA FOR PREVIEW & MODEL UPLOAD
-  // model upload form the frontend has been deactivated on 22.03.2023, but the logic for save-model still remains here, just in case.
-  if ($kirby->request()->is('POST') && (get('save-museum-preview') || get('save-preview') /* || get('save-model') */ || get('save-asset'))) {
+  // model upload from the frontend has been deactivated on 22.03.2023, but the logic for save-model still remains here, just in case.
+  // uploads are handled in JSON controller because we need a upload progress event in javascript
+  if ($kirby->request()->is('POST') && (get('save-museum-preview') || get('save-preview') || get('save-asset') /* || get('save-model') */) ) {
 
     //$exposure = 1;
     if (get('save-museum-preview')) {

@@ -1,16 +1,18 @@
 <?php
 
+/**
+ * Mainly handles the search and filtering ajax queries
+ */
 return function ($kirby, $page, $site) {
 
-  // Grab the data from the default controller for authentification
+  // Grab the data from the default global site controller
   $site_vars = $kirby->controller('site.json', compact('kirby', 'page', 'site'));
 
-  if ($kirby->request()->is('GET') && get('searchQuery')) { // Validation for impulse for curator list in leader
+  if ($kirby->request()->is('GET') && get('searchQuery')) { // a search was requested
 
     $searchQuery   = get('searchQuery');
-    //$searchResults = $site->search($searchQuery, 'title')->unlisted()->filterBy('intendedTemplate', get('currentCollection'));
     $searchResults = $site->search($searchQuery, 'title')->unlisted()->filterBy('intendedTemplate', get('currentCollection'));
-  } else if ($kirby->request()->is('GET') && (get('currentCollection') || get('currentImpulse'))) {
+  } else if ($kirby->request()->is('GET') && (get('currentCollection') || get('currentImpulse'))) { // otherwise it was a change of impulse (Thema) or collection (Objekt/Ausstellung)
     $params   = get();
 
     $items    = $site->children()->filterBy('intendedTemplate', 'c_workshop')

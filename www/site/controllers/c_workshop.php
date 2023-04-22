@@ -2,14 +2,14 @@
 
 return function ($kirby, $page) {
 
-    # Grab the data from the default controller for authentification
+    # Grab the data from the default global site controller
     $site_vars = $kirby->controller('site', compact('page', 'kirby'));
 
     if (!$site_vars['authenticated']) {
         go($kirby->url() . '/login');
     }
 
-    # ----------- HANDLE USER PAGE REQUEST
+    # ----------- HANDLE USER SWITCHING
     if ($kirby->request()->is('GET') && get('changeuser')) {
         $alert = $page->unpinMe($page);
     }
@@ -92,8 +92,7 @@ return function ($kirby, $page) {
         if ($invalid = invalid($data, $rules, $messages)) {
             $alert = $invalid;
         } else {
-            // authenticate as almighty
-            //$kirby->impersonate('kirby');
+
             // everything is ok, handle information
             try {
                 unset($data['set-pin']);
@@ -107,15 +106,10 @@ return function ($kirby, $page) {
                     ]);
 
                     if ($updatedCurator) {
-                        /* kirby()->session()->set([
-                            'participantID' => $data['participant_url'],
-                            'participantLogged'  => true
-                        ]); */
                         $alert[] = "PIN gespeichert!";
 
+                        // pinMe function forwards to the participant page, is successfull
                         $alert = $page->pinMe($page, $data);
-                        //$target_page = $page->find($data['participant_url']);
-                        //$target_page->go();
                     }
                 } else {
                     $alert[] = "PIN stimmt nicht überein, bitte erneut versuchen.";
@@ -158,7 +152,7 @@ return function ($kirby, $page) {
         if ($invalid = invalid($data, $rules, $messages)) {
             $alert = $invalid;
         } else {
-            // everything is ok, handle information
+            // pinMe function forwards to the participant page, is successfull
             $alert = $page->pinMe($page, $data);
         }
 

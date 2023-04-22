@@ -6,7 +6,7 @@ return function ($kirby, $page, $site) {
 
     /***
      * 
-     * LOCK : For Exhibition pages
+     * LOCK page: For Exhibition pages
      * 
      */
 
@@ -35,7 +35,7 @@ return function ($kirby, $page, $site) {
 
     /***
      * 
-     * UNLOCK : For Exhibition pages
+     * UNLOCK page: For Exhibition pages
      * 
      */
     if ($kirby->request()->is('GET') && get('unlockMe')) {
@@ -60,7 +60,7 @@ return function ($kirby, $page, $site) {
         }
     }
 
-    if ($kirby->request()->is('GET') && get('pageID')) { // Validation for impulse
+    if ($kirby->request()->is('GET') && get('pageID')) { // Validation for impulse. Validates the page that is passed to the impulse (Thema) that is also passed
         $impulse = get('impulseCheck');
         $pageID = get('pageID'); // exhibition
 
@@ -96,7 +96,7 @@ return function ($kirby, $page, $site) {
 
 
     // Get embed info for AJAX call
-    if ($kirby->request()->is('GET') && get('embedurl')) {
+    if ($kirby->request()->is('GET') && get('embedurl')) { // we can call globally for embed object information
         $embed = [];
         $embedurl = get('embedurl');
 

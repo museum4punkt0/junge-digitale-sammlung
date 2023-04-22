@@ -1,12 +1,8 @@
 <?php
 
-/*** 
- * TODO
- * populate after form submit still unclean because of $data['title']
- */
 return function ($kirby, $page, $site) {
 
-    # Grab the data from the default controller for authentification
+    # Grab the data from the default global site controller
     $site_vars = $kirby->controller('site', compact('page', 'kirby'));
 
     if (!$site_vars['authenticated']) {
@@ -88,7 +84,7 @@ return function ($kirby, $page, $site) {
             $alert[] = 'Your registration failed: ' . $e->getMessage();
         }
 
-
+        // sends the workshop via email
         $mailData = [
             'ws-name' => 'Workshop Name (ID): ' . $page->parent()->title() . '(' . $page->parent()->slug() . ')',
             'ws-participants'   => $page->parent()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_curator')->sortBy('title'),
@@ -100,7 +96,6 @@ return function ($kirby, $page, $site) {
             'ws-notDoneExhibits' => $data['notDoneExhibits'],
             'ws-notDoneExhibitions' => $data['notDoneExhibitions'],
         ];
-
 
         $mailRules = [
             'from_address'    => ['required'],
@@ -171,6 +166,10 @@ return function ($kirby, $page, $site) {
         /*         $exhibition_msgs = handleExhibitionMessages($data, $page);
         $data = array_merge($data, $exhibition_msgs); */
 
+        // TODO: --> this is still not working, sadly. Maybe update Exhibition List via ajax instead?
+        /* After creating an exhibition the leader has to refresh once to see the actual
+        hints. Not a huge problem, but would be nice to do it somehow else.*/
+
         $formRules = [
             'exhibitiontitle'    => ['required'],
             'impulse'            => ['required'],
@@ -231,7 +230,6 @@ return function ($kirby, $page, $site) {
             // everything is ok, handle information
             try {
                 $data['title'] = $data['exhibitiontitle'];
-                //unset($data['exhibitiontitle']);
                 unset($data['save-exhibition']);
 
                 $changeSlug = $currentExhibition->title() != $data['title'];
@@ -290,8 +288,7 @@ return function ($kirby, $page, $site) {
         }
     }
 
-
-    // logout in case it was auto-logout
+    // logout in case it was auto-logout (javascript called)
     if ($kirby->request()->is('POST') && get('logout-after-save')) {
         go($kirby->url() . '/logout');
     }
