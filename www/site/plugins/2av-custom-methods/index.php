@@ -1,4 +1,8 @@
 <?php
+/**
+ * Helpful extra functions for fields or files
+ * to get information more easily inside yaml files or php
+ */
 Kirby::plugin('2av/custom-methods', [
     'collectionMethods' => [],
     'fieldMethods' => [
@@ -139,11 +143,6 @@ Kirby::plugin('2av/custom-methods', [
 
             return $arr;
         },
-
-        /* 'getUserdaysactiveValue' => function ($field) {
-            kirbylog('TEST');
-            return "today + " . $field->value() . " day";
-        }, */
     ],
     'fileMethods' => [
         'responsiveImg' => function ($srcset = false) {
@@ -173,7 +172,6 @@ Kirby::plugin('2av/custom-methods', [
             return $modelResult->first();
         },
         'getExposure' => function () {
-            //$cleanName = $this->name();
             $exposure = explode('_-_exp-', $this->name());
 
             if (sizeOf($exposure) > 1) {
@@ -181,7 +179,6 @@ Kirby::plugin('2av/custom-methods', [
             }
 
             return floatval($exposure) ?? 1;
-            //return $this->name();
         },
     ],
 ]);

@@ -1,4 +1,12 @@
 <?php
+// extends JDSPage for save-history logging and other functions
+/**
+ * Curator Leader Model (teacher, etc)
+ * Mainly handles some relinking when deleted or updated.
+ * Also handles the creation of the unique ID (unique page slug)
+ * inside of the workshop the participant leader is in. This is the
+ * 4 digit alphanumerical ID that the participant receives.
+ */
 class CCuratorLeaderPage extends JDSPage
 {
   public function updateAtCreation($data = null) // override
@@ -32,7 +40,6 @@ class CCuratorLeaderPage extends JDSPage
     }
 
     $page = $page->changeSlugOnly($pagestamp);
-    //$page = $page->changeTitleAtCreation($pagestamp);
     $page->updateAtCreation($pagestamp);
   }
 }

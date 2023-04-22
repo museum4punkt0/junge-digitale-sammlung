@@ -1,6 +1,11 @@
 <?php
 
-// ROUTES
+/**
+ * ROUTES
+ * Routes can handle some given logic when a specific URL is called.
+ * Also, they can deliver data or virtual pages. For more information:
+ * https://getkirby.com/docs/guide/routing
+ */
 
 return [
     // logout
@@ -17,7 +22,7 @@ return [
         }
     ],
 
-    // virtual pdf page
+    // virtual pdf page (for list of participants)
     [
         'pattern' => '(:num)/teilnehmerliste',
         'action'  => function ($ws) {
@@ -37,7 +42,7 @@ return [
         }
     ],
 
-    // virtual json country list
+    // virtual json country list (for populating the dropdowns)
     [
         'pattern' => 'countries',
         'action'  => function () {

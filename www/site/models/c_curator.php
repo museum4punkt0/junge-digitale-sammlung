@@ -1,4 +1,12 @@
 <?php
+// extends JDSPage for save-history logging and other functions
+/**
+ * Curator Model (participant)
+ * Mainly handles some relinking when deleted or updated.
+ * Also handles the creation of the unique ID (unique page slug)
+ * inside of the workshop the participant is in. This is the
+ * 4 digit alphanumerical ID that the participant receives.
+ */
 class CCuratorPage extends JDSPage
 {
   public function updateAtCreation($data = null) // override
@@ -32,13 +40,11 @@ class CCuratorPage extends JDSPage
     }
 
     $page = $page->changeSlugOnly($pagestamp);
-    //$page = $page->changeTitleAtCreation($pagestamp);
     $page->updateAtCreation($pagestamp);
   }
 
   public function update(array $input = NULL, string $languageCode = NULL, bool $validate = false)
   {
-    //$input['title'] = $this->title();
 
     // repopulate from existing data in case the fields were not updated
     $input['fullname'] = $input['fullname'] ?? $this->fullname()->value();
@@ -49,13 +55,6 @@ class CCuratorPage extends JDSPage
       'fullname'              => ['required'],
       'username'              => ['required'],
       'dse'                   => ['required'],
-      /* 'gender'                => [''],
-      'age'                   => [''],
-      'birthcountry'          => [''],
-      'birthcountry_comment'  => [''],
-      'stations'              => [''],
-      'stations_comment'      => [''],
-      'personaldrive'         => [''], */
     ];
     $messages = [
       'fullname'  => 'Name fehlt.',
@@ -76,7 +75,6 @@ class CCuratorPage extends JDSPage
 
   public static function hookPageUpdateAfter($newPage, $oldPage)
   {
-
     /*** REBUILD USER and EXHIBIT REFERENCES ****/
     $linked_exhibitNew = $newPage->linked_exhibit()->toPageOrDraft();
     $linked_exhibitOld = $oldPage->linked_exhibit()->toPageOrDraft();

@@ -1,6 +1,6 @@
 {
-    "name": "2av/system-functions",
-    "description": "System functions for data handling",
+    "name": "2av/global-functions",
+    "description": "Global system functions for data handling",
     "type": "kirby-plugin",
     "license": "MIT",
     "authors": [

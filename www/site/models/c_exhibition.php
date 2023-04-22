@@ -1,4 +1,16 @@
 <?php
+// extends JDSPage for save-history logging and other functions
+/**
+ * Exhibition Model
+ * Mainly handles some relinking when deleted or updated.
+ * Also handles the creation of a unique slug even if there
+ * is another object with the same name. If there is, a suffixing
+ * index is added, e.g ausstellung, ausstellung-1, ausstellung-2.
+ * This is only relevant inside the same workshop.
+ * 
+ * Also, it has some handy functions to deliver information of
+ * the exhibits inside the exhibition more quickly.
+ */
 class CExhibitionPage extends JDSPage
 {
 
@@ -37,7 +49,7 @@ class CExhibitionPage extends JDSPage
     for ($x = 1; $x <= $this->exhibitLimit; $x++) {
       if (isset($input['user' . $x])) {
         $usersArray['user' . $x]   = $input['user' . $x];
-      } else if ($this->content()->get('user' . $x)->isNotEmpty()) { 
+      } else if ($this->content()->get('user' . $x)->isNotEmpty()) {
         $usersArray['user' . $x]   = $this->content()->get('user' . $x)->toPageOrDraft()->id();
       }
     }

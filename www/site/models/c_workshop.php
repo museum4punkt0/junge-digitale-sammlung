@@ -1,9 +1,18 @@
 <?php
+// extends JDSPage for save-history logging and other functions
+/**
+ * Workshop Model
+ * Mainly handles some relinking when deleted or updated.
+ * Also handles the logic for checking if the username already
+ * exists inside the workshop. The system will loop through all
+ * workshops and call the function in each workshop.
+ * 
+ * Has some handy function to get information about exhibits and exhibitions
+ */
+
+
 class CWorkshopPage extends JDSPage
 {
-  public static function hookPageCreate($page)
-  {
-  }
 
   public function updateAtCreation($data = null) // override
   {
@@ -25,7 +34,7 @@ class CWorkshopPage extends JDSPage
     $dbLink = [];
     if ($userDB) {
       $dbLink = [
-        'data_usernames_page' =>[$userDB->uuid()]
+        'data_usernames_page' => [$userDB->uuid()]
       ];
     }
 

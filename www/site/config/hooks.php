@@ -2,14 +2,15 @@
 
 use claviska\SimpleImage;
 
-// HOOKS
+/**
+ * HOOKS
+ * Hooks are used to trigger functionality before or after
+ * some specific events. For more information:
+ * https://getkirby.com/docs/reference/plugins/extensions/hooks
+ */
 return [
 
     /********* USER **********/
-    'user.logout:before' => function (Kirby\Cms\User $user, Kirby\Session\Session $session) {
-        // your code goes here
-    },
-
     'user.update:after' => function (Kirby\Cms\User $newUser, Kirby\Cms\User $oldUser) {
         /*** REBUILD USER and WS REFERENCES ****/
         if ($newUser->role() == "frontenduser") {
@@ -33,13 +34,11 @@ return [
                     ]);
                 } else if (!$linked_workshopNew && $linked_workshopOld) {
                     // from selected to none
-
                     $linked_workshopOld->update([
                         'mainuser' => []
                     ]);
                 } else {
                     // changed users
-
                     if ($oldUserNewWorkshop = $linked_workshopNew->mainuser()->toUser()) { // reset olduser from new workshop                        
                         $result = $oldUserNewWorkshop->update([
                             'linked_workshop' => []
@@ -59,6 +58,11 @@ return [
     },
 
     /********* PAGE **********/
+    /**
+     * We use static functions so the actual functions can be called
+     * from the page model. This means the actual functionality will
+     * vary depending on the model (page type).
+     */
     'page.update:before' => function ($page, $values, $strings) {
         $modelName = a::get(Page::$models, $page->intendedTemplate()->name());
 
@@ -108,12 +112,22 @@ return [
 
 
     /********* FILE **********/
+
+    /**
+     * Note on 'create_zip' function:
+     * it gets called everywhere, but it will only go
+     * forward for files inside a 'material' template.
+     * Please check the 2av-global-functions plugin.
+     */
     'file.create:after' => function ($file) {
         $page = $file->page();
         create_zip($page, $file);
 
         if ($file->type() == "image") {
-            // workaround for iphone images that have wrong orientation
+            /**
+             * workaround for iphone images that have wrong orientation.
+             * if it has a specific 'wrong' orientation, we turn it and re-save it.
+             */
             $orientation = $file->exif()->data()['Orientation'] ?? 1;
             if ($orientation !== 1) {
                 (new SimpleImage)

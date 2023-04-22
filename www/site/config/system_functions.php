@@ -1,9 +1,21 @@
 <?php
 
+/**
+ * System Functions for CRONs
+ * and Janitor plugin. These functions can
+ * be called via CRON or via Janitor-Button field.
+ * (The Janitor-Plugin in this theme has been changed
+ * to handle some special cases, please dont replace it.)
+ */
+
 return [
+
+    /**
+     * Function gets called via Button inside a User-Page.
+     * The admins have with this the possibility of reseting PINs
+     * for participants and participant leaders.
+     */
     'leaderpinreset' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object  
-        // $data => 'my custom data'
         $leaderUpdated = $page->update([
             'pin' => ''
         ]);
@@ -13,9 +25,12 @@ return [
         ];
     },
 
+    /**
+     * Function gets called via Button inside a Workshop, Users-Tab.
+     * The extra fields where oyu can put your info are customized.
+     * The original Janitor-Plugin is only a button with no fields.
+     */
     'creategroupusers' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object  
-        // $data => 'my custom data'
         buildUsersTree($page, $data);
         $amount = explode('&', $data);
         return [
@@ -24,9 +39,10 @@ return [
         ];
     },
 
+    /**
+     * Deactives temp-users if they are past deadline.
+     */
     'deactivateusers' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object  
-        // $data => 'my custom data'
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
 
@@ -65,9 +81,12 @@ return [
         ];
     },
 
+    /**
+     * Deletes the temp-users. It fetches the temp-users and
+     * checks which ones are past deletion date. The $inactivityDays
+     * is read from the Site data (can be changed in the admin-area).
+     */
     'deleteusers' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object  
-        // $data => 'my custom data'
         $users = kirby()->users()->role('frontenduser');
         $amount = 0;
         $inactivityDays = site()->userdaysbeforedelete()->isNotEmpty() ? site()->userdaysbeforedelete()->value() : 40;
@@ -117,9 +136,13 @@ return [
         ];
     },
 
+    /**
+     * Cleans the workshop by removing exhibits and exhibitions
+     * that 1) are still drafts and 2) have incomplete information.
+     * Please refer to the global function 'removeUnusedPages' function
+     * for the logic.
+     */
     'cleanroutine' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object  
-        // $data => 'my custom data'
         $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
         $amount = 0;
 
@@ -142,9 +165,11 @@ return [
         ];
     },
 
+    /**
+     * Relinks preview images of a phsyical objekt to their 3D model file,
+     * if it exists. Please refer to the documentation.
+     */
     'workshopassetlinking' => function (Kirby\Cms\Page $page = null, string $data = null) {
-        // $page => page object  
-        // $data => 'my custom data'
         $amount = bindAllImagesTo3DModels($page);
 
         kirbylog('CRON: ' . $amount . " Objekt erneut verlinkt in " . $page->title());

@@ -1,4 +1,15 @@
 <?php
+// extends JDSPage for save-history logging and other functions
+/**
+ * Exhibit Model (object)
+ * Mainly handles some relinking when deleted or updated.
+ * Also handles the creation of a unique slug even if there
+ * is another object with the same name. If there is, a suffixing
+ * index is added, e.g banane, banane-1, banane-2. This is only
+ * relevant inside the same workshop.
+ */
+
+
 class CExhibitPage extends JDSPage
 {
 
@@ -90,7 +101,6 @@ class CExhibitPage extends JDSPage
           //$input['embed_url']['media']['code'] = $input['embed_url']['media']['code'] . '<script async src="//www.instagram.com/embed.js"></script>';
         }
       }
-
 
       $dataRules = array_merge($dataRules, $digitalEmbedRules);
     } else if ((int)$exhibitType == '2') { // born digital exhibit
@@ -202,7 +212,6 @@ class CExhibitPage extends JDSPage
       }
     }
 
-
     // refresh messages of exhibition. we check if exhibit exists, since update gets called before hookChangeSlugAfter
     if ($linked_userNew && $linked_userNew->linked_exhibit()->isNotEmpty()) {
       // refresh message infos in exhibition, if it is linked
@@ -234,18 +243,12 @@ class CExhibitPage extends JDSPage
   public function getPreviewImages()
   {
     $workshopImages = $this->parent()->images()->filterBy('template', 'previewimage');
-
-    //$workshopImages = $workshopImages->add($this->images()->filterBy('template', 'image'));
-
     return $workshopImages;
   }
 
   public function getModels()
   {
     $workshopModels = $this->parent()->files()->filterBy('template', 'gltf');
-
-    //$workshopModels = $workshopModels->add($this->files()->filterBy('template', 'gltf'));
-
     return $workshopModels;
   }
 }

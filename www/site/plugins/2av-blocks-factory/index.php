@@ -1,4 +1,12 @@
 <?php
+
+/**
+ * Compilation of some extra Blocks. in JDS only accordions are used.
+ * 
+ * For more info on Blocks:
+ * https://getkirby.com/docs/reference/plugins/extensions/blocks
+ */
+
 Kirby::plugin('2av/blocks-factory', [
   'blueprints' => [
     'blocks/accordion_element'   => __DIR__ . '/blueprints/blocks/accordion_element.yml',
