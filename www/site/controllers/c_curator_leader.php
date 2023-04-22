@@ -124,8 +124,6 @@ return function ($kirby, $page, $site) {
                         $host = option('jds.mailsettings.host') ?? null;
                         $port = (int) option('jds.mailsettings.port') ?? null;
 
-                        $mailer->isSMTP();
-
                         if ($usernameSmtp)
                             $mailer->Username   = $usernameSmtp;
                         if ($passwordSmtp)
@@ -134,12 +132,14 @@ return function ($kirby, $page, $site) {
                             $mailer->Host       = $host;
                         if ($port)
                             $mailer->Port       = $port;
-                        if ($usernameSmtp && $passwordSmtp)
+                        if ($usernameSmtp && $passwordSmtp) {
+                            $mailer->isSMTP();
                             $mailer->SMTPAuth   = true;
+                        }
 
                         return $mailer;
                     },
-                    
+
                     'from' => $site->from_address()->value(),
                     'replyTo' => $site->from_address()->value(),
                     'to' => $site->to_address()->value(),
@@ -151,6 +151,7 @@ return function ($kirby, $page, $site) {
 
                 $alert[] =  "Das Museum wurde erfolgreich benachrichtigt.";
             } catch (Exception $error) {
+                kirbylog("Der Mailversand ist fehlgeschlagen: " . $error);
                 $alert[] =  "Der Mailversand ist fehlgeschlagen: " . $error;
             }
         }
@@ -167,7 +168,7 @@ return function ($kirby, $page, $site) {
         even though exhibition model is going to recheck, because otherwise PHP will render
         the exhibit content already while updates to the messages are still happening in the back.
         This way the messages are created before the page is created and */
-/*         $exhibition_msgs = handleExhibitionMessages($data, $page);
+        /*         $exhibition_msgs = handleExhibitionMessages($data, $page);
         $data = array_merge($data, $exhibition_msgs); */
 
         $formRules = [
