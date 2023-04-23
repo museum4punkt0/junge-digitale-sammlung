@@ -1,6 +1,6 @@
 <?= js('/assets/js/vendor/model-viewer.min.js', ['type' => 'module']) ?>
 <!-- image upload -->
-<div class="preview__area form__dnd w-40 position-relative ms-auto">
+<div class="preview__area w-50 form__dnd position-relative ms-auto">
     <form class="upload-form" action="<?= $page->url() ?>" enctype="multipart/form-data" method="POST">
         <label for="museum_preview">            
             <?= snippet('renderers/labeler', ['field' => 'museum_preview_label', 'fallback' => 'Vorschaubild für Museum']) ?>

@@ -3,7 +3,7 @@
 return function ($page, $site, $kirby) {
 
   # Grab the data from the default global site controller
-  $site_vars = $kirby->controller('site', compact('page', 'kirby'));
+  $site_vars = $kirby->controller('site', compact('page', 'kirby', 'site'));
 
   // handles inital load more logic
   $limit    = option('jds.loadmoresettings.home', 12);

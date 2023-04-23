@@ -704,3 +704,9 @@ sections:
         width: 1/2
         label: Hinweis wann man evtl. die Ausstellung wieder bearbeiten kann.
         help: z.B. "Bitte versuchen Sie es um diese Uhrzeit noch mal:"
+
+      homeloadmore_empty:
+        type: text
+        width: 1/2
+        label: Hinweis wenn Filter in Home liefern keine Ergebnisse.
+        help: z.B. "Keine Ergebnisse"

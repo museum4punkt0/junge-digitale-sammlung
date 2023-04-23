@@ -1,9 +1,14 @@
 <?php
 
 if (isset($loadmoreContent)) {
-  foreach ($loadmoreContent as $loadmoreElement) {
-    $html .= snippet('factories/loadmore-home', ['collectionItem' => $loadmoreElement, 'type' => $type], true);
+  if ($loadmoreContent->isNotEmpty()) {
+    foreach ($loadmoreContent as $loadmoreElement) {
+      $html .= snippet('factories/loadmore-home', ['collectionItem' => $loadmoreElement, 'type' => $type], true);
+    }
+  } else {
+    $html = "<div class='loadmore-element col-exhibit empty fs-1'>" . snippet('renderers/labeler', ['field' => 'homeloadmore_empty', 'fallback' => 'Keine Ergebnisse'], true) . "</div>";
   }
+
   $json['html'] = $html;
   $json['more'] = $more;
 }
@@ -13,8 +18,6 @@ if (isset($searchQuery)) {
 
   $resultPages = [];
   foreach ($searchResults as $id => $sr) {
-
-
     array_push($resultPages, [
       'title' => $sr->title()->value(),
       'url'   => $sr->id(),
