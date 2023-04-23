@@ -134,7 +134,7 @@ Sichtbar im öffentlichen Bereich der Plattform wird nur ein definierter Teil de
 
 Admin Bereich |  Workshop, Reiter Sammlung  |  Workshop, Reiter Benutzer
 :-------------------------:|:-------------------------:|:-------------------------:
-![](_media/admin/panel-intro.png)  |  ![](_media/admin/ws/ws-tab-sammlung.png)  |  ![](_media/admin/ws/ws-tab-users.png)
+![](_media/admin/panel-intro.png)  |  ![](_media/admin/ws/ws-tab-overview%20ws%20sent.png)  |  ![](_media/admin/ws/ws-tab-users.png)
 
 
 ---
