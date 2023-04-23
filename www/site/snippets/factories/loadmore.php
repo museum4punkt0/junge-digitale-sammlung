@@ -1,5 +1,5 @@
 <li class="column">
-  <a href="<?= $project->id() ?>">
-    <?= $project->title()->html() ?>
+  <a href="<?= $element->id() ?>">
+    <?= $element->title()->html() ?>
   </a>
 </li>

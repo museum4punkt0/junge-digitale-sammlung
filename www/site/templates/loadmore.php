@@ -12,10 +12,10 @@
     <div class="container grid-xl">
       <ul class="load-more-container" data-limit="<?= $limit ?>">
         <?php foreach ($loadmoreContent as $loadmoreElement) : ?>
-          <?php snippet('factories/loadmore', ['project' => $loadmoreElement]) ?>
+          <?php snippet('factories/loadmore', ['element' => $loadmoreElement]) ?>
         <?php endforeach ?>
       </ul>
-      <button class="btn load-more-btn">
+      <button class="btn btn-primary load-more-btn">
         <?= $page->loadmore_btn_lbl() ?>
       </button>
     </div>

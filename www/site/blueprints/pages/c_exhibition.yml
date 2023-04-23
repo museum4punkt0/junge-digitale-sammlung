@@ -19,7 +19,7 @@ addFields:
 tabs:
   #exhibits
   exhibits:
-    label: Information
+    label: Inhalt
     icon: layers
     columns:
       - width: 2/3
@@ -131,11 +131,6 @@ tabs:
                 text: "{{page.exhibitsMsg.brToN}}"
                 theme: negative
                 whenQuery: exhibitsMsg
-
-
-  # gallery tab
-  gallery:
-    extends: tabs/galleryTab
 
   # misc
   misc:

@@ -22,27 +22,12 @@ addFields:
 tabs:
   # content tab
   content:
-    label: Content
+    label: Inhalt
     icon: layers
     sections:
       content:
         type: fields
         fields:
-          # multigroup:
-          #   type: multiselect
-          #   label: Geschlecht
-          #   width: 1/2
-          #   options: query
-          #   query:
-          #     fetch: site.multigroup.multiselectGroup
-          #     text: "{{ item.desc }}"
-          #     value: "{{ item.id }}"
-
-          # todo1:
-          #   label: TODO
-          #   type: info
-          #   text: title anstatt name nachname?
-
           contentlabel:
             type: headline
             label: Content
@@ -111,11 +96,6 @@ tabs:
             width: 1/2
             label: Geburtsland
             help: Daten werden aus "Länder JSON" in den Content Einstellungen der Website geladen
-            # options: api
-            # api:
-            #   url: "{{kirby.url}}/countries"
-            #   text: "{{ item.label }}"
-            #   value: "{{ item.value }}"
             options: api
             api:
               query: ""
@@ -175,7 +155,7 @@ tabs:
   # content tab
   settings:
     label: Einstellungen
-    icon: layers
+    icon: template
     sections:
       settings:
         type: fields
@@ -211,10 +191,7 @@ tabs:
             width: 1/3
             progress: Bitte warten ...
             job: leaderpinreset
-  # gallery tab
-  gallery:
-    extends: tabs/galleryTab
 
   # misc
   misc:
-    extends: tabs/miscTab
+    extends: tabs/miscNoSitemapTab

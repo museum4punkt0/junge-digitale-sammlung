@@ -11,16 +11,3 @@ tabs:
   # gallery tab
   gallery:
     extends: tabs/filesTab
-  # content tab
-  content:
-    label: Content
-    icon: layers
-    sections:
-      content:
-        type: fields
-        fields:
-          contentlabel:
-            type: headline
-            label: Content
-          layout:
-            extends: fields/layout

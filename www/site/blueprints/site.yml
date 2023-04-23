@@ -3,7 +3,7 @@ title: Site
 tabs:
   # pages tab
   pages:
-    label: Seiten
+    label: Workshops/Seiten
     icon: layers
     columns:
       - width: 2/3
@@ -77,12 +77,14 @@ tabs:
           data_populators:
             extends: sections/pages
             headline: Daten für Felder
+            help: Sie können unterschiedliche Daten-Sets anlegen, z.B. wenn Sie neue Daten für die Dropdowns und Co. testen wollen (Zugehörigkeiten, Klassifikation, etc)
             type: pages
             templates:
               - d_structures
           data_fieldinfos:
             extends: sections/pages
-            headline: Feld-Informationen
+            headline: Beschritungen und Nachrichten
+            help: Sie können unterschiedliche Informationen-Sets anlegen, z.B. wenn Sie neue Beschriftungen testen wollen.
             type: pages
             templates:
               - d_labelinfos
@@ -101,11 +103,13 @@ tabs:
               data_populators_pick:
                 type: pages
                 label: Aktive "Daten für Felder"
+                help: Hier wählen Sie den aktiven Daten-Set aus.
                 max: 1
                 query: site.children.filterBy('intendedTemplate', 'd_structures')
               data_fieldinfos_pick:
                 type: pages
-                label: Aktive "Feld-Informationen"
+                label: Aktive "Beschritungen und Nachrichten"
+                help: Hier wählen Sie den aktiven Informationen-Set aus.
                 max: 1
                 query: site.children.filterBy('intendedTemplate', 'd_labelinfos')
               # data_usernames_pick:

@@ -12,9 +12,6 @@ fields:
   login_error:
     label: Text für falsche Eingabe
     type: text
-  user_inactive:
-    label: Text für Benutzer nicht mehr aktiv
-    type: text
   username:
     label: Text für "Benutzername"
     type: text

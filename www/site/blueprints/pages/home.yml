@@ -11,7 +11,7 @@ options:
 tabs:
   # content tab
   content:
-    label: Content
+    label: Inhalt
     icon: layers
     sections:
       content:

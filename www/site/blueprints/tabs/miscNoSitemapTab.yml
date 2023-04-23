@@ -1,0 +1,6 @@
+label: Andere Einst.
+icon: settings
+sections:
+  misc:
+    type: fields
+    extends: sections/miscInfo

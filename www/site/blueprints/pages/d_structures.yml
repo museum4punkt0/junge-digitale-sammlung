@@ -92,7 +92,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
           schoolclass:
             label: Klasse/Stufe
             type: structure
@@ -106,7 +106,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
 
           # curators
           h_dropdowns_curator:
@@ -147,7 +147,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
           personaldrive:
             label: Zugehörigkeit zu … wichtig
             type: structure
@@ -161,7 +161,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
 
           # exhibits
           h_dropdowns_exhibits:
@@ -180,7 +180,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
           type:
             label: Objekttypen
             type: structure
@@ -204,7 +204,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
               sub_options:
                 label: options
                 type: structure
@@ -215,21 +215,8 @@ tabs:
                   id:
                     label: ID
                     type: slug
-                    #sync: desc
-          # exh digital
-          # h_dropdowns_digital:
-          #   label: Dropdowns - Digitale Objekte
-          #   type: headline
-          # widgettype:
-          #   label: Widget Typen
-          #   type: structure
-          #   width: 1/2
-          #   sortable: false
-          #   help: Für diese Daten, wenn erweitert, sollten extra Funktionalitäten programmiert werden.
-          #   fields:
-          #     desc:
-          #       label: Beschriftung
-          #       type: text
+                    sync: desc
+
           # exh phys
           h_dropdowns_physical:
             label: Dropdowns - Physische Objekte
@@ -246,7 +233,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
           scan_device:
             label: Digitalisierungsgeräten
             type: structure
@@ -259,7 +246,7 @@ tabs:
               id:
                 label: ID
                 type: slug
-                #sync: desc
+                sync: desc
   # data tab
   jsondata:
     extends: tabs/jsondataTab

@@ -378,13 +378,6 @@ sections:
         label: Hinweis für "Objektstory"
 
       # digital embeds
-      # embed_files_label:
-      #   type: text
-      #   buttons: false
-      #   width: 1/4
-      #   label: Beschriftung für Upload der Dateitypen für "Digital Embed"
-
-
       h_embedfields_info:
         type: line
       embedfields_info:
@@ -627,11 +620,6 @@ sections:
         buttons: false
         width: 1/4
         label: Hinweis für Upload der Dateitypen für "Digital Born"
-      # exhibit_preview_label:
-      #   type: text
-      #   buttons: false
-      #   width: 1/4
-      #   label: Beschriftung für Upload "Vorschaubild / Bild"
 
       # exhibition fields
       h_exhibition:

@@ -19,7 +19,7 @@ addFields:
 tabs:
   # content tab
   content:
-    label: Content
+    label: Inhalt
     icon: layers
     sections:
       information:
@@ -157,16 +157,6 @@ tabs:
             type: headline
             label: Embedded Objekte
             whenQuery: type = 1
-          # widgettype:
-          #   label: Widget Typ
-          #   type: select
-          #   width: 1/3
-          #   whenQuery: type = 1
-          #   options: query
-          #   query:
-          #     fetch: site.data_populators_pick.toPage.widgettype.toStructure
-          #     text: "{{ structureItem.desc }}"
-          #     value: "{{ structureItem.id }}"
           embed_url:
             label: Embed URL
             type: embed
@@ -235,10 +225,6 @@ tabs:
   # gallery tab
   gallery:
     extends: tabs/galleryTab
-
-  # files tab
-  # filestab:
-  #   extends: tabs/modelsTab
 
   # asset tab
   assetstab:

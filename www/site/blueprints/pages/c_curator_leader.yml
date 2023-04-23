@@ -23,7 +23,7 @@ tabs:
   # content tab
   content:
     label: Einstellungen
-    icon: layers
+    icon: template
     sections:
       content:
         type: fields
@@ -66,17 +66,8 @@ tabs:
           pin:
             type: hidden
             label: PIN
-          # fullname:
-          #   type: text
-          #   label: Vorname, Nachname
-          #   width: 1/3 
-      
-
-  # gallery tab
-  gallery:
-    extends: tabs/galleryTab
 
   # misc
   misc:
-    extends: tabs/miscTab   
+    extends: tabs/miscNoSitemapTab  
       

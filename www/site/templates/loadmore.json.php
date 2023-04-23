@@ -2,7 +2,7 @@
 
 foreach($loadmoreContent as $loadmoreElement) {
 
-  $html .= snippet('factories/loadmore', ['project' => $loadmoreElement], true);
+  $html .= snippet('factories/loadmore', ['element' => $loadmoreElement], true);
 
 }
 $json['html'] = $html;

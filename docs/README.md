@@ -4,7 +4,7 @@
 
 # Benutzung
 
- *(Screenshots können abweichen. Screenshots enthalten Testdaten. Manche Bereiche wurden aus Copyright Gründen unkenntlich gemacht)*
+ *(Screenshots können abweichen. Screenshots enthalten Testdaten. Beschriftungen in den Screenshots könnten abweichen. Manche Bereiche wurden aus Copyright Gründen unkenntlich gemacht)*
 
 ## Inhaltsverzeichnis
 
@@ -265,7 +265,7 @@ Workshop | Abschicken des Workshops
 
 Eine Mail wird für das Museum generiert. Die E-Mail Adressen, die im System eingestellt sind, empfangen die Mail. Diese enthält eine Übersicht der verschickten Daten.
 
-### 11) Die Mitarbeiter überprüfen und falls nötig korrigieren (z.B. Schreibfehler) die Daten, veröffentlichen die freigegebenen und, wenn gewünscht, löschen die nicht freigegebenen Objekte und Ausstellungen in dem jeweiligen Workshop.
+### 11) Die Mitarbeiter überprüfen und falls nötig korrigieren die Daten (z.B. Schreibfehler), veröffentlichen die freigegebenen und, wenn gewünscht, löschen die nicht freigegebenen Objekte und Ausstellungen in dem jeweiligen Workshop.
 
 Im Admin-Bereich können die Mitarbeiter:innen die freigegebenen Objekte und Ausstellungen ähnlich wie für die Workshops veröffentlichen: oben links unterhalb vom Name oder auf der jeweiligen Liste. Als kleine Hilfe hat das Personal eine grüne Markierung für Objekte und Ausstellungen, die vollständige Daten enthalten. Der Hinweis des/der Leiters:in ist hier auch zu sehen.
 

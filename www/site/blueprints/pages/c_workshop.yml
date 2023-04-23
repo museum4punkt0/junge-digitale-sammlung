@@ -211,12 +211,6 @@ tabs:
             template:
               - c_curator
 
-          # data_usernames:
-          #   extends: sections/pages
-          #   headline: Benutzernamen
-          #   type: pages
-          #   templates:
-          #     - d_usernames
           db:
             type: fields
             fields:
@@ -258,23 +252,4 @@ tabs:
 
   # misc
   misc:
-    label: Andere Einst.
-    icon: settings
-    sections:
-      psettings:
-        type: fields
-        fields:
-          settingslabel:
-            type: headline
-            label: Sitemap
-          sitemap:
-            extends: fields/sitemap
-            width: 1/4
-            default: no
-            help: Workshops sollten in der Regel nicht in der Sitemap erscheinen.
-            text:
-              - "Übersprungen"
-              - "Hinzugefügt"
-      misc:
-        type: fields
-        extends: sections/miscInfo
+    extends: tabs/miscNoSitemapTab
