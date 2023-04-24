@@ -15,15 +15,15 @@
 
 ## 1. Kurzbeschreibung
 
-Das Deutsche Auswandererhaus ist ein kulturhistorisches Museum zum Thema Migration in Bremerhaven. Im Rahmen des deutschlandweiten Förderprojekts »museum4punkt0« sollen neue Formen der digitalen Kommunikation, Partizipation, Bildung und Vermittlung in Museen entwickelt, umgesetzt und evaluiert werden. Das Projektteam des DAHs erarbeitete unter dem Titel »Junge Digitale Sammlung« JDS ein museumspädagogisches Workshop-Angebot für Schulklassen. Der Workshop setzt sich inhaltlich mit den Themenkomplexen Identität und Diversität auseinander sowie mit der Bedeutung und Handhabung von Objekten im Museum. Teilnehmende Schüler:innen können dabei ihre Alltagsobjekte, die sowohl physisch als auch digital sein können, in 3D scannen oder fotografieren. Diese und weitere Daten zum Objekt werden in eine Datenbank eingegeben und später auf einer Plattform veröffentlicht. Durch die Workshops wird die JDS zu einer umfangreichen Sammlung anwachsen.
+Das Deutsche Auswandererhaus ist ein kulturhistorisches Museum zum Thema Migration in Bremerhaven. Im Rahmen des deutschlandweiten Förderprojekts »museum4punkt0« sollen neue Formen der digitalen Kommunikation, Partizipation, Bildung und Vermittlung in Museen entwickelt, umgesetzt und evaluiert werden. Das Projektteam des DAHs erarbeitete unter dem Titel »Junge Digitale Sammlung« JDS ein museumspädagogisches Workshop-Angebot für Schulklassen. Der Workshop setzt sich inhaltlich mit den Themenkomplexen Identität und Diversität auseinander, sowie mit der Bedeutung und Handhabung von Objekten im Museum. Teilnehmende Schüler:innen können dabei ihre Alltagsobjekte, die sowohl physisch als auch digital sein können, in 3D scannen oder fotografieren. Diese und weitere Daten zum Objekt werden in eine Datenbank eingegeben und später auf einer Plattform veröffentlicht. Durch die Workshops wird die JDS zu einer umfangreichen Sammlung anwachsen.
 
-Dieses Repository entspricht ein komplexes Theme für Kirby CMS und beinhaltet alle relevante Dateien (abgesehen vom Kirby CMS Kern).
+Dieses Repository entspricht einem komplexen Theme für Kirby CMS und beinhaltet alle relevanten Dateien (abgesehen vom Kirby CMS Kern).
 
-Das Projekt "O2G - OBJ to GLTF/GLB" ist Teil vom diesem Projekt. Die Windows/Mac Anwendung konvertiert OBJ Dateien (üblicher Format für 3D Scanner) zu GLB oder komprimierte GLTF Dateien für die Webnutzung.
+Das Projekt "O2G - OBJ to GLTF/GLB" ist Teil vom diesem Projekt. Die Windows/Mac-Anwendung konvertiert OBJ-Dateien (übliches Format für 3D Scanner) zu GLB oder komprimierten GLTF-Dateien für die Webnutzung.
 
 [----TODO----]
 
-LInk zum Repo
+Link zum Repo
 
 ---
 
@@ -36,7 +36,7 @@ LInk zum Repo
 
 ## 3. Empfohlenes Server Setup 
 
-Das Projekt wurde ursprünglich auf folgendem Server installiert.
+Das Projekt wurde ursprünglich auf folgendem Server installiert:
 - Ubuntu 20.04 (Cloudron installiert)
 - Apache 2.4.x
 - PHP 8.1 mit Standard-Modulen (OPCache deaktivieren)
@@ -44,44 +44,44 @@ Das Projekt wurde ursprünglich auf folgendem Server installiert.
 - 4GB RAM
 - 80GB Festplatte
 
-*Die Größe der Festplatte hängt hauptsächlich von der Menge an Video-Dateien die erwartet wird. 3D Modelle und Bilder verbrauchen vergleichsweise wenig Platz.*
+*Die Größe der Festplatte hängt hauptsächlich von der Menge an Video-Dateien ab, die erwartet wird. 3D-Modelle und -Bilder verbrauchen vergleichsweise wenig Platz.*
 
 
 ---
 
 ## 4. Voraussetzungen und Skills
 
-Die Installation (deployment) der Platform ist relativ leicht durchzuführen und kann grundsätzlich ohne große technische Kenntnisse erfolgen.
+Die Installation (deployment) der Plattform ist relativ leicht durchzuführen und kann grundsätzlich ohne große technische Kenntnisse erfolgen.
 
 Bevor Sie beginnen, stellen Sie sicher, dass Sie folgende Anforderungen erfüllt haben:
 
 ### Für die Installation
 * Ein Server steht Ihnen zur Verfügung.
-* Sie haben eine Version vom Kirby-Core [Kirby](https://getkirby.com) heruntergeladen. Das ursprüngliche Projekt wurde mit [Kirby 3.8.3](https://github.com/getkirby/kirby/releases/tag/3.8.3) erstellt. Aus Kompatibilitätsgründen wird empfohlen diese Version zu verwenden. Alle relevante Plugins sind in diesem Repository inkludiert. Kirby ist ein Open-Source, lizenzbasiertes CMS System.
-* Sie haben eine Kopie dieses Repositorys.
+* Sie haben eine Version vom Kirby-Core [Kirby](https://getkirby.com) heruntergeladen. Das ursprüngliche Projekt wurde mit [Kirby 3.8.3](https://github.com/getkirby/kirby/releases/tag/3.8.3) erstellt. Aus Kompatibilitätsgründen wird empfohlen, diese Version zu verwenden. Alle relevanten Plugins sind in diesem Repository inkludiert. Kirby ist ein Open-Source, lizenzbasiertes CMS-System.
+* Sie verfügen über eine Kopie dieses Repositorys.
 
 ### Für die Entwicklung
-*Hinweise: Für eine bessere Verwaltung der npm Packages wurde das Projekt ursprünglich mit den Software [Prepros](https://prepros.io) (Mac, Windows, Linux) und [CodeKit](https://codekitapp.com/) (Mac only) entwickelt. Beide bieten eine grafische und bequeme Benutzeroberfläche, um Source-Code zu kompilieren, Packages zu verwalten und Browser zu auto-refreshen. Beide config-Dateien sind in diesem Repository inkludiert (Sie benötigen nur eine von beiden Software). Für die Server-Funktion wurde es mit MAMP gearbeitet. Alternativ können Sie bspw. ein Webpack Workflow verfolgen, s. bitte [kirby-webpack](https://github.com/brocessing/kirby-webpack).*
+*Hinweise: Für eine bessere Verwaltung der npm Packages wurde das Projekt ursprünglich mit der Software [Prepros](https://prepros.io) (Mac, Windows, Linux) und [CodeKit](https://codekitapp.com/) (Mac only) entwickelt. Beide bieten eine grafische und bequeme Benutzeroberfläche, um Source-Code zu kompilieren, Packages zu verwalten und Browser zu auto-refreshen. Beide config-Dateien sind in diesem Repository inkludiert (Sie benötigen nur eine der beiden Softwares). Für die Server-Funktion wurde mit MAMP gearbeitet. Alternativ können Sie bspw. einen Webpack Workflow verfolgen, s. bitte [kirby-webpack](https://github.com/brocessing/kirby-webpack).*
 
 Es gelten die gleichen Voraussetzungen wie für die Installation (deployment). Dazu noch:
 - Prepros oder CodeKit ist auf Ihrem Rechner installiert (optional können Sie das Webpack Workflow konfigurieren)
 - npm ist auf Ihrem Rechner installiert (optional, falls sie Prepros/CodeKit nicht verwenden werden)
 - Apache steht auf Ihrem Rechner zur Verfügung, um localhost starten zu können (z.B MAMP, XAMPP, Apache Installation, etc.)
 
-*Prepros oder CodeKit?: CodeKit ist eine Mac-only Software, die vergleichsweise performanter ist aber lizenziert/gekauft werden muss. Prepros bietet eine kostenlose Version an und ist universell.*
+*Prepros oder CodeKit?: CodeKit ist eine Mac-only Software, die vergleichsweise performanter ist, aber lizenziert/gekauft werden muss. Prepros bietet eine kostenlose Version an und ist universell.*
 
 
 ---
 
-## 5. Installation der Platform (deploy)
+## 5. Installation der Plattform (deploy)
 
-- Kirby-Core Ordner entzippen (s. bitte 4. Voraussetzungen und Skills) und in `kirby` umbenennen (ohne Suffixe).
+- Kirby-Core-Ordner entzippen (s. bitte 4. Voraussetzungen und Skills) und in `kirby` umbenennen (ohne Suffixe).
 
 - Kirby-Core in den Ordner `www` verschieben.
 
-- Den kompletten Ordner `www` auf den Zielserver kopieren/hochladen. Wichtig dabei ist, dass der komplette Ordner inkl. versteckten Dateien, bspw. .htaccess, kopiert/hochgeladen wird.
+- Den kompletten Ordner `www` auf den Zielserver kopieren/hochladen. Wichtig dabei ist, dass der komplette Ordner inkl. versteckter Dateien, bspw. .htaccess, kopiert/hochgeladen wird.
 
-- Anschliessend im Browser die Domain oder IP Adresse besuchen. Die Sammlung sollte erscheinen.
+- Anschließend im Browser die Domain oder IP-Adresse besuchen. Die Sammlung sollte erscheinen.
 
 Das Admin-Backend von Kirby erreichen Sie unter `/panel`, z.B.:
 
@@ -104,33 +104,33 @@ Passwort:
 
 ---
 
-## 6. Entwicklung der Platform
+## 6. Entwicklung der Plattform
 
-Für die Weiterentwicklung und/oder Anpassung der verschiedenen Teile des Systems wird Personal mit guten Kenntnissen in PHP, JS und CSS und optimalerweise Kirby CMS empfohlen. Auch mittlere Kenntnissen in der Serveradministration sind empfehlenswert, da eine möglichst reibungslose Kommunikation mit den externen Social-Media Anbieter (embeds) je nach Server bestimmte Anpassungen benötigt.
+Für die Weiterentwicklung und/oder Anpassung der verschiedenen Teile des Systems wird Personal mit guten Kenntnissen in PHP, JS und CSS und optimalerweise Kirby CMS empfohlen. Auch mittlere Kenntnisse in der Serveradministration sind empfehlenswert, da eine möglichst reibungslose Kommunikation mit den externen Social-Media Anbietern (embeds) je nach Server bestimmte Anpassungen benötigt.
 
-Zum starten:
+Zum Starten:
 
 - Laden Sie eine Kopie dieses Repositorys herunter.
 
-- Die Platform wie unter "Installation" installieren.
+- Die Plattform wie unter "Installation" installieren.
 
 - Starten Sie den lokalen Server.
 
-- In Prepros oder CodeKit das Projekt importieren. Da beide config-Dateien vorhanden sind können Sie die Packages in dem ausgewählten Programm direkt installieren. 
+- In Prepros oder CodeKit das Projekt importieren. Da beide config-Dateien vorhanden sind, können Sie die Packages in dem ausgewählten Programm direkt installieren. 
 
 - Alternativ können Sie die Packages mit dem Befehl `npm install` wie üblich installieren.
 
-- Pfade zum localhost Ordner des Projekts in den Projekt-Einstellungen in Prepros oder CodeKit für die Auto-Refresh Funktion aktualisieren. Diese sollte zu Ihrem `www` Ordner zeigen.
+- Pfad zum localhost-Ordner des Projekts in den Projekt-Einstellungen in Prepros oder CodeKit für die Auto-Refresh Funktion aktualisieren. Dieser sollte zu Ihrem `www` Ordner zeigen.
 
-- Das Kompilieren von Javascript und SCSS ist bereits in den config-Dateien eingerichtet (Output für kompilierte Dateien ist `www/assets`).
+- Das Kompilieren von Javascript und SCSS ist bereits in den config-Dateien eingerichtet (Output für kompilierten Dateien ist `www/assets`).
 
 - Der Code im Ordner `src` kann jetzt bearbeitet werden. 
 
 ***Weitere technische Details und Hinweise finden Sie [hier](docs/technisches/README.md).***
 
-*Für weitere Prepros Einstellungen bitte die [Prepros Dokumentation](https://prepros.io/help/) lesen.*
+*Für weitere Prepros-Einstellungen bitte die [Prepros-Dokumentation](https://prepros.io/help/) lesen.*
 
-*Für weitere CodeKit Einstellungen bitte die [CodeKit Dokumentation](https://codekitapp.com/help/) lesen.*
+*Für weitere CodeKit-Einstellungen bitte die [CodeKit-Dokumentation](https://codekitapp.com/help/) lesen.*
 
 
 ---
@@ -143,7 +143,7 @@ Zum starten:
 ---
 
 ## 8. Beteiligung/Contributing
-Wenn Sie etwas beitragen möchten, forken Sie bitte das Repository und verwenden Sie einen Feature-Fork.  Pull Requests sind herzlich willkommen.
+Wenn Sie etwas beitragen möchten, forken Sie bitte das Repository und verwenden Sie einen Feature-Fork. Pull Requests sind herzlich willkommen.
 
 
 ---
@@ -153,7 +153,7 @@ Wenn Sie etwas beitragen möchten, forken Sie bitte das Repository und verwenden
 
 ### Team 2av
 - Jens Döring (Projektkoordination)
-- Santiago Duque (Projektleitung and Entwicklung)
+- Santiago Duque (Projektleitung und Entwicklung)
 
 ### Team Deutsches Auswandererhaus
 - Birgit Burghart (Projektkoordination)
