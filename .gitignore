@@ -29,6 +29,8 @@ www/phpinfo.php
 build
 build/*
 
+docs/_media_original
+
 
 
 
