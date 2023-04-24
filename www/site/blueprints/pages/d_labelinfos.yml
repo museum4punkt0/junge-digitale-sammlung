@@ -21,12 +21,12 @@ sections:
         width: 1/2
         label: Einfacher oder formatierter Text
         text: |
-          Die meisten Textfelder sind einfache gehalten und man kann nur Text eingeben. Für Bereiche, die längere Texte benötigen sind Formatierungen (z.B. kursiv oder fett) erlaubt. Selektieren Sie einfach Textbereiche in dem Feld damit die Optionen erscheinen.
+          Die meisten Textfelder sind einfach gehalten und man kann nur Text eingeben. Für Bereiche, die längere Texte benötigen, sind Formatierungen (z.B. kursiv oder fett) erlaubt. Selektieren Sie einfach Textbereiche in dem Feld, damit die Optionen erscheinen.
 
       before_after_text_info:
         type: info
         width: 1/2
-        label: Vor und nach Texte
+        label: Vor-und-nach-Texte
         text: |
           Manche Texte haben eine Variable mitten im Text. Man benötigt in diesem Fall Texte vor der Variable und nach der Variable. Solche Texte besitzen 2 Felder. Diese Texte können nicht formatiert werden.
 
