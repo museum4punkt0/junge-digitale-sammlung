@@ -41,7 +41,9 @@ tabs:
             type: pages
             label: Verlinkte Ausstellung
             multiple: false
+            disabled: true
             width: 1/3
+            help: Kann nur direkt in einer Ausstellung verlinkt werden.
             query: page.parent.childrenAndDrafts.filterBy('intendedTemplate','c_exhibition')
           complete:
             label: Vollständig

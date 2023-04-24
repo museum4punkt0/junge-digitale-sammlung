@@ -82,6 +82,12 @@ class CExhibitionPage extends JDSPage
     $page->changeSlugOnly($indexedSlug);
   }
 
+  public static function hookChangeTitleAfter($newPage, $oldPage)
+  {
+    $newPage->changeSlugAfterTitleChange($newPage->title(), $oldPage->title());
+    Panel::go($newPage->parent()->panel()->path());
+  }
+
   public static function hookPageUpdateAfter($newPage, $oldPage)
   {
 
