@@ -295,8 +295,10 @@ function bindImageTo3DModel($exhibitpage, $exhibit_preview_form_value = null)
     $exhibit_preview_form_value   = $exhibit_preview_form_value ?? ($exhibitpage->exhibit_preview()->isNotEmpty() ? str_replace(" ", "", $exhibitpage->exhibit_preview()->toFile()->uuid()->toString()) : null);
 
     if (isset($exhibit_preview_form_value)) {
-        if (is_array($exhibit_preview_form_value) && isset($exhibit_preview_form_value[0]))
+        if (is_array($exhibit_preview_form_value) && isset($exhibit_preview_form_value[0])) {
             $exhibit_preview_form_value = $exhibit_preview_form_value[0]['uuid'];
+        }
+
         $previewimg = $exhibitpage->parent()->files()->findBy("uuid", $exhibit_preview_form_value);
         if ($previewimg) {
             kirbylog($previewimg->filename() . ' preview image found');
@@ -315,6 +317,10 @@ function bindImageTo3DModel($exhibitpage, $exhibit_preview_form_value = null)
             } else {
                 kirbylog('model NOT found');
                 $input['threed_model'] = [];
+            }
+
+            if ($previewimg->uuid()->value() != $exhibit_preview_form_value) {
+                $input['exhibit_preview'] = [$previewimg->uuid()];
             }
         } else {
             kirbylog('preview image uuid NOT found in workshop');
@@ -339,18 +345,21 @@ function bindAllImagesTo3DModels($workshop)
     $exhibits = $workshop->childrenAndDrafts()->filterBy('intendedTemplate', 'c_exhibit');
     foreach ($exhibits as $exhibit) {
 
-        $modelValues = bindImageTo3DModel($exhibit);
-
-        // update exhibit if new relevant values were found (model exists no more or model exists now)
-        if ($modelValues) {
-            // if new 3D models were found count up
-            $nonEmptyValues = array_filter($modelValues ?? []);
-            if ($nonEmptyValues && !empty($nonEmptyValues)) {
-                $newModelsFound++;
-
-                $exhibitsaved = $exhibit->update($modelValues);
-                if ($exhibitsaved)
-                    $exhibitsUpdated++;
+        if ($exhibit->type()->value() == '0') { // type 0 for physical object
+            kirbylog('physical object ' . $exhibit->title());
+            $modelValues = bindImageTo3DModel($exhibit);
+            // update exhibit if new relevant values were found (model exists no more or model exists now)
+            if ($modelValues) {
+                // if new 3D models were found count up
+                unset($modelValues['exhibit_preview']);
+                $nonEmptyValues = array_filter($modelValues ?? []);                
+                if ($nonEmptyValues && !empty($nonEmptyValues)) {
+                    $newModelsFound++;
+                    $modelValues['skipRechecking3D'] = true;
+                    $exhibitsaved = $exhibit->update($modelValues);
+                    if ($exhibitsaved)
+                        $exhibitsUpdated++;
+                }
             }
         }
     }

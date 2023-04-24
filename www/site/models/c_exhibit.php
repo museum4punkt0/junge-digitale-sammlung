@@ -75,7 +75,8 @@ class CExhibitPage extends JDSPage
       $input['scan_device']   = $input['scan_device'] ?? $this->scan_device()->value();
 
       $modelValues = bindImageTo3DModel($this, $input['exhibit_preview'] ?? null);
-      if ($modelValues) {
+
+      if (isset($modelValues) && $modelValues) {
         $input = array_merge($input, $modelValues);
         kirbylog($this->title()->value() . ": 3D file updated (in model update)");
       } else {
