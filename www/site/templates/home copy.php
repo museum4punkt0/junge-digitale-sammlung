@@ -23,7 +23,7 @@ if ($data = $site->data_populators_pick()->toPage()) {
 <main>
     <div id="wrapper">
         <div class="position-absolute w-100 h-100 top-0">
-            <div class="scroll__area w-100 h-100">
+            <div class="scroll__area position-relative w-100 h-100">
 
                 <div id="scroll__container" class="scroll__container position-relative">
                     <div class="filter__container">
