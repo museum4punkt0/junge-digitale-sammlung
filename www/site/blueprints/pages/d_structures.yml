@@ -47,16 +47,16 @@ tabs:
               json_countries_sourceIsOnline: false
             max: 1
             query: site.data_populators_pick.toPage.files.filterBy('template','jsondata')
-          json_countries_id:
-            type: text
-            width: 1/4
-            label: Wert Parameter aus JSON
-            help: (z.B. 'alpha2' für de, fr, nl, etc. für Daten aus https://stefangabos.github.io/world_countries)
           json_countries_label:
             type: text
             width: 1/4
-            label: Beschriftung Parameter in JSON
+            label: Beschriftung-Parameter in JSON
             help: (z.B. 'name' für Deutschland, Frankreich, Niederlande, etc. für Daten aus https://stefangabos.github.io/world_countries)
+          json_countries_id:
+            type: text
+            width: 1/4
+            label: Wert-Parameter aus JSON
+            help: (z.B. 'alpha2' für de, fr, nl, etc. für Daten aus https://stefangabos.github.io/world_countries)
           countries_extra:
             label: Länder JSON Ergänzung
             type: structure

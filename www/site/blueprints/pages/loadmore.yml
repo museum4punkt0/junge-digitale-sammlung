@@ -15,15 +15,17 @@ tabs:
             label: Special settings
           loadmore_btn_lbl:
             type: text
-            label: '"Load more" Button Label'
+            width: 1/4
+            label: 'Beschriftung für "Load more" Button'
       content:
         type: fields
         fields:
           contentlabel:
             type: headline
-            label: Content
+            label: Inhalt
           layout:
             extends: fields/layout
+            help: Diese Layouts werden vor der Auflistung der Loadmore-Subseiten angezeigt.
   #subpages
   subpages:
     label: Subpages
