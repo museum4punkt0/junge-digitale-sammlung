@@ -259,9 +259,9 @@ Upload im Admin-Bereich | Auswahl für die Teilnehmer
 
 Wenn der/die Leiter:in der Gruppe das Workshop als fertig markieren will, damit die Mitarbeiter:innen mit der Überprüfung der Daten und Freigabe der Seiten anfangen können, kann er/sie das per Knopdruck auf "Workshop abschicken" tun. Hier werden ein Paar hinweise angezeigt, und der/die Leiter:in kann eine kurze Nachricht für die Mitarbeiter:innen eingeben.
 
-Workshop | Abschicken des Workshops
-:-------------------------:|:-------------------------:
-![](_media/workshop/leiter/ws-L-overview%20teilnehmer-bottom.png) | ![](_media/workshop/leiter/ws-L-abschicken.png)
+Workshop | Abschicken des Workshops |  asd
+:-------------------------:|:-------------------------:|:-------------------------:
+![](_media/workshop/leiter/ws-L-overview%20teilnehmer-bottom.png) | ![](_media/workshop/leiter/ws-L-abschicken.png) | ![](_media/workshop/leiter/ws-L-mail.png) 
 
 Eine Mail wird für das Museum generiert. Die E-Mail Adressen, die im System eingestellt sind, empfangen die Mail. Diese enthält eine Übersicht der verschickten Daten.
 
@@ -271,7 +271,7 @@ Im Admin-Bereich können die Mitarbeiter:innen die freigegebenen Objekte und Aus
 
 Veröffentlichte Seiten werden sofort in der Sammlung angezeigt. Sie können jederzeit deaktiviert werden.
 
-Übersicht Ausstellungen und Objekte | Objekt ist veröffentlicht
+Übersicht Ausstellungen und Objekte | Objekt ist veröffentlicht  
 :-------------------------:|:-------------------------:
 ![](_media/admin/ws/ws-tab-overview%20objekt%20freigeben.png) | ![](_media/sammlung/sammlung-teilnehmer-objekt.png)
 

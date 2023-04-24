@@ -6,6 +6,10 @@ icon: sitemap
 status:
   extends: fields/statestwo
 
+image:
+  icon: sitemap
+  query: false
+
 addFields:
   title:
     label: Title

@@ -947,6 +947,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/docs\/_media\/workshop\/leiter\/ws-L-mail.png" : {
+      "ft" : 32768,
+      "iS" : 113523,
+      "oA" : 1,
+      "oAP" : "\/docs\/_media\/workshop\/leiter\/ws-L-mail.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/docs\/_media\/workshop\/leiter\/ws-L-materialien.png" : {
       "ft" : 32768,
       "iS" : 344720,
