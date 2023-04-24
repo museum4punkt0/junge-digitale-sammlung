@@ -211,7 +211,7 @@ if (!$linked_exhibit && isset($data['exhibitname'])) {
             </h2>
           </div>
           <?= snippet('forms_blocks/fields/fields_exhibition', ['exhibition' => $linked_exhibition, 'curator' => $page]) ?>
-          <input type="hidden" name="exhibition-id" id="exhibition-id" value="<?= $linked_exhibition->slug() ?>">
+          <input type="hidden" name="exhibition-id" id="exhibition-id" value="<?= $linked_exhibition->uuid() ?>">
           <div class="row">
             <div class="col-md-4 offset-md-6 col-lg-3 offset-lg-7">
               <div class="vstack gap-2">

@@ -46,7 +46,7 @@ foreach ($exhibitions as $exhibition) : ?>
                     <i icon-name="trash-2" class="icon-only"></i>
                 </button>
                 <input type="hidden" name="delete-exhibition" value="true" />
-                <input type="hidden" name="exhibition-id" value="<?= $exhibition->slug() ?>" />
+                <input type="hidden" name="exhibition-id" value="<?= $exhibition->uuid() ?>" />
             </div>
         </form>
     </div>
