@@ -161,7 +161,7 @@ Menü oben links |  Übersicht Temp Users  |  Konto anlegen
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/admin/panel-menu.png)  |  ![](_media/admin/users/tempusers-paneloverview.png)  |  ![](_media/admin/users/tempusers-anlegen.png) 
 
-Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Er kann zurzeit leider nur im Code verändert werden (www/site/blueprints/users/frontenduser.yml). Die Gültigkeit an sich kann aber nach dem Anlegen beliebig angepasst werden. Nachdem ein Konto nicht mehr aktiv ist wird es nach einer gewissen Zeit gelöscht. Der Standardwert dafür sind 40 Tage; dieser Wert kann im Admin-Bereich eingestellt werden.
+Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Die Gültigkeit an sich kann aber nach dem Anlegen beliebig angepasst werden. Nachdem ein Konto nicht mehr aktiv ist wird es nach einer gewissen Zeit gelöscht. Der Standardwert dafür sind 40 Tage. Diese Werte können im Admin-Bereich eingestellt werden.
 
 Details Gruppen-Konto |  
 :-------------------------:|
@@ -259,7 +259,7 @@ Upload im Admin-Bereich | Auswahl für die Teilnehmer
 
 Wenn der/die Leiter:in der Gruppe das Workshop als fertig markieren will, damit die Mitarbeiter:innen mit der Überprüfung der Daten und Freigabe der Seiten anfangen können, kann er/sie das per Knopdruck auf "Workshop abschicken" tun. Hier werden ein Paar hinweise angezeigt, und der/die Leiter:in kann eine kurze Nachricht für die Mitarbeiter:innen eingeben.
 
-Workshop | Abschicken des Workshops |  asd
+Workshop | Abschicken des Workshops |  Generierte E-Mail
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](_media/workshop/leiter/ws-L-overview%20teilnehmer-bottom.png) | ![](_media/workshop/leiter/ws-L-abschicken.png) | ![](_media/workshop/leiter/ws-L-mail.png) 
 

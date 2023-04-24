@@ -227,16 +227,16 @@ tabs:
             job: deleteusers
           systemline1:
             type: line
-          # userdaysactive:
-          #   type: number
-          #   width: 1/3
-          #   required: true
-          #   min: 7
-          #   max: 40
-          #   default: 30
-          #   after: Tage
-          #   label: Default Gültigkeit der temporären Kontos
-          #   help: 'min: 7, max: 40'
+          uservaliditydate:
+            type: number
+            width: 1/3
+            required: true
+            min: 7
+            max: 40
+            default: 30
+            after: Tage
+            label: Default Gültigkeit der temporären Kontos
+            help: 'min: 7, max: 40'
           userdaysbeforedelete:
             type: number
             width: 1/3
@@ -245,7 +245,7 @@ tabs:
             max: 60
             default: 40
             after: Tage
-            label: Default Gültigkeit bis zum Löschen des inaktiven temporären Kontos
+            label: Default Dauer bis zum Löschen des inaktiven temporären Kontos
             help: 'min: 7, max: 60'
 
   # gallery tab

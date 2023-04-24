@@ -11,6 +11,21 @@ use claviska\SimpleImage;
 return [
 
     /********* USER **********/
+
+    /**** CREATE TEMP USER with deadline set in admin area (workaroudn because kirby does not allow function calling in 'default' parameter) *****/
+    'user.create:after' => function (Kirby\Cms\User $user) {
+        if ($user->role()->name() === 'frontenduser') {
+            $validityDays = site()->uservaliditydate()->isNotEmpty() ? site()->uservaliditydate()->value() : 30;
+            $deadline =  new Kirby\Toolkit\Date();
+            $deadline = $deadline->add(new DateInterval('P' . strval($validityDays) . 'D'));
+
+            $input = [
+                'expiration' => $deadline,
+            ];
+            
+            $user->update($input);
+        }
+    },
     'user.update:after' => function (Kirby\Cms\User $newUser, Kirby\Cms\User $oldUser) {
         /*** REBUILD USER and WS REFERENCES ****/
         if ($newUser->role() == "frontenduser") {
