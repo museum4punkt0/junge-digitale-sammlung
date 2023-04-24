@@ -47,8 +47,7 @@ columns:
         type: date
         width: 2/3
         display: DD.MM.YYYY
-        #default: today + "{{site.userdaysactive.getUserdaysactiveValue}}" day
-        # default: today + 30 day
+        # default of today + XY days is set in a user hook
       description:
         label: Kommentar
         type: text
