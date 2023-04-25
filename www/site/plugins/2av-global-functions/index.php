@@ -7,6 +7,14 @@
  * 
  * 
  **********/
+
+
+/**
+ * usernameExists
+ * Checks if username exists by checking each workshop's usernames table
+ * @param  string $username
+ * @return bool
+ */
 function usernameExists($username)
 {
     $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
@@ -19,24 +27,37 @@ function usernameExists($username)
     return false;
 }
 
+/**
+ * usernameWrite
+ *
+ * @param  string $username
+ * @param  string $oldUsername
+ * @param  User $user
+ * @param  Page $wspage
+ * @return bool
+ */
 function usernameWrite($username, $oldUsername, $user, $wspage)
 {
     $isChanging = $username != $oldUsername;
 
     if ($isChanging) {
-        $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
 
-        foreach ($workshops as $ws) {
-            if ($ws == $wspage) {
-                $ws->usernameWrite($username, $oldUsername, $user);
-                return true;
-            }
-        }
+        if ($wspage->usernameWrite($username, $oldUsername, $user)) // Model function! not this one
+            return true;
+        else
+            return false;
     }
 
     return false;
 }
 
+
+/**
+ * usernameRemove
+ * Removes the user name from the Workshop that it contains it
+ * @param  string $username
+ * @return bool
+ */
 function usernameRemove($username)
 {
     $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
@@ -59,6 +80,14 @@ function usernameRemove($username)
  * 
  **********/
 
+
+/**
+ * buildUsersTree
+ * Creates the amount curators and curator_leaders that the admin has entered
+ * @param  Page $page
+ * @param  Array $amounts
+ * @return void
+ */
 function buildUsersTree($page, $amounts)
 {
     $amounts = explode('&', $amounts);
@@ -96,6 +125,14 @@ function buildUsersTree($page, $amounts)
     }
 }
 
+
+/**
+ * removeUnusedPages
+ * Actual function for cleaning the workshops. Deletes
+ * exhibitions and exhibits that are not complete and still a draft
+ * @param  mixed $ws
+ * @return void
+ */
 function removeUnusedPages($ws)
 {
     $succ = 0;
@@ -125,13 +162,25 @@ function removeUnusedPages($ws)
     return $succ;
 }
 
-
+/**
+ * password_generate
+ * Generates a password with the given lenght
+ * @param  Number $chars
+ * @return string
+ */
 function password_generate($chars)
 {
     $data = '1234567890ABCDEFGHIJKLMNOPQRSTUVWXYZabcefghijklmnopqrstuvwxyz-!*$/';
     return substr(str_shuffle($data), 0, $chars);
 }
 
+/**
+ * handleExhibitionMessages
+ * Runs some checks to see what information is missing is mismatching inside a workshop
+ * @param  array $data
+ * @param  Page $page
+ * @return array
+ */
 function handleExhibitionMessages($data, $page)
 {
     $forcedExhibitionValue = $data['impulse'] ?? null;
@@ -159,6 +208,14 @@ function handleExhibitionMessages($data, $page)
     return $response;
 }
 
+/**
+ * matchImpulses
+ * Checks if impulse (Thema) of an exhibition matches the exhibit impulse of a participant
+ * @param  Page $exhibition
+ * @param  mixed $curatorID
+ * @param  string $forcedExhibitionValue
+ * @return void
+ */
 function matchImpulses($exhibition, $curatorID, $forcedExhibitionValue = null)
 {
     if (isset($forcedExhibitionValue)) {
@@ -210,6 +267,15 @@ function matchImpulses($exhibition, $curatorID, $forcedExhibitionValue = null)
     return $impulseResult;
 }
 
+
+/**
+ * populateAge
+ * Populates the numeric age dropdown by returning a Structure containing the numbers needed
+ * @param  int $start
+ * @param  int $end
+ * @param  bool $invert
+ * @return Structure
+ */
 function populateAge(int $start = 1, int $end = 99, $invert = false)
 {
     $_structure = new Kirby\Cms\Structure();
@@ -247,6 +313,13 @@ function populateAge(int $start = 1, int $end = 99, $invert = false)
     return $_structure;
 }
 
+/**
+ * populateFromCollection
+ * Populates a dropdown for the existing participants in a workshop in the front end
+ * (Workshop-Area). Sets a flag, if the participant is already part of an exhibition.
+ * @param  Collection $collection
+ * @return Structure
+ */
 function populateFromCollection($collection)
 {
     $_structure = new Kirby\Cms\Structure();
@@ -270,6 +343,14 @@ function populateFromCollection($collection)
     return $_structure;
 }
 
+/**
+ * random_strings
+ * Creates some random strings according to the lenght and digits given.
+ * Used for curator and curator leader IDs
+ * @param  mixed $length_of_string
+ * @param  mixed $digitBlock
+ * @return void
+ */
 function random_strings($length_of_string, $digitBlock = 1)
 {
     // String of all alphanumeric character
@@ -289,7 +370,14 @@ function random_strings($length_of_string, $digitBlock = 1)
     return $result;
 }
 
-/* check and set the 3D model for a preview image, in case the 3D file exists */
+
+/**
+ * bindImageTo3DModel
+ * Check and set the 3D model for a preview image, in case the 3D file exists
+ * @param  Page $exhibitpage
+ * @param  mixed $exhibit_preview_form_value
+ * @return array | bool
+ */
 function bindImageTo3DModel($exhibitpage, $exhibit_preview_form_value = null)
 {
     $exhibit_preview_form_value   = $exhibit_preview_form_value ?? ($exhibitpage->exhibit_preview()->isNotEmpty() ? str_replace(" ", "", $exhibitpage->exhibit_preview()->toFile()->uuid()->toString()) : null);
@@ -335,7 +423,15 @@ function bindImageTo3DModel($exhibitpage, $exhibit_preview_form_value = null)
     return $input ?? false;
 }
 
-/* check and set the 3D models for all preview images in a workshop, in case the 3D files exists */
+
+/**
+ * bindAllImagesTo3DModels
+ * Check and set the 3D models for all preview images
+ * inside a workshop, in case the 3D files exists. Gets
+ * called via Janitor Button Plugin in Admin area
+ * @param  Page $workshop
+ * @return int
+ */
 function bindAllImagesTo3DModels($workshop)
 {
     kirbylog('----------NEW WS ASSET BINDING--------');
@@ -352,7 +448,7 @@ function bindAllImagesTo3DModels($workshop)
             if ($modelValues) {
                 // if new 3D models were found count up
                 unset($modelValues['exhibit_preview']);
-                $nonEmptyValues = array_filter($modelValues ?? []);                
+                $nonEmptyValues = array_filter($modelValues ?? []);
                 if ($nonEmptyValues && !empty($nonEmptyValues)) {
                     $newModelsFound++;
                     $modelValues['skipRechecking3D'] = true;
@@ -367,7 +463,13 @@ function bindAllImagesTo3DModels($workshop)
     return $newModelsFound;
 }
 
-/* create file from url */
+/**
+ * makeImage
+ * Creates a Kirby file from a url
+ * @param  Page $exhibit
+ * @param  string $external_url
+ * @return File
+ */
 function makeImage($exhibit, $external_url)
 {
     if (!$external_url)
@@ -389,7 +491,12 @@ function makeImage($exhibit, $external_url)
     return $image;
 }
 
-/* empty images from page */
+/**
+ * emptyImages
+ * Empties images from page with template 'image'
+ * @param  Page $exhibit
+ * @return bool
+ */
 function emptyImages($exhibit)
 {
     $status = true;
@@ -406,7 +513,13 @@ function emptyImages($exhibit)
     return $status;
 }
 
-/* creates a compressed zip file */
+/**
+ * create_zip
+ * Creates a compressed zip file. Relevant for materials
+ * @param  mixed $page
+ * @param  mixed $file
+ * @return void
+ */
 function create_zip($page, $file)
 {
     if ($page->intendedTemplate()->name() == 'material') {
@@ -456,61 +569,3 @@ function create_zip($page, $file)
     }
 }
 
-
-/**
- * Gets data for embed url, based on Embed Class (from kirby plugin).
- * Also creates 'code' parameter for instagram, since
- * it doesnt have it out of the box.
- *
- * @param  string $url
- * @param  array $embed
- * @return array
- */
-/* function scrapEmbed($url, $embed)
-{
-    try {
-        $dispatcher = new Embed\Http\CurlDispatcher();
-        $options = \Embed\Embed::$default_config;
-        $options['min_image_width']         = option('sylvainjule.embed.min_image_width');
-        $options['min_image_height']        = option('sylvainjule.embed.min_image_height');
-        $options['html']['max_images']      = option('sylvainjule.embed.max_images');
-        $options['html']['external_images'] = option('sylvainjule.embed.external_images');
-
-        $media = Embed\Embed::create($url, $options, $dispatcher);
-
-        if (strtolower($media->providerName) == 'instagram') {
-            $media->code = snippet('renderers/embeds/instagram', ['embedurl' => $url], true);
-        }
-
-        $embed['status'] = 'success';
-        $embed['data']   = array(
-            'title'         => $media->title,
-            'description'   => $media->description,
-            'url'           => $media->url,
-            'type'          => $media->type,
-            'tags'          => $media->tags,
-            'image'         => $media->image,
-            'imageWidth'    => $media->imageWidth,
-            'imageHeight'   => $media->imageHeight,
-            'images'        => $media->images,
-            'code'          => $media->code,
-            'feeds'         => $media->feeds,
-            'width'         => $media->width,
-            'height'        => $media->height,
-            'aspectRatio'   => $media->aspectRatio,
-            'authorName'    => $media->authorName,
-            'authorUrl'     => $media->authorUrl,
-            'providerIcon'  => $media->providerIcon,
-            'providerIcons' => $media->providerIcons,
-            'providerName'  => $media->providerName,
-            'providerUrl'   => $media->providerUrl,
-            'publishedTime' => $media->publishedTime,
-            'license'       => $media->license,
-        );
-    } catch (Exception $e) {
-        $embed['status'] = 'error';
-        $embed['error']  = $e->getMessage();
-    }
-
-    return $embed;
-} */
