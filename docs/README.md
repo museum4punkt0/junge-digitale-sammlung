@@ -153,7 +153,7 @@ Den Admin-Bereich finden Sie unter `/panel`, z.B.:
 
 `https://meinedomain.de/panel`
 
-Ein Gruppenkonto, z. B. für eine komplette Klasse, kann im Bereich 'Temp Users' angelegt werden. Gruppenkonten sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist sichergestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Ein automatisiertes Löschen muss auf Ihrem Server per CRON-Job ausgeführt werden (mehr dazu im Kapitel [Technisches](technisches/README.md)).
+Ein Gruppenkonto, z. B. für eine komplette Klasse, kann im Bereich 'Temp Users' angelegt werden. Gruppenkonten sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist sichergestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Ein automatisiertes Löschen muss auf Ihrem Server per CRON-Job ausgeführt werden (mehr dazu im Kapitel [Technisches](details/technisches.md)).
 
 Zur Erstellung eines Gruppenkontos muss sich der/die Mitarbeiter:in im Admin-Bereich einloggen, oben links in der Navigation "Temp Users" auswählen, auf "Neuen Account anlegen" klicken und einen Namen für das Konto eingeben, z. B. KlasseBeethoven8. Das System wird automatisch ein Passwort vergeben. **Dieses Passwort unbedingt aufschreiben, um es später übergeben zu können.** 
 

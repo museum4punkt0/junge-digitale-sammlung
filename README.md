@@ -126,7 +126,7 @@ Zum Starten:
 
 - Der Code im Ordner `src` kann jetzt bearbeitet werden. 
 
-***Weitere technische Details und Hinweise finden Sie [hier](docs/technisches/README.md).***
+***Weitere technische Details und Hinweise finden Sie [hier](docs/details/technisches.md).***
 
 *Für weitere Prepros-Einstellungen bitte die [Prepros-Dokumentation](https://prepros.io/help/) lesen.*
 

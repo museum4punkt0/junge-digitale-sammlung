@@ -2398,7 +2398,7 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/docs\/technisches\/README.md" : {
+    "\/docs\/technisches\/technisches.md" : {
       "cB" : 0,
       "cS" : 0,
       "eF" : 1,
@@ -2408,7 +2408,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 1,
-      "oAP" : "\/docs\/technisches\/README.html",
+      "oAP" : "\/docs\/technisches\/technisches.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
