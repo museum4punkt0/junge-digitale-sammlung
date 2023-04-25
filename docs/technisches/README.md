@@ -12,7 +12,6 @@
 5. [Spezielle Ressourcen](#5-spezielle-ressourcen)
 6. [System-Funktionen und CRON-Jobs](#6-system-funktionen-und-cron-jobs)
 
-
 ## 1. Kurzbeschreibung
 
 Es wird empfohlen die Grundlagen von [Kirby CMS](https://getkirby.com/docs/guide) kennenzulernen, bevor man Anpassungen vornimmt. Diese Datei dient als knappe Einführung und Zusammenfassung des Aufbaus des Systems.
@@ -92,9 +91,41 @@ Jeder Seitentyp kann eine eigene spezielle Klasse besitzen, die die Grundfunktio
 
 ## 4. Kirby Plugins
 
-Im Ordner `www/site/plugins` befinden sich alle Plugins von diesem Kirby-"Theme".
+Im Ordner `www/site/plugins` befinden sich alle Plugins, die dieses Kirby-"Theme" benötigt. Unter anderem finden Sie hier auch die speziell für die JDS programmierte Plugins von 2av. Aus diesem Grund haben diese Plugins keine eigenen Repositorys. Der Code ist kommentiert und sollte grundsätzlich nachvollziehbar sein, wenn Sie Kirby's Struktur und Funktionsweise kennen.
 
-<<<<< TODO >>>>>>>>
+Es wird empfohlen die Plugins von Drittanbietern nur mit Vorsicht und wenn unbedingt nötig zu aktualisieren. Mehr Infos in der Kirby Dokumentation.
+
+**2av-blocks-factory**
+
+Kleine Sammlung von extra Blocks für Layouts. Für die JDS werden an sich nur Akkordeons verwendet.
+
+**2av-custom-lock-class**
+
+Spezielle Lock-Klasse, um Informationen zu den Gruppen-Konten aber zu den Teilnehmern speichern zu können.
+
+**2av-custom-methods**
+
+Spezielle Methoden für Kirby Pages, Files, Fields, etc. Mehr dazu in der Kriby Dokumentation zum jeweiligen Kontext, z.B. für Fields:
+
+https://getkirby.com/docs/reference/plugins/extensions/field-methods
+
+**2av-global-functions**
+
+Globale PHP Funktionen die ohne eingeschränkten Kontext Daten abarbeiten können.
+
+**2av-jds-pagemodel**
+
+Kern fast aller anderen Klassen des Themes. Enthält bestimmte Funktionen, bspw. die Logik für die Änderungshistorie.
+
+**2av-temporary-users**
+
+Erweitern eine Kirby Area damit man temporäre Konten mit einer angepassten Logik anlegen kann. Diese benötigt bswp. keine E-Mail Adressen sondern nur einen Benutzername und ein Passwort, das auch automatisch generiert wird.
+
+**Drittanbieter Plugins**
+
+Die Auflistung der Plugins finden Sie im Admin-Bereich unter 'System' (Hauptnavigation oben links). Für mehr Informationen zu einem bestimmten Plugin bitte die jeweilige Dokumentation/Repository besuchen:
+
+https://getkirby.com/plugins
 
 
 ## 5. Spezielle Ressourcen
