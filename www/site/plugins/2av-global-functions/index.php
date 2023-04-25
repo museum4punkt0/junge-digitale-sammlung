@@ -20,7 +20,7 @@ function usernameExists($username)
     $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
 
     foreach ($workshops as $ws) {
-        if ($ws->usernameExists($username))
+        if ($ws->usernameExistsInWorkshop($username))
             return true;
     }
 
@@ -42,7 +42,7 @@ function usernameWrite($username, $oldUsername, $user, $wspage)
 
     if ($isChanging) {
 
-        if ($wspage->usernameWrite($username, $oldUsername, $user)) // Model function! not this one
+        if ($wspage->usernameWriteInWorkshop($username, $oldUsername, $user)) // Model function! not this one
             return true;
         else
             return false;
@@ -63,8 +63,8 @@ function usernameRemove($username)
     $workshops = site()->childrenAndDrafts()->filterBy('intendedTemplate', 'c_workshop');
 
     foreach ($workshops as $ws) {
-        if ($ws->usernameExists($username)) {
-            $ws->usernameRemove($username);
+        if ($ws->usernameExistsInWorkshop($username)) {
+            $ws->usernameRemoveFromWorkshop($username);
             return true;
         }
     }

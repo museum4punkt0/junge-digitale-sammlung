@@ -131,7 +131,7 @@ class CWorkshopPage extends JDSPage
 
   ////////////////////////////////////////////////
 
-  function usernameExists($username)
+  function usernameExistsInWorkshop($username)
   {
     if (!$dbpage = $this->data_usernames_page()->toPage()) {
 
@@ -148,9 +148,12 @@ class CWorkshopPage extends JDSPage
         ]);
       }
     }
-
+    else{
+      $dbpage = $this->data_usernames_page()->toPage();
+    }
+    
     $db = $dbpage->username_db()->yaml();
-    $indexUsername = substr($username, 0, 1);
+    $indexUsername = substr($username, 0, 1); // gets the first letter
 
     foreach ($db as $db_index) {
       if ($indexUsername == $db_index['index']) {
@@ -166,7 +169,7 @@ class CWorkshopPage extends JDSPage
     return false;
   }
 
-  function usernameWrite($username, $oldUsername, $user)
+  function usernameWriteInWorkshop($username, $oldUsername, $user)
   {
     $isChanging = $username != $oldUsername;
 
@@ -260,7 +263,7 @@ class CWorkshopPage extends JDSPage
     }
   }
 
-  function usernameRemove($username)
+  function usernameRemoveFromWorkshop($username)
   {
     if (!$dbpage = $this->data_usernames_page()->toPage())
       return;

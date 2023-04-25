@@ -125,6 +125,9 @@ class CCuratorPage extends JDSPage
       if ($isChanging && usernameExists($values['username'])) {
         throw new Exception('Benutzername existiert bereits.');
       }
+      else{
+        $updateSite = usernameWrite($values['username'], $page->username(), $page->id(), $page->parent());
+      }
     }
   }
 

@@ -47,11 +47,11 @@ return function ($kirby, $page, $site) {
                         unset($data['title']);
                     }
 
-                    $updateSite = usernameWrite($data['username'], $page->username(), $page->id(), $page->parent());
+                    //$updateSite = usernameWrite($data['username'], $page->username(), $page->id(), $page->parent());
 
-                    if ($updateSite) {
+                    /* if ($updateSite) {
                         //$alert[] = 'DB saved';
-                    }
+                    } */
                 } catch (Exception $e) {
                     $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
                 }
