@@ -121,6 +121,10 @@ Kern fast aller anderen Klassen des Themes. Enthält bestimmte Funktionen, bspw.
 
 Erweitern eine Kirby Area damit man temporäre Konten mit einer angepassten Logik anlegen kann. Diese benötigt bswp. keine E-Mail Adressen sondern nur einen Benutzername und ein Passwort, das auch automatisch generiert wird.
 
+**kirby3-janitor-2.16.0-von 2av angepasst**
+
+Spezielle Version des Janitor-Plugins für Kirby die erweitert wurde, um Felder für die Menge an Teilnehmer und Leiter eingeben zu können für den Generator.
+
 **Drittanbieter Plugins**
 
 Die Auflistung der Plugins finden Sie im Admin-Bereich unter 'System' (Hauptnavigation oben links). Für mehr Informationen zu einem bestimmten Plugin bitte die jeweilige Dokumentation/Repository besuchen:

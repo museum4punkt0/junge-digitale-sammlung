@@ -1,6 +1,7 @@
 <template>
   <div class="k-grid">
     <span v-if="generator" class="k-grid">
+      <!-- 2av: here we add extra fields to input the amount of curators and curator leaders. This data gets handled below. -->
       <div class="k-column">
         <k-number-field v-model="amountLeaders" :novalidate="true" :placeholder="0" :value="0" :max="3" :min="0" name="amountLeaders" help="Leiter (Min: 0, Max: 3)" label="Leiter Anzahl" @input="updateAmountLeader({ amountLeaders: $event })"/>
       </div>
@@ -120,6 +121,7 @@ export default {
      * Source: https://stackoverflow.com/a/8831937
      */
 
+     /* 2av: updates the amount variables */
      updateAmount(str) {
       //console.log(str.amount);
       if(str.amount < 0 ){
@@ -133,6 +135,7 @@ export default {
       }
       
      },
+     /* 2av: updates the amount variables */
      updateAmountLeader(str) {
       //console.log(str.amountLeaders);
       if(str.amountLeaders < 0 ){
@@ -209,6 +212,7 @@ export default {
 
       let url = this.job + "/" + encodeURIComponent(this.pageURI);
 
+      /* 2av: if the generator was set */
       if (this.generator) {
         
         if(!this.amount)
@@ -244,6 +248,7 @@ export default {
         this.button.state = "has-response";
       }
 
+      // 2av: if reload was set in yaml, we reload
       if (reload) {
         location.reload();
       }

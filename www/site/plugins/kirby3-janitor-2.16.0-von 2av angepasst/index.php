@@ -62,16 +62,14 @@ Kirby::plugin('bnomei/janitor', [
     'fields' => [
         'janitor' => [
             'props' => [
+                ////// 2av CHANGE START (yaml properties)
                 'generator' => function (bool $open = false) {
                     return $open;
-                },
-                'amount'=> function ($amount = null) {
-                    return $amount;
                 },
                 'reload'=> function (bool $open = false) {
                     return $open;
                 },
-                ////// SD CHANGE
+                ////// 2av CHANGE END
                 'label' => function ($label = null) {
                     return \Kirby\Toolkit\I18n::translate($label, $label);
                 },
