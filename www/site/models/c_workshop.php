@@ -172,7 +172,7 @@ class CWorkshopPage extends JDSPage
 
     if ($isChanging) {
       if (!$dbpage = $this->data_usernames_page()->toPage())
-        return;
+        return false;
 
       $db = $dbpage->username_db()->yaml();
 
@@ -247,11 +247,15 @@ class CWorkshopPage extends JDSPage
       }
 
       try {
-        $this->data_usernames_page()->toPage()->update([
+        $usertableupdated = $this->data_usernames_page()->toPage()->update([
           'username_db' => Yaml::encode($db)
         ]);
+
+        return $usertableupdated;
       } catch (Exception $error) {
-        $errors .= 'Submission logging failed: ' . $error->getMessage() . '. ';
+        $error .= 'Submission logging failed: ' . $error->getMessage() . '. ';
+        kirbylog($error);
+        return false;
       }
     }
   }
