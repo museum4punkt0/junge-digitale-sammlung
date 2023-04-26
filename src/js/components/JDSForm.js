@@ -228,7 +228,8 @@ export default class JDSForm {
         let conf = Object.assign({
             ele: '#' + id,
             options: jsonData,
-            selectedValue: value.replaceAll(" ", "").split(','),
+            //selectedValue: value.replaceAll(" ", "").split(','),
+            selectedValue: value.replace(/ /g, "").split(','),
         }, this.virtualSelectConf);
 
         VirtualSelect.init(conf);
@@ -245,8 +246,7 @@ export default class JDSForm {
      */
     initFormWatchdog() {
         var wdForm = this.nativeElement;
-        this.formEls = wdForm.querySelectorAll('input:not([type="submit"],.vscomp-search-input,#dseHidden,.radioimage-radio), textarea, select, .radioimages');
-
+        this.formEls = wdForm.querySelectorAll('input:not([type="submit"]):not(.vscomp-search-input):not(#dseHidden):not(.radioimage-radio), textarea, select, .radioimages');
         this.formEls.forEach(formEl => {
 
             if (formEl.tagName.toLowerCase() === 'input' && formEl.getAttribute('type') === 'checkbox') {
@@ -443,7 +443,7 @@ export default class JDSForm {
 
         this.submit.disabled = !this.formChanged;
         if (this.reset)
-            this.reset.disabled = !this.formChanged;        
+            this.reset.disabled = !this.formChanged;
 
         let containerpane = window.findParentContainer(this.nativeElement ? this.nativeElement.parentNode : this.parentNode, 'tab-pane');
         document.dispatchEvent(new CustomEvent('form_changed', { detail: { paneID: containerpane.id, state: this.formChanged } }));
