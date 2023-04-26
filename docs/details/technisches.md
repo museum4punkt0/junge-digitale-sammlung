@@ -101,7 +101,7 @@ Kleine Sammlung von extra Blocks für Layouts. Für die JDS werden an sich nur A
 
 **2av-custom-lock-class**
 
-Spezielle Lock-Klasse, um Informationen zu den Gruppen-Konten aber zu den Teilnehmern speichern zu können.
+Spezielle Lock-Klasse, um Informationen zu den Gruppenkonten aber zu den Teilnehmern speichern zu können.
 
 **2av-custom-methods**
 
@@ -155,13 +155,13 @@ System-Funktionen |
 
 Das System geht alle Workshops durch, die noch nicht als bereinigt markiert sind. Bereinigen bedeutet in diesem Fall das Löschen von Ausstellungen und Objekten, die a) keine vollständigen Daten haben ***und*** b) nicht veröffentlicht wurden. Erst wenn beide Bedingungen zutreffen, wird die Seite gelöscht.
 
-Ein Workshop wird auch bereinigt, wenn das verlinkte Gruppen-Konto gelöscht wird.
+Ein Workshop wird auch bereinigt, wenn das verlinkte Gruppenkonto gelöscht wird.
 
 #### Benutzer deaktivieren
 
-Diese Funktion deaktiviert die temporären Gruppen-Konten, deren Gültigkeit abgelaufen ist. Das heißt, wenn Sie sofort einen Benutzer deaktivieren wollen, bewirkt diese Funktion nichts, da sie nur Kontos mit einem Gültigkeitsdatum älter als "heute" deaktiviert.
+Diese Funktion deaktiviert die temporären Gruppenkonten, deren Gültigkeit abgelaufen ist. Das heißt, wenn Sie sofort einen Benutzer deaktivieren wollen, bewirkt diese Funktion nichts, da sie nur Kontos mit einem Gültigkeitsdatum älter als "heute" deaktiviert.
 
-Gruppen-Konten, z. B. für eine komplette Klasse, sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist sichergestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Dies kann im Blueprint für die Frontend-Benutzer angepasst werden. Dieser Wert wird beim Anlegen eines Kontos übernommen. Er kann im Admin-Backend aber jederzeit wieder angepasst werden.
+Gruppenkonten, z. B. für eine komplette Klasse, sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist sichergestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Dies kann im Blueprint für die Frontend-Benutzer angepasst werden. Dieser Wert wird beim Anlegen eines Kontos übernommen. Er kann im Admin-Backend aber jederzeit wieder angepasst werden.
 
 ***site/blueprints/users/frontenduser.yml***
 
@@ -176,7 +176,7 @@ Gruppen-Konten, z. B. für eine komplette Klasse, sollten regelmäßig deaktivi
 
 #### Inaktive Benutzer löschen
 
-Mit dieser Funktion werden inaktive Gruppen-Konten endgültig gelöscht. Sie überprüft, ob die Lösch-Gültigkeit abgelaufen ist, um erst dann das Konto zu löschen. Die Lösch-Gültigkeit setzt sich zusammen aus "Ablaufdatum des Kontos" + "eingestellter Warteperiode (in Tagen) bis zum Löschen". Der Standardwert für die Warteperiode bis zum Löschen nach Ablaufdatum des Kontos beträgt 40 Tage. Dieser Wert kann jederzeit im Admin-Bereich angepasst werden (Tab "Website Einstellungen").
+Mit dieser Funktion werden inaktive Gruppenkonten endgültig gelöscht. Sie überprüft, ob die Lösch-Gültigkeit abgelaufen ist, um erst dann das Konto zu löschen. Die Lösch-Gültigkeit setzt sich zusammen aus "Ablaufdatum des Kontos" + "eingestellter Warteperiode (in Tagen) bis zum Löschen". Der Standardwert für die Warteperiode bis zum Löschen nach Ablaufdatum des Kontos beträgt 40 Tage. Dieser Wert kann jederzeit im Admin-Bereich angepasst werden (Tab "Website Einstellungen").
 
 Wie weiter oben beschrieben: Vor dem Löschen des Kontos wird auch der damit verknüpfte Workshop erstmal bereinigt.
 

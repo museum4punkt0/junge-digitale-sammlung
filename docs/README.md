@@ -68,7 +68,7 @@ Auch weitere, reguläre Seiten können besucht werden, z. B. eine Impressums- od
 
 [Hier finden Sie Details zum Workshop-Bereich](details/workshop.md) »
 
-Workshop-Räume sind virtuelle Räume, geschützte Arbeitsbereiche für Klassen oder Gruppen, mit einer zeitlichen Begrenzung. Für diese werden Gruppen-Konten benötigt, die es Leiter:innen und Teilnehmer:innen ermöglicht, Objekte und deren Metadaten zur Sammlung hinzuzufügen, anzusehen und zu bearbeiten. Hierfür werden Zugänge ohne eine verpflichtende Registrierung mit E-Mail-Adressen von den Administratoren angelegt. Die Gültigkeitsdauer der Logins und damit der Zugriff auf die Workshop-Räume kann ggf. noch verändert oder verlängert werden, um flexibel auf die Entwicklungen und Bedürfnisse des Workshops eingehen zu können.
+Workshop-Räume sind virtuelle Räume, geschützte Arbeitsbereiche für Klassen oder Gruppen, mit einer zeitlichen Begrenzung. Für diese werden Gruppenkonten benötigt, die es Leiter:innen und Teilnehmer:innen ermöglicht, Objekte und deren Metadaten zur Sammlung hinzuzufügen, anzusehen und zu bearbeiten. Hierfür werden Zugänge ohne eine verpflichtende Registrierung mit E-Mail-Adressen von den Administratoren angelegt. Die Gültigkeitsdauer der Logins und damit der Zugriff auf die Workshop-Räume kann ggf. noch verändert oder verlängert werden, um flexibel auf die Entwicklungen und Bedürfnisse des Workshops eingehen zu können.
 
 Workshop Login |  Profil-Tab  |  Objekt-Tab (gescrollt)
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -153,9 +153,9 @@ Den Admin-Bereich finden Sie unter `/panel`, z.B.:
 
 `https://meinedomain.de/panel`
 
-Ein Gruppenkonto, z. B. für eine komplette Klasse, kann im Bereich 'Konten' angelegt werden. Gruppen-Konten sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist sichergestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Ein automatisiertes Löschen muss auf Ihrem Server per CRON-Job ausgeführt werden (mehr dazu im Kapitel [Technisches](details/technisches.md)).
+Ein Gruppenkonto, z. B. für eine komplette Klasse, kann im Bereich 'Konten' angelegt werden. Gruppenkonten sollten regelmäßig deaktiviert und im Anschluss gelöscht werden. So ist sichergestellt, dass die Teilnehmer nur für eine begrenzte Zeit Zugriff zum Workshop haben. Ein automatisiertes Löschen muss auf Ihrem Server per CRON-Job ausgeführt werden (mehr dazu im Kapitel [Technisches](details/technisches.md)).
 
-Zur Erstellung eines Gruppen-Kontos muss sich der/die Mitarbeiter:in im Admin-Bereich einloggen, oben links in der Navigation "Konten" auswählen, auf "Temp. Konto anlegen" klicken und einen Namen für das Konto eingeben, z. B. KlasseBeethoven8. Das System wird automatisch ein Passwort vergeben. **Dieses Passwort unbedingt aufschreiben, um es später übergeben zu können.** 
+Zur Erstellung eines Gruppenkontos muss sich der/die Mitarbeiter:in im Admin-Bereich einloggen, oben links in der Navigation "Konten" auswählen, auf "Temp. Konto anlegen" klicken und einen Namen für das Konto eingeben, z. B. KlasseBeethoven8. Das System wird automatisch ein Passwort vergeben. **Dieses Passwort unbedingt aufschreiben, um es später übergeben zu können.** 
 
 Menü oben links |  Übersicht Konten  |  Konto anlegen
 :-------------------------:|:-------------------------:|:-------------------------:
@@ -163,14 +163,14 @@ Menü oben links |  Übersicht Konten  |  Konto anlegen
 
 Der Standardwert für die Gültigkeit eines Kontos ist 30 Tage. Die Gültigkeit an sich kann aber nach dem Anlegen beliebig angepasst werden. Nachdem ein Konto nicht mehr aktiv ist, wird es nach einer gewissen Zeit gelöscht. Der Standardwert dafür sind 40 Tage. Diese Werte können im Admin-Bereich eingestellt werden.
 
-Details Gruppen-Konto |  
+Details Gruppenkonto |  
 :-------------------------:|
 ![](_media/admin/users/tempusers-eigenschaften.png) |  
 
 
 Im Anschluss muss der/die Mitarbeiter:in einen Workshop anlegen. Dafür oben links im Menü zurück zu "Site" navigieren. Hier auf der Hauptansicht des Admin-Bereiches werden die Workshops aufgelistet. Einfach auf "Hinzufügen" klicken und einen sinnvollen passenden Namen (z. B. KlasseBeethoven8-2023) eingeben und den Workshop anlegen. Bitte bei der Benennung daran denken, dass Workshops voraussichtlich nicht gelöscht werden. Dementsprechend wurde in diesem Beispiel ein Suffix 2023 hinzugefügt. So kann man die Workshops auf der Liste nach einigen Jahren trotzdem noch gut identifizieren. Die genaue Systematik wird aber Ihnen überlassen.
 
-Auf der Workshop-Seite bitte die Institution eingeben, und einen Benutzer (hier: das neu erstellte Gruppen-Konto von vorhin) auswählen. Dies sind Pflichtfelder. 
+Auf der Workshop-Seite bitte die Institution eingeben, und einen Benutzer (hier: das neu erstellte Gruppenkonto von vorhin) auswählen. Dies sind Pflichtfelder. 
 
 *Hinweis: Auch in der Ansicht eines Temp-Users kann die Beziehung Workshop-Gruppenkonto verändert werden.*
 
@@ -210,7 +210,7 @@ PDF Übersicht |
 
 Dabei ist zu beachten, dass die Zugangsdaten des Gruppenkontos und die Leiter-IDs getrennt und nicht in der PDF geliefert werden müssen, um zu vermeiden, dass Unbefugten diese Informationen zugänglich sind.
 
-### 6) Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppen-Konto.
+### 6) Leiter:in verteilt IDs und kommuniziert Zugangsdaten für das Gruppenkonto.
 
 Dies erfolgt auf klassische Art, bspw. persönlich oder per E-Mail, etc.
 
@@ -283,15 +283,15 @@ Das System hat 3 Funktionen, die entweder per Klick oder CRON (automatisch von I
 
 Das System geht alle Workshops durch, die noch nicht als bereinigt markiert sind. Bereinigen bedeutet in diesem Fall das Löschen von Ausstellungen und Objekten, die a) keine vollständigen Daten haben ***und*** b) nicht veröffentlicht wurden. Erst wenn beide Bedingungen zutreffen, wird die Seite gelöscht.
 
-Ein Workshop wird auch bereinigt, wenn das verlinkte Gruppen-Konto gelöscht wird.
+Ein Workshop wird auch bereinigt, wenn das verlinkte Gruppenkonto gelöscht wird.
 
 #### Benutzer deaktivieren
 
-Diese Funktion deaktiviert die temporären Gruppen-Konten, dessen Gültigkeit abgelaufen ist. Das heißt, wenn Sie sofort einen Benutzer deaktivieren wollen, bewirkt diese Funktion nichts, da sie nur Kontos mit einem Gültigkeitsdatum älter als "heute" deaktiviert.
+Diese Funktion deaktiviert die temporären Gruppenkonten, dessen Gültigkeit abgelaufen ist. Das heißt, wenn Sie sofort einen Benutzer deaktivieren wollen, bewirkt diese Funktion nichts, da sie nur Kontos mit einem Gültigkeitsdatum älter als "heute" deaktiviert.
 
 #### Inaktive Benutzer löschen
 
-Mit dieser Funktion werden inaktive Gruppen-Konten endgültig gelöscht. Sie überprüft, ob die Lösch-Gültigkeit abgelaufen ist, um erst dann das Konto zu löschen. Die Lösch-Gültigkeit setzt sich zusammen aus "Ablaufdatum des Kontos" + "eingestellter Warteperiode (in Tagen) bis zum Löschen". 
+Mit dieser Funktion werden inaktive Gruppenkonten endgültig gelöscht. Sie überprüft, ob die Lösch-Gültigkeit abgelaufen ist, um erst dann das Konto zu löschen. Die Lösch-Gültigkeit setzt sich zusammen aus "Ablaufdatum des Kontos" + "eingestellter Warteperiode (in Tagen) bis zum Löschen". 
 
 Wie weiter oben beschrieben: Vor dem Löschen des Kontos wird auch der damit verknüpfte Workshop erst mal bereinigt.
 

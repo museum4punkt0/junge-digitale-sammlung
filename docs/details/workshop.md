@@ -123,9 +123,9 @@ Workshop abschicken Button (Leiter)  |  Workshop abschicken Button (Leiter)  |  
 
 ## Teilnehmer-Wechsel und Abmelden
 
-Ein Wechsel der Teilnehmer ist möglich. Dies erleichtert die Arbeit, falls mehrere Personen an einem Rechner arbeiten. Der Button "Lobby" oben rechts bringt die Teilnehmer zur Lobby. Hier können sie zurück zu ihrer persönlichen Seite oder sich als Teilnehmer ausloggen. Nun kann der nächste Teilnehmer dran arbeiten. Um sich komplett abzumelden (also das Gruppen-Konto), müssen die Teilnehmer auf "Abmelden" klicken. Das System hat einen Countdown integriert. Nach Ablauf der Zeit wird das Gruppen-Konto ausgeloggt.
+Ein Wechsel der Teilnehmer ist möglich. Dies erleichtert die Arbeit, falls mehrere Personen an einem Rechner arbeiten. Der Button "Lobby" oben rechts bringt die Teilnehmer zur Lobby. Hier können sie zurück zu ihrer persönlichen Seite oder sich als Teilnehmer ausloggen. Nun kann der nächste Teilnehmer dran arbeiten. Um sich komplett abzumelden (also das Gruppenkonto), müssen die Teilnehmer auf "Abmelden" klicken. Das System hat einen Countdown integriert. Nach Ablauf der Zeit wird das Gruppenkonto ausgeloggt.
 
-Gruppen-Konto abmelden (oben rechts) |  Teilnehmer in der Lobby wechseln
+Gruppenkonto abmelden (oben rechts) |  Teilnehmer in der Lobby wechseln
 :-------------------------:|:-------------------------:
 ![](../_media/workshop/user-tab.png)  |  ![](../_media/workshop/workshop-lobby.png)  | 
 
