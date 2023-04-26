@@ -234,7 +234,6 @@ return function ($kirby, $page, $site) {
             $_field = 'digital_asset';
         }
 
-        // check for duplicate
         $currentLinkedExhibit = $page->linked_exhibit()->toPageOrDraft();
         $files = $currentLinkedExhibit->files()->filterBy('template', $_file_template);
         // we always remove all images, only one exists
