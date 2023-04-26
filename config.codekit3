@@ -1196,7 +1196,7 @@
     },
     "\/docs\/_media\/admin\/panel-intro.png" : {
       "ft" : 32768,
-      "iS" : 311641,
+      "iS" : 160636,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/panel-intro.png",
       "oF" : 0,
@@ -1209,7 +1209,7 @@
     },
     "\/docs\/_media\/admin\/panel-menu.png" : {
       "ft" : 32768,
-      "iS" : 332083,
+      "iS" : 164938,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/panel-menu.png",
       "oF" : 0,
@@ -1456,7 +1456,7 @@
     },
     "\/docs\/_media\/admin\/users\/tempusers-anlegen.png" : {
       "ft" : 32768,
-      "iS" : 210535,
+      "iS" : 145972,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/users\/tempusers-anlegen.png",
       "oF" : 0,
@@ -1469,7 +1469,7 @@
     },
     "\/docs\/_media\/admin\/users\/tempusers-eigenschaften-menu open.png" : {
       "ft" : 32768,
-      "iS" : 306162,
+      "iS" : 297941,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/users\/tempusers-eigenschaften-menu open.png",
       "oF" : 0,
@@ -1482,7 +1482,7 @@
     },
     "\/docs\/_media\/admin\/users\/tempusers-eigenschaften.png" : {
       "ft" : 32768,
-      "iS" : 279389,
+      "iS" : 278662,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/users\/tempusers-eigenschaften.png",
       "oF" : 0,
@@ -1495,7 +1495,7 @@
     },
     "\/docs\/_media\/admin\/users\/tempusers-paneloverview.png" : {
       "ft" : 32768,
-      "iS" : 147700,
+      "iS" : 287393,
       "oA" : 1,
       "oAP" : "\/docs\/_media\/admin\/users\/tempusers-paneloverview.png",
       "oF" : 0,
