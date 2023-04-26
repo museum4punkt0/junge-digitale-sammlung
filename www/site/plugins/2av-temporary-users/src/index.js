@@ -1,9 +1,7 @@
-import TempUsers from "./components/TempUsers.vue";
-import TempUser from "./components/TempUser.vue";
+import UsersView from "./components/UsersView.vue";
 
-panel.plugin("2av/temporaryusers", {
+panel.plugin("2av/users", {
   components: {
-    temporaryusers: TempUsers, 
-    temporaryuser: TempUser,  
-  },
-});
+    "k-users-view": UsersView
+  }
+}); 

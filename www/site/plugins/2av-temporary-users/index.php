@@ -9,55 +9,47 @@ use Kirby\Panel\Panel;
 use Kirby\Toolkit\Escape;
 use Kirby\Toolkit\I18n;
 
-Kirby::plugin('2av/temporaryusers', [
+/**
+ * This plugin overrides the original Users Area of Kirby.
+ * Please refer to the original files to see the differences
+ * 
+ * https://github.com/getkirby/kirby/blob/main/config/areas/users.php
+ * https://github.com/getkirby/kirby/blob/main/panel/src/components/Views/UsersView.vue
+ * 
+ */
+Kirby::plugin('2av/users', [
     'areas' => [
-        'temporaryusers' => function ($kirby) {
+        'users' => function () {
             return [
-                'label' => 'Temp users',
-                'icon' => 'check',
-                'menu' => true,
-                'link'  => 'temporaryusers',
-                //'views'     => require __DIR__ . '/tempusers/views.php'
+                // we adjust the label
+                'label' => 'Konten',
                 'views' => [
-                    'temporaryusers' => [
-                        // the Panel patterns must not start with 'panel/',
-                        // the `panel` slug is automatically prepended.
-                        'pattern' => 'temporaryusers',
-                        'action'  => function () {
+                    'users' => [
+                        'action' => function () {
                             $kirby = App::instance();
-
-                            /*$role  = $kirby->request()->get('role');                            
-
-                             $roles = $kirby->roles()->toArray(fn ($role) => [
+                            $role  = $kirby->request()->get('role');
+                            $roles = $kirby->roles()->toArray(fn ($role) => [
                                 'id'    => $role->id(),
                                 'title' => $role->title(),
-                            ]); 
-
-                          $roles = $kirby->roles()->filterBy('name','frontenduser')->toArray(fn ($role) => [
-                                'id'    => $role->id(),
-                                'title' => $role->title(),
-                            ]); */
-
-
-
+                            ]);
                             return [
-                                'component' => 'temporaryusers',
+                                'component' => 'k-users-view',
                                 'props'     => [
-                                    /* 'role' => function () use ($kirby, $roles, $role) {
+                                    'role' => function () use ($kirby, $roles, $role) {
                                         if ($role) {
                                             return $roles[$role] ?? null;
                                         }
                                     },
-                                    'roles' => array_values($roles), */
-                                    //'users' => function () use ($kirby, $role) {
-                                    'users' => function () use ($kirby) {
+                                    'roles' => array_values($roles),
+                                    'users' => function () use ($kirby, $role) {
                                         $users = $kirby->users();
-
-                                        /* if (empty($role) === false) {
+                                        // we sort the users by role
+                                        $users = $users->sortBy('role');
+                                        if (empty($role) === false) {
                                             $users = $users->role($role);
-                                        } */
+                                        }
 
-                                        $users = $users->filterBy('role', 'frontenduser')->paginate([
+                                        $users = $users->paginate([
                                             'limit' => 20,
                                             'page'  => $kirby->request()->get('page')
                                         ]);
@@ -67,7 +59,6 @@ Kirby::plugin('2av/temporaryusers', [
                                                 'id'    => $user->id(),
                                                 'image' => $user->panel()->image(),
                                                 'info'  => Escape::html($user->role()->title()),
-                                                //'link'  => 'temporaryusers/'.$user->id(),
                                                 'link'  => $user->panel()->url(true),
                                                 'text'  => Escape::html($user->username())
                                             ]),
@@ -77,19 +68,64 @@ Kirby::plugin('2av/temporaryusers', [
                                 ]
                             ];
                         }
-                    ],
-                    'temporaryuser' => [
-                        'pattern' => 'temporaryusers/(:any)',
-                        'action'  => function (string $id) {
-                            return Find::user($id)->panel()->view();
+                    ]
+                ],
+                'dialogs' => [
+                    // create admin
+                    'user.create' => [
+                        'pattern' => 'users/create',
+                        'load' => function () {
+                            $kirby = App::instance();
+                            return [
+                                'component' => 'k-form-dialog',
+                                'props' => [
+                                    'fields' => [
+                                        'name'  => Field::username(),
+                                        'email' => Field::email([
+                                            'link'     => false,
+                                            'required' => true
+                                        ]),
+                                        'password'     => Field::password(),
+                                        'translation'  => Field::translation([
+                                            'required' => true
+                                        ])
+                                        // we removed the original extra field for 'role', we are only creating admins here
+                                    ],
+                                    'submitButton' => I18n::translate('create'),
+                                    'value' => [
+                                        'name'        => '',
+                                        'email'       => '',
+                                        'password'    => '',
+                                        'translation' => $kirby->panelLanguage(),
+                                        'role'        => 'admin' // we are only creating admins here
+                                    ]
+                                ]
+                            ];
+                        },
+                        'submit' => function () {
+                            $kirby = App::instance();
+
+                            $kirby->users()->create([
+                                'name'     => $kirby->request()->get('name'),
+                                'email'    => $kirby->request()->get('email'),
+                                'password' => $kirby->request()->get('password'),
+                                'language' => $kirby->request()->get('translation'),
+                                'role'     => $kirby->request()->get('role')
+                            ]);
+
+                            return [
+                                'event' => 'user.create'
+                            ];
                         }
                     ],
-                ],
-
-                'dialogs' => [
-
-                    // the key of the dialog defines its routing pattern
-                    'temporaryusers/create' => [
+                    // create tempuser
+                    /**
+                     * Here we create a shorter form with autogenerated password
+                     * and a random email address that is only used in the system.
+                     * The tempusers will loing only with usernames ,so they dont need
+                     * to know their email address.
+                     */
+                    'users/createTempUser' => [
                         // dialog callback functions
                         'load' => function () {
                             $kirby = App::instance();
@@ -102,29 +138,16 @@ Kirby::plugin('2av/temporaryusers', [
                                             'placeholder' => 'z.B. Name der Schule/Institution',
                                             'label' => 'Benutzername'
                                         ]),
-                                        /* 'email' => Field::email([
-                                            'link'     => false,
-                                            'required' => true,
-                                            'disabled' => true,
-                                        ]), */
                                         'password' => array_merge([
                                             'label' => I18n::translate('password'),
                                             'type'  => 'text'
                                         ], ['icon'     => 'key',]),
-                                        /* 'password'     => Field::password([
-                                            'required' => true,
-                                            'disabled' => true,
-                                        ]), */
-
-
-                                        /* 'translation'  => Field::translation([
-                                            'required' => true
-                                        ]), */
-                                        /* 'role' => Field::role([
-                                            'required' => true
-                                        ]) */
                                     ],
                                     'submitButton' => I18n::translate('create'),
+                                    /**
+                                     * here we ill use the domain from the config for the
+                                     * auto generated addresses
+                                     */
                                     'value' => [
                                         'name'        => '',
                                         'email'       => $uniqueId . '@' . option('jds.tempusers.defaultdomain', '2av.de'),
@@ -140,7 +163,7 @@ Kirby::plugin('2av/temporaryusers', [
                             $em = $kirby->request()->get('email');
                             $user = explode("@", $em);
                             $kirby->users()->create([
-                                'name'     => $kirby->request()->get('name')/* .'_'.$user[0] */,
+                                'name'     => $kirby->request()->get('name'),
                                 'email'    => $em,
                                 'password' => $kirby->request()->get('password'),
                                 'language' => $kirby->request()->get('translation'),

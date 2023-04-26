@@ -2,22 +2,28 @@
 	<k-inside>
 		<k-view class="k-users-view">
 			<k-header>
-				Temporary Users
+				Konten
 
 				<template #left>
 					<k-button-group
 						:buttons="[
 							{
 								disabled: $permissions.users.create === false,
-								text: $t('user.create'),
+								text: 'Admin Konto anlegen',
 								icon: 'add',
-								click: () => $dialog('temporaryusers/create')
+								click: () => $dialog('users/create')
+							},
+							{
+								disabled: $permissions.users.create === false,
+								text: 'Temp. Konto anlegen',
+								icon: 'clock',
+								click: () => $dialog('users/createTempUser')
 							}
 						]"
 					/>
 				</template>
 
-				<!-- <template #right>
+				<template v-if="roles.length > 1" #right>
 					<k-button-group>
 						<k-dropdown>
 							<k-button
@@ -42,7 +48,7 @@
 							</k-dropdown-content>
 						</k-dropdown>
 					</k-button-group>
-				</template> -->
+				</template>
 			</k-header>
 
 			<template v-if="users.data.length > 0">
@@ -64,8 +70,8 @@
 <script>
 export default {
 	props: {
-		/* role: Object,
-		roles: Array, */
+		role: Object,
+		roles: Array,
 		search: String,
 		title: String,
 		users: Object
