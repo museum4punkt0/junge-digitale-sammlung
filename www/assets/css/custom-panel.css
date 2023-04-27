@@ -115,7 +115,7 @@ PAGE TABLES
 
 .k-field-name-data_usernames_page,
 .k-field-name-tempslug{
-    /*display: none;*/
+    display: none;
 }
 
 /*
