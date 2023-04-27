@@ -1,6 +1,6 @@
 {
-    "name": "2av/blocks-factory",
-    "description": "Special blocks",
+    "name": "2av/jds-pagemodel",
+    "description": "Basic class for JDS platform",
     "type": "kirby-plugin",
     "license": "GNU",
     "authors": [

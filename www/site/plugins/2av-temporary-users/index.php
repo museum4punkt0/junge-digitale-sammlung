@@ -17,7 +17,7 @@ use Kirby\Toolkit\I18n;
  * https://github.com/getkirby/kirby/blob/main/panel/src/components/Views/UsersView.vue
  * 
  */
-Kirby::plugin('2av/users', [
+Kirby::plugin('2av/jds-user-area', [
     'areas' => [
         'users' => function () {
             return [

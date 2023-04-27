@@ -1,6 +1,6 @@
 {
-    "name": "2av/blocks-factory",
-    "description": "Special blocks",
+    "name": "2av/custom-methods",
+    "description": "Field and file methods",
     "type": "kirby-plugin",
     "license": "GNU",
     "authors": [

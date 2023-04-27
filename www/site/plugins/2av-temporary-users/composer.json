@@ -1,11 +1,11 @@
 {
-    "name": "2av/temporaryusers",
-    "description": "Temporary users that expire",
+    "name": "2av/jds-user-area",
+    "description": "Custom JDS platform user area with temporary users that expire",
     "type": "kirby-plugin",
-    "license": "MIT",
+    "license": "GNU",
     "authors": [
         {
-            "name": "Santiago Duque",
+            "name": "2av, Santiago Duque",
             "email": "sd@2av.de"
         }
     ],
