@@ -149,7 +149,7 @@ if (isset($changeHandler)) {
                 </label>
             </div>
         </div>
-        <?php $collection = $_page->getPreviewImages();
+        <?php $collection = $_page->parent()->getPreviewImages();
         foreach ($collection as $key => $item) :
         ?>
             <div class="col-4 col-lg-3">

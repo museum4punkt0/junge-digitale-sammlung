@@ -1,0 +1,117 @@
+Title: Teilnehmer-dhpn
+
+----
+
+Linked-exhibit: - page://kInLao88qP6aql1u
+
+----
+
+Linked-exhibition: - page://40OhKdoG9MKbJ61K
+
+----
+
+Complete: false
+
+----
+
+Username: tIkTOkeR2007!
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:35:53
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:36:02
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:36:07
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:42
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:26:12
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:30:02
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:25
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:53
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:38:09
+
+----
+
+Sitemap: true
+
+----
+
+Uuid: mbzrHe4SN9Z634co
+
+----
+
+Datecreatedepoch: 1681479353
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682588289
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Delayedslugchange: 1

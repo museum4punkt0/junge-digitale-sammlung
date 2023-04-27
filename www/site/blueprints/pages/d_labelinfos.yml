@@ -16,6 +16,16 @@ sections:
         type: headline
         label: Hinweise
 
+      before_after_text_info:
+        type: info
+        label: Vor-und-nach-Texte
+        text: |
+          Manche Texte haben eine Variable mitten im Text. Man benötigt in diesem Fall Texte vor der Variable und nach der Variable. Solche Texte besitzen 2 Felder. Diese Texte können nicht formatiert werden.
+
+          Beispiel: Hallo ((varible benutzername)), schön dich wieder zu sehen!
+          Teil davor: Hallo
+          Teil danach: , schön dich wieder zu sehen! 
+
       plain__and_writer_info:
         type: info
         width: 1/2
@@ -23,16 +33,20 @@ sections:
         text: |
           Die meisten Textfelder sind einfach gehalten und man kann nur Text eingeben. Für Bereiche, die längere Texte benötigen, sind Formatierungen (z.B. kursiv oder fett) erlaubt. Selektieren Sie einfach Textbereiche in dem Feld, damit die Optionen erscheinen.
 
-      before_after_text_info:
+      tooltip_info:
         type: info
-        width: 1/2
-        label: Vor-und-nach-Texte
+        width: 1/4
+        label: '"Hinweise" neben Workshop Felder (i-Icon)'
         text: |
-          Manche Texte haben eine Variable mitten im Text. Man benötigt in diesem Fall Texte vor der Variable und nach der Variable. Solche Texte besitzen 2 Felder. Diese Texte können nicht formatiert werden.
+          Das kleine i-Icon wird nur angezeigt, wenn ein Wert eingetragen wird.   
 
-          Beispiel: Hallo ((varible benutzername)), schön dich wieder zu sehen!
-          Teil davor: Hallo
-          Teil danach: , schön dich wieder zu sehen!
+      labels_info:
+        type: info
+        width: 1/4
+        label: '"Beschriftungen" der Workshop Felder'
+        text: |
+          Wenn ein Wert leer ist benutzt das System Standardwerte.
+
 
       # user infos
       h_user:
@@ -608,7 +622,7 @@ sections:
         type: text
         buttons: false
         width: 1/4
-        label: Beschriftung für "Video" Upload 
+        label: Beschriftung für "Video" Upload
       borndigital_files:
         type: writer
         nodes: false

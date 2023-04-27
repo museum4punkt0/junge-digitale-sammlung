@@ -1,0 +1,9 @@
+Sort: 3
+
+----
+
+Uuid: JVaWnp5GIBovQBsS
+
+----
+
+Template: gltf

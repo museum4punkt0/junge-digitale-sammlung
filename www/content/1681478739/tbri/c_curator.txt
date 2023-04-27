@@ -1,0 +1,120 @@
+Title: Teilnehmer-tbri
+
+----
+
+Linked-exhibit: - page://lgEH8FovAw4ntBx5
+
+----
+
+Linked-exhibition: 
+
+----
+
+Complete: false
+
+----
+
+Username: musicIsLife
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:26:13
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:27:46
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:30:46
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:44:45
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:52:11
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:14
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:41
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:27:10
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:29:37
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:25
+
+----
+
+Sitemap: true
+
+----
+
+Uuid: bcfKSJd6O9nEtEWF
+
+----
+
+Datecreatedepoch: 1681478773
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682588245
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Delayedslugchange: 1

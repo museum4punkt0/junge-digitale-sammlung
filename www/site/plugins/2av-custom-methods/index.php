@@ -156,9 +156,7 @@ Kirby::plugin('2av/custom-methods', [
         'findModelFromImage' => function ($input = false) {
             $filename = $input ? $input : $this->name();
             $filenameQuery = explode('-', $filename)[0]; // get first occurrence, filenames must not have - for this to work
-            //$filenameQuery = substr($filename, 0, strrpos($filename, '-'));
-            kirbylog($filenameQuery);
-            $models = $this->page()->getModels(); // we assume its a c_exhibit page and call the function directly
+            $models = $this->page()->getModels(); // we assume its a workshop page, because the files that call these function live all in the workshops and call the function directly
 
             $modelResult = $models->filter(function ($model) use ($filenameQuery) {
                 $result = false;

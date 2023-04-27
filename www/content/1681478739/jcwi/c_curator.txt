@@ -1,0 +1,97 @@
+Title: Teilnehmer-jcwi
+
+----
+
+Linked-exhibit: - page://NM5oBEKg00yOQHgI
+
+----
+
+Linked-exhibition: - page://POZO6JHB6kP5PiBr
+
+----
+
+Complete: false
+
+----
+
+Username: bananeNane
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:44:17
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:52:03
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:52:07
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:53:26
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:14:03
+
+----
+
+Uuid: EDPZ9robUVo4cS22
+
+----
+
+Datecreatedepoch: 1682588657
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682590443
+
+----
+
+Modifiedbyuser: 0DAH_duque

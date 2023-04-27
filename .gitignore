@@ -21,6 +21,10 @@ www/content/*
 !www/content/1_home
 !www/content/login
 !www/content/error
+!www/content/felder-start
+!www/content/labels-start
+!www/content/1681478739
+
 
 www/kirby
 www/kirby/*
@@ -30,8 +34,6 @@ build
 build/*
 
 docs/_media_original
-
-
 
 
 

@@ -1,0 +1,91 @@
+Title: Teilnehmer-zb3u
+
+----
+
+Linked-exhibit: - page://JB7yxSmof7fZLvlp
+
+----
+
+Linked-exhibition: - page://POZO6JHB6kP5PiBr
+
+----
+
+Complete: false
+
+----
+
+Username: ichhabeeinecam
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:44:16
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:12:52
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:14:04
+
+----
+
+Uuid: H9ston3N8f4UDHqK
+
+----
+
+Datecreatedepoch: 1682588656
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682590444
+
+----
+
+Modifiedbyuser: 0DAH_duque

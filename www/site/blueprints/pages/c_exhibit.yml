@@ -68,7 +68,7 @@ tabs:
             uploads: false
             width: 1/4
             max: 1
-            query: page.getPreviewImages
+            query: page.getMixedPreviewImages
             whenQuery: type = 2 || type = 0
           digital_asset:
             label: Mediendatei
@@ -84,7 +84,7 @@ tabs:
             width: 1/4 
             max: 1
             whenQuery: type = 0  
-            query: page.getModels
+            query: page.parent.getModels
           threed_model_light:
             label: Belichtung Objekt
             type: range

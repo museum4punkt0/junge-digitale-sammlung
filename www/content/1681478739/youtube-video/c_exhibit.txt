@@ -1,0 +1,410 @@
+Title: Youtube Video!
+
+----
+
+Linked-user: - page://pCVUllywYW8l0YE0
+
+----
+
+Complete: true
+
+----
+
+Museum-preview: 
+
+----
+
+Exhibit-preview: 
+
+----
+
+Digital-asset: 
+
+----
+
+Threed-model: 
+
+----
+
+Threed-model-light: 1
+
+----
+
+Threed-model-size: false
+
+----
+
+Impulse: anders-sein-ist-normal
+
+----
+
+Type: 1
+
+----
+
+Classification: macht-gewalt-diskriminierung
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Made-when: 27.04.2023
+
+----
+
+Historical-background: 
+
+----
+
+Personal-relation: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Embed-url:
+
+input: https://youtu.be/qZjWUkohSQg
+media:
+  title: 'Coding Session - Lofi Hip Hop Mix [ Coding Lofi Mix | Coding Music ]'
+  description: '💗  ARTWORK BY PiNe(パイネ):✍️ https://www.pixiv.net/en/users/5403033Coding Session - Lofi Hip Hop Mix [ Coding Lofi Mix | Coding Music ]https://youtu.be/qZjWUk...'
+  url: >
+    https://www.youtube.com/watch?v=qZjWUkohSQg
+  type: video
+  tags:
+    - lofi hip hop
+    - lofi study
+    - chilledcow
+    - chillhop
+    - study music
+    - lofi songs
+    - lofi
+    - relaxing music
+    - chill music
+    - relax
+    - chill lofi
+    - lofi music
+    - coding session
+    - coding music
+    - chill beats
+    - lofi boost your mood
+    - coding lofi mix
+    - code chill
+    - music lab
+    - coding music fast
+    - study mix 2022
+    - lofi hip hop playlist 2022
+    - lofi songs 2022
+    - best lofi songs 2022
+    - Beats To Relax / Study To
+  image: >
+    https://i.ytimg.com/vi/qZjWUkohSQg/hqdefault.jpg
+  imageWidth: 480
+  imageHeight: 360
+  images:
+    - 
+      url: >
+        https://i.ytimg.com/vi/qZjWUkohSQg/hqdefault.jpg
+      width: 480
+      height: 360
+      size: 172800
+      mime: image/jpeg
+    - 
+      url: 'https://i.ytimg.com/vi/qZjWUkohSQg/maxresdefault.jpg?sqp=-oaymwEmCIAKENAF8quKqQMa8AEB-AH-DoACuAiKAgwIABABGD4gXihyMA8%3D&rs=AOn4CLDq6WnRAsaipbpSyQeP_h6JFJaDlQ'
+      width: 1280
+      height: 720
+      size: 921600
+      mime: image/jpeg
+  code: '<iframe width="200" height="113" src="https://www.youtube.com/embed/qZjWUkohSQg?feature=oembed" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen title="Coding Session - Lofi Hip Hop Mix [ Coding Lofi Mix | Coding Music ]"></iframe>'
+  feeds: [ ]
+  width: 200
+  height: 113
+  aspectRatio: 56.5
+  authorName: Lofi boost your mood
+  authorUrl: >
+    https://www.youtube.com/@lofiboostyourmood6235
+  providerIcon: >
+    https://www.youtube.com/s/desktop/70627e6a/img/favicon_144x144.png
+  providerIcons:
+    - 
+      url: https://www.youtube.com/favicon.ico
+      width: 16
+      height: 16
+      size: 256
+      mime: image/x-icon
+    - 
+      url: >
+        https://www.youtube.com/s/desktop/70627e6a/img/favicon.ico
+      width: 16
+      height: 16
+      size: 256
+      mime: image/x-icon
+    - 
+      url: >
+        https://www.youtube.com/s/desktop/70627e6a/img/favicon_32x32.png
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/png
+    - 
+      url: >
+        https://www.youtube.com/s/desktop/70627e6a/img/favicon_48x48.png
+      width: 48
+      height: 48
+      size: 2304
+      mime: image/png
+    - 
+      url: >
+        https://www.youtube.com/s/desktop/70627e6a/img/favicon_96x96.png
+      width: 96
+      height: 96
+      size: 9216
+      mime: image/png
+    - 
+      url: >
+        https://www.youtube.com/s/desktop/70627e6a/img/favicon_144x144.png
+      width: 144
+      height: 144
+      size: 20736
+      mime: image/png
+  providerName: YouTube
+  providerUrl: https://www.youtube.com/
+  publishedTime: 2021-11-29
+  license: null
+
+----
+
+Material: 
+
+----
+
+Dimensions: 
+
+----
+
+Weight: 
+
+----
+
+Scan-date: 
+
+----
+
+Scan-method: 
+
+----
+
+Scan-device: 
+
+----
+
+Scan-software: 
+
+----
+
+Scan-updated: 
+
+----
+
+Sitemap: true
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:28:22
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:28:31
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:28:38
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:28:49
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:30:35
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:33:09
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:33:12
+- 
+  user: 0DAH_duque
+  time: 2023.04.15, Sa. 09:06:06
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:07:29
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:17:02
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:17:13
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:17:21
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: 
+
+----
+
+Meta-canonical-url: 
+
+----
+
+Meta-author: 
+
+----
+
+Meta-image: 
+
+----
+
+Meta-phone-number: 
+
+----
+
+Og-title: 
+
+----
+
+Og-description: 
+
+----
+
+Og-image: 
+
+----
+
+Og-site-name: 
+
+----
+
+Og-url: 
+
+----
+
+Og-audio: 
+
+----
+
+Og-video: 
+
+----
+
+Og-determiner: 
+
+----
+
+Og-type: website
+
+----
+
+Og-type-article-published-time: 2023-04-14 15:30:00
+
+----
+
+Og-type-article-modified-time: 2023-04-14 15:30:00
+
+----
+
+Og-type-article-expiration-time: 2023-04-14 15:30:00
+
+----
+
+Og-type-article-author: 
+
+----
+
+Og-type-article-section: 
+
+----
+
+Og-type-article-tag: 
+
+----
+
+Twitter-title: 
+
+----
+
+Twitter-description: 
+
+----
+
+Twitter-image: 
+
+----
+
+Twitter-card-type: 
+
+----
+
+Twitter-site: 
+
+----
+
+Twitter-creator: 
+
+----
+
+Robots-noindex: default
+
+----
+
+Robots-nofollow: default
+
+----
+
+Robots-noarchive: default
+
+----
+
+Robots-noimageindex: default
+
+----
+
+Robots-nosnippet: default
+
+----
+
+Widgettype: 
+
+----
+
+Tempslug: embed1
+
+----
+
+Uuid: PI9NA8y90X4IMiTP
+
+----
+
+Datecreatedepoch: 1681478902
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: 
+
+----
+
+Datemodifiedepoch: 1682587041
+
+----
+
+Modifiedbyuser: 0DAH_duque

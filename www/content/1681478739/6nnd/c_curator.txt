@@ -1,0 +1,91 @@
+Title: Teilnehmer-6nnd
+
+----
+
+Linked-exhibit: - page://cEtqSdxRkJSgEfe0
+
+----
+
+Linked-exhibition: 
+
+----
+
+Complete: false
+
+----
+
+Username: coolerfotograf
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:44:16
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:09:45
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:09:54
+
+----
+
+Uuid: M2IccnEYgFi8jN0v
+
+----
+
+Datecreatedepoch: 1682588656
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682590194
+
+----
+
+Modifiedbyuser: 0DAH_duque

@@ -1,0 +1,114 @@
+Title: Teilnehmer-igef
+
+----
+
+Linked-exhibit: 
+
+----
+
+Linked-exhibition: 
+
+----
+
+Complete: false
+
+----
+
+Username: 
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:26:12
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:27:32
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:30:50
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:44:45
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:52:11
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:20:57
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:15
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:26:46
+
+----
+
+Sitemap: true
+
+----
+
+Uuid: p4wnH8gUkP8QtowS
+
+----
+
+Datecreatedepoch: 1681478772
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Benutzername fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682587606
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Delayedslugchange: 1

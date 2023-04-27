@@ -241,15 +241,11 @@ class CExhibitPage extends JDSPage
     }
   }
 
-  public function getPreviewImages()
+  public function getMixedPreviewImages()
   {
     $workshopImages = $this->parent()->images()->filterBy('template', 'previewimage');
-    return $workshopImages;
+    $ownImages = $this->images()->filterBy('template', 'image');
+    return $workshopImages->add($ownImages);
   }
 
-  public function getModels()
-  {
-    $workshopModels = $this->parent()->files()->filterBy('template', 'gltf');
-    return $workshopModels;
-  }
 }

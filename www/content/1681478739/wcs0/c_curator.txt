@@ -1,0 +1,123 @@
+Title: Teilnehmer-wcs0
+
+----
+
+Linked-exhibit: - page://Z6KgzHeZVWDg7xbd
+
+----
+
+Linked-exhibition: - page://40OhKdoG9MKbJ61K
+
+----
+
+Complete: false
+
+----
+
+Username: superTweeter2006
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:38:37
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:38:46
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:39:01
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:52:10
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:14
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:41
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:26:05
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:29:24
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:24
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:53
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:38:09
+
+----
+
+Sitemap: true
+
+----
+
+Uuid: 2r5YKJBLs0v1mJYf
+
+----
+
+Datecreatedepoch: 1681479517
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682588289
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Delayedslugchange: 1

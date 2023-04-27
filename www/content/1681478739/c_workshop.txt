@@ -1,0 +1,86 @@
+Title: Mein erster Workshop
+
+----
+
+Institution: Institution
+
+----
+
+Complete: false
+
+----
+
+Mainuser: - user://qLN1yDxg
+
+----
+
+Comment: 
+
+----
+
+Clean: false
+
+----
+
+Materials:
+
+- page://PAk0GeA0ogQENwwZ
+- page://0MQ6ovt0GqzY4L9R
+
+----
+
+Data-usernames-page: - page://azserQFsDLK96cBv
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:25:39
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:25:51
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:25:59
+- 
+  user: 0DAH_duque
+  time: 2023.04.17, Mo. 22:33:31
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:23:05
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:23:24
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:25:50
+
+----
+
+Sitemap: false
+
+----
+
+Tempslug: ws-embeds
+
+----
+
+Uuid: vcXFFjENdKMQtYcm
+
+----
+
+Datecreatedepoch: 1681481904
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Datemodifiedepoch: 1682587550
+
+----
+
+Modifiedbyuser: 0DAH_duque

@@ -1,0 +1,117 @@
+Title: Teilnehmer-9tg1
+
+----
+
+Linked-exhibit: - page://PI9NA8y90X4IMiTP
+
+----
+
+Linked-exhibition: - page://40OhKdoG9MKbJ61K
+
+----
+
+Complete: false
+
+----
+
+Username: contentCreator88
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:26:11
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:27:13
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:30:35
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:44:44
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:52:11
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:26:57
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:31:22
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:53
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:38:09
+
+----
+
+Sitemap: true
+
+----
+
+Uuid: pCVUllywYW8l0YE0
+
+----
+
+Datecreatedepoch: 1681478771
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682588289
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Delayedslugchange: 1

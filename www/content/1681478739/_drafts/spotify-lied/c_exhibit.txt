@@ -1,0 +1,366 @@
+Title: Spotify Lied
+
+----
+
+Linked-user: - page://bcfKSJd6O9nEtEWF
+
+----
+
+Complete: false
+
+----
+
+Museum-preview: 
+
+----
+
+Exhibit-preview: 
+
+----
+
+Digital-asset: 
+
+----
+
+Threed-model: 
+
+----
+
+Threed-model-light: 1
+
+----
+
+Threed-model-size: false
+
+----
+
+Impulse: anders-sein-ist-normal
+
+----
+
+Type: 1
+
+----
+
+Classification: 
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Made-when: 
+
+----
+
+Historical-background: 
+
+----
+
+Personal-relation: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Embed-url:
+
+input: >
+  https://open.spotify.com/track/7MXVkk9YMctZqd1Srtv4MB?si=d12d7e28bd0247de
+media:
+  title: Starboy
+  description: The Weeknd, Daft Punk · Song · 2016
+  url: >
+    https://open.spotify.com/track/7MXVkk9YMctZqd1Srtv4MB
+  type: rich
+  tags: [ ]
+  image: >
+    https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452
+  imageWidth: 300
+  imageHeight: 300
+  images:
+    - 
+      url: >
+        https://i.scdn.co/image/ab67616d00001e024718e2b124f79258be7bc452
+      width: 300
+      height: 300
+      size: 90000
+      mime: image/jpeg
+    - 
+      url: >
+        https://i.scdn.co/image/ab67616d0000b2734718e2b124f79258be7bc452
+      width: 640
+      height: 640
+      size: 409600
+      mime: image/jpeg
+  code: '<iframe style="border-radius: 12px" width="100%" height="152" title="Spotify Embed: Starboy" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" src="https://open.spotify.com/embed/track/7MXVkk9YMctZqd1Srtv4MB?utm_source=oembed"></iframe>'
+  feeds: [ ]
+  width: 456
+  height: 152
+  aspectRatio: 33.333
+  authorName: null
+  authorUrl: null
+  providerIcon: >
+    https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png
+  providerIcons:
+    - 
+      url: https://open.spotify.com/favicon.ico
+      width: 16
+      height: 16
+      size: 256
+      mime: image/x-icon
+    - 
+      url: >
+        https://open.spotifycdn.com/cdn/images/favicon32.b64ecc03.png
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/png
+    - 
+      url: >
+        https://open.spotifycdn.com/cdn/images/favicon16.1c487bff.png
+      width: 16
+      height: 16
+      size: 256
+      mime: image/png
+    - 
+      url: >
+        https://open.spotifycdn.com/cdn/images/favicon.0f31d2ea.ico
+      width: 16
+      height: 16
+      size: 256
+      mime: image/vnd.microsoft.icon
+  providerName: Spotify
+  providerUrl: https://spotify.com
+  publishedTime: 2016-11-25
+  license: null
+
+----
+
+Material: 
+
+----
+
+Dimensions: 
+
+----
+
+Weight: 
+
+----
+
+Scan-date: 
+
+----
+
+Scan-method: 
+
+----
+
+Scan-device: 
+
+----
+
+Scan-software: 
+
+----
+
+Scan-updated: 
+
+----
+
+Sitemap: true
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:29:27
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:29:39
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:29:48
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:30:46
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:33:57
+- 
+  user: 0DAH_duque
+  time: 2023.04.15, Sa. 09:06:26
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:19:06
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:19:25
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:20:13
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:36:35
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: 
+
+----
+
+Meta-canonical-url: 
+
+----
+
+Meta-author: 
+
+----
+
+Meta-image: 
+
+----
+
+Meta-phone-number: 
+
+----
+
+Og-title: 
+
+----
+
+Og-description: 
+
+----
+
+Og-image: 
+
+----
+
+Og-site-name: 
+
+----
+
+Og-url: 
+
+----
+
+Og-audio: 
+
+----
+
+Og-video: 
+
+----
+
+Og-determiner: 
+
+----
+
+Og-type: website
+
+----
+
+Og-type-article-published-time: 2023-04-14 15:30:00
+
+----
+
+Og-type-article-modified-time: 2023-04-14 15:30:00
+
+----
+
+Og-type-article-expiration-time: 2023-04-14 15:30:00
+
+----
+
+Og-type-article-author: 
+
+----
+
+Og-type-article-section: 
+
+----
+
+Og-type-article-tag: 
+
+----
+
+Twitter-title: 
+
+----
+
+Twitter-description: 
+
+----
+
+Twitter-image: 
+
+----
+
+Twitter-card-type: 
+
+----
+
+Twitter-site: 
+
+----
+
+Twitter-creator: 
+
+----
+
+Robots-noindex: default
+
+----
+
+Robots-nofollow: default
+
+----
+
+Robots-noarchive: default
+
+----
+
+Robots-noimageindex: default
+
+----
+
+Robots-nosnippet: default
+
+----
+
+Widgettype: 
+
+----
+
+Tempslug: embed3
+
+----
+
+Uuid: lgEH8FovAw4ntBx5
+
+----
+
+Datecreatedepoch: 1681478967
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Klassifikation fehlt.
+
+----
+
+Datemodifiedepoch: 1682588195
+
+----
+
+Modifiedbyuser: 0DAH_duque

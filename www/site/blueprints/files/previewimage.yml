@@ -7,11 +7,6 @@ accept:
   maxsize: 6000000
 
 fields:
-  linkedmodel:
-    label: 3D Model
-    type: files
-    uploads: false
-    query: file.page.getModels
   alt:
     label: Alternative Text
     type: text

@@ -1,0 +1,264 @@
+Title: Felder-Start
+
+----
+
+Json-countries-sourceisonline: false
+
+----
+
+Json-countries-url: https://cdn.jsdelivr.net/npm/world_countries_lists@latest/data/countries/de/world.json
+
+----
+
+Json-countries-file: - file://XDbNqDTEVj6t6FCj
+
+----
+
+Json-countries-id: alpha2
+
+----
+
+Json-countries-label: name
+
+----
+
+Countries-extra:
+
+- 
+  label: Keine Angabe
+  value: keine-angabe
+
+----
+
+Curator-state:
+
+- 
+  desc: Baden-Württemberg
+  id: baden-wurttemberg
+- 
+  desc: Bayern
+  id: bayern
+- 
+  desc: Berlin
+  id: berlin
+- 
+  desc: Brandenburg
+  id: brandenburg
+- 
+  desc: Bremen
+  id: bremen
+- 
+  desc: Hamburg
+  id: hamburg
+- 
+  desc: Hessen
+  id: hessen
+- 
+  desc: Rheinland-Pfalz
+  id: rheinland-pfalz
+- 
+  desc: Mecklenburg-Vorpommern
+  id: mecklenburg-vorpommern
+- 
+  desc: Niedersachsen
+  id: niedersachsen
+- 
+  desc: Nordrhein-Westfalen
+  id: nordrhein-westfalen
+- 
+  desc: Saarland
+  id: saarland
+- 
+  desc: Sachsen
+  id: sachsen
+- 
+  desc: Sachsen-Anhalt
+  id: sachsen-anhalt
+- 
+  desc: Schleswig-Holstein
+  id: schleswig-holstein
+- 
+  desc: Thüringen
+  id: thuringen
+- 
+  desc: Keine Angabe
+  id: keine-angabe
+
+----
+
+Schoolclass:
+
+- 
+  desc: 7. Klasse
+  id: 7-klasse
+- 
+  desc: 8. Klasse
+  id: 8-klasse
+- 
+  desc: 9. Klasse
+  id: 9-klasse
+- 
+  desc: 10. Klasse
+  id: 10-klasse
+- 
+  desc: 11. Klasse
+  id: 11-klasse
+- 
+  desc: 12. Klasse
+  id: 12-klasse
+- 
+  desc: 13. Klasse
+  id: 13-klasse
+- 
+  desc: Nicht zutreffend
+  id: nicht-zutreffend
+
+----
+
+Age-start: 14
+
+----
+
+Age-end: 88
+
+----
+
+Age-structure:
+
+- 
+  desc: Keine Angabe
+
+----
+
+Gender:
+
+- 
+  desc: Weiblich
+  id: weiblich
+- 
+  desc: Männlich
+  id: mannlich
+- 
+  desc: Divers
+  id: divers
+- 
+  desc: Keine Angabe
+  id: keine-angabe
+
+----
+
+Personaldrive:
+
+- 
+  desc: Religion
+  id: religion
+- 
+  desc: Sportverein
+  id: sportverein
+- 
+  desc: Ethnie
+  id: ethnie
+- 
+  desc: Stadt bzw. Ort
+  id: stadt-bzw-ort
+- 
+  desc: Land
+  id: land
+
+----
+
+Impulse:
+
+- 
+  desc: Anders sein ist normal
+  id: anders-sein-ist-normal
+- 
+  desc: Hass – leider alltäglich
+  id: hass-leider-alltaglich
+- 
+  desc: Mein Stolz, dein Vorurteil
+  id: mein-stolz-dein-vorurteil
+- 
+  desc: Zwischen den Stühlen
+  id: zwischen-den-stuhlen
+
+----
+
+Type:
+
+- 
+  desc: Materielles Objekt
+- 
+  desc: 'Digitales Objekt: Social Media / Drittanbieter'
+- 
+  desc: Digitales Objekt (born-digital)
+
+----
+
+Classification:
+
+- 
+  desc: Konsum
+  id: konsum
+  sub_options: [ ]
+- 
+  desc: Macht, Gewalt
+  id: macht-gewalt
+  sub_options:
+    - 
+      desc: Antisemitismus
+      id: antisemitismus
+    - 
+      desc: Diskriminierung
+      id: diskriminierung
+    - 
+      desc: Rassismus
+      id: rassismus
+- 
+  desc: Kommunikation und Sprache
+  id: kommunikation-und-sprache
+  sub_options: [ ]
+- 
+  desc: Abschied
+  id: abschied
+  sub_options: [ ]
+
+----
+
+Scan-method:
+
+- 
+  desc: 3D-Scan
+  id: 3d-scan
+- 
+  desc: Fotografie
+  id: fotografie
+- 
+  desc: Sonstiges
+  id: sonstiges
+
+----
+
+Scan-device:
+
+- 
+  desc: Handscanner EinScan Pro HD von Shining
+  id: handscanner-einscan-pro-hd-von-shining
+- 
+  desc: 'Fotokamera Nikon Z7 II, Objektiv: Nikon Z 24-70 mm / 2,8 S inkl. Geli HB-87'
+  id: >
+    fotokamera-nikon-z7-ii-objektiv-nikon-z-24-70-mm-2-8-s-inkl-geli-hb-87
+- 
+  desc: Andere Fotokamera
+  id: andere-fotokamera
+- 
+  desc: Sonstiges
+  id: sonstiges
+
+----
+
+Json-countriesid: panch
+
+----
+
+Uuid: kvdrf9ZyngZYlpHD

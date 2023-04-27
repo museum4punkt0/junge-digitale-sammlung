@@ -1,0 +1,103 @@
+Title: Teilnehmer-ivha
+
+----
+
+Linked-exhibit: - page://TCUHNrYaruZl4JFG
+
+----
+
+Linked-exhibition: - page://POZO6JHB6kP5PiBr
+
+----
+
+Complete: false
+
+----
+
+Username: dinoCrazy
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:44:15
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:45:09
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:47:40
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:48:09
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:53:02
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:53:25
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:14:03
+
+----
+
+Uuid: ksAJNu4TpNBapxZu
+
+----
+
+Datecreatedepoch: 1682588655
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682590443
+
+----
+
+Modifiedbyuser: 0DAH_duque

@@ -1,0 +1,329 @@
+Title: Labels-Start
+
+----
+
+Fullname-label: 
+
+----
+
+Fullname: <p>Name</p>
+
+----
+
+Username-label: 
+
+----
+
+Username: <p>Benutzername</p>
+
+----
+
+Gender-label: 
+
+----
+
+Gender: <p>Geschlecht</p>
+
+----
+
+Age-in-years-label: 
+
+----
+
+Age-in-years: <p>Alter</p>
+
+----
+
+Birthcountry-label: 
+
+----
+
+Birthcountry: <p>Geburtsland</p>
+
+----
+
+Birthcountry-comment-label: 
+
+----
+
+Birthcountry-comment: <p>Geburtsland HL</p>
+
+----
+
+Stations-label: 
+
+----
+
+Stations: <p>Lebensstationen</p>
+
+----
+
+Stations-comment-label: 
+
+----
+
+Stations-comment: <p>Lebensstationen HL</p>
+
+----
+
+Personaldrive-label: 
+
+----
+
+Personaldrive: <p>Zugehörigkeiten</p>
+
+----
+
+Curator-state-label: 
+
+----
+
+Curator-state: <p>Bundesland</p>
+
+----
+
+Schoolclass-label: 
+
+----
+
+Schoolclass: <p>Klassenstufe</p>
+
+----
+
+Privacytext: <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed <strong>diam</strong> nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+----
+
+Exhibitname-label: 
+
+----
+
+Exhibitname: <p>Objektname</p>
+
+----
+
+Impulse-label: 
+
+----
+
+Impulse: <p>Thema, Ausstellung und Objekt müssen passen.</p>
+
+----
+
+Type-label: 
+
+----
+
+Type: <p>Objekttyp</p>
+
+----
+
+Classification-label: 
+
+----
+
+Classification: <p>Klassifikation</p>
+
+----
+
+Description-label: 
+
+----
+
+Description: <p>Objektbeschreibung</p>
+
+----
+
+Made-when-label: 
+
+----
+
+Made-when: <p>Entstehungszeit</p>
+
+----
+
+Historical-background-label: 
+
+----
+
+Historical-background: <p>Historischer Hintergrund</p>
+
+----
+
+Personal-relation-label: 
+
+----
+
+Personal-relation: <p>Objektstory</p>
+
+----
+
+Embed-url-label: 
+
+----
+
+Embed-url: <p>Embed URL</p>
+
+----
+
+Embed-files: <p>Digital Embed</p>
+
+----
+
+Museum-preview-label: 
+
+----
+
+Museum-preview: <p>Vorschau für das Museum</p>
+
+----
+
+Exhibit-3dpreview-label: 
+
+----
+
+Exhibit-preview: <p>Auswahl des des Objekts (Anhand der Vorschaubilder)</p>
+
+----
+
+Material-label: 
+
+----
+
+Material: <p>Material</p>
+
+----
+
+Dimensions-label: 
+
+----
+
+Dimensions: <p>Maße</p>
+
+----
+
+Weight-label: 
+
+----
+
+Weight: <p>Gewicht</p>
+
+----
+
+Scan-date-label: 
+
+----
+
+Scan-date: <p>Aufnahmedatum Digitalisat</p>
+
+----
+
+Scan-method-label: 
+
+----
+
+Scan-method: <p>Digitalisierungsmethode</p>
+
+----
+
+Scan-device-label: 
+
+----
+
+Scan-device: <p>Digitalisierungsgerät</p>
+
+----
+
+Scan-software-label: 
+
+----
+
+Scan-software: <p>Software &amp; version</p>
+
+----
+
+Scan-updated-label: 
+
+----
+
+Scan-updated: <p>Bearbeitung des Digitalisates</p>
+
+----
+
+Exhibit-preview-label: 
+
+----
+
+Digital-asset-label: 
+
+----
+
+Borndigital-files: Infos zum Vorschaubild und evtl. Video
+
+----
+
+Exhibitiontitle-label: 
+
+----
+
+Exhibitiontitle: <p>Ausstellungstitel</p>
+
+----
+
+Exhibitionintro-label: 
+
+----
+
+Exhibitionintro: <p>Einführungstext</p>
+
+----
+
+Cookies-infotext: 
+
+----
+
+Ws-send-main-txt: 
+
+----
+
+Ws-exhibition-locked-msg-before: 
+
+----
+
+Ws-exhibition-locked-msg-after: 
+
+----
+
+Ws-exhibition-locked-msg-unlockwarning: 
+
+----
+
+Ws-exhibition-locked-msg-tryagain: 
+
+----
+
+Homeloadmore-empty: 
+
+----
+
+Borndigital-files-label: DDDDDDDDDDDDDDD
+
+----
+
+Embed-files-label: 
+
+----
+
+Privacytext-label: 
+
+----
+
+Digitalborn-files: Infos zum Bild und evtl. Video
+
+----
+
+Widgettype: Welche Seite?
+
+----
+
+Uuid: XRohzQsudrEbSvu5

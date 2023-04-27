@@ -1,0 +1,126 @@
+Title: Teilnehmer-boj3
+
+----
+
+Linked-exhibit: - page://XZYEvw9Wg0lCTgVp
+
+----
+
+Linked-exhibition: - page://40OhKdoG9MKbJ61K
+
+----
+
+Complete: false
+
+----
+
+Username: guitarrist76
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:26:14
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:27:24
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:30:39
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:44:45
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:52:11
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:14
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:21:41
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:27:20
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:30:23
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:25
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:37:53
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:38:09
+
+----
+
+Sitemap: true
+
+----
+
+Uuid: jFjgQHnuDQI7YVfJ
+
+----
+
+Datecreatedepoch: 1681478774
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682588289
+
+----
+
+Modifiedbyuser: 0DAH_duque
+
+----
+
+Delayedslugchange: 1

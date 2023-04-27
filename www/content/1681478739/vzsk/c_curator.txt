@@ -1,0 +1,109 @@
+Title: Teilnehmer-vzsk
+
+----
+
+Linked-exhibit: - page://Yyky0eBWkcCPu72G
+
+----
+
+Linked-exhibition: - page://POZO6JHB6kP5PiBr
+
+----
+
+Complete: false
+
+----
+
+Username: apfelSindToll
+
+----
+
+Gender: 
+
+----
+
+Age-in-years: 
+
+----
+
+Birthcountry: 
+
+----
+
+Birthcountry-comment: 
+
+----
+
+Stations: 
+
+----
+
+Stations-comment: 
+
+----
+
+Personaldrive: 
+
+----
+
+Curator-state: 
+
+----
+
+Schoolclass: 
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:44:18
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:44:33
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:47:59
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:48:22
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:48:33
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:49:30
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:53:03
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:53:26
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 12:14:03
+
+----
+
+Uuid: StRu9Twz5ts6lRPN
+
+----
+
+Datecreatedepoch: 1682588658
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
+
+----
+
+Datemodifiedepoch: 1682590443
+
+----
+
+Modifiedbyuser: 0DAH_duque

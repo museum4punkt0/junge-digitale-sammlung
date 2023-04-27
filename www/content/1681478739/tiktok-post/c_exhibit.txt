@@ -1,0 +1,328 @@
+Title: Tiktok Post
+
+----
+
+Linked-user: - page://mbzrHe4SN9Z634co
+
+----
+
+Complete: true
+
+----
+
+Museum-preview: 
+
+----
+
+Exhibit-preview: 
+
+----
+
+Digital-asset: 
+
+----
+
+Threed-model: 
+
+----
+
+Threed-model-light: 1
+
+----
+
+Threed-model-size: false
+
+----
+
+Impulse: anders-sein-ist-normal
+
+----
+
+Type: 1
+
+----
+
+Classification: kommunikation-und-sprache
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Made-when: 
+
+----
+
+Historical-background: 
+
+----
+
+Personal-relation: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Embed-url:
+
+input: 'https://www.tiktok.com/@jumphype/video/7196928727014542634?is_from_webapp=1&sender_device=pc'
+media:
+  title: yesterdays highlights
+  description: yesterdays highlights
+  url: >
+    https://www.tiktok.com/@jumphype/video/7196928727014542634?is_from_webapp=1
+  type: video
+  tags: [ ]
+  image: 'https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/ba27d55d7fe540b4b24a6e6f14e11ab1?x-expires=1681498800&x-signature=wsOTY3fZhBgmCH%2FN4ia6QDzErRg%3D'
+  imageWidth: 1750
+  imageHeight: 1080
+  images:
+    - 
+      url: 'https://p19-sign.tiktokcdn-us.com/obj/tos-useast5-p-0068-tx/ba27d55d7fe540b4b24a6e6f14e11ab1?x-expires=1681498800&x-signature=wsOTY3fZhBgmCH%2FN4ia6QDzErRg%3D'
+      width: 1750
+      height: 1080
+      size: 1890000
+      mime: image/jpeg
+  code: '<blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jumphype/video/7196928727014542634" data-video-id="7196928727014542634" data-embed-from="oembed" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@jumphype" href="https://www.tiktok.com/@jumphype?refer=embed">@jumphype</a> <p>yesterdays highlights</p> <a target="_blank" title="♬ original sound - JumpHype - Jumphype" href="https://www.tiktok.com/music/original-sound-JumpHype-7196929046465235754?refer=embed">♬ original sound - JumpHype - Jumphype</a> </section> </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>'
+  feeds: [ ]
+  width: '100%'
+  height: '100%'
+  aspectRatio: null
+  authorName: Jumphype
+  authorUrl: https://www.tiktok.com/@jumphype
+  providerIcon: https://www.tiktok.com/favicon.ico
+  providerIcons:
+    - 
+      url: https://www.tiktok.com/favicon.ico
+      width: 152
+      height: 152
+      size: 23104
+      mime: image/x-icon
+  providerName: TikTok
+  providerUrl: https://www.tiktok.com
+  publishedTime: null
+  license: null
+
+----
+
+Material: 
+
+----
+
+Dimensions: 
+
+----
+
+Weight: 
+
+----
+
+Scan-date: 
+
+----
+
+Scan-method: 
+
+----
+
+Scan-device: 
+
+----
+
+Scan-software: 
+
+----
+
+Scan-updated: 
+
+----
+
+Sitemap: true
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:35:19
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:35:26
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:35:31
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:35:47
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:36:07
+- 
+  user: 0DAH_duque
+  time: 2023.04.15, Sa. 09:07:01
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:20:36
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:20:50
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: 
+
+----
+
+Meta-canonical-url: 
+
+----
+
+Meta-author: 
+
+----
+
+Meta-image: 
+
+----
+
+Meta-phone-number: 
+
+----
+
+Og-title: 
+
+----
+
+Og-description: 
+
+----
+
+Og-image: 
+
+----
+
+Og-site-name: 
+
+----
+
+Og-url: 
+
+----
+
+Og-audio: 
+
+----
+
+Og-video: 
+
+----
+
+Og-determiner: 
+
+----
+
+Og-type: website
+
+----
+
+Og-type-article-published-time: 2023-04-14 15:35:00
+
+----
+
+Og-type-article-modified-time: 2023-04-14 15:35:00
+
+----
+
+Og-type-article-expiration-time: 2023-04-14 15:35:00
+
+----
+
+Og-type-article-author: 
+
+----
+
+Og-type-article-section: 
+
+----
+
+Og-type-article-tag: 
+
+----
+
+Twitter-title: 
+
+----
+
+Twitter-description: 
+
+----
+
+Twitter-image: 
+
+----
+
+Twitter-card-type: 
+
+----
+
+Twitter-site: 
+
+----
+
+Twitter-creator: 
+
+----
+
+Robots-noindex: default
+
+----
+
+Robots-nofollow: default
+
+----
+
+Robots-noarchive: default
+
+----
+
+Robots-noimageindex: default
+
+----
+
+Robots-nosnippet: default
+
+----
+
+Widgettype: 
+
+----
+
+Tempslug: embed7
+
+----
+
+Uuid: kInLao88qP6aql1u
+
+----
+
+Datecreatedepoch: 1681479319
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: 
+
+----
+
+Datemodifiedepoch: 1682587250
+
+----
+
+Modifiedbyuser: 0DAH_duque

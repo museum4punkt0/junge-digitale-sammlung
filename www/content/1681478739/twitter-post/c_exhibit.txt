@@ -1,0 +1,338 @@
+Title: Twitter Post
+
+----
+
+Linked-user: - page://2r5YKJBLs0v1mJYf
+
+----
+
+Complete: true
+
+----
+
+Museum-preview: 
+
+----
+
+Exhibit-preview: 
+
+----
+
+Digital-asset: 
+
+----
+
+Threed-model: 
+
+----
+
+Threed-model-light: 1
+
+----
+
+Threed-model-size: false
+
+----
+
+Impulse: anders-sein-ist-normal
+
+----
+
+Type: 1
+
+----
+
+Classification: konsum
+
+----
+
+Description: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Made-when: 
+
+----
+
+Historical-background: 
+
+----
+
+Personal-relation: Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+----
+
+Embed-url:
+
+input: >
+  https://twitter.com/uxlinks/status/1646786818388508673?s=20
+media:
+  title: >
+    https://twitter.com/uxlinks/status/1646786818388508673
+  description: null
+  url: >
+    https://twitter.com/uxlinks/status/1646786818388508673
+  type: rich
+  tags: [ ]
+  image: null
+  imageWidth: null
+  imageHeight: null
+  images: [ ]
+  code: |
+    <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Top Tools for Entrepreneurs<br>by @eyeaslo<a href="https://twitter.com/hashtag/ux?src=hash&amp;ref_src=twsrc%5Etfw">#ux</a> <a href="https://twitter.com/hashtag/ui?src=hash&amp;ref_src=twsrc%5Etfw">#ui</a> <a href="https://twitter.com/hashtag/uxdesign?src=hash&amp;ref_src=twsrc%5Etfw">#uxdesign</a> <a href="https://twitter.com/hashtag/uidesign?src=hash&amp;ref_src=twsrc%5Etfw">#uidesign</a> <a href="https://twitter.com/hashtag/productdesign?src=hash&amp;ref_src=twsrc%5Etfw">#productdesign</a> <a href="https://twitter.com/hashtag/figma?src=hash&amp;ref_src=twsrc%5Etfw">#figma</a> <a href="https://twitter.com/hashtag/chatgpt?src=hash&amp;ref_src=twsrc%5Etfw">#chatgpt</a> <a href="https://twitter.com/hashtag/gpt4?src=hash&amp;ref_src=twsrc%5Etfw">#gpt4</a> <a href="https://twitter.com/hashtag/webflow?src=hash&amp;ref_src=twsrc%5Etfw">#webflow</a> <a href="https://twitter.com/hashtag/canva?src=hash&amp;ref_src=twsrc%5Etfw">#canva</a> <a href="https://twitter.com/hashtag/entrepreneur?src=hash&amp;ref_src=twsrc%5Etfw">#entrepreneur</a> <a href="https://twitter.com/hashtag/business?src=hash&amp;ref_src=twsrc%5Etfw">#business</a> <a href="https://twitter.com/hashtag/html?src=hash&amp;ref_src=twsrc%5Etfw">#html</a> <a href="https://twitter.com/hashtag/css?src=hash&amp;ref_src=twsrc%5Etfw">#css</a> <a href="https://twitter.com/hashtag/js?src=hash&amp;ref_src=twsrc%5Etfw">#js</a> <a href="https://twitter.com/hashtag/swiftui?src=hash&amp;ref_src=twsrc%5Etfw">#swiftui</a> <a href="https://twitter.com/hashtag/mobile?src=hash&amp;ref_src=twsrc%5Etfw">#mobile</a> <a href="https://twitter.com/hashtag/webdevelopment?src=hash&amp;ref_src=twsrc%5Etfw">#webdevelopment</a> <a href="https://twitter.com/hashtag/webdesign?src=hash&amp;ref_src=twsrc%5Etfw">#webdesign</a> <a href="https://twitter.com/hashtag/appdesign?src=hash&amp;ref_src=twsrc%5Etfw">#appdesign</a> <a href="https://twitter.com/hashtag/apple?src=hash&amp;ref_src=twsrc%5Etfw">#apple</a> <a href="https://twitter.com/hashtag/android?src=hash&amp;ref_src=twsrc%5Etfw">#android</a> <a href="https://twitter.com/hashtag/design?src=hash&amp;ref_src=twsrc%5Etfw">#design</a> <a href="https://twitter.com/hashtag/userexperience?src=hash&amp;ref_src=twsrc%5Etfw">#userexperience</a> <a href="https://t.co/HxoFwyOkWq">pic.twitter.com/HxoFwyOkWq</a></p>&mdash; UX Links (@uxlinks) <a href="https://twitter.com/uxlinks/status/1646786818388508673?ref_src=twsrc%5Etfw">April 14, 2023</a></blockquote>
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  feeds: [ ]
+  width: 550
+  height: null
+  aspectRatio: null
+  authorName: UX Links
+  authorUrl: https://twitter.com/uxlinks
+  providerIcon: >
+    https://abs.twimg.com/responsive-web/client-web-legacy/icon-ios.b1fc727a.png
+  providerIcons:
+    - 
+      url: https://twitter.com/favicon.ico
+      width: 16
+      height: 16
+      size: 256
+      mime: image/x-icon
+    - 
+      url: >
+        https://abs.twimg.com/favicons/twitter.2.ico
+      width: 32
+      height: 32
+      size: 1024
+      mime: image/vnd.microsoft.icon
+    - 
+      url: >
+        https://abs.twimg.com/responsive-web/client-web-legacy/icon-ios.b1fc727a.png
+      width: 1024
+      height: 1024
+      size: 1048576
+      mime: image/png
+  providerName: Twitter
+  providerUrl: https://twitter.com
+  publishedTime: null
+  license: null
+
+----
+
+Material: 
+
+----
+
+Dimensions: 
+
+----
+
+Weight: 
+
+----
+
+Scan-date: 
+
+----
+
+Scan-method: 
+
+----
+
+Scan-device: 
+
+----
+
+Scan-software: 
+
+----
+
+Scan-updated: 
+
+----
+
+Sitemap: true
+
+----
+
+Updatelogs:
+
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:38:22
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:38:31
+- 
+  user: 0DAH_duque
+  time: 2023.04.14, Fr. 15:39:02
+- 
+  user: 0DAH_duque
+  time: 2023.04.15, Sa. 09:07:08
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:17:44
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:17:50
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 11:17:53
+
+----
+
+Meta-title: 
+
+----
+
+Meta-description: 
+
+----
+
+Meta-canonical-url: 
+
+----
+
+Meta-author: 
+
+----
+
+Meta-image: 
+
+----
+
+Meta-phone-number: 
+
+----
+
+Og-title: 
+
+----
+
+Og-description: 
+
+----
+
+Og-image: 
+
+----
+
+Og-site-name: 
+
+----
+
+Og-url: 
+
+----
+
+Og-audio: 
+
+----
+
+Og-video: 
+
+----
+
+Og-determiner: 
+
+----
+
+Og-type: website
+
+----
+
+Og-type-article-published-time: 2023-04-14 15:40:00
+
+----
+
+Og-type-article-modified-time: 2023-04-14 15:40:00
+
+----
+
+Og-type-article-expiration-time: 2023-04-14 15:40:00
+
+----
+
+Og-type-article-author: 
+
+----
+
+Og-type-article-section: 
+
+----
+
+Og-type-article-tag: 
+
+----
+
+Twitter-title: 
+
+----
+
+Twitter-description: 
+
+----
+
+Twitter-image: 
+
+----
+
+Twitter-card-type: 
+
+----
+
+Twitter-site: 
+
+----
+
+Twitter-creator: 
+
+----
+
+Robots-noindex: default
+
+----
+
+Robots-nofollow: default
+
+----
+
+Robots-noarchive: default
+
+----
+
+Robots-noimageindex: default
+
+----
+
+Robots-nosnippet: default
+
+----
+
+Widgettype: 
+
+----
+
+Tempslug: embed8
+
+----
+
+Uuid: Z6KgzHeZVWDg7xbd
+
+----
+
+Datecreatedepoch: 1681479502
+
+----
+
+Createdbyuser: 0DAH_duque
+
+----
+
+Missinginfo: 
+
+----
+
+Datemodifiedepoch: 1682587073
+
+----
+
+Modifiedbyuser: 0DAH_duque
