@@ -14,11 +14,11 @@ Json-countries-file: - file://XDbNqDTEVj6t6FCj
 
 ----
 
-Json-countries-id: alpha2
+Json-countries-label: name
 
 ----
 
-Json-countries-label: name
+Json-countries-id: alpha2
 
 ----
 
@@ -170,7 +170,7 @@ Personaldrive:
 Impulse:
 
 - 
-  desc: Anders sein ist normal
+  desc: Thema 1
   id: anders-sein-ist-normal
 - 
   desc: Hass – leider alltäglich

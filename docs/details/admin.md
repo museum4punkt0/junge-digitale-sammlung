@@ -274,6 +274,8 @@ Im Tab 'Daten' können Sie auch auswählen, ob Sie eine lokale JSON-Datei (also 
 
 Für beide Fälle müssen Sie identifizieren, wie die Parameter für 'Beschriftung' und 'Wert' in Ihren JSON-Daten heißen. Bspw. steht in der von uns verwendeten JSON-Datei der Parameter mit dem Namen 'name' für die Beschriftung und der Parameter mit dem Namen 'alpha2' für den 2-stelligen Ländercode (z. B. de, en, it), den wir als Wert deklarieren wollen.
 
+Bitte denken Sie daran, dass wenn Sie Werte verändern ältere Objekte und Ausstellungen, die diese Werte verwendet haben, nicht mehr zuverlässig eine Zuordnung finden werden können.
+
 Daten |  Daten eingeben  |  JSON-Dateien
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](../_media/admin/specials/fields-inhalt.png)  |  ![](../_media/admin/specials/fields-inhalt-eingeben.png) | ![](../_media/admin/specials/fields-json.png)

@@ -101,6 +101,7 @@ Passwort:
 
 `adminadmin`
 
+Die Plattform entählt die Home-, Error und Login-Seiten sowie einen Test-Workshop. Test-Datensätze für die Dropdowns wurden auch angelegt.
 
 ---
 
