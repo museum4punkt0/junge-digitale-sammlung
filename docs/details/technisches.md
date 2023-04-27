@@ -6,11 +6,12 @@
 
 ## Inhaltsverzeichnis
 1. [Kurzbeschreibung](#1-kurzbeschreibung)
-2. [Source Code (src)](#2-source-code-src)
-3. [Kirby Struktur und Seiten-Templates (Typen)](#3-kirby-struktur-und-seiten-templates-typen)
-4. [Kirby Plugins](#4-kirby-plugins)
-5. [Spezielle Ressourcen](#5-spezielle-ressourcen)
-6. [System-Funktionen und CRON-Jobs](#6-system-funktionen-und-cron-jobs)
+2. [Probleme mit der lokalen Installation und Hinweise](#2-probleme-mit-der-lokalen-installation-und-hinweise)
+3. [Source Code (src)](#3-source-code-src)
+4. [Kirby Struktur und Seiten-Templates (Typen)](#4-kirby-struktur-und-seiten-templates-typen)
+5. [Kirby Plugins](#5-kirby-plugins)
+6. [Spezielle Ressourcen](#6-spezielle-ressourcen)
+7. [System-Funktionen und CRON-Jobs](#7-system-funktionen-und-cron-jobs)
 
 ## 1. Kurzbeschreibung
 
@@ -24,11 +25,27 @@ Die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über di
 
 Je nach Server treten manchmal Verbindungsprobleme zu den Drittanbieter-Embeds auf. Bspw. Twitter und Instagram können lokal nicht angesprochen werden, um die Metadaten zu liefern. Bestimmte Server blockieren die Play- (und somit auch Autoplay) Funktion von TikTok in macOS Safari und allen iOS Browsern. Dies ist bis jetzt auf virtuellen Servern in einem Cloudron Kontext aufgetreten. Übliche Webserver in einem Hosting-Paket können TikTok problemlos abspielen lassen. Bitte denken Sie dran, dass externe Drittanbieter evtl. ihre APIs verändern. Diese Plattform fokussiert sich hauptsächlich auf die physischen Modelle und hat die Embed Implementierung möglichst optimal aber nicht perfekt verfolgt.
 
-## 2. Source Code (src)
+### MAMP
+Wenn Sie MAMP für Windows benutzen, bitte Folgendes beachten:
+
+* Fügen Sie `C:\MAMP\bin\php\php8.1.0` zu Ihren System Umgebungsvariablen hinzu (bitte Pfad anpassen, falls Sie MAMP nicht im Standardpfad installiert haben).
+* Bitte aktivieren Sie die INTL Extension. Die php.ini Datei finden Sie normalerweise unter `mamp/conf/php8.1.0`. Suchen Sie nach 'intl' und entfernen Sie das ; am Anfang der Zeile `extension=php_intl.dll` .
+* Starten Sie am besten Ihren Rechner neu.
+
+### XAMPP
+Wenn Sie XAMPP für Windows benutzen, bitte Folgendes beachten:
+
+* Die richtige XAMPP Version herunterladen! Das System unterstützt PHP 8.1.x.
+* Ähnlich wie bei MAMP aktivieren Sie bitte die Extensions: `extension=gd`, `extension=intl`. Die php.ini können Sie direkt aus XAMPP öffnen.
+* Starten Sie nur den Server neu.
+
+
+
+## 3. Source Code (src)
 Im Ordner `src` finden Sie SASS und Javascript-Dateien, die relevant für das Aussehen und Funktionalität der Plattform sind. Wenn Sie in CodeKit oder Prepros, wie in der README-Datei des Repositorys erklärt, das Projekt importiert haben, wird der Code aus dem `src`-Ordner kompiliert und in `www/assets` verschoben. Somit bleibt der Ordner `www`, der von Ihrem localhost aufgerufen wird, immer aktuell.
 
 
-## 3. Kirby-Struktur und Seiten-Templates (Typen) 
+## 4. Kirby-Struktur und Seiten-Templates (Typen) 
 
 ### Die Kirby-Struktur
 Man kann dieses Repository als ein Theme für Kirby CMS verstehen. Alle relevanten Dateien befinden sich im `www/site`-Ordner. 
@@ -89,7 +106,7 @@ Jeder Seitentyp kann eine eigene spezielle Klasse besitzen, die die Grundfunktio
 *https://getkirby.com/docs/guide/templates/page-models*
 
 
-## 4. Kirby Plugins
+## 5. Kirby Plugins
 
 Im Ordner `www/site/plugins` befinden sich alle Plugins, die dieses Kirby-"Theme" benötigt. Unter anderem finden Sie hier auch die speziell für die JDS programmierte Plugins von 2av. Aus diesem Grund haben diese Plugins keine eigenen Repositorys. Der Code ist kommentiert und sollte grundsätzlich nachvollziehbar sein, wenn Sie Kirby's Struktur und Funktionsweise kennen.
 
@@ -132,7 +149,7 @@ Die Auflistung der Plugins finden Sie im Admin-Bereich unter 'System' (Hauptnavi
 https://getkirby.com/plugins
 
 
-## 5. Spezielle Ressourcen
+## 6. Spezielle Ressourcen
 
 Die Plattform verwendet 2 wichtige Ressourcen von Drittanbietern.
 
@@ -143,7 +160,7 @@ Diese 3D-Bibliothek ist verantwortlich für das Laden und Rendering der 3D-Model
 Die Plattform arbeitet sehr viel mit Dropdowns. Einige davon besitzen eine Autovervollständigung. Die Virtual-Select Bibliothek wurde an dieser Stelle eingesetzt, allerdings in einer abgewandelten Version, da die Handhabung der Daten der Plattform eine höhere Komplexität erforderte. Die Source-Code-Datei finden sie unter `src/js/vendor` und die dist-Version unter `assets/js/vendor`. Prepros/CodeKit aktualisieren die dist-Datei automatisch, wenn Sie die Quelle bearbeiten.
 
 
-## 6. System-Funktionen und CRON-Jobs
+## 7. System-Funktionen und CRON-Jobs
 
 Das System hat 3 Funktionen, die entweder per Klick oder CRON (automatisch von Ihrem Server) ausgelöst werden können. Um die Funktionen händisch auszulösen, gehen Sie bitte auf die Hauptseite des Admin-Bereichs, Tab "Website Einstellungen". Die Buttons befinden sich am Ende der Ansicht.
 

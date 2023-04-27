@@ -30,7 +30,7 @@ return function ($kirby, $page, $site) {
   # ------------ HANDLE DATA FOR PREVIEW & MODEL UPLOAD
   // model upload from the frontend has been deactivated on 22.03.2023, but the logic for save-model still remains here, just in case.
   // uploads are handled in JSON controller because we need a upload progress event in javascript
-  if ($kirby->request()->is('POST') && (get('save-museum-preview') || get('save-preview') || get('save-asset') /* || get('save-model') */) ) {
+  if ($kirby->request()->is('POST') && (get('save-museum-preview') || get('save-preview') || get('save-asset') /* || get('save-model') */)) {
 
     //$exposure = 1;
     if (get('save-museum-preview')) {
@@ -80,9 +80,20 @@ return function ($kirby, $page, $site) {
     kirbylog('---------------####');
     kirbylog($upload['name']);
     kirbylog($upload['tmp_name']);
+
+    if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+      $temppath = sys_get_temp_dir() . '\\' . time() . '-' . $upload['name'];
+    } else {
+      $temppath = ini_get('upload_tmp_dir') . '/' . time() . '-' . $upload['name'];
+    }
+    $filecontent = F::read($upload['tmp_name']);
+    F::write($temppath, $filecontent);
+
+    kirbylog($temppath);
+
     try {
       $file = $currentLinkedExhibit->createFile([
-        'source'   => $upload['tmp_name'],
+        'source'   => $temppath,
         'filename' => $upload['name'],
         'template' => $_file_template,
         'content' => [
@@ -92,7 +103,6 @@ return function ($kirby, $page, $site) {
 
       $updateexhibit = $currentLinkedExhibit->update([
         $_field => [$file->uuid()->toString()],
-        //'threed_model_light' => floatval($exposure),
       ]);
 
       $alert[] = $file->filename();
@@ -105,8 +115,10 @@ return function ($kirby, $page, $site) {
     } catch (Exception $e) {
       $alert[] = "ERROR: " . $e->getMessage();
     }
+
+    F::remove($temppath);
   }
-  
+
   return [
     'lockactionstatus' => $site_vars['lockactionstatus'],
     'lockedBy' => $site_vars['lockedBy'],
