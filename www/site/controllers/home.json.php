@@ -10,7 +10,7 @@ return function ($kirby, $page, $site) {
 
   if ($kirby->request()->is('GET') && get('searchQuery')) { // a search was requested
     $searchQuery   = get('searchQuery');
-    $searchResults = $site->search($searchQuery, 'title')->unlisted()->filterBy('intendedTemplate', get('currentCollection'));
+    $searchResults = $site->search($searchQuery, 'title')->unlisted()->filterBy('intendedTemplate', get('currentCollection'))->filterBy('impulse', get('currentImpulse'));
   } else if ($kirby->request()->is('GET') && (get('currentCollection') || get('currentImpulse'))) { // otherwise it was a change of impulse (Thema) or collection (Objekt/Ausstellung)
 
     $params   = get();

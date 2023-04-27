@@ -277,7 +277,7 @@ function scrapWorkshopEmbed(ajaxTarget) {
         //try {
         /* const response = await fetch(url);
         const { embed } = await response.json();
- */
+        */
         scrapEmbed(embedurl).then(embed => {
             let check = ajaxTarget.form.querySelector('.checks[data-for="' + ajaxTarget.id + '"]');
             let error = ajaxTarget.form.querySelector('.errors[data-for="' + ajaxTarget.id + '"]');

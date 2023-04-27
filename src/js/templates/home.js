@@ -460,7 +460,7 @@ const autoCompleteJS = new autoComplete({
     src: async (query) => {
       try {
         let url = location.protocol + '//' + location.host + location.pathname;
-        url = `${url}home.json?searchQuery=${query}&currentCollection=${currentCollection}`;
+        url = `${url}home.json?searchQuery=${query}&currentCollection=${currentCollection}&currentImpulse=${currentImpulse}`;
 
         // Set count of results to placeholder '...' in the bootstrap Badge
         badge_autocomplete.querySelector('.visual-information').innerHTML = '...';
