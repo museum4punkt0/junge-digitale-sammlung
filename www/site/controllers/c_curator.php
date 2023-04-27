@@ -53,7 +53,7 @@ return function ($kirby, $page, $site) {
                         //$alert[] = 'DB saved';
                     } */
                 } catch (Exception $e) {
-                    $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
+                    $alert[] = 'Es ist ein Fehler aufgetreten: ' . $e->getMessage();
                 }
             }
         }
@@ -211,7 +211,7 @@ return function ($kirby, $page, $site) {
                     $alert[] = 'Objekt erfolgreich gespeichert!';
                 }
             } catch (Exception $e) {
-                $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
+                $alert[] = 'Es ist ein Fehler aufgetreten: ' . $e->getMessage();
             }
         }
     }
@@ -250,7 +250,7 @@ return function ($kirby, $page, $site) {
             ]);
 
             if (!$updateexhibit) {
-                $alert[] = 'Leider ist ein Fehler beim Speichern des Objekts aufgetretten.';
+                $alert[] = 'Leider ist ein Fehler beim Speichern des Objekts aufgetreten.';
             }
 
             $alert[] = 'Datei wurde erfolgreich gelöscht';
@@ -308,7 +308,7 @@ return function ($kirby, $page, $site) {
                     unset($data['title']);
                 }
             } catch (Exception $e) {
-                $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
+                $alert[] = 'Es ist ein Fehler aufgetreten: ' . $e->getMessage();
             }
         }
     }

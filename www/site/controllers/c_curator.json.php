@@ -89,8 +89,6 @@ return function ($kirby, $page, $site) {
     $filecontent = F::read($upload['tmp_name']);
     F::write($temppath, $filecontent);
 
-    kirbylog($temppath);
-
     try {
       $file = $currentLinkedExhibit->createFile([
         'source'   => $temppath,
@@ -108,7 +106,7 @@ return function ($kirby, $page, $site) {
       $alert[] = $file->filename();
 
       if (!$updateexhibit) {
-        $alert[] = 'Leider ist ein Fehler bei der Aktualisierung des Objekts aufgetretten.';
+        $alert[] = 'Leider ist ein Fehler bei der Aktualisierung des Objekts aufgetreten.';
       }
 
       $alert[] = 'Datei  wurde erfolgreich hochgeladen';

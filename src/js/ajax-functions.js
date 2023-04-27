@@ -318,7 +318,7 @@ function scrapWorkshopEmbed(ajaxTarget) {
             }
             else {
                 let embed_preview = document.querySelector('#embed__preview');
-                embed_preview.innerHTML = '<p>Es ist ein Fehler aufgetretten oder der Link ist ungültig und konnte nicht geladen werden.</p>';
+                embed_preview.innerHTML = '<p>Es ist ein Fehler aufgetreten oder der Link ist ungültig und konnte nicht geladen werden.</p>';
 
                 if (input && error && check) {
                     isInvalid(input, check, error);

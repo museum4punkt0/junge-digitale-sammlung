@@ -40,7 +40,7 @@ return function ($kirby, $page, $site) {
                     unset($data['title']);
                 }
             } catch (Exception $e) {
-                $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
+                $alert[] = 'Es ist ein Fehler aufgetreten: ' . $e->getMessage();
             }
         }
     }
@@ -257,7 +257,7 @@ return function ($kirby, $page, $site) {
                     unset($data['title']);
                 }
             } catch (Exception $e) {
-                $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
+                $alert[] = 'Es ist ein Fehler aufgetreten: ' . $e->getMessage();
             }
         }
     }
@@ -284,7 +284,7 @@ return function ($kirby, $page, $site) {
                 $alert[] = 'Ausstellung erfolgreich gelöscht!';
             }
         } catch (Exception $e) {
-            $alert[] = 'Es ist ein Fehler aufgetretten: ' . $e->getMessage();
+            $alert[] = 'Es ist ein Fehler aufgetreten: ' . $e->getMessage();
         }
     }
 

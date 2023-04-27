@@ -54,7 +54,7 @@ return function ($page, $kirby) {
       if ($e->getKey() == 'error.access.login') {
         $alert[] = 'Benutzername oder Passwort nicht korrekt.';
       } else {
-        $alert[] = $e->getKey() . ': Es ist ein Fehler aufgetretten. Versuchen Sie es später noch mal.';
+        $alert[] = $e->getKey() . ': Es ist ein Fehler aufgetreten. Versuchen Sie es später noch mal.';
       }
     }
   }
