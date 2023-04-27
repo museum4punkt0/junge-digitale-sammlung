@@ -6,14 +6,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- MetaKnight -->
+  <!-- MetaKnight Plugin -->
   <?= snippet('meta_information'); ?>
   <?= snippet('robots'); ?>
 
-  <!-- Favicon -->
-  <?php // snippet('header_elements/header_favicon') ?>
-
-  <?php snippet('favicon') ?>
+  <!-- Favicon Plugin -->
+  <?= snippet('favicon') ?>
 
   <?= css('assets/css/index.css', 'screen') ?>
   <?= css('@auto') ?>
