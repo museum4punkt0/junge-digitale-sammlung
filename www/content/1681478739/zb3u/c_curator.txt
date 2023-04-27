@@ -46,11 +46,11 @@ Personaldrive:
 
 ----
 
-Curator-state: 
+Curator-state: bremen
 
 ----
 
-Schoolclass: 
+Schoolclass: 13-klasse
 
 ----
 
@@ -65,6 +65,12 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 12:14:04
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:43:11
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:45:02
 
 ----
 
@@ -84,7 +90,7 @@ Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
 
 ----
 
-Datemodifiedepoch: 1682590444
+Datemodifiedepoch: 1682617502
 
 ----
 

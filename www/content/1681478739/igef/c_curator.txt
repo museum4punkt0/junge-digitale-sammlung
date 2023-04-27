@@ -46,11 +46,11 @@ Personaldrive:
 
 ----
 
-Curator-state: 
+Curator-state: mecklenburg-vorpommern
 
 ----
 
-Schoolclass: 
+Schoolclass: 8-klasse
 
 ----
 
@@ -80,6 +80,12 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 11:26:46
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:43:44
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:44:39
 
 ----
 
@@ -103,7 +109,7 @@ Missinginfo: Name fehlt.<br>Benutzername fehlt.<br>Datenschutzerklärung nicht a
 
 ----
 
-Datemodifiedepoch: 1682587606
+Datemodifiedepoch: 1682617479
 
 ----
 

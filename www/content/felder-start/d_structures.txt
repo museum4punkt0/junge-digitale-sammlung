@@ -171,16 +171,16 @@ Impulse:
 
 - 
   desc: Thema 1
-  id: anders-sein-ist-normal
+  id: thema-1
 - 
-  desc: Hass – leider alltäglich
-  id: hass-leider-alltaglich
+  desc: Thema 2
+  id: thema-2
 - 
-  desc: Mein Stolz, dein Vorurteil
-  id: mein-stolz-dein-vorurteil
+  desc: Thema 3
+  id: thema-3
 - 
-  desc: Zwischen den Stühlen
-  id: zwischen-den-stuhlen
+  desc: Thema 4
+  id: thema-4
 
 ----
 

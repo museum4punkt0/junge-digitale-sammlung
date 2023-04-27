@@ -46,11 +46,11 @@ Personaldrive:
 
 ----
 
-Curator-state: 
+Curator-state: berlin
 
 ----
 
-Schoolclass: 
+Schoolclass: 13-klasse
 
 ----
 
@@ -71,6 +71,12 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 12:14:03
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:43:36
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:44:48
 
 ----
 
@@ -90,7 +96,7 @@ Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
 
 ----
 
-Datemodifiedepoch: 1682590443
+Datemodifiedepoch: 1682617488
 
 ----
 

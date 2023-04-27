@@ -46,11 +46,11 @@ Personaldrive:
 
 ----
 
-Curator-state: 
+Curator-state: schleswig-holstein
 
 ----
 
-Schoolclass: 
+Schoolclass: 13-klasse
 
 ----
 
@@ -89,6 +89,12 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 11:38:09
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:43:24
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:44:59
 
 ----
 
@@ -112,7 +118,7 @@ Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
 
 ----
 
-Datemodifiedepoch: 1682588289
+Datemodifiedepoch: 1682617499
 
 ----
 

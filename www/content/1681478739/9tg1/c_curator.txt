@@ -46,11 +46,11 @@ Personaldrive:
 
 ----
 
-Curator-state: 
+Curator-state: nordrhein-westfalen
 
 ----
 
-Schoolclass: 
+Schoolclass: 7-klasse
 
 ----
 
@@ -83,6 +83,12 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 11:38:09
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:44:04
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:44:23
 
 ----
 
@@ -106,7 +112,7 @@ Missinginfo: Name fehlt.<br>Datenschutzerklärung nicht angekreuzt.
 
 ----
 
-Datemodifiedepoch: 1682588289
+Datemodifiedepoch: 1682617463
 
 ----
 

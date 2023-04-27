@@ -50,11 +50,11 @@ Personaldrive:
 
 ----
 
-Curator-state: 
+Curator-state: thuringen
 
 ----
 
-Schoolclass: 
+Schoolclass: 7-klasse
 
 ----
 
@@ -100,6 +100,12 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 11:37:25
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:43:58
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:44:27
 
 ----
 
@@ -123,7 +129,7 @@ Missinginfo: Datenschutzerklärung nicht angekreuzt.
 
 ----
 
-Datemodifiedepoch: 1682588245
+Datemodifiedepoch: 1682617467
 
 ----
 

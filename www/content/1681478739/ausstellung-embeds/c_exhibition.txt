@@ -2,7 +2,7 @@ Title: Ausstellung Embeds
 
 ----
 
-Impulse: anders-sein-ist-normal
+Impulse: thema-1
 
 ----
 
@@ -64,24 +64,6 @@ Sitemap: true
 
 Updatelogs:
 
-- 
-  user: 0DAH_duque
-  time: 2023.04.14, Fr. 15:44:44
-- 
-  user: 0DAH_duque
-  time: 2023.04.14, Fr. 15:52:10
-- 
-  user: 0DAH_duque
-  time: 2023.04.15, Sa. 09:05:57
-- 
-  user: 0DAH_duque
-  time: 2023.04.15, Sa. 09:06:16
-- 
-  user: 0DAH_duque
-  time: 2023.04.15, Sa. 09:06:26
-- 
-  user: 0DAH_duque
-  time: 2023.04.15, Sa. 09:06:41
 - 
   user: 0DAH_duque
   time: 2023.04.15, Sa. 09:07:09
@@ -154,6 +136,24 @@ Updatelogs:
 - 
   user: 0DAH_duque
   time: 2023.04.27, Do. 11:38:09
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:38:47
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:40:23
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:40:28
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:40:32
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:40:35
+- 
+  user: 0DAH_duque
+  time: 2023.04.27, Do. 19:40:39
 
 ----
 
@@ -317,7 +317,7 @@ Exhibitsmsg:
 
 ----
 
-Datemodifiedepoch: 1682588289
+Datemodifiedepoch: 1682617239
 
 ----
 
