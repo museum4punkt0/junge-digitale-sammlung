@@ -11,7 +11,9 @@
   <?= snippet('robots'); ?>
 
   <!-- Favicon -->
-  <?= snippet('header_elements/header_favicon') ?>
+  <?php // snippet('header_elements/header_favicon') ?>
+
+  <?php snippet('favicon') ?>
 
   <?= css('assets/css/index.css', 'screen') ?>
   <?= css('@auto') ?>
