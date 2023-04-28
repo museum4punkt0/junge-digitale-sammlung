@@ -3,6 +3,10 @@
   @include media-breakpoint-up(md){
       padding-top: 90px;
   } */
+  
+  &.regular-content{
+    padding: 0 1rem;
+  }
 }
 
 main{

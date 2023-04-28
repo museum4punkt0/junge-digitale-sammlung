@@ -33,6 +33,8 @@ tabs:
     sections:
       pages:
         extends: sections/pages
+        templates:
+          - default
 
   # gallery tab
   gallery:

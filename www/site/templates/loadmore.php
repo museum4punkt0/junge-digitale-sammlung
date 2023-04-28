@@ -2,7 +2,7 @@
 <?php snippet('section-header', ['isFrontEnd' => true]) ?>
 
 <main>
-  <div id="wrapper">
+  <div id="wrapper" class="regular-content">
     <div class="container">
       <h1>
         <?= $page->title()->html() ?>

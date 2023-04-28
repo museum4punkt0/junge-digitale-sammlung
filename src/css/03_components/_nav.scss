@@ -5,7 +5,7 @@ body {
 
   &.nav-open {
     overflow: hidden;
-    height: 100vh;
+    height: 100%;
 
     main {
       //margin-left: 100vw;
@@ -24,11 +24,15 @@ header {
 
   nav.navbar {
     z-index: 100;
-    position: relative;
+    position: fixed;
+    right: 0;
+    @include media-breakpoint-up(lg) {
+      position: relative;
+    }
   }
 }
-.nav-container{
-  overflow-y: scroll;
+.nav-container {
+  //overflow-y: scroll;
   position: relative;
 }
 ul.navbar-nav {
@@ -44,7 +48,7 @@ ul.navbar-nav {
   box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   padding-right: 20%;
   padding-top: 2vh;
-  padding-bottom: 2rem;
+  padding-bottom: 5rem;
   overflow-y: auto;
   background-color: var(--body-bg);
 
@@ -90,7 +94,7 @@ ul.navbar-nav {
 
     > ul {
       position: static;
-      display: block;     
+      display: block;
       min-width: 0;
       background-color: var(--body-bg);
       border: none;
@@ -104,7 +108,8 @@ ul.navbar-nav {
       }
     }
 
-    &:hover, &.open {
+    &:hover,
+    &.open {
       > ul {
         display: block;
       }
@@ -136,7 +141,7 @@ header {
   justify-content: space-between;
   //font-size: 3rem;
 
-  .dropdown-menu{
+  .dropdown-menu {
     font-size: inherit;
   }
 
@@ -144,13 +149,13 @@ header {
     font-size: 3rem;
     position: relative;
 
-    .template-legal{
+    .template-legal {
       font-size: 1.35rem;
       opacity: 0.8;
     }
     @include media-breakpoint-up(lg) {
       font-size: 1.0625rem;
-      .template-legal{
+      .template-legal {
         font-size: 1.0625rem;
       }
     }
@@ -166,7 +171,6 @@ header {
     --bs-navbar-disabled-color: var(--c-color-9);
     --bs-navbar-active-color: var(--primary-color);
   }
-
 }
 
 .btn-responsive {
@@ -193,11 +197,11 @@ header {
   color: #fff;
   z-index: 100;
   margin-top: 1rem;
-  padding: .8rem;
+  padding: 0.8rem;
   opacity: 1;
   transition: opacity 100ms 150ms;
 
-  &.active{
+  &.active {
     transition: opacity 250ms;
     opacity: 0;
   }
@@ -239,7 +243,7 @@ header {
   min-height: 15vh; */
   display: grid;
   grid-template-columns: 15px var(--margin-md) 100px;
-  grid-template-rows: 39px 16px auto; 
+  grid-template-rows: 39px 16px auto;
 
   &.backend {
     grid-template-columns: 10px var(--margin-md) 50px;
@@ -267,7 +271,7 @@ header {
   }
 }
 
-.user__meta{
+.user__meta {
   max-width: 250px;
   text-align: right;
 }
