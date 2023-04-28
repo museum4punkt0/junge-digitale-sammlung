@@ -19,7 +19,7 @@ Das Deutsche Auswandererhaus ist ein kulturhistorisches Museum zum Thema Migrati
 
 Dieses Repository entspricht einem komplexen Theme für Kirby CMS und beinhaltet alle relevanten Dateien (abgesehen vom Kirby CMS Kern).
 
-Das Projekt "O2G - OBJ to GLTF/GLB" ist Teil vom diesem Projekt. Die Windows/Mac-Anwendung konvertiert OBJ-Dateien (übliches Format für 3D Scanner) zu GLB oder komprimierten GLTF-Dateien für die Webnutzung.
+Das Projekt "O2G - OBJ to GLTF/GLB" ist Teil von diesem Projekt. Die Windows/Mac-Anwendung konvertiert OBJ-Dateien (übliches Format für 3D Scanner) zu GLB oder komprimierten GLTF-Dateien für die Webnutzung.
 
 [----TODO----]
 
@@ -28,9 +28,10 @@ Link zum Repo
 ---
 
 ## 2. Finanzierung
-[----TODO----]
 
-[Bitte Input von BB]
+Diese Anwendung ist entstanden im Verbundprojekt museum4punkt0 – Digitale Strategien für das Museum der Zukunft, Teilprojekt Deutsches Auswandererhaus – Migrationsgeschichte digital erleben. Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages.
+
+Weitere Informationen: https://www.museum4punkt0.de
 
 ---
 
@@ -144,31 +145,29 @@ Zum Starten:
 ---
 
 ## 8. Beteiligung/Contributing
+
 Wenn Sie etwas beitragen möchten, forken Sie bitte das Repository und verwenden Sie einen Feature-Fork. Pull Requests sind herzlich willkommen.
 
 
 ---
 
 ## 9. Credits
-[----TODO----]
 
-### Team 2av
-- Jens Döring (Projektkoordination)
-- Santiago Duque (Projektleitung und Entwicklung)
+Diese Anwendung ist entstanden im Verbundprojekt museum4punkt0 – Digitale Strategien für das Museum der Zukunft, Teilprojekt Deutsches Auswandererhaus - Migrationsgeschichte digital erleben. Weitere Informationen: https://www.museum4punkt0.de.
 
-### Team Deutsches Auswandererhaus
-- Birgit Burghart (Projektkoordination)
-- Jasper Stephan-Beneker (Museumswissenschaft)
-- Astrid Bormann (Museumspädagogik)
-- Marcel Leukel (Museumstechnik)
+Das Projekt museum4punkt0 wird gefördert durch die Beauftragte der Bundesregierung für Kultur und Medien aufgrund eines Beschlusses des Deutschen Bundestages.
 
-### Team Studio Andreas Heller Architects & Designers
-- Dirk Kühne (Projektkoordination und Design)
+Auftraggeber und inhaltliches Konzept: Deutsches Auswandererhaus Bremerhaven, Columbusstraße 65, 27568 Bremerhaven
 
+Design: Andreas Heller Architects and Designers, Hamburg
+
+Auftragnehmer Programmierung: 2av GmbH, Keltergasse 3, 89073 Ulm, Ansprechpartner: Jens Döring (Projektkoordination), Santiago Duque (Projektleitung und Entwicklung)
 
 ---
 
 ## 10. Lizenz
-GNU GENERAL PUBLIC LICENSE <br>
-Copyright © 2022, 2av GmbH <br>
+
+GNU GENERAL PUBLIC LICENSE 
+Copyright © 2022/2023, Deutsches Auswandererhaus / Design: Andreas Heller Architects and Designers, Hamburg; Programmierung: 2av GmbH, Ulm 
 Please also see the LICENSE file provided within this repository
+
