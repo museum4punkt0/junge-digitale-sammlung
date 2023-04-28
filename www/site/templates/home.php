@@ -74,7 +74,6 @@ if ($data = $site->data_populators_pick()->toPage()) {
 
                                 <label for="home__search" class=" col-form-label">Suche</label>
                                 <input type="text" class="autocomplete-input form-control" />
-                                <ul class="autocomplete-result-list results__search"></ul>
                                 <div class="">
                                     <button id="btn__search_submit" type="button" class="btn__search btn btn-primary">></button>
                                 </div>

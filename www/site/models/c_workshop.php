@@ -22,11 +22,12 @@ class CWorkshopPage extends JDSPage
       option('2av.jds-pagemodel.dateCreated') => time(),
       option('2av.jds-pagemodel.createdByUser') => kirby()->user()->name(),
       'materials' => $materials->toArray(),
+      'sitemap'   => false,
     ];
 
     $userDB = $this->createChild([
       'content'  => [
-        'title' => $this->title()->value() . '-userDB'
+        'title' => $this->title()->value() . '-userDB',
       ],
       'template' => 'd_usernames',
     ]);
