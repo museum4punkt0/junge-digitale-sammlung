@@ -7,11 +7,14 @@ import { Collapse } from "bootstrap";
 initSelects();
 
 const bod = document.body;
+const btn_btl = document.getElementById('btl');
+const btl_revert_time = 2500;
 
 /**
  * Main init for home
  */
 function initHome() {
+  console.log('init home');
   const introText = new DynamicContainer(document.querySelector('.home-intro'), document.getElementById('scroll__container'));
 
   // setup virtual-selects
@@ -21,6 +24,10 @@ function initHome() {
     fselect.addEventListener('change', filterChange);
   });
 
+  //back to left for desktop    
+  btn_btl.addEventListener('click', leftFunction);
+  scrollLeftStop(revert_btl, btl_revert_time);
+
   initScroller();
 
   document.addEventListener("focus", focusChange, true);
@@ -29,12 +36,56 @@ function initHome() {
 }
 
 /**
+ * Handles back-to-left button hidding and showing when container scrolls
+ */
+
+function scrollHFunction() {
+  if (scrollContainer.scrollLeft > window.innerWidth/2) {
+    btn_btl.classList.add("showing");
+  } else {
+    btn_btl.classList.remove("showing");
+  }
+}
+
+/**
+* Handles back to top function
+*/
+function leftFunction() {
+  scrollContainer.scroll({
+    left: 0,
+    behavior: 'smooth'
+  })
+}
+
+/**
+* Hides back to left button
+*/
+function revert_btl() {
+  btn_btl.classList.remove("showing");
+}
+
+/**
+ * Handles stop after user was scrolling horizontally so button can stay delayed on screen
+ * @param {Function} callback 
+ * @param {number} refresh 
+ * @returns 
+ */
+function scrollLeftStop(callback, refresh = 66) {
+  // Make sure a valid callback was provided
+  if (!callback || typeof callback !== 'function') return;
+
+  let isScrolling;
+  scrollContainer.addEventListener('scroll', function (event) {
+    window.clearTimeout(isScrolling);
+    isScrolling = setTimeout(callback, refresh);
+  }, false);
+}
+
+/**
  * Init horizontal scrolling functionality 
  */
 function initScroller() {
   if (!scrollerInitialised) {
-
-    const scrollContainer = document.querySelector("#scroll__container");
 
     if (!is_touch_enabled()) {
       // listen to 'wheel' event so that the container only scrolls horizontally when we scroll directly on it
@@ -53,6 +104,7 @@ function initScroller() {
           else {
             scrollContainer.scrollLeft += evt.deltaX;
           }
+          scrollHFunction();
           lastFocusItem = null;
         }
       });
@@ -68,7 +120,8 @@ function initScroller() {
  * 
  * ********/
 const collectionContainer = document.querySelector('.load-more-container');
-const scrollContainer = document.querySelector('.podest-container');
+const podestContainer = document.querySelector('.podest-container');
+const scrollContainer = document.querySelector("#scroll__container");
 const loadmoreTrigger = document.querySelector(".loadmore-trigger");
 const selectorCollection = document.querySelector('.select-collection');
 const selectorImpulse = document.querySelector('.select-impulse');
@@ -107,10 +160,10 @@ const fetchProjects = async () => {
     const response = await fetch(url);
     const { html, more, comment } = await response.json();
     loadmoreTrigger.hidden = !more;
-    scrollContainer.innerHTML += html;
+    podestContainer.innerHTML += html;
     offset += limit;
 
-    console.log("JSON COMMENT: " + offset); 
+    console.log("JSON COMMENT: " + offset);
 
     dynamicInit();
     focusLastItem(parseInt(lastOffset));
@@ -118,10 +171,10 @@ const fetchProjects = async () => {
     if (typeof twttr !== 'undefined') {
       let newTweets = document.querySelectorAll('blockquote.twitter-tweet');
       newTweets.forEach(element => {
-        twttr.widgets.load(element); 
+        twttr.widgets.load(element);
       });
     }
-    else{
+    else {
       console.log('no twitter');
     }
 
@@ -161,7 +214,7 @@ function focusChange(event) {
  */
 function focusLastItem(lastOffset) {
   if (lastFocusItem) {
-    let loadmore_items = scrollContainer.querySelectorAll('.loadmore-element');
+    let loadmore_items = podestContainer.querySelectorAll('.loadmore-element');
 
     if (loadmore_items[lastOffset - 1]) {
       loadmore_items[lastOffset - 1].querySelector('a').focus();
@@ -290,7 +343,7 @@ function switchCollection(evt) {
   offset = 0;
   lastOffset = -1;
   collectionContainer.setAttribute('collection-type', currentCollection);
-  scrollContainer.innerHTML = '';
+  podestContainer.innerHTML = '';
   input_search.value = "";
   sessionStorageSet('current_collection', currentCollection);
   fetchProjects();
@@ -306,7 +359,7 @@ function switchImpulse(evt) {
   //reset data
   offset = 0;
   lastOffset = -1;
-  scrollContainer.innerHTML = '';
+  podestContainer.innerHTML = '';
   sessionStorageSet('current_impulse', currentImpulse);
   fetchProjects();
 }
@@ -339,7 +392,7 @@ function filterChange(evt) {
   //reset data
   offset = 0;
   lastOffset = -1;
-  scrollContainer.innerHTML = '';
+  podestContainer.innerHTML = '';
   fetchProjects();
 
   refreshFilterBadge(evt);

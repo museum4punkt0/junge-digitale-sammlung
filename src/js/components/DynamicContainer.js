@@ -7,7 +7,6 @@
 export default class DynamicContainer {
 
     constructor(nativeElement, parent = null) {
-
         this.resizeW = false;
         this.resizeH = false;
         this.maxWidthPerc = 1;
@@ -24,7 +23,6 @@ export default class DynamicContainer {
     }
 
     init() {
-
         window.addEventListener("resize", (event) => {
             this.checkDimensions();
             this.checkOverflow();
@@ -84,13 +82,13 @@ export default class DynamicContainer {
     }
 
     applyResize() {
-        let csstyle = "";
-
         if (this.resizeH) {
-            csstyle += "overflow-y: scroll;";
+            //csstyle += "overflow-y: scroll;";
+            this.nativeElement.classList.add('container-overflown');
         }
         else {
-            csstyle += "overflow-y: auto;";
+            //csstyle += "overflow-y: auto;";
+            this.nativeElement.classList.remove('container-overflown');
         }
 
         if (this.resizeW || this.resizeH) {
@@ -98,9 +96,7 @@ export default class DynamicContainer {
         }
         else {
             this.nativeElement.classList.remove('ignoreWheel');
-        }
-
-        this.nativeElement.style.cssText = csstyle;
+        }        
     }
 
 }

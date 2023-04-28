@@ -99,8 +99,9 @@ if ($data = $site->data_populators_pick()->toPage()) {
     </div>
 </main>
 <?php if (isFeatureAllowed('embeds')) : ?>
-    <?= js('https://platform.twitter.com/widgets.js');?>
+    <?= js('https://platform.twitter.com/widgets.js'); ?>
 <?php endif ?>
 
+<button id="btl" class="hovers d-none d-lg-block" title="Zum Start"><img src="<?= $kirby->url('assets') ?>/images/backtotop.svg" alt="Zum Start"> </button> 
 <?= js('/assets/js/vendor/virtual-select.js') ?>
 <?php snippet('footer', ['isFrontEnd' => true]) ?>

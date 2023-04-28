@@ -42,6 +42,14 @@
   }
 }
 
+#btl {
+  bottom: calc(var(--displ-bot-hover-els) + 7.8rem);
+  @include media-breakpoint-up(lg) {
+    bottom: 4.5rem;
+  }
+  transform: rotate(-90deg);
+}
+
 .custom-tooltip {
   --bs-tooltip-bg: var(--c-darkblue);
   pointer-events: none;
