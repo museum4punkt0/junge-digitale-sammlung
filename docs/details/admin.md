@@ -308,6 +308,14 @@ Blog  |  Blog Subseiten  |  Blog im Frontend
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](../_media/admin/specials/blog.png) | ![](../_media/admin/specials/blog-subpages.png)  | ![](../_media/admin/specials/blog-frontend.png) 
 
+### Virtuelle Seite für PDFs der Teilnehmer
+
+Die PDF-Ansicht der Teilnehmer ist als virtuelle Seite angelegt. Dies bedeutet, dass die Seite im Admin-Bereich an sich gar nicht existiert sondern wird aus Daten anderer Seiten generiert. Der PHP Template, um die Seite zu rendern finden Sie unter `www/site/templates`.
+
+Mehr zu virtuellen Seiten in der Kirby Dokumentation:
+
+https://getkirby.com/docs/guide/virtual-pages
+
 ### Normale Seiten
 
 Normale Seiten, dazu zählen auch rechtliche oder die Error-Seite, basieren ähnlich wie die Blog-Seiten auf Layouts. Mehr dazu in der Kirby-Dokumentation:
