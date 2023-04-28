@@ -7,8 +7,6 @@
 # Composer files
 /vendor
 
-# Yarn
+# Lock Files
 yarn.lock
-
-# Parcel
-.cache
+package-lock.json

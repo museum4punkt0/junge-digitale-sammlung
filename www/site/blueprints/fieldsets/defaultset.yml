@@ -6,7 +6,6 @@ fieldsets:
   - list
   - amountlist
   - image
-  - table
   - line
   - gallery
   - video
