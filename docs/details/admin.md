@@ -308,9 +308,9 @@ Blog  |  Blog Subseiten  |  Blog im Frontend
 :-------------------------:|:-------------------------:|:-------------------------:
 ![](../_media/admin/specials/blog.png) | ![](../_media/admin/specials/blog-subpages.png)  | ![](../_media/admin/specials/blog-frontend.png) 
 
-### Virtuelle Seite für PDFs der Teilnehmer
+### Virtuelle Seite (z.B. für PDFs der Teilnehmer)
 
-Die PDF-Ansicht der Teilnehmer ist als virtuelle Seite angelegt. Dies bedeutet, dass die Seite im Admin-Bereich an sich gar nicht existiert sondern wird aus Daten anderer Seiten generiert. Der PHP Template, um die Seite zu rendern finden Sie unter `www/site/templates`.
+Die PDF-Ansicht der Teilnehmer ist als virtuelle Seite angelegt. Dies bedeutet, dass die Seite im Admin-Bereich an sich gar nicht existiert sondern wird aus Daten anderer Seiten generiert. Der PHP Template, um die Seite zu rendern finden Sie unter `www/site/templates`. Die jeweilige Seite eines Workshops wird durch eine Route generiert (`www/site/config/routes.php`).
 
 Mehr zu virtuellen Seiten in der Kirby Dokumentation:
 
