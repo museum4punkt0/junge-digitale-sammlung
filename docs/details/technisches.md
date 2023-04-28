@@ -26,9 +26,6 @@ Die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über di
 
 Je nach Server treten manchmal Verbindungsprobleme zu den Drittanbieter-Embeds auf. Bspw. Twitter und Instagram können lokal nicht angesprochen werden, um die Metadaten zu liefern. Bestimmte Server blockieren die Play- (und somit auch Autoplay) Funktion von TikTok in macOS Safari und allen iOS Browsern. Dies ist bis jetzt auf virtuellen Servern in einem Cloudron Kontext aufgetreten. Übliche Webserver in einem Hosting-Paket können TikTok problemlos abspielen lassen. Bitte denken Sie dran, dass externe Drittanbieter evtl. ihre APIs verändern. Diese Plattform fokussiert sich hauptsächlich auf die physischen Modelle und hat die Embed Implementierung möglichst optimal aber nicht perfekt verfolgt.
 
-## Twitter
-Da Twitter an sich ohne Bilder arbeitet kann man dafür keine Previewbilder aufrufen. Für die Sammlung werden aus diesem Grund die eigentlichen Embeds geladen und transformiert (verkleinert). Die iFrames werden dann für Interaktion deaktiviert. Da CSS scale-Transformationen aber eine leere Fläche hinterlassen (Originalgröße des Elements bleibt bestehen) befinden sich diese Tweets in einem extra Container, der per JavaScript die benötigte berechnete Größe bekommt und den Subcontainer quasi zuschneidet. Es kommt manchmal dazu, dass die Berechnete Größe minimal abweicht, was an sich nicht sichtbar ist, bis der/die Besucher:in den Tweet fokusiert und der Glow erscheint.
-
 ### MAMP
 Wenn Sie MAMP für Windows benutzen, bitte Folgendes beachten:
 
@@ -42,6 +39,21 @@ Wenn Sie XAMPP für Windows benutzen, bitte Folgendes beachten:
 * Die richtige XAMPP Version herunterladen! Das System unterstützt PHP 8.1.x.
 * Ähnlich wie bei MAMP aktivieren Sie bitte die Extensions: `extension=gd`, `extension=intl`. Die php.ini können Sie direkt aus XAMPP öffnen.
 * Starten Sie nur den Server neu.
+
+## Drittanbieter Embeds
+
+Bitte allgemein überprüfen, ob alle Embeds funktionieren. Manche Server benötigen bestimmte Einstellungen, um die Embeds laden zu können.
+
+### TikTok
+Bestimmte Server blockieren die Play- (und somit auch Autoplay) Funktion von TikTok in macOS Safari und allen iOS Browsern. Dies ist bis jetzt auf virtuellen Servern in einem Cloudron Kontext aufgetreten. Falls Ihre Plattform auf einem virtuellen Server mit Cloudron läuft (so wie das Originalprojekt) müssen Sie eine Einstellung der LAMP-App in Cloudron anpassen. Dafür bitte die Datei `apache/app.conf` im Filemanager der LAMP-App öffnen und im VirtualHost ergänzen:
+
+```
+    # added this header for tiktok safari and ios play
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+```
+
+### Twitter
+Da Twitter an sich ohne Bilder arbeitet kann man dafür keine Previewbilder aufrufen. Für die Sammlung werden aus diesem Grund die eigentlichen Embeds geladen und transformiert (verkleinert). Die iFrames werden dann für Interaktion deaktiviert. Da CSS scale-Transformationen aber eine leere Fläche hinterlassen (Originalgröße des Elements bleibt bestehen) befinden sich diese Tweets in einem extra Container, der per JavaScript die benötigte berechnete Größe bekommt und den Subcontainer quasi zuschneidet. Es kommt manchmal dazu, dass die Berechnete Größe minimal abweicht, was an sich nicht sichtbar ist, bis der/die Besucher:in den Tweet fokusiert und der Glow erscheint.
 
 
 
