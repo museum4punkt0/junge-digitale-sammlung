@@ -54,10 +54,11 @@ return [
      * or localhost you can leave it empty.
      */
     'mailsettings' => [
-      'un' => getenv('CLOUDRON_MAIL_SMTP_USERNAME'),
+      // uncomment this for cloudron setup
+      /* 'un' => getenv('CLOUDRON_MAIL_SMTP_USERNAME'),
       'pw' => getenv('CLOUDRON_MAIL_SMTP_PASSWORD'),
       'host' => getenv('CLOUDRON_MAIL_SMTP_SERVER'),
-      'port' => getenv('CLOUDRON_MAIL_SMTP_PORT'),
+      'port' => getenv('CLOUDRON_MAIL_SMTP_PORT'), */
     ],
 
     /**
