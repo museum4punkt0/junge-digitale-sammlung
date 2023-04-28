@@ -17,8 +17,9 @@ foreach ($exhibitions as $exhibition) : ?>
                 <?php endif ?>
             </div>
             <div class="u-count">                
-                <?php if ($exhibition->userMsg()->isNotEmpty()) : ?>
-                    <span class="text-danger" data-bs-html="true" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="<?= $exhibition->userMsg() ?>">
+                <?php if ($exhibition->userMsg()->isNotEmpty() || $exhibition->userAmountMsg()->isNotEmpty()) : ?>
+                    <?php $message = ($exhibition->userMsg() ?? '') . ($exhibition->userAmountMsg() ?? '') ?>
+                    <span class="text-danger" data-bs-html="true" data-bs-custom-class="custom-tooltip" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-title="<?= $message ?>">
                     <?= $exhibition->getLinkedUsersCount(); ?>
                     </span>
                 <?php else : ?>

@@ -257,7 +257,7 @@ class CExhibitionPage extends JDSPage
     for ($i = 1; $i <= $this->exhibitLimit; $i++) {
       $_field = $this->content()->get('user' . $i);
 
-      if ($_field && $_field->isNotEmpty()) {
+      if ($_field && $_field->isNotEmpty() && $_field->toPageOrDraft()) {
         if ($_field->toPageOrDraft()->linked_exhibit() && $_field->toPageOrDraft()->linked_exhibit()->isNotEmpty()) {
           $amount++;
         }

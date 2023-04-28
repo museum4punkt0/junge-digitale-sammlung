@@ -163,12 +163,8 @@ return function ($kirby, $page, $site) {
         even though exhibition model is going to recheck, because otherwise PHP will render
         the exhibit content already while updates to the messages are still happening in the back.
         This way the messages are created before the page is created and */
-        /*         $exhibition_msgs = handleExhibitionMessages($data, $page);
-        $data = array_merge($data, $exhibition_msgs); */
-
-        // TODO: --> this is still not working, sadly. Maybe update Exhibition List via ajax instead?
-        /* After creating an exhibition the leader has to refresh once to see the actual
-        hints. Not a huge problem, but would be nice to do it somehow else.*/
+        $exhibition_msgs = handleExhibitionMessages($data, $page);
+        $data = array_merge($data, $exhibition_msgs);
 
         $formRules = [
             'exhibitiontitle'    => ['required'],

@@ -131,6 +131,12 @@ tabs:
                 text: "{{page.exhibitsMsg.brToN}}"
                 theme: negative
                 whenQuery: exhibitsMsg
+              comments3:
+                label: Anzahl Teilnehmer
+                type: info
+                text: "{{page.userAmountMsg.brToN}}"
+                theme: negative
+                whenQuery: userAmountMsg
 
   # misc
   misc:

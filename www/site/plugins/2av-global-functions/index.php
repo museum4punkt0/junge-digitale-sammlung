@@ -186,10 +186,13 @@ function handleExhibitionMessages($data, $page)
     $forcedExhibitionValue = $data['impulse'] ?? null;
     $response['userMsg'] = '';
     $response['exhibitsMsg'] = '';
+    $response['userAmountMsg'] = '';
     $userWarnings = 0;
     $userErrors = 0;
+    $userAmount = 0;
     for ($x = 1; $x <= 5; $x++) {
         if (isset($data['user' . $x]) && $data['user' . $x] != '' && !empty($data['user' . $x])) {
+            $userAmount ++;
             $result = matchImpulses($page, $data['user' . $x], $forcedExhibitionValue);
             if ($result  == 'result_error') {
                 $userErrors++;
@@ -199,10 +202,13 @@ function handleExhibitionMessages($data, $page)
         }
     }
     if ($userWarnings != 0) {
-        $response['userMsg'] .= $userWarnings . " verlinkte Teilnehmer haben noch keine Objekte";
+        $response['userMsg'] .= $userWarnings . " verlinkte Teilnehmer haben noch keine Objekte. ";
     }
     if ($userErrors != 0) {
-        $response['exhibitsMsg'] .= $userErrors . " verlinkte Objekte haben nicht passende Themen";
+        $response['exhibitsMsg'] .= $userErrors . " verlinkte Objekte haben nicht passende Themen. ";
+    }
+    if($userAmount < 3){
+        $response['userAmountMsg'] .= "Bitte mindestens 3 Teilnehmer auswählen. ";
     }
 
     return $response;
