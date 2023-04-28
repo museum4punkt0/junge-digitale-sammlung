@@ -3,8 +3,10 @@
 @font-face {
     font-style: normal;
     font-weight: 400;
-    font-family: 'WeissenhofGrotesk';
-    src: url('webfonts/332361_7_unhinted_0.woff2') format('woff2'), url('webfonts/332361_7_unhinted_0.woff') format('woff'), url('webfonts/332361_7_unhinted_0.ttf') format('truetype');
+    font-family: "WeissenhofGrotesk";
+    src: url("../webfonts/332361_7_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_7_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_7_unhinted_0.ttf") format("truetype"); 
 }
 
 @font-face {
@@ -13,7 +15,7 @@
     font-family: "WeissenhofGrotesk";
     src: url("../webfonts/332361_0_unhinted_0.woff2") format("woff2"),
         url("../webfonts/332361_0_unhinted_0.woff") format("woff"),
-        url("../webfonts/332361_0_unhinted_0.ttf") format("truetype");
+        url("../webfonts/332361_0_unhinted_0.ttf") format("truetype"); 
 }
 
 body {
@@ -67,4 +69,8 @@ button,
     color: #fff;
     text-decoration: none;
     text-align: center;
+}
+
+p,.qr{
+    margin-bottom: 0.5rem;
 }

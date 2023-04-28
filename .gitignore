@@ -35,7 +35,7 @@ build/*
 
 docs/_media_original
 
-
+__inactive/
 
 ### PHP ###
 php-error.log*
