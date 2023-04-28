@@ -6,7 +6,7 @@
 
 ## Inhaltsverzeichnis
 1. [Kurzbeschreibung](#1-kurzbeschreibung)
-2. [Probleme mit der lokalen Installation und Hinweise](#2-probleme-mit-der-lokalen-installation-und-hinweise)
+2. [Hinweise für lokale Installation und bekannte Probleme](#2-hinweise-für-lokale-installation-und-bekannte-probleme)
 3. [Source Code (src)](#3-source-code-src)
 4. [Kirby Struktur und Seiten-Templates (Typen)](#4-kirby-struktur-und-seiten-templates-typen)
 5. [Kirby Plugins](#5-kirby-plugins)
@@ -17,13 +17,17 @@
 
 Es wird empfohlen die Grundlagen von [Kirby CMS](https://getkirby.com/docs/guide) kennenzulernen, bevor man Anpassungen vornimmt. Diese Datei dient als knappe Einführung und Zusammenfassung des Aufbaus des Systems.
 
-## 2. Probleme mit der lokalen Installation und Hinweise
+## 2. Hinweise für lokale Installation und bekannte Probleme
 
+## Lokale Installation
 Je nach Server-Konfiguration müssen Sie evtl. immer mal wieder PHP-Erweiterungen aktivieren, die Kirby benötigt. Bspw. INTL ist bei XAMPP und MAMP deaktiviert. Webserver haben in der Regel alle gängigen Erweiterungen aktiv. Diese können Sie wie üblich in den php.ini-Dateien Ihres Servers bearbeiten.
 
 Die Admin- und Workshop-Bereiche sollten aus technischen Gründen nicht über die Live-Reload-URLs von Prepros oder CodeKit abgerufen werden, da Weiterleitungsfehler auftreten werden. Die Live-Reload-Funktion bleibt von daher nur für den Sammlung-Bereich relevant. Sollten Probleme auftreten, bspw. werden GTLF-3D-Modelle nicht geladen oder Ähnliches, bitte die normale localhost-URL verwenden und auf die Live-Reload-URLs verzichten.
 
 Je nach Server treten manchmal Verbindungsprobleme zu den Drittanbieter-Embeds auf. Bspw. Twitter und Instagram können lokal nicht angesprochen werden, um die Metadaten zu liefern. Bestimmte Server blockieren die Play- (und somit auch Autoplay) Funktion von TikTok in macOS Safari und allen iOS Browsern. Dies ist bis jetzt auf virtuellen Servern in einem Cloudron Kontext aufgetreten. Übliche Webserver in einem Hosting-Paket können TikTok problemlos abspielen lassen. Bitte denken Sie dran, dass externe Drittanbieter evtl. ihre APIs verändern. Diese Plattform fokussiert sich hauptsächlich auf die physischen Modelle und hat die Embed Implementierung möglichst optimal aber nicht perfekt verfolgt.
+
+## Twitter
+Da Twitter an sich ohne Bilder arbeitet kann man dafür keine Previewbilder aufrufen. Für die Sammlung werden aus diesem Grund die eigentlichen Embeds geladen und transformiert (verkleinert). Die iFrames werden dann für Interaktion deaktiviert. Da CSS scale-Transformationen aber eine leere Fläche hinterlassen (Originalgröße des Elements bleibt bestehen) befinden sich diese Tweets in einem extra Container, der per JavaScript die benötigte berechnete Größe bekommt und den Subcontainer quasi zuschneidet. Es kommt manchmal dazu, dass die Berechnete Größe minimal abweicht, was an sich nicht sichtbar ist, bis der/die Besucher:in den Tweet fokusiert und der Glow erscheint.
 
 ### MAMP
 Wenn Sie MAMP für Windows benutzen, bitte Folgendes beachten:
@@ -105,6 +109,13 @@ Jeder Seitentyp kann eine eigene spezielle Klasse besitzen, die die Grundfunktio
 
 *https://getkirby.com/docs/guide/templates/page-models*
 
+#### E-Mail Templates
+Die vom System generierten E-Mails, die das Personal bekommt können auch umgestaltet werden. Die Templates dafür finden sie unter `www/site/templates/emails`. Es gibt jeweils ein Template für HTML und Plain-Text.
+
+*Mehr zu Kirby E-Mail Templates:*
+
+*https://getkirby.com/docs/guide/emails*
+
 
 ## 5. Kirby Plugins
 
@@ -147,6 +158,8 @@ Spezielle Version des Janitor-Plugins für Kirby die erweitert wurde, um Felder 
 Die Auflistung der Plugins finden Sie im Admin-Bereich unter 'System' (Hauptnavigation oben links). Für mehr Informationen zu einem bestimmten Plugin bitte die jeweilige Dokumentation/Repository besuchen:
 
 https://getkirby.com/plugins
+
+* Cookie Consent Plugin: Die Texte können erst mal nur per Kirby-Config angepasst werden: https://github.com/michnhokn/kirby3-cookie-banner/wiki/02-Translate-the-modal
 
 
 ## 6. Spezielle Ressourcen

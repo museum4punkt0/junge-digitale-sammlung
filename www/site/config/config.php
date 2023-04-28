@@ -83,6 +83,14 @@ return [
     'features' => [
       'embeds' => 'Embeds',
     ],
+    'content' => [
+      'title' => 'Cookie Einstellungen',
+      'text' => 'Wir nutzen Cookies um Dir die bestmögliche Erfahrung zu bieten. Um die komplette Sammlung sehen zu können benötigst du die "Embeds" Cookies.',
+      'essentialText' => 'Essentiell',
+      'denyAll' => 'Alle ablehnen',
+      'acceptAll' => 'Alle annehmen',
+      'save' => 'Speichern',
+    ],
   ],
 
   /**
