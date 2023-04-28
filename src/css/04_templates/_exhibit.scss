@@ -67,11 +67,10 @@
         .digital__container {
             max-width: 90%;
             padding-top: 1rem;
-            padding-bottom: 15vw;
+            padding-bottom: 10vw;
 
             @include media-breakpoint-up(md) {
                 padding-top: 4rem;
-                padding-bottom: 10vw;
                 max-width: 70%;
                 min-height: 35vh;
             }
@@ -125,7 +124,7 @@
             &.youtube,
             &.vimeo {
                 @include media-breakpoint-down(md) {
-                    max-width: 100%;
+                    max-width: 93%;
                 }
 
                 @include media-breakpoint-up(md) {
@@ -147,13 +146,14 @@
             &.spotify,
             &.soundcloud {
                 padding-top: 1rem;
-                max-width: calc(1024px - 14rem);
+                max-width: 88%;
 
                 @include media-breakpoint-up(md) {
                     padding-top: 5.5rem;
                 }
 
                 @include media-breakpoint-up(xl) {
+                    max-width: calc(1024px - 14rem);
                     padding-top: 14rem;
                 }
 
