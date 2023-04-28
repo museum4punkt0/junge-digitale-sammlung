@@ -244,9 +244,8 @@ body.home {
                     vertical-align: bottom;
                     //width: 64%;
                     --angled-points-distance: 8vw;
-                    --podest-width: 50vw;
-                    --poster-width: 35vh;
-                    --poster-height: 60vh;
+                    --poster-height: clamp(120px, 44vh, 420px);
+                    --poster-width: clamp(82px, 29vh, 300px);
                     --poster-basic-botttom: 3rem;
                     //margin-left: 1.5rem;
                     margin-left: calc(1rem + var(--left-col-width));
@@ -255,6 +254,9 @@ body.home {
                     @media (orientation: landscape) {
                         --podest-width: 25vw;
                         --angled-points-distance: 4vw;
+
+                        --poster-height: clamp(120px, 48vh, 420px);
+                        --poster-width: clamp(82px, 33vh, 300px);
                     }
 
                     @include media-breakpoint-up(md) {
@@ -529,7 +531,7 @@ body.home {
                             }
 
                             @include media-breakpoint-up(md) {
-                                --single-exhibit-w: 72%;
+                                --single-exhibit-w: 73%;
 
                                 &.size-compact {
                                     --single-exhibit-w: 56%;
