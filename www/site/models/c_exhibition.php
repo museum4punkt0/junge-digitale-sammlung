@@ -20,7 +20,7 @@ class CExhibitionPage extends JDSPage
   {
     $input['exhibitiontitle']    = $input['exhibitiontitle'] ?? $this->title();
     $input['impulse']            = $input['impulse'] ?? $this->impulse()->value();
-    $input['exhibitionintro']       = $input['exhibitionintro'] ?? $this->exhibitionintro()->value();
+    $input['exhibitionintro']    = $input['exhibitionintro'] ?? $this->exhibitionintro()->value();
 
     $dataRules = [
       'exhibitiontitle'    => ['required'],
@@ -42,10 +42,9 @@ class CExhibitionPage extends JDSPage
       $input['missingInfo'] = '';
     }
 
-
     // refresh message infos in exhibition, if it is linked
     $usersArray = [];
-    $usersArray['impulse'] = $input['impulse'] ?? $this->impulse()->value(); // we also need to pass the impulse
+    $usersArray['impulse'] = $input['impulse']; // we also need to pass the impulse
     for ($x = 1; $x <= $this->exhibitLimit; $x++) {
       if (isset($input['user' . $x])) {
         $usersArray['user' . $x]   = $input['user' . $x];
@@ -56,6 +55,11 @@ class CExhibitionPage extends JDSPage
 
     $exhibition_msgs = handleExhibitionMessages($usersArray, $this);
     $input = array_merge($input, $exhibition_msgs);
+
+    if (isset($exhibition_msgs['userAmountMsg']) && $exhibition_msgs['userAmountMsg'] != '') {
+      $input['complete'] = false;
+      $input['missingInfo'] .= " " .$exhibition_msgs['userAmountMsg'];
+    }
 
     return parent::update($input);
   }
