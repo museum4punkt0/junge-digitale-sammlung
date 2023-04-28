@@ -1,5 +1,5 @@
 <?php snippet('cookie-modal', ['assets' => true]) ?>
-<button class="btn" id="edit-cookies"><span class="d-none d-lg-block">Cookies</span><i icon-name="cookie" class="icon-only d-lg-none"></i></button>
+<button class="btn" id="edit-cookies" title="Cookies" aria-label="Cookies"><span class="d-none d-lg-block">Cookies</span><i icon-name="cookie" class="icon-only d-lg-none"></i></button>
 <script>
     document.querySelector('#edit-cookies').addEventListener('click', function(e) {
         e.preventDefault();

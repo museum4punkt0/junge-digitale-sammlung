@@ -3,14 +3,14 @@
     <div class="logos__container p-4 <?php if (!isset($isFrontEnd)) : ?> backend <?php endif ?>">
         <?php if ($image1 = $site->institutionlogo()->toFile()) : ?>
             <div class="logo__header logo__institution">
-                <a class="navbar-brand d-block" href="<?= $site->url() ?>">
+                <a class="navbar-brand d-block" href="<?= $site->url() ?>" aria-label="Logo Institution, zu Home">
                     <img src="<?= $image1->url() ?>" data-lazyload alt="<?= $image1->alt() ?>">
                 </a>
             </div>
         <?php endif ?>
         <?php if ($image2 = $site->projectlogo()->toFile()) : ?>
             <div class="logo__header logo__project">
-                <a class="navbar-brand d-block" href="<?= $site->url() ?>">
+                <a class="navbar-brand d-block" href="<?= $site->url() ?>" aria-label="Logo Institution, zu Home">
                     <img src="<?= $image2->url() ?>" data-lazyload alt="<?= $image2->alt() ?>">
                 </a>
             </div>
