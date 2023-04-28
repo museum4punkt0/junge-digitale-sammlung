@@ -2,7 +2,7 @@
 $valueField;
 if (isset($forcedValue))
     $valueField = $forcedValue;
-else if ($context->content()->get($field) && $context->content()->get($field)->isNotEmpty() && $context->content()->get($field) != '')
+else if ($context && $context->content()->get($field) && $context->content()->get($field)->isNotEmpty() && $context->content()->get($field) != '')
     $valueField = $context->content()->get($field);
 
 ?>
