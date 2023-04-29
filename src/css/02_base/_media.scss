@@ -23,7 +23,13 @@
 img {
     border-radius: 0rem;
     max-width: 100%;
-    //pointer-events: none;
+    pointer-events: none;
+}
+
+.pswp-gallery{ // enable pointerevents for high quality image that can be zoomed in
+    img{
+        pointer-events: all;
+    }
 }
 
 figure {

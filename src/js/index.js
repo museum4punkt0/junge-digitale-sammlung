@@ -46,6 +46,14 @@ function init() {
     window.onscroll = function () { scrollFunction() };
     scrollStop(revert_btt, btt_revert_time);
 
+    // disable context menu for images
+    let allImages = document.querySelectorAll("img");
+    allImages.forEach((value) => {
+        value.oncontextmenu = (e) => {
+            e.preventDefault();
+        }
+    })
+
     // init alert animations, if alerts exists
     initAlerts();
 }
