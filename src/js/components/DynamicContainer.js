@@ -10,7 +10,7 @@ export default class DynamicContainer {
         this.resizeW = false;
         this.resizeH = false;
         this.maxWidthPerc = 1;
-        this.maxHeightPerc = 0.7;
+        this.maxHeightPerc = 0.54; // 55 in CSS
 
         this.nativeElement = nativeElement;
 
@@ -42,7 +42,7 @@ export default class DynamicContainer {
             this.resizeW = false;
         }
 
-        if (this.nativeElement.offsetHeight > this.parent.offsetHeight * 0.65) {
+        if (this.nativeElement.offsetHeight > this.parent.offsetHeight * this.maxHeightPerc) {
             console.log('height bigger');
             this.resizeH = true;
         }
@@ -82,21 +82,16 @@ export default class DynamicContainer {
     }
 
     applyResize() {
-        if (this.resizeH) {
+        if (this.resizeH || this.resizeW) {
             //csstyle += "overflow-y: scroll;";
             this.nativeElement.classList.add('container-overflown');
+            this.nativeElement.classList.add('ignoreWheel');
         }
         else {
             //csstyle += "overflow-y: auto;";
             this.nativeElement.classList.remove('container-overflown');
-        }
-
-        if (this.resizeW || this.resizeH) {
-            this.nativeElement.classList.add('ignoreWheel');
-        }
-        else {
             this.nativeElement.classList.remove('ignoreWheel');
-        }        
+        }      
     }
 
 }

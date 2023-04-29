@@ -1,1 +1,1 @@
-<button id="btt" class="hovers" title="Zum Start" aria-label="Zum Start"><img src="<?= $kirby->url('assets') ?>/images/backtotop.svg" alt="Zum Start"> </button> 
+<button id="btt" class="hovers" title="Zum Start" aria-label="Zum Start"><i icon-name="chevron-up" class="text-white"></i> </button> 

@@ -107,7 +107,7 @@ function initScroller() {
           scrollHFunction();
           lastFocusItem = null;
         }
-      }, {passive:false});
+      }, {passive:true});
     }
 
     scrollerInitialised = true;

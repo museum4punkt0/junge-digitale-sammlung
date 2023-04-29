@@ -6,7 +6,7 @@ import { initEmbedLogic } from "./controllers/embeds";
 import { setupVideos } from './controllers/video-handler';
 import { initAccessibility } from "./controllers/accessibility";
 import { InactivityCountdownTimer } from 'inactivity-countdown-timer/dist/main';
-import { createIcons, Save, Eye, Upload, Trash2, Info, CheckCircle2, AlertCircle, XCircle, X, Pencil, History, Contact, Users, Box, LayoutGrid, Undo2, Filter, Files, Download, HelpCircle, Slash, Cookie, Twitter } from 'lucide';
+import { createIcons, Save, Eye, Upload, Trash2, Info, CheckCircle2, AlertCircle, XCircle, X, Pencil, History, Contact, Users, Box, LayoutGrid, Undo2, Filter, Files, Download, HelpCircle, Slash, Cookie, Twitter, ChevronRight, ChevronUp, ChevronLeft } from 'lucide';
 
 
 const $body = document.body;
@@ -169,11 +169,12 @@ function initIcons() {
             Slash,
             Cookie,
             Twitter,
+            ChevronRight,
+            ChevronUp,
+            ChevronLeft,
         },
     });
 }
-
-
 
 
 /**

@@ -100,7 +100,7 @@ if ($data = $site->data_populators_pick()->toPage()) {
 <?php if (isFeatureAllowed('embeds')) : ?>
     <?= js('https://platform.twitter.com/widgets.js'); ?>
 <?php endif ?>
-
-<button id="btl" class="hovers d-none d-lg-block" title="Zum Anfang der Elemente" aria-label="Zum Anfang der Elemente"><img src="<?= $kirby->url('assets') ?>/images/backtotop.svg" alt="Zum Start"> </button> 
+<i icon-name="chevron-right" id="right-indicator" class="text-white"></i> 
+<button id="btl" class="hovers d-none d-lg-block" title="Zum Anfang der Elemente" aria-label="Zum Anfang der Elemente"><i icon-name="chevron-left" class="text-white"></i> </button> 
 <?= js('/assets/js/vendor/virtual-select.js') ?>
 <?php snippet('footer', ['isFrontEnd' => true]) ?>

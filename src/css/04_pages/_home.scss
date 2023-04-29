@@ -592,3 +592,19 @@ body.home {
         }
     }
 }
+
+#right-indicator {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    stroke-width: 1px;
+    color: #fafafa;
+
+    @include media-breakpoint-up(lg) {
+        width: 100px;
+        height: 100px;
+    }
+}

@@ -2880,7 +2880,7 @@
       "pg" : 2,
       "sct" : 0
     },
-    "\/src\/css\/04_templates\/_exhibit.scss" : {
+    "\/src\/css\/04_pages\/_exhibit.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 1,
@@ -2889,13 +2889,13 @@
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
-      "oAP" : "\/www\/assets\/css\/04_templates\/_exhibit.css",
+      "oAP" : "\/www\/assets\/css\/04_pages\/_exhibit.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 2,
       "sct" : 0
     },
-    "\/src\/css\/04_templates\/_exhibition.scss" : {
+    "\/src\/css\/04_pages\/_exhibition.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 1,
@@ -2904,13 +2904,13 @@
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
-      "oAP" : "\/www\/assets\/css\/04_templates\/_exhibition.css",
+      "oAP" : "\/www\/assets\/css\/04_pages\/_exhibition.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 2,
       "sct" : 0
     },
-    "\/src\/css\/04_templates\/_home.scss" : {
+    "\/src\/css\/04_pages\/_home.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 1,
@@ -2919,7 +2919,7 @@
       "ft" : 4,
       "ma" : 1,
       "oA" : 1,
-      "oAP" : "\/www\/assets\/css\/04_templates\/_home.css",
+      "oAP" : "\/www\/assets\/css\/04_pages\/_home.css",
       "oF" : 0,
       "oS" : 0,
       "pg" : 2,
