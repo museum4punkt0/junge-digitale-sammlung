@@ -12,7 +12,7 @@ Bei der Objektauswahl sind sowohl 3D-Objekte als auch Born Digital und Embedded 
 
 Nach Fertigstellung des Workshops erfolgt eine Abgabe an das Museum, diese setzt das Ausfüllen der Pflichtfelder voraus. Hinweise auf fehlende Eingaben erleichtern das Ausfüllen. Dies beinhaltet auch die Bestätigung, dass eine Nutzungsvereinbarung mit Datenschutzerklärung unterzeichnet wurde. Diese Bestätigungen sind Voraussetzung dafür, dass die Beiträge der Teilnehmer:innen für die Redaktion des DAHs als vollständig markiert werden.
 
-Eine weitere Dateneinheit beinhaltet die Ausstellung. Es wird der jeweilige Impuls ausgewählt und die Objekttitel der Gruppenmitglieder (Dropdown Menüs). Neu eingetragen werden im Datensatz für die Ausstellung ein Ausstellungstitel, ein Einführungstext und zu jedem der Objekte eine Bildunterschrift. Die Gruppe bzw. eins ihrer Mitglieder bestätigt die Abgabe des Datensatzes für die Redaktion des DAH.
+Eine weitere Dateneinheit beinhaltet die Ausstellung. Es wird das jeweilige Thema ausgewählt und die Objekttitel der Gruppenmitglieder (Dropdown Menüs). Neu eingetragen werden im Datensatz für die Ausstellung ein Ausstellungstitel, ein Einführungstext und zu jedem der Objekte eine Bildunterschrift. Die Gruppe bzw. eins ihrer Mitglieder bestätigt die Abgabe des Datensatzes für die Redaktion des DAH.
 
 ## Personenbezogene Daten
 * Vorname und erster Buchstabe vom Nachnamen

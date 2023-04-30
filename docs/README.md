@@ -76,7 +76,7 @@ Workshop Login |  Profil-Tab  |  Objekt-Tab (gescrollt)
 
 Eine Teilnehmer-Gruppe (z. B. eine ganze Schulklasse) besitzt eine Benutzername-und-Passwort-Kombination. Diese werden von einem Administrator vor Workshop-Start definiert und weiter gegeben. Jeder Teilnehmer besitzt dazu noch eine eigene ID und kann bei der ersten Anmeldung eine eigene PIN anlegen. So können gemeinsame und private Bereiche innerhalb eines Workshop-Raumes getrennt werden.
 
-Wenn eingeloggt können Teilnehmer hier Daten zu ihrer Person und ihrem Objekt einpflegen. Bestimmte persönliche Daten werden auf der jeweiligen Objektansicht in der Sammlung angezeigt, z. B. Benutzername oder Bundesland, viele davon dienen aber eher internen Zwecken des Personals.
+Wenn eingeloggt können Teilnehmer hier Daten zu ihrer Person und ihrem Objekt einpflegen. Bestimmte persönliche Daten werden auf der jeweiligen Objektansicht in der Sammlung angezeigt, z. B. Benutzername oder Bundesland, viele davon dienen eher statistischen Zwecken.
 
 Gruppenkonto Login |  PIN-Eingabe nach Login  |  Lobby, um Teilnehmer zu wechseln
 :-------------------------:|:-------------------------:|:-------------------------:
