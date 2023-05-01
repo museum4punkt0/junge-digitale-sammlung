@@ -168,6 +168,6 @@ Auftragnehmer Programmierung: 2av GmbH, Keltergasse 3, 89073 Ulm, Ansprechpartne
 ## 10. Lizenz
 
 GNU GENERAL PUBLIC LICENSE 
-Copyright © 2022/2023, Deutsches Auswandererhaus / Design: Andreas Heller Architects and Designers, Hamburg; Programmierung: 2av GmbH, Ulm 
-Please also see the LICENSE file provided within this repository
+Copyright © 2022/2023, Deutsches Auswandererhaus / Design: Andreas Heller Architects and Designers, Hamburg; Programmierung: 2av GmbH, Ulm. 
+Please also see the LICENSE file provided within this repository.
 
