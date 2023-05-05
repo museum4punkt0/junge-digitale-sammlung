@@ -93,11 +93,8 @@ Diese Objekte wurden während des Workshops mittels eines 3D-Scanners eingescann
 
 Es ist vorausgesehen, dass der Scan des Objekts vor Ort gemeinsam mit Hilfe von Personal erfolgt. Dementsprechend ist das System so konzipiert, dass die Mitarbeiter die 3D-Modelle und deren Vorschaubilder im Admin-Bereich hochladen. Die Teilnehmer können im Anschluss ihr Objekt auswählen. Das System erlaubt ausschliesslich GLTF- oder GLB-Dateien, da diese für Web optimiert sind.
 
-Der 3D-Scanner vom DAH exportiert OBJ-Dateitypen. Mit Hilfe vom JDS O2G Tool können die OBJ-Dateien leicht bearbeitet und in GLTF/GLB umgewandelt werden. Mehr zu diesem Tool erfahren Sie im O2G Repository.
+Der 3D-Scanner vom DAH exportiert OBJ-Dateitypen. Mit Hilfe vom JDS O2G Tool können die OBJ-Dateien leicht bearbeitet und in GLTF/GLB umgewandelt werden. Mehr zu diesem Tool erfahren Sie im [O2G Repository](https://github.com/museum4punkt0/jds-o2g-electronapp).
 
-[----TODO----]
-
-!!!!!!!! -- LINK ZUM O2G REPO -- !!!!!!
 
 O2G Tool |  3D-Modelle und Vorschaubilder als Admin hochladen  |  Als Teilnehmer Objekt auswählen
 :-------------------------:|:-------------------------:|:-------------------------:

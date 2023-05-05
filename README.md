@@ -19,11 +19,7 @@ Das Deutsche Auswandererhaus ist ein kulturhistorisches Museum zum Thema Migrati
 
 Dieses Repository entspricht einem komplexen Theme für Kirby CMS und beinhaltet alle relevanten Dateien (abgesehen vom Kirby CMS Kern).
 
-Das Projekt "O2G - OBJ to GLTF/GLB" ist Teil von diesem Projekt. Die Windows/Mac-Anwendung konvertiert OBJ-Dateien (übliches Format für 3D Scanner) zu GLB oder komprimierten GLTF-Dateien für die Webnutzung.
-
-[----TODO----]
-
-Link zum Repo
+Das Projekt "O2G - OBJ to GLTF/GLB" ist Teil von diesem Projekt. Die Windows/Mac-Anwendung konvertiert OBJ-Dateien (übliches Format für 3D Scanner) zu GLB oder komprimierten GLTF-Dateien für die Webnutzung. Das Repository finden Sie [hier](https://github.com/museum4punkt0/jds-o2g-electronapp).
 
 ---
 
