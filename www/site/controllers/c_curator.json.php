@@ -83,11 +83,11 @@ return function ($kirby, $page, $site) {
 
     if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
       $temppath = sys_get_temp_dir() . '\\' . time() . '-' . $upload['name'];
+      $filecontent = F::read($upload['tmp_name']);
+      F::write($temppath, $filecontent);
     } else {
-      $temppath = ini_get('upload_tmp_dir') . '/' . time() . '-' . $upload['name'];
+      $temppath = $upload['tmp_name'];
     }
-    $filecontent = F::read($upload['tmp_name']);
-    F::write($temppath, $filecontent);
 
     try {
       $file = $currentLinkedExhibit->createFile([
