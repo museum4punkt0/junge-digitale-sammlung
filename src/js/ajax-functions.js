@@ -250,8 +250,8 @@ async function scrapFreshEmbedImage(url) {
             };
         }
         else
-            result = {
-                imgTag: '<p class="single-exhibit text-danger">Unable to load<span class="empty"><i icon-name="x-circle" class="icon-only"></i></span></p>',
+            result = { 
+                imgTag: '<p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>',
             }
     });
 

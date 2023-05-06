@@ -1,8 +1,10 @@
 <!-- if not collage, it is an exhibit podest -->
 <?php if (!$isPosterCollage) : ?>
     <?php if ($exhibit_type_class == "embed") : ?>
+        <!-- embeds -->
         <?php if ($url = $collectionItem->embed_url()->toEmbed()) : ?>
             <?php if ($url->providerName()->lower() == 'twitter') : ?>
+                <!-- twitter -->
                 <?php if (isFeatureAllowed('embeds')) : ?>
                     <div class="twitter-framer">
                         <div class="pe-none twitter-container single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" tabindex="-1">
@@ -30,6 +32,7 @@
                     </div>
                 <?php endif; ?>
             <?php elseif ($url->providerName()->lower() == 'tiktok' || $url->providerName()->lower() == 'instagram') : ?>
+                <!-- dynamic insta and titktok -->
                 <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
                     <div class="load-embed-img" href="<?= $url->url() ?>">
                         <div class="spinner-border text-primary fs-3" role="status">
@@ -38,22 +41,19 @@
                     </div>
                 </a>
             <?php else : ?>
+                <!-- all others -->
                 <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
                     <?php if ($url->image()) : ?>
                         <img src="<?= $url->image() ?>" alt="<?= $url->title() ?>">
                     <?php else : ?>
-                        <p class="single-exhibit">
-                            <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
-                        </p>
+                        <p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>
                     <?php endif ?>
                 </a>
             <?php endif ?>
 
         <?php else : ?>
             <a title="<?= $collectionItem->title() ?>" class="exhibit-link single-exhibit <?= $compact_exhibit_class ?> <?= $exhibit_type_class ?>" href="<?= $collectionItem->id() ?>">
-                <p class="single-exhibit">
-                    <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
-                </p>
+                <p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>
             </a>
         <?php endif ?>
     <?php else : ?>
@@ -61,9 +61,7 @@
             <?php if ($img = $collectionItem->exhibit_preview()->toFile()) : ?>
                 <?= $img->responsiveImg() ?>
             <?php else : ?>
-                <p class="single-exhibit">
-                    <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
-                </p>
+                <p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>
             <?php endif ?>
         </a>
     <?php endif ?>

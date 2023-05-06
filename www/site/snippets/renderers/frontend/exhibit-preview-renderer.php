@@ -18,7 +18,9 @@
         ?>
 
         <?php if ($exhibit_type_class == "embed") : ?>
+            <!-- embeds -->
             <?php if ($url = $exhibit->embed_url()->toEmbed()) : ?>
+                <!-- twitter -->
                 <?php if ($url->providerName()->lower() == 'twitter') : ?>
                     <?php if (isFeatureAllowed('embeds')) : ?>
                         <div class="twitter-framer">
@@ -58,6 +60,7 @@
                     <?php endif; ?>
 
                 <?php elseif ($url->providerName()->lower() == 'tiktok' || $url->providerName()->lower() == 'instagram') : ?>
+                    <!-- dynamic insta and tiktok image url -->
                     <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">
                         <div class="load-embed-img" href="<?= $url->url() ?>">
                             <div class="spinner-border text-primary fs-3" role="status">
@@ -66,31 +69,27 @@
                         </div>
                     </a>
                 <?php else : ?>
+                    <!-- all other embeds that have a long living image url -->
                     <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">
                         <?php if ($url->image()) : ?>
                             <img src="<?= $url->image() ?>" alt="">
                         <?php else : ?>
-                            <p class="single-exhibit">
-                                <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
-                            </p>
+                            <p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>
                         <?php endif ?>
                     </a>
                 <?php endif ?>
             <?php else : ?>
                 <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">
-                    <div class="single-exhibit">
-                        <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
-                    </div>
+                    <p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>
                 </a>
             <?php endif ?>
         <?php else : ?>
+            <!-- not embeds -->
             <a title="<?= $exhibit->title() ?>" class="exhibit-link single-exhibit <?= $model_size ?> <?= $exhibit_type_class ?>" href="<?= $exhibit->url() ?>">
                 <?php if ($image = $exhibit->exhibit_preview()->toFile()) : ?>
                     <?= $image->responsiveImg() ?>
                 <?php else : ?>
-                    <div class="single-exhibit">
-                        <span class="empty"><i icon-name="help-circle" class="icon-only"></i></span>
-                    </div>
+                    <p class="single-exhibit text-danger">Konnte nicht geladen werden<span class="empty"></span></p>  
                 <?php endif ?>
             </a>
         <?php endif ?>
