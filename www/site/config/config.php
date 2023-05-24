@@ -74,7 +74,7 @@ return [
   /**
    * JANITOR PLUGIN ( System functions)
    */
-  'bnomei.janitor.secret' => 'ef1aebc3c119b6ddba70dd8b368f1d99',
+  'bnomei.janitor.secret' => 'xxxxxxxxxxxxxxxxxxx', // please insert a secret key value for janitor here
   'bnomei.janitor.jobs' => require_once 'system_functions.php',
 
   /**
