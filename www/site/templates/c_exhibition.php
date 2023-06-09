@@ -15,14 +15,14 @@ foreach ($curators as $curator) {
 
 $exhibit_texts = [$page->exhibit1text()->kt(), $page->exhibit2text()->kt(), $page->exhibit3text()->kt(), $page->exhibit4text()->kt(), $page->exhibit5text()->kt()];
 
-$actual_exhibits = $page->getLinkedActiveExhibitsCount();
+$actual_exhibits = $page->getLinkedTotalExhibitsCount();
 ?>
 <main>
     <div id="wrapper" class="exhibition">
         <div class="container custom">
             <div class="podest-container justify-content-between align-items-end" style="--actual_exhibits_count: <?= $actual_exhibits ?> ;">
                 <?php for ($x = 0; $x < count($exhibits); $x++) : ?>
-                    <?php if ($curators[$x] && $exhibits[$x] && !$exhibits[$x]->isDraft()) : ?>
+                    <?php if ($curators[$x] && $exhibits[$x]) : ?>
                         <div class="col-exhibit">
                             <?= snippet('renderers/frontend/exhibit-preview-renderer', ['user' => $curators[$x]]); ?>
                             <div class="exhibit-podest"> </div>
@@ -55,7 +55,7 @@ $actual_exhibits = $page->getLinkedActiveExhibitsCount();
                     <div class="col gx-0 col-12 col-lg-7">
                         <div class="row" data-masonry='{"percentPosition": true }'>
                             <?php for ($x = 0; $x < count($curators); $x++) : ?>
-                                <?php if ($curators[$x] && $exhibits[$x] && !$exhibits[$x]->isDraft()) : ?>
+                                <?php if ($curators[$x] && $exhibits[$x]) : ?>
                                     <?= snippet('renderers/frontend/exhibit-text-renderer', ['user' => $curators[$x], 'exhibittext' => $exhibit_texts[$x]]); ?>
                                 <?php endif ?>
                             <?php endfor ?>
