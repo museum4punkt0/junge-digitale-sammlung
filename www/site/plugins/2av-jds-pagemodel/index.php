@@ -201,7 +201,7 @@ class JDSPage extends Page
                 if (password_verify($entered_pin, $target_participant->pin())) {
 
                     kirby()->session()->set([
-                        'participantID' => $data['participant_url'],
+                        'participantID' => strtolower($data['participant_url']),
                         'participantLogged'  => true
                     ]);
                     $alert[] = "PIN Richtig!";

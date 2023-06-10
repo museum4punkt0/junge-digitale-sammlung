@@ -34,10 +34,10 @@
                         <!-- check for page -->
                         <form class="ws-redirect-form pin__form autofocus" autocomplete="off" action="<?= $page->url() ?>" method="POST">
                             <div class="justify-content-center hstack gap-3">
-                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_first_part" name="url_first_part" class="first field__pin" pattern="[a-z0-9]+" maxlength="1" value="<?= $data['url_first_part'] ?? '' ?>">
-                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_second_part" name="url_second_part" class="second field__pin" pattern="[a-z0-9]+" maxlength="1" value="<?= $data['url_second_part'] ?? '' ?>">
-                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_third_part" name="url_third_part" class="third field__pin" pattern="[a-z0-9]+" maxlength="1" value="<?= $data['url_third_part'] ?? '' ?>">
-                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_fourth_part" name="url_fourth_part" class="fourth field__pin" pattern="[a-z0-9]+" maxlength="1" value="<?= $data['url_fourth_part'] ?? '' ?>">
+                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_first_part" name="url_first_part" class="first field__pin" pattern="[A-Za-z0-9]+" maxlength="1" value="<?= $data['url_first_part'] ?? '' ?>">
+                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_second_part" name="url_second_part" class="second field__pin" pattern="[A-Za-z0-9]+" maxlength="1" value="<?= $data['url_second_part'] ?? '' ?>">
+                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_third_part" name="url_third_part" class="third field__pin" pattern="[A-Za-z0-9]+" maxlength="1" value="<?= $data['url_third_part'] ?? '' ?>">
+                                <input type="text" autocorrect="off" spellcheck="false" autocapitalize="off" aria-autocomplete="none" autocomplete="off" id="url_fourth_part" name="url_fourth_part" class="fourth field__pin" pattern="[A-Za-z0-9]+" maxlength="1" value="<?= $data['url_fourth_part'] ?? '' ?>">
                             </div>
                             <div class="row py-4">
                                 <div class="col d-flex justify-content-center">
