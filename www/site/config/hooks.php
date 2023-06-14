@@ -10,6 +10,19 @@ use claviska\SimpleImage;
  */
 return [
 
+    /*** ROUTE ***/
+
+    // reroute if frontend user tries to reach panel
+    'route:before' => function ($route, $path, $method) {
+        if (str_contains($path, 'panel') && $user = kirby()->user()) {
+            $permissions = $user->role()->permissions()->toArray()['access'];
+            if (($permissions['panel'] ?? true) !== true) {
+                kirby()->user()->logout();
+                //go(kirby()->url() . '/error');
+            }
+        }
+    },
+
     /********* USER **********/
 
     /**** CREATE TEMP USER with deadline set in admin area (workaroudn because kirby does not allow function calling in 'default' parameter) *****/
