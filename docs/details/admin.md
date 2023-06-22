@@ -83,7 +83,7 @@ Navigation zu "Konten" | Admin-Konto |  Gruppenkonto
 
 ## 3. Workshop
 
-In einem Workshop hat meine eine Übersicht der Objekten, Ausstellungen und Teilnehmern. Workshops haben folgende Tabs:
+In einem Workshop hat man eine Übersicht der Objekten, Ausstellungen und Teilnehmern. Workshops haben folgende Tabs:
 
 * Sammlung
 * Teilnehmer 
