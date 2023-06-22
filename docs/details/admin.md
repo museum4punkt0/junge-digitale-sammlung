@@ -99,7 +99,7 @@ Die Auflistungen der Objekte und Ausstellungen haben einen Status, um schnell ei
 
 Wenn ein Workshop angelegt wird, wird er mit allen Materialien-Paketen verknüpft. Diese sind ZIP-Dateien, die die Leiter:innen im Workshop-Bereich herunterladen können (mehr dazu weiter [unten](#materialien-und-material-paket)).
 
-Mit dem Button '3D Modelle verlinken' werden die Vorschaubilder, die Sie als Administrator im Admin-Bereich hochgeladen und Teilnehmer für ihr physisches Objekt im Workshop-Bereich ausgewählt haben, mit der passenden 3D-Datei verlinkt, falls sie existiert. Dies erfolgt in der Regel automatisch. Sollte ein physisches Objekt nur ein Bild anzeigen, überprüfen Sie bitte, dass 1) die 3D-Datei hochgeladen wurde (3D Modelle Tab) und 2) die Namen aus O2G nicht geändert wurden. Die Beziehung der Dateien entsteht durch die Namen.
+Mit dem Button '3D Modelle verlinken' können die Vorschaubilder, die Sie als Administrator im Admin-Bereich hochgeladen und Teilnehmer für ihr physisches Objekt im Workshop-Bereich ausgewählt haben, mit der passenden 3D-Datei nachträglich verlinkt werden, falls sie existiert. Dies erfolgt in der Regel automatisch. Sollte ein physisches Objekt nur ein Bild anzeigen, überprüfen Sie bitte, dass 1) die 3D-Datei hochgeladen wurde (3D Modelle Tab) und 2) die Namen aus O2G nicht geändert wurden. Die Beziehung der Dateien entsteht durch die Namen.
 
 Sammlung-Tab (leer) |  Sammlung-Tab  | Sammlung-Tab (gescrollt)
 :-------------------------:|:-------------------------:|:-------------------------:
