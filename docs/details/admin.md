@@ -270,7 +270,7 @@ Im Tab 'JSON Dateien' können Sie einen JSON-Datensatz für die Länderliste hoc
 
 https://stefangabos.github.io/world_countries
 
-Im Tab 'Daten' können Sie auch auswählen, ob Sie eine lokale JSON-Datei (also eine 'hochgeladene') oder eine Online-Datenbank verwenden wollen. Beide Werte sind im System konfiguriert und es wird empfohlen, die lokale zu werden, damit die Website nicht externe URLs aufrufen muss.
+Im Tab 'Daten' können Sie auch auswählen, ob Sie eine lokale JSON-Datei (also eine 'hochgeladene') oder eine Online-Datenbank verwenden wollen. Beide Werte sind im System konfiguriert und es wird empfohlen, die lokale zu verwenden, damit die Website nicht externe URLs aufrufen muss.
 
 Für beide Fälle müssen Sie identifizieren, wie die Parameter für 'Beschriftung' und 'Wert' in Ihren JSON-Daten heißen. Bspw. steht in der von uns verwendeten JSON-Datei der Parameter mit dem Namen 'name' für die Beschriftung und der Parameter mit dem Namen 'alpha2' für den 2-stelligen Ländercode (z. B. de, en, it), den wir als Wert deklarieren wollen.
 
