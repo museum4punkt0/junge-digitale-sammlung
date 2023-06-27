@@ -260,11 +260,11 @@
   };
   var _sfc_render = function render() {
     var _vm = this, _c = _vm._self._c;
-    return _c("div", { staticClass: "k-grid" }, [_vm.generator ? _c("span", { staticClass: "k-grid" }, [_c("div", { staticClass: "k-column" }, [_c("k-number-field", { attrs: { "novalidate": true, "placeholder": 0, "value": 0, "max": 3, "min": 0, "name": "amountLeaders", "help": "Leiter (Min: 0, Max: 3)", "label": "Leiter Anzahl" }, on: { "input": function($event) {
+    return _c("div", { staticClass: "k-grid" }, [_vm.generator ? _c("span", { staticClass: "k-grid" }, [_c("div", { staticClass: "k-column" }, [_c("k-number-field", { attrs: { "novalidate": true, "placeholder": 0, "value": 0, "max": 3, "min": 0, "name": "amountLeaders", "help": "Leiter:innen (Min: 0, Max: 3)", "label": "Leiter:innen Anzahl" }, on: { "input": function($event) {
       return _vm.updateAmountLeader({ amountLeaders: $event });
     } }, model: { value: _vm.amountLeaders, callback: function($$v) {
       _vm.amountLeaders = $$v;
-    }, expression: "amountLeaders" } })], 1), _c("div", { staticClass: "k-column" }, [_c("k-number-field", { attrs: { "novalidate": true, "placeholder": 0, "value": 0, "max": 30, "min": 0, "name": "amount", "help": "Teilnehmer (Min: 0, Max: 30)", "label": "Teilnehmer Anzahl" }, on: { "input": function($event) {
+    }, expression: "amountLeaders" } })], 1), _c("div", { staticClass: "k-column" }, [_c("k-number-field", { attrs: { "novalidate": true, "placeholder": 0, "value": 0, "max": 30, "min": 0, "name": "amount", "help": "Teilnehmer:innen (Min: 0, Max: 30)", "label": "Teilnehmer:innen Anzahl" }, on: { "input": function($event) {
       return _vm.updateAmount({ amount: $event });
     } }, model: { value: _vm.amount, callback: function($$v) {
       _vm.amount = $$v;

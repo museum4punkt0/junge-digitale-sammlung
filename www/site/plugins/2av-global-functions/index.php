@@ -92,7 +92,7 @@ function buildUsersTree($page, $amounts)
 {
     $amounts = explode('&', $amounts);
     // get the subpage_builder definition from the blueprint
-    $_title = "Teilnehmer";
+    $_title = "Teilnehmer:in";
     $count = $amounts[0];
     for ($index = 0; $index < $count; $index++) {
         try {
@@ -108,7 +108,7 @@ function buildUsersTree($page, $amounts)
         }
     }
 
-    $_title = "Leiter";
+    $_title = "Leiter:in";
     $count = $amounts[1];
     for ($index = 0; $index < $count; $index++) {
         try {

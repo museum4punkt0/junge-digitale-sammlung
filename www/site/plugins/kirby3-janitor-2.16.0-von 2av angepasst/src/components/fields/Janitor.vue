@@ -3,10 +3,10 @@
     <span v-if="generator" class="k-grid">
       <!-- 2av: here we add extra fields to input the amount of curators and curator leaders. This data gets handled below. -->
       <div class="k-column">
-        <k-number-field v-model="amountLeaders" :novalidate="true" :placeholder="0" :value="0" :max="3" :min="0" name="amountLeaders" help="Leiter (Min: 0, Max: 3)" label="Leiter Anzahl" @input="updateAmountLeader({ amountLeaders: $event })"/>
+        <k-number-field v-model="amountLeaders" :novalidate="true" :placeholder="0" :value="0" :max="3" :min="0" name="amountLeaders" help="Leiter:innen (Min: 0, Max: 3)" label="Leiter:innen Anzahl" @input="updateAmountLeader({ amountLeaders: $event })"/>
       </div>
       <div class="k-column">
-        <k-number-field v-model="amount" :novalidate="true" :placeholder="0" :value="0" :max="30" :min="0" name="amount" help="Teilnehmer (Min: 0, Max: 30)" label="Teilnehmer Anzahl" @input="updateAmount({ amount: $event })"/>
+        <k-number-field v-model="amount" :novalidate="true" :placeholder="0" :value="0" :max="30" :min="0" name="amount" help="Teilnehmer:innen (Min: 0, Max: 30)" label="Teilnehmer:innen Anzahl" @input="updateAmount({ amount: $event })"/>
       </div>
     </span>
     <div class="k-column janitor-wrapper">    

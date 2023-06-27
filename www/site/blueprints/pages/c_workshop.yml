@@ -83,7 +83,7 @@ tabs:
                 type: text
                 value: "{{page.slug}}"
               linked_user:
-                label: Teilnehmer / ID
+                label: Teilnehmer:in / ID
                 type: html
                 value: "{{page.linked_user.toPageOrDraft.title}} / <span class='meta'>{{page.linked_user.toPageOrDraft.slug}}</span>"
               complete:
@@ -120,7 +120,7 @@ tabs:
                 multiple: false
                 required: true
                 query: kirby.users.filterBy("role", "frontenduser")
-                help: Verlinktes Gruppenkonto für eine Gruppe von Teilnehmern.
+                help: Verlinktes Gruppenkonto für eine Gruppe von Teilnehmer:innen.
               comment:
                 type: textarea
                 label: Kommentar
@@ -159,7 +159,7 @@ tabs:
 
   # tab users
   users:
-    label: Teilnehmer
+    label: Teilnehmer:innen
     icon: users
     columns:
       - width: 2/3
@@ -184,7 +184,7 @@ tabs:
               - c_curator_leader
           c_users:
             extends: sections/pages
-            headline: Teilnehmer
+            headline: Teilnehmer:innen
             info: false
             layout: table
             sortBy: dateCreatedEpoch desc

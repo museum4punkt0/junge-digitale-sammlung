@@ -35,7 +35,7 @@ return [
         $amount = explode('&', $data);
         return [
             'status' => 200,
-            'label' => (int)$amount[0] + (int)$amount[1] . " Benutzer angelegt.",
+            'label' => (int)$amount[0] + (int)$amount[1] . " Benutzer:innen angelegt.",
         ];
     },
 

@@ -456,7 +456,7 @@ sections:
         type: text
         buttons: false
         width: 1/4
-        label: Beschriftung für "Auswahl des Objekts (Anhand der Vorschaubilder)"
+        label: Beschriftung für "Auswahl des 3D-Modell des Objekts/Hochauflösendes Objektfoto"
       exhibit_preview:
         type: writer
         nodes: false
@@ -467,7 +467,7 @@ sections:
           - email
         buttons: false
         width: 1/4
-        label: Hinweis für "Auswahl des des Objekts (Anhand der Vorschaubilder)"
+        label: Hinweis für "Auswahl des 3D-Modell des Objekts/Hochauflösendes Objektfoto"
 
       material_label:
         type: text
