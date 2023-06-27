@@ -32,9 +32,13 @@ $model_size = $page->threed_model_size()->toBool() ? 'size-compact' : 'size-regu
         </model-viewer>
     </section>
 <?php elseif (!$modelurl && $imgurl) : ?>
-    <section class="object__viewer">
-        <div class="exhibit-3d text-center <?= $model_size ?>" id="reveal">
-            <?= $img->responsiveImg() ?>
+    <section class="digital__container row justify-content-center">
+        <div class="col align-self-center text-center exhibit-digital">
+            <div id="gallery" class="pswp-gallery">
+                <a class="pswp-gallery__item" href="<?= $img->url() ?>" target="_blank" data-pswp-width="<?= $img->width() ?>" data-pswp-height="<?= $img->height() ?>">
+                    <?= $img->responsiveImg() ?>
+                </a>
+            </div>
         </div>
     </section>
 <?php else : ?>
@@ -42,8 +46,6 @@ $model_size = $page->threed_model_size()->toBool() ? 'size-compact' : 'size-regu
         <div class="exhibit-3d no-object row justify-content-center text-center">
             <!--<section class="exhibit-3d no-object row justify-content-center text-center"></section>-->
             <span class="empty w-50 text-primary"><i icon-name="help-circle" class="icon-only"></i></span>
-
-
         </div>
     </section>
 <?php endif ?>

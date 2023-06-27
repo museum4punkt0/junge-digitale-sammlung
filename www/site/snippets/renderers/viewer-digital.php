@@ -27,7 +27,6 @@ if ($video = $page->digital_asset()->toFile())
             <video crossorigin id="<?= $video->id() ?>" class="vlite-js modal__video" src="<?= $src ?>">
             </video>
         <?php elseif ($imgurl) : ?>
-
             <div id="gallery" class="pswp-gallery">
                 <a class="pswp-gallery__item" href="<?= $imgurl ?>" target="_blank" data-pswp-width="<?= $img->width() ?>" data-pswp-height="<?= $img->height() ?>">
                     <?= $img->responsiveImg() ?>
