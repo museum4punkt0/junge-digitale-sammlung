@@ -166,7 +166,7 @@ tabs:
         sections:
           c_leaders:
             extends: sections/pages
-            headline: Leiter
+            headline: Leiter:innen
             info: false
             layout: table
             sortBy: dateCreatedEpoch desc
