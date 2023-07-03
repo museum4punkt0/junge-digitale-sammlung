@@ -13,17 +13,19 @@ return function ($kirby, $page, $site) {
     if ($kirby->request()->is('POST') && get('save-user')) {
 
         $data = get();
-        $username = $kirby->site()->username_db()->yaml();
+        //$username = $kirby->site()->username_db()->yaml();
+        $data['username'] = ltrim($data['username']); // remove first backspaces
+        $data['username'] = preg_replace('/\s+/', ' ', $data['username']); // remove double backspaces
         $isChanging = $data['username'] != $page->username();
 
         $formRules = [
             'fullname'              => ['required'],
-            'username'              => ['required'],
+            //'username'              => ['required'],
         ];
 
         $messages = [
             'fullname'  => 'Bitte einen Name eingeben.',
-            'username'  =>  'Bitte einen Benutzername eingeben.',
+            //'username'  =>  'Bitte einen Benutzername eingeben.',
         ];
 
         // some of the data is invalid
@@ -34,7 +36,7 @@ return function ($kirby, $page, $site) {
                 $alert[] = 'Benutzername existiert bereits.';
                 $metainfo = "user-error";
             } else {
-                // everything is ok, handle information
+                // everything is ok, handle information                
                 try {
                     $data['title'] = $data['fullname']; // workaround because page and object have same attribute 'title'. we also save 'fullname' for message functionality
                     unset($data['save-user']);

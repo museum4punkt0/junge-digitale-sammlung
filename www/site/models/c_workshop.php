@@ -148,11 +148,10 @@ class CWorkshopPage extends JDSPage
           'data_usernames_page' => [$dbpage->uuid()],
         ]);
       }
-    }
-    else{
+    } else {
       $dbpage = $this->data_usernames_page()->toPage();
     }
-    
+
     $db = $dbpage->username_db()->yaml();
     $indexUsername = substr($username, 0, 1); // gets the first letter
 
@@ -177,6 +176,11 @@ class CWorkshopPage extends JDSPage
     if ($isChanging) {
       if (!$dbpage = $this->data_usernames_page()->toPage())
         return false;
+
+      if (strlen($username) == 0) { // if new username empty, just remove old one
+        $this->usernameRemoveFromWorkshop($oldUsername);
+        return false;
+      }
 
       $db = $dbpage->username_db()->yaml();
 
