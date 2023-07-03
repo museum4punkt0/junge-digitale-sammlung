@@ -192,7 +192,7 @@ function handleExhibitionMessages($data, $page)
     $userAmount = 0;
     for ($x = 1; $x <= 5; $x++) {
         if (isset($data['user' . $x]) && $data['user' . $x] != '' && !empty($data['user' . $x])) {
-            $userAmount ++;
+            $userAmount++;
             $result = matchImpulses($page, $data['user' . $x], $forcedExhibitionValue);
             if ($result  == 'result_error') {
                 $userErrors++;
@@ -207,7 +207,7 @@ function handleExhibitionMessages($data, $page)
     if ($userErrors != 0) {
         $response['exhibitsMsg'] .= $userErrors . " verlinkte Objekte haben nicht passende Themen. ";
     }
-    if($userAmount < 3){
+    if ($userAmount < 3) {
         $response['userAmountMsg'] .= "Bitte mindestens 3 Teilnehmer auswählen. ";
     }
 
@@ -528,6 +528,8 @@ function emptyImages($exhibit)
  */
 function create_zip($page, $file)
 {
+    if (!$page) //in case its site
+        return;
     if ($page->intendedTemplate()->name() == 'material') {
         $pagefiles = $page->files()->filter(function ($f) {
             return $f->extension() != 'zip';
@@ -574,4 +576,3 @@ function create_zip($page, $file)
         }
     }
 }
-
