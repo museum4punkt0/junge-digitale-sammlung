@@ -12,7 +12,7 @@
 return [
   'debug' => true,
 
-  'languages' => false,
+  'languages' => true,
 
   'panel' => [
     'language' => 'de',
@@ -82,16 +82,16 @@ return [
    */
   'michnhokn.cookie-banner' => [
     'features' => [
-      'embeds' => 'Embeds',
+      'embeds' => 'custom.cookie-modal.embeds',
     ],
-    'content' => [
+    /* 'content' => [
       'title' => 'Cookie Einstellungen',
       'text' => 'Wir nutzen Cookies um Dir die bestmögliche Erfahrung zu bieten. Um die komplette Sammlung sehen zu können benötigst du die "Embeds" Cookies.',
       'essentialText' => 'Essentiell',
       'denyAll' => 'Alle ablehnen',
       'acceptAll' => 'Alle annehmen',
       'save' => 'Speichern',
-    ],
+    ], */
   ],
 
   /**
