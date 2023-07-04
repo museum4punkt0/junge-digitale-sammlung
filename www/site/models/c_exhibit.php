@@ -75,13 +75,13 @@ class CExhibitPage extends JDSPage
       $input['scan_device']   = $input['scan_device'] ?? $this->scan_device()->value();
 
       $modelValues = bindImageTo3DModel($this, $input['exhibit_preview'] ?? null);
-
+      
       if (isset($modelValues) && $modelValues) {
         $input = array_merge($input, $modelValues);
         kirbylog($this->title()->value() . ": 3D file updated (in model update)");
       } else {
-        $input['exhibit_preview'] = $input['exhibit_preview'] ?? ($this->exhibit_preview()->isNotEmpty() ? [$this->exhibit_preview()->toFile()->uuid()] : null);
-        $input['threed_model'] = $input['threed_model'] ?? ($this->threed_model()->isNotEmpty() ? [$this->threed_model()->toFile()->uuid()] : null);
+        $input['exhibit_preview'] = $input['exhibit_preview'] ?? ($this->exhibit_preview()->isNotEmpty() && $this->exhibit_preview()->toFile() ? [$this->exhibit_preview()->toFile()->uuid()] : null);
+        $input['threed_model'] = $input['threed_model'] ?? ($this->threed_model()->isNotEmpty() && $this->threed_model()->toFile() ? [$this->threed_model()->toFile()->uuid()] : null);
       }
 
       $dataRules = array_merge($dataRules, $physicalRules);
@@ -247,5 +247,4 @@ class CExhibitPage extends JDSPage
     $ownImages = $this->images()->filterBy('template', 'image');
     return $workshopImages->add($ownImages);
   }
-
 }

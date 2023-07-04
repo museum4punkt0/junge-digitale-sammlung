@@ -386,7 +386,14 @@ function random_strings($length_of_string, $digitBlock = 1)
  */
 function bindImageTo3DModel($exhibitpage, $exhibit_preview_form_value = null)
 {
-    $exhibit_preview_form_value   = $exhibit_preview_form_value ?? ($exhibitpage->exhibit_preview()->isNotEmpty() ? str_replace(" ", "", $exhibitpage->exhibit_preview()->toFile()->uuid()->toString()) : null);
+    if ($exhibitpage->exhibit_preview()->isNotEmpty() && $exhibitpage->exhibit_preview()->toFile()) {
+        $existing_preview_value = str_replace(" ", "", $exhibitpage->exhibit_preview()->toFile()->uuid()->toString());
+    } else
+        $existing_preview_value = null;
+
+    $exhibit_preview_form_value   = $exhibit_preview_form_value ?? $existing_preview_value;
+
+    //$exhibit_preview_form_value   = $exhibit_preview_form_value ?? ($exhibitpage->exhibit_preview()->isNotEmpty() ? str_replace(" ", "", $exhibitpage->exhibit_preview()->toFile()->uuid()->toString()) : null);
 
     if (isset($exhibit_preview_form_value)) {
         if (is_array($exhibit_preview_form_value) && isset($exhibit_preview_form_value[0])) {

@@ -41,7 +41,6 @@ class CExhibitionPage extends JDSPage
       $input['complete'] = true;
       $input['missingInfo'] = '';
     }
-
     // refresh message infos in exhibition, if it is linked
     $usersArray = [];
     $usersArray['impulse'] = $input['impulse']; // we also need to pass the impulse
@@ -49,7 +48,7 @@ class CExhibitionPage extends JDSPage
       if (isset($input['user' . $x])) {
         $usersArray['user' . $x]   = $input['user' . $x];
       } else if ($this->content()->get('user' . $x)->isNotEmpty()) {
-        $usersArray['user' . $x]   = $this->content()->get('user' . $x)->toPageOrDraft()->id();
+        $usersArray['user' . $x]   = $this->content()->get('user' . $x)->toPageOrDraft() ? $this->content()->get('user' . $x)->toPageOrDraft()->id() : null;
       }
     }
 
@@ -58,7 +57,7 @@ class CExhibitionPage extends JDSPage
 
     if (isset($exhibition_msgs['userAmountMsg']) && $exhibition_msgs['userAmountMsg'] != '') {
       $input['complete'] = false;
-      $input['missingInfo'] .= " " .$exhibition_msgs['userAmountMsg'];
+      $input['missingInfo'] .= " " . $exhibition_msgs['userAmountMsg'];
     }
 
     return parent::update($input);
@@ -196,7 +195,6 @@ class CExhibitionPage extends JDSPage
         }
       }
     }
-
     $this->update($updateData);
   }
 

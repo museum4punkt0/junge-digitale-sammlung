@@ -141,7 +141,7 @@ class CCuratorPage extends JDSPage
     if ($exhibition = $page->linked_exhibition()->toPageOrDraft()) {
       $exhibition->removeUser($page);
     }
-
+    
     usernameRemove($page->username());
   }
 }
