@@ -7,6 +7,7 @@
   size: A4;
   margin: 0;
 }
+
 * {
   box-sizing: border-box;
 }
@@ -27,11 +28,14 @@ body {
   font-size: 12pt;
   margin: 2em auto;
   padding: calc(var(--bleeding) + var(--margin));
-  box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
   background: white;
 }
 
 @media screen {
+  .page {
+    box-shadow: 0 0 0.5cm rgba(0, 0, 0, 0.5);
+  }
+
   .page::after {
     position: absolute;
     content: '';
@@ -50,5 +54,5 @@ body {
   .page {
     margin: 0;
     overflow: hidden;
-  }
+  }  
 }

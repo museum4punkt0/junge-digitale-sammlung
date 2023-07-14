@@ -2,20 +2,87 @@
 
 @font-face {
     font-style: normal;
+    font-weight: 300;
+    font-family: "WeissenhofGrotesk";
+    src:
+        url("../webfonts/332361_4_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_4_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_4_unhinted_0.ttf") format("truetype");
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 300;
+    font-family: "WeissenhofGrotesk";
+    src:
+        url("../webfonts/332361_2_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_2_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_2_unhinted_0.ttf") format("truetype");
+}
+@font-face {
+    font-style: normal;
     font-weight: 400;
     font-family: "WeissenhofGrotesk";
-    src: url("../webfonts/332361_7_unhinted_0.woff2") format("woff2"),
+    src:
+        url("../webfonts/332361_7_unhinted_0.woff2") format("woff2"),
         url("../webfonts/332361_7_unhinted_0.woff") format("woff"),
-        url("../webfonts/332361_7_unhinted_0.ttf") format("truetype"); 
+        url("../webfonts/332361_7_unhinted_0.ttf") format("truetype");
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 400;
+    font-family: "WeissenhofGrotesk";
+    src:
+        url("../webfonts/332361_3_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_3_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_3_unhinted_0.ttf") format("truetype");
+}
+
+@font-face {
+    font-style: normal;
+    font-weight: 500;
+    font-family: "WeissenhofGrotesk";
+    src:
+        url("../webfonts/332361_5_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_5_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_5_unhinted_0.ttf") format("truetype");
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 500;
+    font-family: "WeissenhofGrotesk";
+    src:
+        url("../webfonts/332361_6_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_6_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_6_unhinted_0.ttf") format("truetype");
 }
 
 @font-face {
     font-style: normal;
     font-weight: 600;
     font-family: "WeissenhofGrotesk";
-    src: url("../webfonts/332361_0_unhinted_0.woff2") format("woff2"),
+    src:
+        url("../webfonts/332361_0_unhinted_0.woff2") format("woff2"),
         url("../webfonts/332361_0_unhinted_0.woff") format("woff"),
-        url("../webfonts/332361_0_unhinted_0.ttf") format("truetype"); 
+        url("../webfonts/332361_0_unhinted_0.ttf") format("truetype");
+}
+
+@font-face {
+    font-style: italic;
+    font-weight: 600;
+    font-family: "WeissenhofGrotesk";
+    src:
+        url("../webfonts/332361_1_unhinted_0.woff2") format("woff2"),
+        url("../webfonts/332361_1_unhinted_0.woff") format("woff"),
+        url("../webfonts/332361_1_unhinted_0.ttf") format("truetype");
+}
+
+:root {
+    --bleeding: 0.5cm;
+    --margin: 2cm;
+    --letter-spacing: 0.25px;
 }
 
 body {
@@ -23,8 +90,20 @@ body {
     transition: background-color 0.25s;
     font-weight: 400;
     letter-spacing: var(--letter-spacing);
-    font-family: "WeissenhofGrotesk", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans",
-        "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    font-family:
+        "WeissenhofGrotesk",
+        system-ui,
+        -apple-system,
+        "Segoe UI",
+        Roboto,
+        "Helvetica Neue",
+        "Noto Sans",
+        "Liberation Sans",
+        Arial,
+        sans-serif,
+        "Apple Color Emoji",
+        "Segoe UI Emoji",
+        "Segoe UI Symbol",
         "Noto Color Emoji";
 }
 * {
@@ -32,16 +111,39 @@ body {
     padding: 0;
     border: none;
 }
-h1 {
-    color: var(--body-font-color);
-}
 
 .page {
+    font-size: 9.25pt;
     .qr {
         img {
             max-width: 5cm;
         }
     }
+}
+html.on-apple {
+    .page {
+        height: 294mm;
+    }
+}
+.wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+h1,
+h2,
+p,
+.qr {
+    margin-bottom: 0.5em;
+}
+h1 {
+    font-weight: 300;
+    font-size: 1.9rem;
+    margin: 2.2rem 0;
+}
+h2 {
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
 .info__area {
@@ -71,6 +173,40 @@ button,
     text-align: center;
 }
 
-p,.qr{
-    margin-bottom: 0.5rem;
+.txt_center {
+    text-align: center;
+
+    .login {
+        font-weight: 500;
+        font-size: 1.18rem;
+        margin-bottom: 5rem;
+        margin-top: 1rem;
+        color: var(--body-font-color);
+    }
+}
+.closer {
+    margin-bottom: 2rem;
+}
+.italic {
+    font-style: italic;
+}
+
+.logos {
+    position: relative;
+    margin-bottom: 4rem;
+    margin-top: -0.5rem;
+
+    div {
+        //position: absolute;
+        display: inline-block;
+        max-width: 60%;
+        vertical-align: top;
+        &.logo__project {
+            margin-left: -8.55rem;
+            margin-top: 2.7rem;
+        }
+        img {
+            width: 55%;
+        }
+    }
 }
