@@ -226,7 +226,7 @@ function revert_btt() {
  * @param {number} refresh 
  * @returns 
  */
-function scrollStop(callback, refresh = 66) {
+function scrollStop(callback, refresh = 66) { 
     // Make sure a valid callback was provided
     if (!callback || typeof callback !== 'function') return;
 
@@ -234,7 +234,7 @@ function scrollStop(callback, refresh = 66) {
     window.addEventListener('scroll', function (event) {
         window.clearTimeout(isScrolling);
         isScrolling = setTimeout(callback, refresh);
-    }, false);
+    }, false); 
 }
 
 /**

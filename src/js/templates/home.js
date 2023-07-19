@@ -13,7 +13,7 @@ const btl_revert_time = 2500;
 /**
  * Main init for home
  */
-function initHome() {
+function initHome() { 
   console.log('init home');
   const introText = new DynamicContainer(document.querySelector('.home-intro'), document.getElementById('scroll__container'));
 

@@ -13,7 +13,7 @@ function init() {
     largeImg = document.querySelector('#gallery');
 
     if (model)
-        init3DLogic();
+        init3DLogic(); 
 
     if (largeImg)
         initLargeImage();

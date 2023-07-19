@@ -10,7 +10,7 @@ function initAdmin() {
     console.log('init admin');
 
     initForms();
-    initBSElements();
+    initBSElements(); 
     rehashUrl();
 }
 Object.assign(window, { initAdmin });

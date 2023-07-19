@@ -13,7 +13,7 @@ const fetchPages = async () => {
   let tagVar = urlwithtag[1];
   firstpart = removeChar(firstpart);
   url = `${firstpart}.json/tag:${tagVar}?offset=${offset}&limit=${limit}`;
-  console.log(url);
+  console.log(url); 
   try {
     const response = await fetch(url);
     const { html, more } = await response.json();

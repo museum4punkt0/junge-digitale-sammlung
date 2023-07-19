@@ -2064,7 +2064,7 @@
     "displayValueWasSetByUser" : 1,
     "iconImageName" : "meme-ron",
     "iconImageWasSetByUser" : 1,
-    "lastBuiltDate" : 648375881.57954895
+    "lastBuiltDate" : 711455871.10955203
   },
   "projectSettings" : {
     "abortBuildOnError" : 1,
@@ -3728,7 +3728,7 @@
         "flagValue" : -1
       },
       "drop_console" : {
-        "active" : 0,
+        "active" : 1,
         "flagValue" : -1
       },
       "drop_debugger" : {

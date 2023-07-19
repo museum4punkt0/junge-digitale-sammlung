@@ -10,7 +10,7 @@
  * We call a JSON URL and kirby handles in the
  * targeted controller the data and returns the required information. 
  */
-import JDSForm from "./components/JDSForm";
+import JDSForm from "./components/JDSForm"; 
 
 
 /**
