@@ -2,7 +2,7 @@
     background-color: var(--body-bg) !important;
 }
 .cookie-modal__check svg {
-  stroke: var(--body-bg) !important;
+    stroke: var(--body-bg) !important;
 }
 #edit-cookies {
     &.btn {
@@ -46,5 +46,12 @@
         &:hover {
             background-color: var(--secondary-color) !important;
         }
+    }
+}
+
+.cookie-modal__option {
+    align-items: flex-start !important;
+    &.disabled{
+        opacity: 0.5 !important;
     }
 }
