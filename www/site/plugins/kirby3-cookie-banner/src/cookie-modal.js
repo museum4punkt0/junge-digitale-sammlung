@@ -121,7 +121,7 @@ class CookieModal {
 
   updateButtons() {
     let _this = this;
-    if (_this.CUSTOM_FEATURES.length > 1) {
+    /* if (_this.CUSTOM_FEATURES.length > 1) {
       _this.$ACCEPT_BUTTON.classList.add('hide');
       _this.$DENY_BUTTON.classList.add('hide');
       _this.$SAVE_BUTTON.classList.remove('hide');
@@ -129,7 +129,7 @@ class CookieModal {
       _this.$ACCEPT_BUTTON.classList.remove('hide');
       _this.$DENY_BUTTON.classList.remove('hide');
       _this.$SAVE_BUTTON.classList.add('hide');
-    }
+    } */
   }
 
   setCookie(features) {

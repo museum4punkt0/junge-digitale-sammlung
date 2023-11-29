@@ -28,15 +28,15 @@ $features = array_merge(option('michnhokn.cookie-banner.features'), $features);
             <?php endforeach; ?>
         </div>
         <div class="cookie-modal__buttons">
-            <a href="#" class="cookie-modal__button primary" id="cookie-accept"
+            <a href="#" class="cookie-modal__button primary hide" id="cookie-accept"
                title="<?= getCookieModalTranslation('acceptAll') ?>">
                 <span><?= getCookieModalTranslation('acceptAll') ?></span>
             </a>
-            <a href="#" class="cookie-modal__button" id="cookie-deny"
+            <a href="#" class="cookie-modal__button hide" id="cookie-deny"
                title="<?= getCookieModalTranslation('denyAll') ?>">
                 <span><?= getCookieModalTranslation('denyAll') ?></span>
             </a>
-            <a href="#" class="cookie-modal__button hide" id="cookie-save"
+            <a href="#" class="cookie-modal__button" id="cookie-save"
                title="<?= getCookieModalTranslation('save') ?>">
                 <span><?= getCookieModalTranslation('save') ?></span>
             </a>
